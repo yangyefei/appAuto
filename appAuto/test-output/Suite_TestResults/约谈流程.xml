@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite hostname="ALLen-PC" name="test.apptest.common.AppCommonInterview" tests="1" failures="1" timestamp="9 Nov 2016 08:08:01 GMT" time="272.399" errors="0">
+  <testcase name="interviewProcess" time="271.463" classname="test.apptest.common.AppCommonInterview">
+    <failure type="org.openqa.selenium.remote.UnreachableBrowserException" message="Error communicating with the remote browser. It may have died.
+Build info: version: &amp;apos;2.25.0&amp;apos;, revision: &amp;apos;17482&amp;apos;, time: &amp;apos;2012-07-18 21:09:54&amp;apos;
+System info: os.name: &amp;apos;Windows Vista&amp;apos;, os.arch: &amp;apos;x86&amp;apos;, os.version: &amp;apos;6.1&amp;apos;, java.version: &amp;apos;1.6.0_10-rc2&amp;apos;
+Driver info: driver.version: RemoteWebDriver">
+      <![CDATA[org.openqa.selenium.remote.UnreachableBrowserException: Error communicating with the remote browser. It may have died.
+Build info: version: '2.25.0', revision: '17482', time: '2012-07-18 21:09:54'
+System info: os.name: 'Windows Vista', os.arch: 'x86', os.version: '6.1', java.version: '1.6.0_10-rc2'
+Driver info: driver.version: RemoteWebDriver
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:493)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:268)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementByName(RemoteWebDriver.java:329)
+	at org.openqa.selenium.By$ByName.findElement(By.java:291)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:260)
+	at test.apptest.common.AppCommonInterview.interviewProcess(Unknown Source)
+	at org.springframework.test.context.testng.AbstractTestNGSpringContextTests.run(AbstractTestNGSpringContextTests.java:140)
+Caused by: org.openqa.selenium.WebDriverException: Session ID may not be null
+Build info: version: '2.25.0', revision: '17482', time: '2012-07-18 21:09:54'
+System info: os.name: 'Windows Vista', os.arch: 'x86', os.version: '6.1', java.version: '1.6.0_10-rc2'
+Driver info: driver.version: RemoteWebDriver
+	at org.openqa.selenium.remote.HttpCommandExecutor$CommandInfo.get(HttpCommandExecutor.java:560)
+	at org.openqa.selenium.remote.HttpCommandExecutor$CommandInfo.getMethod(HttpCommandExecutor.java:544)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:281)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:472)
+	... 36 more
+... Removed 30 stack frames]]>
+    </failure>
+  </testcase>
+</testsuite>
