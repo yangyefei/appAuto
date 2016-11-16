@@ -32,4 +32,12 @@ public interface AppCommonService {
 	 */
 	public AppiumDriver commentSubmit(AppiumDriver driver,String comment);
 	
+	/**
+	 * 向下滑动
+	 * @param driver
+	 * @return
+	 */
+	public AppiumDriver swipeToDown(AppiumDriver driver);
+	
+	
 }

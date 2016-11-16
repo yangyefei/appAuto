@@ -57,6 +57,17 @@ public class AppCommonServiceImpl implements AppCommonService{
 
 		return driver;
 	}
+
+	@Override
+	public AppiumDriver swipeToDown(AppiumDriver driver) {
+		// TODO Auto-generated method stub
+		
+        int width = driver.manage().window().getSize().width;
+        int height = driver.manage().window().getSize().height;
+        driver.swipe(width/2,height*3/4, width/2,height/4, 1000);//向下滑动，间隔1s
+	
+		return driver;
+	}
 	
 
 

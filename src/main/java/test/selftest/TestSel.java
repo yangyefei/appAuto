@@ -15,6 +15,16 @@ public class TestSel {
 	  
 	  System.out.println("test");
 	  
+	  int a = 1;
+	  int b =2;
+	  String ab ="test";
+	  String cdString ="test";
+	  
+	  
+	  if (ab.equalsIgnoreCase(cdString)) {
+		
+	}
+	  
 	  
   }
 

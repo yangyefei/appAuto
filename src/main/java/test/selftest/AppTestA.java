@@ -36,7 +36,7 @@ public class AppTestA extends BaseTest{
 	  
   }
   
-  @Test(enabled=true)
+  @Test(enabled=false)
   public void testa(){
 	  
 	   System.setProperty("webdriver.firefox.bin",

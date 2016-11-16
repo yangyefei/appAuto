@@ -64,20 +64,8 @@ public class AppCommonInquiry extends BaseTest {
 		new WebDriverWait(driver,120).until(ExpectedConditions.elementToBeClickable(By.name("申请问诊"))).click();
 		logger.info("填写并提交问诊申请");
 		new WebDriverWait(driver,60).until(ExpectedConditions.elementToBeClickable(By.name("融资规划"))).click();
-		driver.findElement(By.id("qi_ye_xin_xi_edit")).sendKeys(datadriven.get("comments"));
-		
-//		Actions actions = new Actions(driver);
-//		Action action = null;
-//		actions.clickAndHold(driver.findElement(By.id("qi_ye_xin_xi_edit"))).moveToElement(driver.findElement(By.name("告诉导师您需要咨询的问题")),0,500).release();
-//		action = actions.build();
-//		action.perform();
-		
-
-        int width = driver.manage().window().getSize().width;
-        int height = driver.manage().window().getSize().height;
-        driver.swipe(width/2,height*3/4, width/2,height/4, 1000);
-
-		
+		driver.findElement(By.id("qi_ye_xin_xi_edit")).sendKeys(datadriven.get("comments"));		
+		driver = appCommonService.swipeToDown(driver);//向下滑动		
 		driver.findElement(By.id("wen_ti_xin_xi_edit")).sendKeys(datadriven.get("comments"));
 		driver.findElement(By.id("submit_view")).click();
 		
