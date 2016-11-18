@@ -9,6 +9,7 @@ import java.util.Map;
 import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -23,6 +24,7 @@ import service.InitialService;
 
 import common.frame.helper.Utils;
 import common.frame.test.BaseTest;
+import common.utils.UrlsOfPre;
 
 
 
@@ -34,6 +36,7 @@ public class AppCommonInquiry extends BaseTest {
 	private AppCommonService appCommonService;
 
 	private AppiumDriver driver;
+	private WebDriver webDriver;
 
 
 	@BeforeClass
@@ -44,87 +47,81 @@ public class AppCommonInquiry extends BaseTest {
 	@Test(enabled = true, dataProvider = "testData",description="普通问诊流程")
 	public void commonInquiryProcess(Map<String, String> datadriven)throws Exception {
 		
-		logger.info("APP "+datadriven.get("version")+"---普通问诊流程测试开始---");
-		//启动投资者app并且登录
-		logger.info("启动并登陆创业者app");
-		driver = Initial.appiumAndroidChuangyeSetUp(driver, datadriven.get("changyeApkName"));
-		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
-		driver = appCommonService.appLogin(driver,datadriven.get("changyeUserName"),datadriven.get("chuangyePassword"));
-		
-		//点击进入问诊导师列表
-		logger.info("首页-企业问诊进入导师列表");
-		new WebDriverWait(driver,60).until(ExpectedConditions.elementToBeClickable(By.name("一融"))).click();
-	    new WebDriverWait(driver,60).until(ExpectedConditions.elementToBeClickable(By.name("企业问诊"))).click();
-		
-		//选择问诊导师并申请问诊
-	    logger.info("选择问诊导师并申请问诊");
-		new WebDriverWait(driver,120).until(ExpectedConditions.elementToBeClickable(By.name(datadriven.get("inquiryTutor")))).click();
-		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
-		logger.info("点击进入申请问诊页面");
-		new WebDriverWait(driver,120).until(ExpectedConditions.elementToBeClickable(By.name("申请问诊"))).click();
-		logger.info("填写并提交问诊申请");
-		new WebDriverWait(driver,60).until(ExpectedConditions.elementToBeClickable(By.name("融资规划"))).click();
-		driver.findElement(By.id("qi_ye_xin_xi_edit")).sendKeys(datadriven.get("comments"));		
-		driver = appCommonService.swipeToDown(driver);//向下滑动		
-		driver.findElement(By.id("wen_ti_xin_xi_edit")).sendKeys(datadriven.get("comments"));
-		driver.findElement(By.id("submit_view")).click();
-		
-		driver.quit();
-		
-
-		
-//		//启动创业者包并且登录
+//		logger.info("APP "+datadriven.get("version")+"---普通问诊流程测试开始---");
+//		//启动投资者app并且登录
 //		logger.info("启动并登陆创业者app");
 //		driver = Initial.appiumAndroidChuangyeSetUp(driver, datadriven.get("changyeApkName"));
 //		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 //		driver = appCommonService.appLogin(driver,datadriven.get("changyeUserName"),datadriven.get("chuangyePassword"));
 //		
-//		//接受邀约
-//		logger.info("去收到的邀约页面接受邀约");
-//		new WebDriverWait(driver,60).until(ExpectedConditions.elementToBeClickable(By.name("收到的邀约"))).click();
-//		new WebDriverWait(driver,60).until(ExpectedConditions.elementToBeClickable(By.name("接受邀约"))).click();
+//		//点击进入问诊导师列表
+//		logger.info("首页-企业问诊进入导师列表");
+//		new WebDriverWait(driver,60).until(ExpectedConditions.elementToBeClickable(By.name("一融"))).click();
+//	    new WebDriverWait(driver,60).until(ExpectedConditions.elementToBeClickable(By.name("企业问诊"))).click();
 //		
-//		//确认见过
-//		logger.info("去待约见点击确认见过");
-//		driver.findElement(By.name("待约见")).click();
-//		new WebDriverWait(driver,60).until(ExpectedConditions.elementToBeClickable(By.name("确认见过"))).click();
-//		
-//		//评价后提交
-//		logger.info("评价后提交");
-//		appCommonService.commentSubmit(driver, datadriven.get("interviewComments"));
-//		
-//		try {
-//			//去创业者app约谈成功页面进行检查
-//			logger.info("去已成功页面校验是否有当天订单");
-//			new WebDriverWait(driver,60).until(ExpectedConditions.elementToBeClickable(By.name("已成功"))).click();
-//			new WebDriverWait(driver,60).until(ExpectedConditions.visibilityOfElementLocated(By.name(Utils.getCurrentDate())));//和当前日期比较，检查是否可以找到当天下的订单
-//			
-//		} catch (Exception e) {//检查失败后创业者和投资者app都退出登录
-//			// TODO Auto-generated catch block
-//			//返回并退出创业者app
-//			logger.info("创业者中校验订单失败，未找到当天订单，进行创业者退出操作");
-//			driver.findElement(By.id("title_back_img")).click();
-//			appCommonService.appLoginout(driver);
-//			driver.quit();
-//			
-//			//退出投资者app
-//			logger.info("创业者中校验订单失败，未找到当天订单，将之前登录的投资者也进行退出操作");
-//			driver = Initial.appiumAndroidFundSetUp(driver, datadriven.get("fundApkName"));
-//			new WebDriverWait(driver,60).until(ExpectedConditions.elementToBeClickable(By.name("我的"))).click();
-//			appCommonService.appLoginout(driver);
-//			driver.quit();
-//			logger.info("APP "+datadriven.get("version")+"---约谈流程测试结束---");
-//			
-//			e.printStackTrace();
-//		}
-//		
-//		//检查成功，返回并退出app
-//		logger.info("创业者中校验当天订单成功，进行创业者退出操作");
-//		driver.findElement(By.id("title_back_img")).click();
-//		appCommonService.appLoginout(driver);
+//		//选择问诊导师并申请问诊
+//	    logger.info("选择问诊导师并申请问诊");
+//		new WebDriverWait(driver,120).until(ExpectedConditions.elementToBeClickable(By.name(datadriven.get("inquiryTutor")))).click();
+//		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+//		logger.info("点击进入申请问诊页面");
+//		new WebDriverWait(driver,120).until(ExpectedConditions.elementToBeClickable(By.name("申请问诊"))).click();
+//		logger.info("填写并提交问诊申请");
+//		new WebDriverWait(driver,60).until(ExpectedConditions.elementToBeClickable(By.name("融资规划"))).click();
+//		driver.findElement(By.id("qi_ye_xin_xi_edit")).sendKeys(datadriven.get("comments"));		
+//		driver = appCommonService.swipeToDown(driver);//向下滑动		
+//		driver.findElement(By.id("wen_ti_xin_xi_edit")).sendKeys(datadriven.get("comments"));
+//		driver.findElement(By.id("submit_view")).click();
+//		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 //		driver.quit();
+//
+//		//启动投资者app并且登录
+//		logger.info("启动并登陆投资者app");
+//		driver = Initial.appiumAndroidFundSetUp(driver, datadriven.get("fundApkName"));
+//		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+//		driver = appCommonService.appLogin(driver,datadriven.get("fundUserName"),datadriven.get("fundPassword"));
 //		
+//		logger.info("进入我的问诊");
+//		driver.findElement(By.name("我的问诊")).click();
+//		logger.info("接受问诊");
+//		driver.findElement(By.name("接受问诊")).click();
+//		driver.quit();
+		
+		logger.info("启动后台系统");
+//		webDriver = Initial.browserOfFirefoxSetUp(webDriver);
+		webDriver = Initial.browserOfChromeSetUp(webDriver);
+		webDriver.manage().window().maximize();
+		webDriver.get(UrlsOfPre.BackGroundSystem.getUrl());
+		
+		new WebDriverWait(webDriver,60).until(ExpectedConditions.elementToBeClickable(By.id("form_user"))).sendKeys(datadriven.get("backUserName"));
+		webDriver.findElement(By.id("form_password")).sendKeys(datadriven.get("backPassword"));
+		webDriver.findElement(By.className("btn-submit")).click();
+		
+		
+		new WebDriverWait(webDriver,60).until(ExpectedConditions.elementToBeClickable(By.linkText("一融赋"))).click();
+		new WebDriverWait(webDriver,60).until(ExpectedConditions.elementToBeClickable(By.id("li_73"))).click();
+		new WebDriverWait(webDriver,60).until(ExpectedConditions.elementToBeClickable(By.id("li_74"))).click();
+		webDriver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+		
+		new WebDriverWait(webDriver,60).until(ExpectedConditions.elementToBeClickable(By.linkText("确认到账"))).click();
+		webDriver.findElement(By.id("add_freeReason")).sendKeys("test");
+		webDriver.findElement(By.linkText("提交")).click();
+		webDriver.findElement(By.cssSelector("span.s-sopop-btn")).click();
+	
+		webDriver.quit();
+		
+//		logger.info("再次启动并登陆创业者app");
+//		driver = Initial.appiumAndroidChuangyeSetUp(driver, datadriven.get("changyeApkName"));
+//		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 //		
+//		new WebDriverWait(driver,60).until(ExpectedConditions.elementToBeClickable(By.name("我的"))).click();
+//		new WebDriverWait(driver,60).until(ExpectedConditions.elementToBeClickable(By.name("我的问诊"))).click();
+//		
+//		new WebDriverWait(driver,60).until(ExpectedConditions.elementToBeClickable(By.name("待问诊"))).click();
+//		new WebDriverWait(driver,60).until(ExpectedConditions.elementToBeClickable(By.name("确认服务"))).click();
+//		
+//		driver.quit();
+		
+		
 //		//再次启动投资者app
 //		logger.info("再次启动之前已经登录的投资者app");
 //		driver = Initial.appiumAndroidFundSetUp(driver, datadriven.get("fundApkName"));
