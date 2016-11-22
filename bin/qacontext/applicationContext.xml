@@ -17,11 +17,8 @@
 <!--<import resource="classpath:qacontext/envPropertyLoader.xml" />
 引入hessian配置
 <import	resource="classpath:qacontext/remote/context-remote-hessianclient.xml" /> -->
+
 <!-- spring  -->
 <import	resource="classpath:qacontext/spring/spring-context.xml" />
-
-<!-- 引入mdp配置 -->
-<!-- <import	resource="classpath:qacontext/remote/context-remote-mdpclient.xml" />
-<import	resource="classpath:qacontext/remote/context-remote-mdpconnection.xml" /> -->
 
 </beans>

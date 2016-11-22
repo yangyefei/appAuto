@@ -8,7 +8,7 @@ public enum UrlsOfPre {
 	 * @author ALLen
 	 *
 	 */
-	BackGroundSystem {		
+	BackGroundSystem {
 		@Override
 		public String getUrl(){			
 			String url = "http://fwgl.yirongbang.net/";			

@@ -25,6 +25,9 @@
 	<bean id="appCommonService" class="service.impl.AppCommonServiceImpl">
 	</bean>
 	
+	<bean id="webCommonService" class="service.impl.WebCommonServiceImpl">
+	</bean>
+	
 	<bean id="excelProviderByTest" class="common.frame.data.ExcelProviderByTest">
 	    <property name="envTestID" value="${TEST_ID}"></property>
 	</bean>

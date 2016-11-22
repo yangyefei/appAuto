@@ -21,7 +21,7 @@ public interface AppCommonService {
 	 * @param driver
 	 * @return
 	 */
-	public AppiumDriver appLoginout(AppiumDriver driver);
+	public AppiumDriver appLogout(AppiumDriver driver);
 	
 	
 	/**
@@ -38,6 +38,14 @@ public interface AppCommonService {
 	 * @return
 	 */
 	public AppiumDriver swipeToDown(AppiumDriver driver);
+	
+	/**
+	 * 支付宝付款
+	 * @param driver
+	 * @return
+	 * @throws Exception
+	 */
+	public AppiumDriver alipay(AppiumDriver driver) throws Exception;
 	
 	
 }

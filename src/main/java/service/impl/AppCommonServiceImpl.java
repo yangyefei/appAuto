@@ -1,6 +1,9 @@
 package service.impl;
 
+import java.util.concurrent.TimeUnit;
+
 import io.appium.java_client.AppiumDriver;
+import io.appium.java_client.TouchAction;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.support.ui.ExpectedConditions;
@@ -32,7 +35,7 @@ public class AppCommonServiceImpl implements AppCommonService{
 	}
 
 	@Override
-	public AppiumDriver appLoginout(AppiumDriver driver) {
+	public AppiumDriver appLogout(AppiumDriver driver) {
 		// TODO Auto-generated method stub
 		//点击设置按钮
 		new WebDriverWait(driver,60).until(ExpectedConditions.elementToBeClickable(By.id("mine_setting_img"))).click();
@@ -64,8 +67,23 @@ public class AppCommonServiceImpl implements AppCommonService{
 		
         int width = driver.manage().window().getSize().width;
         int height = driver.manage().window().getSize().height;
-        driver.swipe(width/2,height*3/4, width/2,height/4, 1000);//向下滑动，间隔1s
+        driver.swipe(width/2,height*3/4, width/2,height/4, 1000);//向下滑动，间隔1s        
 	
+		return driver;
+	}
+
+	@Override
+	public AppiumDriver alipay(AppiumDriver driver) throws Exception {
+		// TODO Auto-generated method stub
+		Thread.sleep(5000);	
+		int x =driver.manage().window().getSize().width;
+		int y =driver.manage().window().getSize().height;
+		TouchAction  touchAction =new TouchAction(driver);
+		touchAction.press(x/2, y-90).release().perform();
+		
+		driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
+		new WebDriverWait(driver,60).until(ExpectedConditions.elementToBeClickable(By.name("付款"))).click();
+		
 		return driver;
 	}
 	

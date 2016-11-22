@@ -93,14 +93,14 @@ public class AppCommonInterview extends BaseTest {
 			//返回并退出创业者app
 			logger.info("创业者中校验订单失败，未找到当天订单，进行创业者退出操作");
 			driver.findElement(By.id("title_back_img")).click();
-			appCommonService.appLoginout(driver);
+			appCommonService.appLogout(driver);
 			driver.quit();
 			
 			//退出投资者app
 			logger.info("创业者中校验订单失败，未找到当天订单，将之前登录的投资者也进行退出操作");
 			driver = Initial.appiumAndroidFundSetUp(driver, datadriven.get("fundApkName"));
 			new WebDriverWait(driver,60).until(ExpectedConditions.elementToBeClickable(By.name("我的"))).click();
-			appCommonService.appLoginout(driver);
+			appCommonService.appLogout(driver);
 			driver.quit();
 			logger.info("APP "+datadriven.get("version")+"---约谈流程测试结束---");
 			
@@ -110,7 +110,7 @@ public class AppCommonInterview extends BaseTest {
 		//检查成功，返回并退出app
 		logger.info("创业者中校验当天订单成功，进行创业者退出操作");
 		driver.findElement(By.id("title_back_img")).click();
-		appCommonService.appLoginout(driver);
+		appCommonService.appLogout(driver);
 		driver.quit();
 		
 		
@@ -131,7 +131,7 @@ public class AppCommonInterview extends BaseTest {
 			// TODO Auto-generated catch block
 			logger.info("投资者中校验订单失败，未找到当天订单，进行退出操作");
 			driver.findElement(By.id("title_back_img")).click();
-			appCommonService.appLoginout(driver);
+			appCommonService.appLogout(driver);
 			driver.quit();
 			logger.info("APP "+datadriven.get("version")+"---约谈流程测试结束---");
 			
@@ -146,7 +146,7 @@ public class AppCommonInterview extends BaseTest {
 		//返回并退出app
 		logger.info("投资者当天订单评价成功后，最后返回并进行退出登录操作");
 		driver.findElement(By.id("title_back_img")).click();
-		appCommonService.appLoginout(driver);
+		appCommonService.appLogout(driver);
 		driver.quit();
 		
 		logger.info("APP "+datadriven.get("version")+"---约谈流程测试结束---");
