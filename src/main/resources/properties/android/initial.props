@@ -1,0 +1,17 @@
+#ip of run machine
+#currentMachineIp=172.16.22.180
+currentMachineIp=172.16.22.117
+
+#appium port
+appiumPort=4723
+
+#android platform
+platformVersion=4.4
+
+#android chuangye apk
+chuangyeAppPackage=com.easyrongchuangye
+chuangyeAppActivity=.activities.EasyrongChuangyeActivity
+
+#android fund apk
+fundAppPackage=com.easyrongfund
+fundAppActivity=.activities.EasyrongFundMainActivity
