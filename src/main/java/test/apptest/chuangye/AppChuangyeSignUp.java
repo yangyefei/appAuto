@@ -1,4 +1,4 @@
-package test.apptest.common;
+package test.apptest.chuangye;
 
 
 import io.appium.java_client.AppiumDriver;
@@ -29,7 +29,7 @@ import common.utils.UrlsOfPre;
 
 
 
-public class AppCommonInquiry extends BaseTest {
+public class AppChuangyeSignUp extends BaseTest {
 
 	@Autowired
 	private InitialService Initial;
