@@ -51,6 +51,7 @@ public class AppCommonInquiry extends BaseTest {
 	public void commonInquiryProcess(Map<String, String> datadriven)throws Exception {
 		
 		String commonContent = datadriven.get("comments");
+		
 		String changyeApkName = datadriven.get("changyeApkName");//创业者apk
 		String fundApkName = datadriven.get("fundApkName");//投资者apk
 		
