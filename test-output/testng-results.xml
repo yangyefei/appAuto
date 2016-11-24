@@ -2,6 +2,7 @@
 <testng-results skipped="0" failed="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
+<<<<<<< HEAD
   <suite name="Default suite" duration-ms="85830" started-at="2016-11-23T08:40:42Z" finished-at="2016-11-23T08:42:08Z">
     <groups>
     </groups>
@@ -49,6 +50,59 @@
           </reporter-output>
         </test-method> <!-- springTestContextAfterTestMethod -->
       </class> <!-- test.apptest.fund.AppFundSpeedInquiry -->
+=======
+  <suite name="Default suite" duration-ms="198362" started-at="2016-11-22T10:58:11Z" finished-at="2016-11-22T11:01:29Z">
+    <groups>
+    </groups>
+    <test name="Default test" duration-ms="198362" started-at="2016-11-22T10:58:11Z" finished-at="2016-11-22T11:01:29Z">
+      <class name="test.apptest.common.AppCommonInquiry">
+        <test-method status="PASS" signature="springTestContextPrepareTestInstance()[pri:0, instance:test.apptest.common.AppCommonInquiry@c7b00c]" name="springTestContextPrepareTestInstance" is-config="true" duration-ms="608" started-at="2016-11-22T18:58:11Z" finished-at="2016-11-22T18:58:11Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- springTestContextPrepareTestInstance -->
+        <test-method status="PASS" signature="beforeClass()[pri:0, instance:test.apptest.common.AppCommonInquiry@c7b00c]" name="beforeClass" is-config="true" duration-ms="0" started-at="2016-11-22T18:58:11Z" finished-at="2016-11-22T18:58:11Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeClass -->
+        <test-method status="PASS" signature="springTestContextBeforeTestMethod(java.lang.reflect.Method)[pri:0, instance:test.apptest.common.AppCommonInquiry@c7b00c]" name="springTestContextBeforeTestMethod" is-config="true" duration-ms="1" started-at="2016-11-22T18:58:12Z" finished-at="2016-11-22T18:58:12Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void test.apptest.common.AppCommonInquiry.commonInquiryProcess(java.util.Map) throws java.lang.Exception]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- springTestContextBeforeTestMethod -->
+        <test-method status="PASS" signature="commonInquiryProcess(java.util.Map)[pri:0, instance:test.apptest.common.AppCommonInquiry@c7b00c]" name="commonInquiryProcess" duration-ms="197327" started-at="2016-11-22T18:58:12Z" description="普通问诊流程" data-provider="testData" finished-at="2016-11-22T19:01:29Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[{fundApkName=EasyrongFund_pre_2_2_1.apk, fundPassword=xlh123456, backPassword=xlh123456, inquiryTutor=空空, filePath=D:\\autotest.pdf, changyeUserName=18200000099, backUserName=zdhcs, changyeApkName=EasyrongChuangye_pre_2_3_1.apk, fundUserName=lkj123, comments=app自动化测试用评论123，有长度要求超过20个字, chuangyePassword=xlh123456, version=v2.3}]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- commonInquiryProcess -->
+        <test-method status="PASS" signature="springTestContextAfterTestMethod(java.lang.reflect.Method)[pri:0, instance:test.apptest.common.AppCommonInquiry@c7b00c]" name="springTestContextAfterTestMethod" is-config="true" duration-ms="2" started-at="2016-11-22T19:01:29Z" finished-at="2016-11-22T19:01:29Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void test.apptest.common.AppCommonInquiry.commonInquiryProcess(java.util.Map) throws java.lang.Exception]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- springTestContextAfterTestMethod -->
+        <test-method status="PASS" signature="afterClass()[pri:0, instance:test.apptest.common.AppCommonInquiry@c7b00c]" name="afterClass" is-config="true" duration-ms="1" started-at="2016-11-22T19:01:29Z" finished-at="2016-11-22T19:01:29Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterClass -->
+      </class> <!-- test.apptest.common.AppCommonInquiry -->
+>>>>>>> branch 'master' of http://172.16.11.124/luyi/appAuto.git
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>
