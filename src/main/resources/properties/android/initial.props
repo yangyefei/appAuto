@@ -1,6 +1,6 @@
 #ip of run machine
-#currentMachineIp=172.16.22.180
-currentMachineIp=172.16.22.117
+currentMachineIp=172.16.22.180
+#currentMachineIp=172.16.22.117
 
 #appium port
 appiumPort=4723

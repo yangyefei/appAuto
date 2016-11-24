@@ -22,7 +22,7 @@ public interface WebCommonService {
 	 * @param filePath
 	 * @return
 	 */
-	public WebDriver uploadFilesOfBackgroundSystem(WebDriver driver, String filePath);
+	public WebDriver uploadFilesOfBackgroundSystem(WebDriver driver, String uploadFileName)throws Exception;
 		
 	
 }

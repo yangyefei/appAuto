@@ -1,5 +1,8 @@
 package test.selftest;
 
+import java.io.File;
+import java.io.IOException;
+
 import org.testng.annotations.Test;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.AfterClass;
@@ -11,21 +14,13 @@ public class TestSel {
   }
   
   @Test
-  public void function() {
+  public void function() throws Exception {
 	  
-	  System.out.println("test");
-	  
-	  int a = 1;
-	  int b =2;
-	  String ab ="test";
-	  String cdString ="test";
-	  
-	  
-	  if (ab.equalsIgnoreCase(cdString)) {
+		String filePath =  String.valueOf(new File("./../../").getCanonicalPath()) +"auto.pdf";
 		
-	}
+		System.out.println(filePath);
 	  
-	  
+
   }
 
   @AfterClass

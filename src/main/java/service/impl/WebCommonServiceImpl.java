@@ -1,5 +1,7 @@
 package service.impl;
 
+import java.io.File;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
@@ -22,8 +24,12 @@ public class WebCommonServiceImpl implements WebCommonService{
 
 	@Override
 	public WebDriver uploadFilesOfBackgroundSystem(WebDriver driver,
-			String filePath) {
+			String uploadFileName) throws Exception {
 		// TODO Auto-generated method stub
+		
+		String filePath =  String.valueOf(new File("./../../").getCanonicalPath()) + uploadFileName;
+		
+		System.out.println("文件上传路径为：" + filePath);
 		
 		driver.switchTo().frame(driver.findElement(By.id("sopop-iframe")));
 	    
