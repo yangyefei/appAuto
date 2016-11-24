@@ -180,4 +180,3 @@ public class AppFundRequirement<E> extends BaseTest {
 		
 		
 }
->>>>>>> branch 'master' of git@172.16.11.124:luyi/appAuto.git
