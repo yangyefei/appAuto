@@ -13,7 +13,7 @@ public interface WebCommonService {
 	 * @param driver
 	 * @return
 	 */
-	public WebDriver logoutOfBackgroundSystem(WebDriver driver);
+	public WebDriver logoutOfBackgroundSystem(WebDriver driver)throws InterruptedException;
 	
 	
 	/**

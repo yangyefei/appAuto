@@ -59,8 +59,9 @@ public class AppCommonInquiry extends BaseTest {
 		logger.info("启动并登录创业者app");
 		driver = Initial.appiumAndroidChuangyeSetUp(driver, changyeApkName);
 		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+		driver = appCommonService.appLogout(driver);//先退出登录下		
 		driver = appCommonService.appLogin(driver,datadriven.get("changyeUserName"),datadriven.get("chuangyePassword"));
-		
+						
 		//点击进入问诊导师列表
 		logger.info("首页-企业问诊进入导师列表");
 		new WebDriverWait(driver,60).until(ExpectedConditions.elementToBeClickable(By.name("一融"))).click();
@@ -75,7 +76,7 @@ public class AppCommonInquiry extends BaseTest {
 		logger.info("填写并提交问诊申请");
 		new WebDriverWait(driver,60).until(ExpectedConditions.elementToBeClickable(By.name("融资规划"))).click();
 		driver.findElement(By.id("qi_ye_xin_xi_edit")).sendKeys(commonContent);		
-		driver = appCommonService.swipeToDown(driver);//向下滑动		
+		driver = appCommonService.swipeToDown(driver);//向下滑动
 		driver.findElement(By.id("wen_ti_xin_xi_edit")).sendKeys(commonContent);
 		driver.findElement(By.id("submit_view")).click();
 		new WebDriverWait(driver,60).until(ExpectedConditions.elementToBeClickable(By.name("进入我的问诊"))).click();
@@ -86,6 +87,7 @@ public class AppCommonInquiry extends BaseTest {
 		logger.info("启动并登录投资者app");
 		driver = Initial.appiumAndroidFundSetUp(driver, fundApkName);
 		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+		driver = appCommonService.appLogout(driver);//先退出登录下
 		driver = appCommonService.appLogin(driver,datadriven.get("fundUserName"),datadriven.get("fundPassword"));
 		
 		logger.info("进入我的问诊");

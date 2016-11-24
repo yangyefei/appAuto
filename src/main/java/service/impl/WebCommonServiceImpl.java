@@ -1,7 +1,6 @@
 package service.impl;
 
 import java.io.File;
-import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
@@ -13,9 +12,9 @@ import service.WebCommonService;
 public class WebCommonServiceImpl implements WebCommonService{
 
 	@Override
-	public WebDriver logoutOfBackgroundSystem(WebDriver driver) {
+	public WebDriver logoutOfBackgroundSystem(WebDriver driver) throws InterruptedException {
 		// TODO Auto-generated method stub
-		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+		Thread.sleep(3000);
 	    new WebDriverWait(driver,60).until(ExpectedConditions.elementToBeClickable(By.xpath("//span[@class='user']/img"))).click();
 	    
 	    new WebDriverWait(driver,60).until(ExpectedConditions.elementToBeClickable(By.linkText("退出"))).click();

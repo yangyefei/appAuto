@@ -32,14 +32,14 @@ public class AppFundWallet extends BaseTest{
 
 	@BeforeClass
 	public void beforeClass() throws Exception {	
-		Runtime.getRuntime().exec("cmd.exe /c start appium");
-		Thread.sleep(5000);
+//		Runtime.getRuntime().exec("cmd.exe /c start appium");
+//		Thread.sleep(5000);
 	}
 
 	@AfterClass
 	public void afterClass() throws Exception {	
-		Runtime.getRuntime().exec("cmd.exe /C start wmic process where name='cmd.exe' call terminate");
-		Thread.sleep(5000);
+//		Runtime.getRuntime().exec("cmd.exe /C start wmic process where name='cmd.exe' call terminate");
+//		Thread.sleep(5000);
 	}
 	@Test(enabled = true, dataProvider = "testData",description="我的钱包提现")
 	public void Wallet(Map<String, String> datadriven)throws Exception {
@@ -53,9 +53,9 @@ public class AppFundWallet extends BaseTest{
 		//测试自动搜索定位
 	   new WebDriverWait(driver, 30).until(ExpectedConditions.elementToBeClickable(By.name("一融"))).click();
 	   new WebDriverWait(driver, 30).until(ExpectedConditions.elementToBeClickable(By.name("订阅项目"))).click();
-
+logger.info("开始滑动");
 	   AutoSwipeAndSearchById("com.easyrongfund:id/project_name","企业名称项目名称");
-
+Thread.sleep(10000);
 	   driver.quit();
  
 	}

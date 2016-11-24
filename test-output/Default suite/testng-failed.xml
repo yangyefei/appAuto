@@ -3,34 +3,16 @@
 <suite name="Failed suite [Default suite]">
   <test name="Default test(failed)">
     <classes>
-<<<<<<< HEAD
-      <class name="test.apptest.fund.AppFundRequirement">
-=======
-<<<<<<< HEAD
-      <class name="test.apptest.fund.AppFundRequirement">
-        <methods>
-          <include name="FundRespond" invocation-numbers="0"/>
-          <include name="beforeClass"/>
-          <include name="springTestContextPrepareTestInstance"/>
-          <include name="springTestContextBeforeTestMethod"/>
-          <include name="springTestContextAfterTestMethod"/>
-        </methods>
-      </class> <!-- test.apptest.fund.AppFundRequirement -->
-=======
       <class name="test.apptest.common.AppCommonInquiry">
->>>>>>> branch 'master' of git@172.16.11.124:luyi/appAuto.git
         <methods>
-          <include name="springTestContextPrepareTestInstance"/>
-          <include name="FundRequirement"/>
-          <include name="FundRespond"/>
+          <include name="commonInquiryProcess" invocation-numbers="0"/>
+          <include name="springTestContextBeforeTestMethod"/>
           <include name="beforeClass"/>
+          <include name="springTestContextPrepareTestInstance"/>
+          <include name="springTestContextAfterTestMethod"/>
+          <include name="afterClass"/>
         </methods>
-<<<<<<< HEAD
-      </class> <!-- test.apptest.fund.AppFundRequirement -->
-=======
       </class> <!-- test.apptest.common.AppCommonInquiry -->
->>>>>>> branch 'master' of http://172.16.11.124/luyi/appAuto.git
->>>>>>> branch 'master' of git@172.16.11.124:luyi/appAuto.git
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

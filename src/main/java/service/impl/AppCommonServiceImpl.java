@@ -37,6 +37,8 @@ public class AppCommonServiceImpl implements AppCommonService{
 	@Override
 	public AppiumDriver appLogout(AppiumDriver driver) {
 		// TODO Auto-generated method stub
+		//点击我的
+		new WebDriverWait(driver,60).until(ExpectedConditions.elementToBeClickable(By.name("我的"))).click();
 		//点击设置按钮
 		new WebDriverWait(driver,60).until(ExpectedConditions.elementToBeClickable(By.id("mine_setting_img"))).click();
 		//退出登录

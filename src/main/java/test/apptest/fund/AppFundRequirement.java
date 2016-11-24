@@ -38,6 +38,8 @@ public class AppFundRequirement<E> extends BaseTest {
 	private AppCommonService appCommonService;
 
 	private AppiumDriver driver;
+	WebDriver  driverweb;
+	
     
 	@BeforeClass
 	public void beforeClass()  {
@@ -152,16 +154,20 @@ public class AppFundRequirement<E> extends BaseTest {
 	
 	
 	}
-	public static void oderConfrim() throws InterruptedException { 
+	public void oderConfrim() throws Exception { 
 
-	    System.setProperty("webdriver.firefox.bin", "C:\\Program Files (x86)\\Mozilla Firefox\\firefox.exe");
-	    System.setProperty("webdriver.gecko.marionette","C:\\Program Files (x86)\\Mozilla Firefox\\geckodriver.exe");
-	   //运行时关闭之前启动的浏览器
-	    WindowsUtils.tryToKillByName("firefox.exe");
-	    WebDriver  driverweb=new FirefoxDriver();  
+//	    System.setProperty("webdriver.firefox.bin", "C:\\Program Files (x86)\\Mozilla Firefox\\firefox.exe");
+//	    System.setProperty("webdriver.gecko.marionette","C:\\Program Files (x86)\\Mozilla Firefox\\geckodriver.exe");
+//	   //运行时关闭之前启动的浏览器
+////	    WindowsUtils.tryToKillByName("firefox.exe");
+//	    WebDriver  driverweb=new FirefoxDriver();  
+//	    driverweb.manage().timeouts().pageLoadTimeout(60, TimeUnit.SECONDS);
+//	    driverweb.get("http://fwgl.yirongbang.net/");
+		
+		driverweb= Initial.browserOfChromeSetUp(driverweb);
+	    driverweb.manage().window().maximize();
 	    driverweb.manage().timeouts().pageLoadTimeout(60, TimeUnit.SECONDS);
 	    driverweb.get("http://fwgl.yirongbang.net/");
-	    //driverweb.manage().window().maximize();
 	  
 		driverweb.findElement(By.name("form_user")).sendKeys("zdhcs");
 		driverweb.findElement(By.name("form_password")).sendKeys("xlh123456");
