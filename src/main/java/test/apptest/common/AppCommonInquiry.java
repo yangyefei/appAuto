@@ -45,7 +45,7 @@ public class AppCommonInquiry extends BaseTest {
 	@BeforeClass
 	public void beforeClass() {		
 	}
-
+	
 
 	@Test(enabled = true, dataProvider = "testData",description="普通问诊流程")
 	public void commonInquiryProcess(Map<String, String> datadriven)throws Exception {

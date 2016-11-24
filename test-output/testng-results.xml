@@ -1,58 +1,77 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" total="1" passed="1">
+<testng-results skipped="0" failed="2" total="2" passed="0">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="362899" started-at="2016-11-24T03:58:23Z" finished-at="2016-11-24T04:04:26Z">
+  <suite name="Default suite" duration-ms="623" started-at="2016-11-24T07:53:20Z" finished-at="2016-11-24T07:53:20Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="362899" started-at="2016-11-24T03:58:23Z" finished-at="2016-11-24T04:04:26Z">
-      <class name="test.apptest.common.AppCommonInquiry">
-        <test-method status="PASS" signature="springTestContextPrepareTestInstance()[pri:0, instance:test.apptest.common.AppCommonInquiry@1f6f296]" name="springTestContextPrepareTestInstance" is-config="true" duration-ms="617" started-at="2016-11-24T11:58:23Z" finished-at="2016-11-24T11:58:23Z">
+    <test name="Default test" duration-ms="623" started-at="2016-11-24T07:53:20Z" finished-at="2016-11-24T07:53:20Z">
+      <class name="test.apptest.fund.AppFundRequirement">
+        <test-method status="PASS" signature="springTestContextPrepareTestInstance()[pri:0, instance:test.apptest.fund.AppFundRequirement@c7b00c]" name="springTestContextPrepareTestInstance" is-config="true" duration-ms="596" started-at="2016-11-24T15:53:20Z" finished-at="2016-11-24T15:53:20Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- springTestContextPrepareTestInstance -->
-        <test-method status="PASS" signature="beforeClass()[pri:0, instance:test.apptest.common.AppCommonInquiry@1f6f296]" name="beforeClass" is-config="true" duration-ms="1" started-at="2016-11-24T11:58:23Z" finished-at="2016-11-24T11:58:23Z">
+        <test-method status="FAIL" signature="FundRequirement(java.util.Map)[pri:0, instance:test.apptest.fund.AppFundRequirement@c7b00c]" name="FundRequirement" duration-ms="12" started-at="2016-11-24T15:53:20Z" description="需求响应" data-provider="testData" finished-at="2016-11-24T15:53:20Z">
+          <exception class="java.lang.NullPointerException">
+            <full-stacktrace>
+              <![CDATA[java.lang.NullPointerException
+	at common.frame.data.ExcelProvider.hasNext(ExcelProvider.java:74)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1224)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:128)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:111)
+	at org.testng.TestRunner.privateRun(TestRunner.java:767)
+	at org.testng.TestRunner.run(TestRunner.java:617)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:334)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:329)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:291)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:240)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1203)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1128)
+	at org.testng.TestNG.run(TestNG.java:1036)
+	at org.testng.remote.RemoteTestNG.run(RemoteTestNG.java:111)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:204)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:175)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.NullPointerException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- FundRequirement -->
+        <test-method status="PASS" signature="beforeClass()[pri:0, instance:test.apptest.fund.AppFundRequirement@c7b00c]" name="beforeClass" is-config="true" duration-ms="0" started-at="2016-11-24T15:53:20Z" finished-at="2016-11-24T15:53:20Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeClass -->
-        <test-method status="PASS" signature="commonInquiryProcess(java.util.Map)[pri:0, instance:test.apptest.common.AppCommonInquiry@1f6f296]" name="commonInquiryProcess" duration-ms="362023" started-at="2016-11-24T11:58:24Z" description="普通问诊流程" data-provider="testData" finished-at="2016-11-24T12:04:26Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[{fundApkName=EasyrongFund_pre_2_2_1.apk, fundPassword=xlh123456, backPassword=xlh123456, inquiryTutor=空空, changyeUserName=18200000099, backUserName=zdhcs, changyeApkName=EasyrongChuangye_pre_2_3_1.apk, fundUserName=lkj123, uploadFileName=autotest.pdf, comments=app自动化测试用评论123，有长度要求超过20个字, chuangyePassword=xlh123456, version=v2.3}]]>
-              </value>
-            </param>
-          </params>
+        <test-method status="FAIL" signature="FundRespond(java.util.Map)[pri:0, instance:test.apptest.fund.AppFundRequirement@c7b00c]" name="FundRespond" duration-ms="2" started-at="2016-11-24T15:53:20Z" description="我的需求响应" data-provider="testData" finished-at="2016-11-24T15:53:20Z">
+          <exception class="java.lang.NullPointerException">
+            <full-stacktrace>
+              <![CDATA[java.lang.NullPointerException
+	at common.frame.data.ExcelProvider.hasNext(ExcelProvider.java:74)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1224)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:128)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:111)
+	at org.testng.TestRunner.privateRun(TestRunner.java:767)
+	at org.testng.TestRunner.run(TestRunner.java:617)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:334)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:329)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:291)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:240)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1203)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1128)
+	at org.testng.TestNG.run(TestNG.java:1036)
+	at org.testng.remote.RemoteTestNG.run(RemoteTestNG.java:111)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:204)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:175)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.NullPointerException -->
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- commonInquiryProcess -->
-        <test-method status="PASS" signature="springTestContextBeforeTestMethod(java.lang.reflect.Method)[pri:0, instance:test.apptest.common.AppCommonInquiry@1f6f296]" name="springTestContextBeforeTestMethod" is-config="true" duration-ms="0" started-at="2016-11-24T11:58:24Z" finished-at="2016-11-24T11:58:24Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[public void test.apptest.common.AppCommonInquiry.commonInquiryProcess(java.util.Map) throws java.lang.Exception]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- springTestContextBeforeTestMethod -->
-        <test-method status="PASS" signature="springTestContextAfterTestMethod(java.lang.reflect.Method)[pri:0, instance:test.apptest.common.AppCommonInquiry@1f6f296]" name="springTestContextAfterTestMethod" is-config="true" duration-ms="3" started-at="2016-11-24T12:04:26Z" finished-at="2016-11-24T12:04:26Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[public void test.apptest.common.AppCommonInquiry.commonInquiryProcess(java.util.Map) throws java.lang.Exception]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- springTestContextAfterTestMethod -->
-        <test-method status="PASS" signature="afterClass()[pri:0, instance:test.apptest.common.AppCommonInquiry@1f6f296]" name="afterClass" is-config="true" duration-ms="0" started-at="2016-11-24T12:04:26Z" finished-at="2016-11-24T12:04:26Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- afterClass -->
-      </class> <!-- test.apptest.common.AppCommonInquiry -->
+        </test-method> <!-- FundRespond -->
+      </class> <!-- test.apptest.fund.AppFundRequirement -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

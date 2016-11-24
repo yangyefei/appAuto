@@ -17,10 +17,10 @@ public class WebForReuirement {
 @Test
 public static void oderConfrim() throws InterruptedException { 
 
-    System.setProperty("webdriver.firefox.bin", "C:\\Program Files (x86)\\Mozilla Firefox\\firefox.exe");
-    System.setProperty("webdriver.gecko.marionette","C:\\Program Files (x86)\\Mozilla Firefox\\geckodriver.exe");
-   //运行时关闭之前启动的浏览器
-    WindowsUtils.tryToKillByName("firefox.exe");
+//    System.setProperty("webdriver.firefox.bin", "C:\\Program Files (x86)\\Mozilla Firefox\\firefox.exe");
+//    System.setProperty("webdriver.gecko.marionette","C:\\Program Files (x86)\\Mozilla Firefox\\geckodriver.exe");
+//   //运行时关闭之前启动的浏览器
+//    WindowsUtils.tryToKillByName("firefox.exe");
     WebDriver  driverweb=new FirefoxDriver();  
     driverweb.manage().timeouts().pageLoadTimeout(60, TimeUnit.SECONDS);
     driverweb.get("http://fwgl.yirongbang.net/");

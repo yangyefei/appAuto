@@ -38,8 +38,8 @@ public class AppFundRequirement<E> extends BaseTest {
     
 	@BeforeClass
 	public void beforeClass() throws IOException, InterruptedException {
-		Runtime.getRuntime().exec("cmd.exe /c start appium");
-		Thread.sleep(5000);
+//		Runtime.getRuntime().exec("cmd.exe /c start appium");
+//		Thread.sleep(5000);
 	}
 
 	@Test(enabled = true, dataProvider = "testData",description="需求响应")
