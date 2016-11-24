@@ -3,16 +3,15 @@
 <suite name="Failed suite [Default suite]">
   <test name="Default test(failed)">
     <classes>
-      <class name="test.apptest.common.AppCommonInquiry">
+      <class name="test.apptest.fund.AppFundRequirement">
         <methods>
-          <include name="commonInquiryProcess" invocation-numbers="0"/>
-          <include name="springTestContextBeforeTestMethod"/>
+          <include name="FundRespond" invocation-numbers="0"/>
           <include name="beforeClass"/>
           <include name="springTestContextPrepareTestInstance"/>
+          <include name="springTestContextBeforeTestMethod"/>
           <include name="springTestContextAfterTestMethod"/>
-          <include name="afterClass"/>
         </methods>
-      </class> <!-- test.apptest.common.AppCommonInquiry -->
+      </class> <!-- test.apptest.fund.AppFundRequirement -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

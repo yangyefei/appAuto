@@ -6,7 +6,10 @@ import java.util.List;
 import java.util.Map;
 import java.util.concurrent.TimeUnit;
 import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.os.WindowsUtils;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -30,7 +33,7 @@ public class AppFundSpeedInquiry extends BaseTest{
 
 
 	@BeforeClass
-	public void beforeClass() throws IOException, InterruptedException {		
+	public void beforeClass()  {		
 	
 	}
 
@@ -66,7 +69,7 @@ public class AppFundSpeedInquiry extends BaseTest{
 		PayButton();
 		new WebDriverWait(driver, 30).until(ExpectedConditions.elementToBeClickable(By.className("android.widget.Button"))).click();
 		driver.findElementByName("我的问诊 Link").click();
-		WebForSpeedInquiry.oderConfrim();
+		oderConfrim();
 		
 		new WebDriverWait(driver, 30).until(ExpectedConditions.elementToBeClickable(By.name("待问诊"))).click();
 	
@@ -86,12 +89,11 @@ public class AppFundSpeedInquiry extends BaseTest{
 		driver.quit();
 
 	}
-//		WebElement touzhiren=new  WebDriverWait(driver, 30).until(ExpectedConditions.elementToBeClickable(By.name("Johnnice看")));
-//		Boolean flag=touzhiren.isDisplayed();
+
 	public void PayButton(){
 		int x =driver.manage().window().getSize().width;
 		int y =driver.manage().window().getSize().height;
-//		driver.tap(2,x/2, y-50, 500);
+
 		TouchAction  touchAction =new TouchAction(driver);
 		touchAction.press(x/2, y*19/20).release().perform();
 	}
@@ -106,4 +108,38 @@ public class AppFundSpeedInquiry extends BaseTest{
 	public Iterator<Object[]> data1test() throws IOException {
 		return ExcelProviderByEnv(this, "testData");
 	}
+	public static void oderConfrim() throws InterruptedException { 
+
+	    System.setProperty("webdriver.firefox.bin", "C:\\Program Files (x86)\\Mozilla Firefox\\firefox.exe");
+	    System.setProperty("webdriver.gecko.marionette","C:\\Program Files (x86)\\Mozilla Firefox\\geckodriver.exe");
+	   //运行时关闭之前启动的浏览器
+	    WindowsUtils.tryToKillByName("firefox.exe");
+	    WebDriver  driverweb=new FirefoxDriver();  
+	    driverweb.manage().timeouts().pageLoadTimeout(60, TimeUnit.SECONDS);
+	    driverweb.get("http://fwgl.yirongbang.net/");
+	    //driverweb.manage().window().maximize();
+	  
+		    driverweb.findElement(By.name("form_user")).sendKeys("zdhcs");
+		    driverweb.findElement(By.name("form_password")).sendKeys("xlh123456");
+		    new WebDriverWait(driverweb,30).until(ExpectedConditions.elementToBeClickable(By.className("btn-submit"))).click();
+//		    new WebDriverWait(driver,10).until(ExpectedConditions.alertIsPresent();
+//	      alert = driver.switchTo().alert();
+//	      alert.accept();
+		    System.out.println(driverweb.getTitle());
+//	  	SwitchToWindow(s,driver);
+		    new WebDriverWait(driverweb,30).until(ExpectedConditions.elementToBeClickable(By.linkText("一融赋"))).click();
+		    new WebDriverWait(driverweb,30).until(ExpectedConditions.elementToBeClickable(By.id("li_73"))).click();
+		    new WebDriverWait(driverweb,30).until(ExpectedConditions.elementToBeClickable(By.linkText("问诊订单"))).click();
+//		    new WebDriverWait(driver,30).until(ExpectedConditions.elementToBeClickable(By.linkText("分配供应商"))).click();
+//		    new WebDriverWait(driver,30).until(ExpectedConditions.elementToBeClickable(By.linkText("确定"))).click();
+//		    new WebDriverWait(driver,30).until(ExpectedConditions.elementToBeClickable(By.linkText("确定"))).click();
+		    new WebDriverWait(driverweb,30).until(ExpectedConditions.elementToBeClickable(By.linkText("确认到账"))).click();
+	        new WebDriverWait(driverweb,30).until(ExpectedConditions.elementToBeClickable(By.id("add_freeReason"))).sendKeys("123456");
+	        new WebDriverWait(driverweb,30).until(ExpectedConditions.elementToBeClickable(By.xpath("/html/body/div[2]/p/a[1]/span"))).click();
+	        Thread.sleep(5000);
+	        driverweb.quit();
+	        //Select fruits = new Select(option1);
+//		    fruits.selectByValue("4");
 	}
+	}	
+	
