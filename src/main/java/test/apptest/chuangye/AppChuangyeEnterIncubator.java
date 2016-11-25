@@ -39,7 +39,7 @@ public class AppChuangyeEnterIncubator extends BaseTest {
 //	private WebCommonService webCommonService;
 
 	private AppiumDriver driver;
-	private WebDriver webDriver;
+//	private WebDriver webDriver;
 
 
 	@BeforeClass
@@ -50,9 +50,8 @@ public class AppChuangyeEnterIncubator extends BaseTest {
 	@Test(enabled = true, dataProvider = "testData",description="企业入驻孵化器")
 	public void chuangyeEnterIncubator(Map<String, String> datadriven)throws Exception {
 		
-		String commonContent = datadriven.get("comments");
+//		String commonContent = datadriven.get("comments");
 		String changyeApkName = datadriven.get("changyeApkName");//创业者apk
-		String fundApkName = datadriven.get("fundApkName");//投资者apk
 		
 		logger.info("APP "+datadriven.get("version")+"---企业入驻孵化器测试开始---");
 		
