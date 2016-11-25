@@ -59,7 +59,7 @@ public class AppChuangyeSignUp extends BaseTest {
 		logger.info("启动并登录创业者app");
 		driver = Initial.appiumAndroidChuangyeSetUp(driver, changyeApkName);
 		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
-		driver = appCommonService.appLogin(driver,datadriven.get("changyeUserName"),datadriven.get("chuangyePassword"));
+		driver = appCommonService.loginForApp(driver,datadriven.get("changyeUserName"),datadriven.get("chuangyePassword"));
 		
 		//点击进入问诊导师列表
 		logger.info("首页-企业问诊进入导师列表");
@@ -86,7 +86,7 @@ public class AppChuangyeSignUp extends BaseTest {
 		logger.info("启动并登录投资者app");
 		driver = Initial.appiumAndroidFundSetUp(driver, fundApkName);
 		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
-		driver = appCommonService.appLogin(driver,datadriven.get("fundUserName"),datadriven.get("fundPassword"));
+		driver = appCommonService.loginForApp(driver,datadriven.get("fundUserName"),datadriven.get("fundPassword"));
 		
 		logger.info("进入我的问诊");
 		driver.findElement(By.name("我的问诊")).click();
@@ -233,7 +233,7 @@ public class AppChuangyeSignUp extends BaseTest {
 		
 		logger.info("退出当前app");
 		driver.findElement(By.id("title_back_img")).click();
-		appCommonService.appLogout(driver);
+		appCommonService.logoutForApp(driver);
 		driver.quit();
 		
 	}
@@ -245,7 +245,7 @@ public class AppChuangyeSignUp extends BaseTest {
 		
 		logger.info("退出另一个app");
 		new WebDriverWait(driver,60).until(ExpectedConditions.elementToBeClickable(By.name("我的"))).click();
-		appCommonService.appLogout(driver);
+		appCommonService.logoutForApp(driver);
 		driver.quit();
 	}
 	

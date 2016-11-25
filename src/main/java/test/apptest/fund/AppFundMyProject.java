@@ -53,7 +53,7 @@ public class AppFundMyProject extends BaseTest {
 		driver.findElement(By.name("退出登录")).click();		
 		new WebDriverWait(driver,60).until(ExpectedConditions.elementToBeClickable(By.id("button1"))).click();
 		
-	    driver=appCommonService.appLogin(driver,datadriven.get("fundUserName"),datadriven.get("fundPassword"));
+	    driver=appCommonService.loginForApp(driver,datadriven.get("fundUserName"),datadriven.get("fundPassword"));
 
 		//进入我有项目菜单,填写信息
 		logger.info("进入我有项目，填写信息");

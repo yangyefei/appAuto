@@ -21,7 +21,8 @@ public class InitialServiceImpl implements InitialService{
 	  private String fundAppActivity;
 	  
 	  private String platformVersion;
-	  private String currentMachineIp;
+	  private String appRunMachineIp;
+	  private String webRunMachineIp;
 	  private String appiumPort;
 
 	@Override
@@ -57,7 +58,7 @@ public class InitialServiceImpl implements InitialService{
 
 	     capabilities.setCapability("noSign", "True");
 		 
-	     driver = new AppiumDriver(new URL("http://"+currentMachineIp+":"+appiumPort+"/wd/hub"), capabilities);
+	     driver = new AppiumDriver(new URL("http://"+appRunMachineIp+":"+appiumPort+"/wd/hub"), capabilities);
 		
 		return driver;
 	}
@@ -96,7 +97,7 @@ public class InitialServiceImpl implements InitialService{
 
 	     capabilities.setCapability("noSign", "True");
 		 
-		 driver = new AppiumDriver(new URL("http://"+currentMachineIp+":"+appiumPort+"/wd/hub"), capabilities);
+		 driver = new AppiumDriver(new URL("http://"+appRunMachineIp+":"+appiumPort+"/wd/hub"), capabilities);
 			
 		return driver;
 	}
@@ -106,7 +107,7 @@ public class InitialServiceImpl implements InitialService{
 	public WebDriver browserOfInternetSetUp(WebDriver driver) throws Exception {
 		// TODO Auto-generated method stub
 		
-		driver = new RemoteWebDriver(new URL("http://" + currentMachineIp + ":4444/wd/hub"), DesiredCapabilities.internetExplorer());
+		driver = new RemoteWebDriver(new URL("http://" + webRunMachineIp + ":4444/wd/hub"), DesiredCapabilities.internetExplorer());
 		
 		return driver;
 	}
@@ -114,7 +115,7 @@ public class InitialServiceImpl implements InitialService{
 	@Override
 	public WebDriver browserOfChromeSetUp(WebDriver driver) throws Exception {
 		// TODO Auto-generated method stub
-		driver = new RemoteWebDriver(new URL("http://" + currentMachineIp + ":4444/wd/hub"), DesiredCapabilities.chrome());
+		driver = new RemoteWebDriver(new URL("http://" + webRunMachineIp + ":4444/wd/hub"), DesiredCapabilities.chrome());
 		
 		return driver;
 	}
@@ -123,7 +124,7 @@ public class InitialServiceImpl implements InitialService{
 	@Override
 	public WebDriver browserOfFirefoxSetUp(WebDriver driver) throws Exception {
 		// TODO Auto-generated method stub
-		driver = new RemoteWebDriver(new URL("http://" + currentMachineIp + ":4444/wd/hub"), DesiredCapabilities.firefox());
+		driver = new RemoteWebDriver(new URL("http://" + webRunMachineIp + ":4444/wd/hub"), DesiredCapabilities.firefox());
 		return driver;
 	}
 
@@ -177,18 +178,25 @@ public class InitialServiceImpl implements InitialService{
 		this.appiumPort = appiumPort;
 	}
 
-	public String getCurrentMachineIp() {
-		return currentMachineIp;
+
+	public String getAppRunMachineIp() {
+		return appRunMachineIp;
 	}
 
 
-	public void setCurrentMachineIp(String currentMachineIp) {
-		this.currentMachineIp = currentMachineIp;
+	public void setAppRunMachineIp(String appRunMachineIp) {
+		this.appRunMachineIp = appRunMachineIp;
 	}
 
 
+	public String getWebRunMachineIp() {
+		return webRunMachineIp;
+	}
 
 
+	public void setWebRunMachineIp(String webRunMachineIp) {
+		this.webRunMachineIp = webRunMachineIp;
+	}
 
 
 }

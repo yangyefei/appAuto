@@ -47,8 +47,8 @@ public class AppFundSpeedInquiry extends BaseTest{
 		driver = Initial.appiumAndroidChuangyeSetUp(driver, datadriven.get("changyeApkName"));
 		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 		new WebDriverWait(driver, 30).until(ExpectedConditions.elementToBeClickable(By.name("我的"))).click();
-		driver =appCommonService.appLogout(driver);
-		driver = appCommonService.appLogin(driver,datadriven.get("changyeUserName"),datadriven.get("chuangyePassword"));
+		driver =appCommonService.logoutForApp(driver);
+		driver = appCommonService.loginForApp(driver,datadriven.get("changyeUserName"),datadriven.get("chuangyePassword"));
 		
 		//进入企业快速问诊流程
 		logger.info("进入企业专人问诊流程");

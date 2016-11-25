@@ -62,7 +62,7 @@ public class AppFundRequirement<E> extends BaseTest {
 		driver.findElement(By.name("退出登录")).click();		
 		new WebDriverWait(driver,60).until(ExpectedConditions.elementToBeClickable(By.id("button1"))).click();
 		
-		driver=appCommonService.appLogin(driver,datadriven.get("fundUserName"),datadriven.get("fundPassword"));
+		driver=appCommonService.loginForApp(driver,datadriven.get("fundUserName"),datadriven.get("fundPassword"));
 
 		//进入我有我的需求菜单,填写信息
 		logger.info("进入我的需求，填写信息");
@@ -122,7 +122,7 @@ public class AppFundRequirement<E> extends BaseTest {
 		
 		driver.findElement(By.name("退出登录")).click();		
 		new WebDriverWait(driver,60).until(ExpectedConditions.elementToBeClickable(By.id("button1"))).click();
-		driver=appCommonService.appLogin(driver,"13774364001","xlh123456");	
+		driver=appCommonService.loginForApp(driver,"13774364001","xlh123456");	
 		//进入需求街，响应需求
 		logger.info("进入响应需求流程");
 		new WebDriverWait(driver, 10).until(ExpectedConditions.elementToBeClickable(By.name("一融"))).click();
