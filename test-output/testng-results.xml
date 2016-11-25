@@ -1,58 +1,118 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" total="1" passed="1">
+<testng-results skipped="0" failed="1" total="1" passed="0">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="198362" started-at="2016-11-22T10:58:11Z" finished-at="2016-11-22T11:01:29Z">
+  <suite name="Default suite" duration-ms="458" started-at="2016-11-25T03:53:10Z" finished-at="2016-11-25T03:53:11Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="198362" started-at="2016-11-22T10:58:11Z" finished-at="2016-11-22T11:01:29Z">
-      <class name="test.apptest.common.AppCommonInquiry">
-        <test-method status="PASS" signature="springTestContextPrepareTestInstance()[pri:0, instance:test.apptest.common.AppCommonInquiry@c7b00c]" name="springTestContextPrepareTestInstance" is-config="true" duration-ms="608" started-at="2016-11-22T18:58:11Z" finished-at="2016-11-22T18:58:11Z">
+    <test name="Default test" duration-ms="458" started-at="2016-11-25T03:53:10Z" finished-at="2016-11-25T03:53:11Z">
+      <class name="test.apptest.chuangye.AppChuangyeEnterIncubator">
+        <test-method status="FAIL" signature="springTestContextPrepareTestInstance()[pri:0, instance:test.apptest.chuangye.AppChuangyeEnterIncubator@2927fa12]" name="springTestContextPrepareTestInstance" is-config="true" duration-ms="0" started-at="2016-11-25T11:53:10Z" finished-at="2016-11-25T11:53:10Z">
+          <exception class="org.springframework.beans.factory.BeanCreationException">
+            <message>
+              <![CDATA[Error creating bean with name 'test.apptest.chuangye.AppChuangyeEnterIncubator': Autowiring of fields failed; nested exception is org.springframework.beans.factory.BeanCreationException: Could not autowire field: private io.appium.java_client.AppiumDriver test.apptest.chuangye.AppChuangyeEnterIncubator.driver; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No unique bean of type [io.appium.java_client.AppiumDriver] is defined: Unsatisfied dependency of type [class io.appium.java_client.AppiumDriver]: expected at least 1 matching bean]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'test.apptest.chuangye.AppChuangyeEnterIncubator': Autowiring of fields failed; nested exception is org.springframework.beans.factory.BeanCreationException: Could not autowire field: private io.appium.java_client.AppiumDriver test.apptest.chuangye.AppChuangyeEnterIncubator.driver; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No unique bean of type [io.appium.java_client.AppiumDriver] is defined: Unsatisfied dependency of type [class io.appium.java_client.AppiumDriver]: expected at least 1 matching bean
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessAfterInstantiation(AutowiredAnnotationBeanPostProcessor.java:243)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:959)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireBeanProperties(AbstractAutowireCapableBeanFactory.java:329)
+	at org.springframework.test.context.support.DependencyInjectionTestExecutionListener.injectDependencies(DependencyInjectionTestExecutionListener.java:110)
+	at org.springframework.test.context.support.DependencyInjectionTestExecutionListener.prepareTestInstance(DependencyInjectionTestExecutionListener.java:75)
+	at org.springframework.test.context.TestContextManager.prepareTestInstance(TestContextManager.java:255)
+	at org.springframework.test.context.testng.AbstractTestNGSpringContextTests.springTestContextPrepareTestInstance(AbstractTestNGSpringContextTests.java:117)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:84)
+	at org.testng.internal.Invoker.invokeConfigurationMethod(Invoker.java:564)
+	at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:213)
+	at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:138)
+	at org.testng.internal.TestMethodWorker.invokeBeforeClassMethods(TestMethodWorker.java:175)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:107)
+	at org.testng.TestRunner.privateRun(TestRunner.java:767)
+	at org.testng.TestRunner.run(TestRunner.java:617)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:335)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:330)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:291)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:240)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1224)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1149)
+	at org.testng.TestNG.run(TestNG.java:1057)
+	at org.testng.remote.RemoteTestNG.run(RemoteTestNG.java:111)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:204)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:175)
+Caused by: org.springframework.beans.factory.BeanCreationException: Could not autowire field: private io.appium.java_client.AppiumDriver test.apptest.chuangye.AppChuangyeEnterIncubator.driver; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No unique bean of type [io.appium.java_client.AppiumDriver] is defined: Unsatisfied dependency of type [class io.appium.java_client.AppiumDriver]: expected at least 1 matching bean
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:435)
+	at org.springframework.beans.factory.annotation.InjectionMetadata.injectFields(InjectionMetadata.java:105)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessAfterInstantiation(AutowiredAnnotationBeanPostProcessor.java:240)
+	... 30 more
+Caused by: org.springframework.beans.factory.NoSuchBeanDefinitionException: No unique bean of type [io.appium.java_client.AppiumDriver] is defined: Unsatisfied dependency of type [class io.appium.java_client.AppiumDriver]: expected at least 1 matching bean
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:613)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:412)
+	... 32 more
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.springframework.beans.factory.BeanCreationException -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- springTestContextPrepareTestInstance -->
-        <test-method status="PASS" signature="beforeClass()[pri:0, instance:test.apptest.common.AppCommonInquiry@c7b00c]" name="beforeClass" is-config="true" duration-ms="0" started-at="2016-11-22T18:58:11Z" finished-at="2016-11-22T18:58:11Z">
+        <test-method status="SKIP" signature="beforeClass()[pri:0, instance:test.apptest.chuangye.AppChuangyeEnterIncubator@2927fa12]" name="beforeClass" is-config="true" duration-ms="0" started-at="2016-11-25T11:53:11Z" finished-at="2016-11-25T11:53:11Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeClass -->
-        <test-method status="PASS" signature="springTestContextBeforeTestMethod(java.lang.reflect.Method)[pri:0, instance:test.apptest.common.AppCommonInquiry@c7b00c]" name="springTestContextBeforeTestMethod" is-config="true" duration-ms="1" started-at="2016-11-22T18:58:12Z" finished-at="2016-11-22T18:58:12Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[public void test.apptest.common.AppCommonInquiry.commonInquiryProcess(java.util.Map) throws java.lang.Exception]]>
-              </value>
-            </param>
-          </params>
+        <test-method status="FAIL" signature="chuangyeEnterIncubator(java.util.Map)[pri:0, instance:test.apptest.chuangye.AppChuangyeEnterIncubator@2927fa12]" name="chuangyeEnterIncubator" duration-ms="0" started-at="2016-11-25T11:53:11Z" description="��ҵ��פ������" data-provider="testData" finished-at="2016-11-25T11:53:11Z">
+          <exception class="java.lang.RuntimeException">
+            <message>
+              <![CDATA[java.lang.NullPointerException]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.RuntimeException: java.lang.NullPointerException
+	at org.testng.internal.MethodInvocationHelper.invokeDataProvider(MethodInvocationHelper.java:161)
+	at org.testng.internal.Parameters.handleParameters(Parameters.java:429)
+	at org.testng.internal.Invoker.handleParameters(Invoker.java:1383)
+	at org.testng.internal.Invoker.createParameters(Invoker.java:1075)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1180)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:127)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:111)
+	at org.testng.TestRunner.privateRun(TestRunner.java:767)
+	at org.testng.TestRunner.run(TestRunner.java:617)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:335)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:330)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:291)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:240)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1224)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1149)
+	at org.testng.TestNG.run(TestNG.java:1057)
+	at org.testng.remote.RemoteTestNG.run(RemoteTestNG.java:111)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:204)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:175)
+Caused by: java.lang.NullPointerException
+	at common.frame.test.BaseTest.ExcelProviderByEnv(BaseTest.java:25)
+	at test.apptest.chuangye.AppChuangyeEnterIncubator.data1test(AppChuangyeEnterIncubator.java:95)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:84)
+	at org.testng.internal.MethodInvocationHelper.invokeDataProvider(MethodInvocationHelper.java:153)
+	... 20 more
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.RuntimeException -->
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- springTestContextBeforeTestMethod -->
-        <test-method status="PASS" signature="commonInquiryProcess(java.util.Map)[pri:0, instance:test.apptest.common.AppCommonInquiry@c7b00c]" name="commonInquiryProcess" duration-ms="197327" started-at="2016-11-22T18:58:12Z" description="普通问诊流程" data-provider="testData" finished-at="2016-11-22T19:01:29Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[{fundApkName=EasyrongFund_pre_2_2_1.apk, fundPassword=xlh123456, backPassword=xlh123456, inquiryTutor=空空, filePath=D:\\autotest.pdf, changyeUserName=18200000099, backUserName=zdhcs, changyeApkName=EasyrongChuangye_pre_2_3_1.apk, fundUserName=lkj123, comments=app自动化测试用评论123，有长度要求超过20个字, chuangyePassword=xlh123456, version=v2.3}]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- commonInquiryProcess -->
-        <test-method status="PASS" signature="springTestContextAfterTestMethod(java.lang.reflect.Method)[pri:0, instance:test.apptest.common.AppCommonInquiry@c7b00c]" name="springTestContextAfterTestMethod" is-config="true" duration-ms="2" started-at="2016-11-22T19:01:29Z" finished-at="2016-11-22T19:01:29Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[public void test.apptest.common.AppCommonInquiry.commonInquiryProcess(java.util.Map) throws java.lang.Exception]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- springTestContextAfterTestMethod -->
-        <test-method status="PASS" signature="afterClass()[pri:0, instance:test.apptest.common.AppCommonInquiry@c7b00c]" name="afterClass" is-config="true" duration-ms="1" started-at="2016-11-22T19:01:29Z" finished-at="2016-11-22T19:01:29Z">
+        </test-method> <!-- chuangyeEnterIncubator -->
+        <test-method status="SKIP" signature="afterClass()[pri:0, instance:test.apptest.chuangye.AppChuangyeEnterIncubator@2927fa12]" name="afterClass" is-config="true" duration-ms="0" started-at="2016-11-25T11:53:11Z" finished-at="2016-11-25T11:53:11Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterClass -->
-      </class> <!-- test.apptest.common.AppCommonInquiry -->
+      </class> <!-- test.apptest.chuangye.AppChuangyeEnterIncubator -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>
