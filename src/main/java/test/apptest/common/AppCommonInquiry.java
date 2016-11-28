@@ -46,8 +46,37 @@ public class AppCommonInquiry extends BaseTest {
 	public void beforeClass() {		
 	}
 	
-
 	@Test(enabled = true, dataProvider = "testData",description="普通问诊流程")
+	public void funtest(Map<String, String> datadriven) throws Exception{
+		
+		logger.info("启动并登录后台系统");
+//	    webDriver = Initial.browserOfFirefoxSetUp(webDriver);
+	    webDriver = Initial.browserOfChromeSetUp(webDriver);
+	    webDriver.manage().window().maximize();
+	    webDriver.get(UrlsOfPre.BackGroundSystem.getUrl());
+	
+	    new WebDriverWait(webDriver,60).until(ExpectedConditions.elementToBeClickable(By.id("form_user"))).sendKeys(datadriven.get("backUserName"));
+	    webDriver.findElement(By.id("form_password")).sendKeys(datadriven.get("backPassword"));
+	    webDriver.findElement(By.className("btn-submit")).click();
+	
+	    logger.info("进入一融赋-问诊管理-问诊订单菜单");
+	    new WebDriverWait(webDriver,60).until(ExpectedConditions.elementToBeClickable(By.linkText("一融赋"))).click();
+	    new WebDriverWait(webDriver,60).until(ExpectedConditions.elementToBeClickable(By.id("li_73"))).click();
+	    new WebDriverWait(webDriver,60).until(ExpectedConditions.elementToBeClickable(By.id("li_74"))).click();
+	    Thread.sleep(5000);
+	    
+	    logger.info("上传报告");
+	    new WebDriverWait(webDriver,60).until(ExpectedConditions.elementToBeClickable(By.linkText("上传报告"))).click();	    
+	    webDriver = webCommonService.uploadFilesOfBackgroundSystem(webDriver, datadriven.get("uploadFileName"));
+	    
+	    logger.info("退出后台系统");
+	    webDriver = webCommonService.logoutOfBackgroundSystem(webDriver);
+	    webDriver.quit();
+		
+	}
+	
+
+	@Test(enabled = false, dataProvider = "testData",description="普通问诊流程")
 	public void commonInquiryProcess(Map<String, String> datadriven)throws Exception {
 		
 		String commonContent = datadriven.get("comments");

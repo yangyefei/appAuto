@@ -1,81 +1,32 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" total="4" passed="4">
+<testng-results skipped="0" failed="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Suite_TestResults" duration-ms="541912" started-at="2016-11-28T03:12:34Z" finished-at="2016-11-28T03:21:36Z">
+  <suite name="Default suite" duration-ms="21127" started-at="2016-11-28T08:12:21Z" finished-at="2016-11-28T08:12:42Z">
     <groups>
     </groups>
-    <test name="约谈流程" duration-ms="170579" started-at="2016-11-28T03:12:34Z" finished-at="2016-11-28T03:15:24Z">
-      <class name="test.apptest.common.AppCommonInterview">
-        <test-method status="PASS" signature="springTestContextPrepareTestInstance()[pri:0, instance:test.apptest.common.AppCommonInterview@1e13d52]" name="springTestContextPrepareTestInstance" is-config="true" duration-ms="560" started-at="2016-11-28T11:12:34Z" finished-at="2016-11-28T11:12:34Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- springTestContextPrepareTestInstance -->
-        <test-method status="PASS" signature="beforeClass()[pri:0, instance:test.apptest.common.AppCommonInterview@1e13d52]" name="beforeClass" is-config="true" duration-ms="0" started-at="2016-11-28T11:12:34Z" finished-at="2016-11-28T11:12:34Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- beforeClass -->
-        <test-method status="PASS" signature="springTestContextBeforeTestMethod(java.lang.reflect.Method)[pri:0, instance:test.apptest.common.AppCommonInterview@1e13d52]" name="springTestContextBeforeTestMethod" is-config="true" duration-ms="1" started-at="2016-11-28T11:12:34Z" finished-at="2016-11-28T11:12:34Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[public void test.apptest.common.AppCommonInterview.interviewProcess(java.util.Map) throws java.lang.Exception]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- springTestContextBeforeTestMethod -->
-        <test-method status="PASS" signature="interviewProcess(java.util.Map)[pri:0, instance:test.apptest.common.AppCommonInterview@1e13d52]" name="interviewProcess" duration-ms="169569" started-at="2016-11-28T11:12:34Z" description="约谈流程" data-provider="testData" finished-at="2016-11-28T11:15:24Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[{fundApkName=EasyrongFund_pre_2_2_1.apk, fundPassword=xlh123456, interviewProject=自动化测试用勿操作, changyeUserName=18200000099, changyeApkName=EasyrongChuangye_pre_2_3_1.apk, fundUserName=lkj123, chuangyePassword=xlh123456, interviewComments=app自动化测试用评论123, version=v2.3}]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- interviewProcess -->
-        <test-method status="PASS" signature="springTestContextAfterTestMethod(java.lang.reflect.Method)[pri:0, instance:test.apptest.common.AppCommonInterview@1e13d52]" name="springTestContextAfterTestMethod" is-config="true" duration-ms="2" started-at="2016-11-28T11:15:24Z" finished-at="2016-11-28T11:15:24Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[public void test.apptest.common.AppCommonInterview.interviewProcess(java.util.Map) throws java.lang.Exception]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- springTestContextAfterTestMethod -->
-        <test-method status="PASS" signature="afterClass()[pri:0, instance:test.apptest.common.AppCommonInterview@1e13d52]" name="afterClass" is-config="true" duration-ms="1" started-at="2016-11-28T11:15:24Z" finished-at="2016-11-28T11:15:24Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- afterClass -->
-      </class> <!-- test.apptest.common.AppCommonInterview -->
-    </test> <!-- 约谈流程 -->
-    <test name="普通问诊流程" duration-ms="220330" started-at="2016-11-28T03:15:24Z" finished-at="2016-11-28T03:19:05Z">
+    <test name="Default test" duration-ms="21127" started-at="2016-11-28T08:12:21Z" finished-at="2016-11-28T08:12:42Z">
       <class name="test.apptest.common.AppCommonInquiry">
-        <test-method status="PASS" signature="springTestContextPrepareTestInstance()[pri:0, instance:test.apptest.common.AppCommonInquiry@17a8a02]" name="springTestContextPrepareTestInstance" is-config="true" duration-ms="10" started-at="2016-11-28T11:15:24Z" finished-at="2016-11-28T11:15:24Z">
+        <test-method status="PASS" signature="springTestContextPrepareTestInstance()[pri:0, instance:test.apptest.common.AppCommonInquiry@1e13d52]" name="springTestContextPrepareTestInstance" is-config="true" duration-ms="565" started-at="2016-11-28T16:12:21Z" finished-at="2016-11-28T16:12:21Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- springTestContextPrepareTestInstance -->
-        <test-method status="PASS" signature="beforeClass()[pri:0, instance:test.apptest.common.AppCommonInquiry@17a8a02]" name="beforeClass" is-config="true" duration-ms="1" started-at="2016-11-28T11:15:24Z" finished-at="2016-11-28T11:15:24Z">
+        <test-method status="PASS" signature="beforeClass()[pri:0, instance:test.apptest.common.AppCommonInquiry@1e13d52]" name="beforeClass" is-config="true" duration-ms="0" started-at="2016-11-28T16:12:21Z" finished-at="2016-11-28T16:12:21Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeClass -->
-        <test-method status="PASS" signature="springTestContextBeforeTestMethod(java.lang.reflect.Method)[pri:0, instance:test.apptest.common.AppCommonInquiry@17a8a02]" name="springTestContextBeforeTestMethod" is-config="true" duration-ms="0" started-at="2016-11-28T11:15:25Z" finished-at="2016-11-28T11:15:25Z">
+        <test-method status="PASS" signature="springTestContextBeforeTestMethod(java.lang.reflect.Method)[pri:0, instance:test.apptest.common.AppCommonInquiry@1e13d52]" name="springTestContextBeforeTestMethod" is-config="true" duration-ms="1" started-at="2016-11-28T16:12:21Z" finished-at="2016-11-28T16:12:21Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[public void test.apptest.common.AppCommonInquiry.commonInquiryProcess(java.util.Map) throws java.lang.Exception]]>
+                <![CDATA[public void test.apptest.common.AppCommonInquiry.funtest(java.util.Map) throws java.lang.Exception]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- springTestContextBeforeTestMethod -->
-        <test-method status="PASS" signature="commonInquiryProcess(java.util.Map)[pri:0, instance:test.apptest.common.AppCommonInquiry@17a8a02]" name="commonInquiryProcess" duration-ms="219745" started-at="2016-11-28T11:15:25Z" description="普通问诊流程" data-provider="testData" finished-at="2016-11-28T11:19:04Z">
+        <test-method status="PASS" signature="funtest(java.util.Map)[pri:0, instance:test.apptest.common.AppCommonInquiry@1e13d52]" name="funtest" duration-ms="20286" started-at="2016-11-28T16:12:21Z" description="普通问诊流程" data-provider="testData" finished-at="2016-11-28T16:12:42Z">
           <params>
             <param index="0">
               <value>
@@ -85,101 +36,23 @@
           </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- commonInquiryProcess -->
-        <test-method status="PASS" signature="springTestContextAfterTestMethod(java.lang.reflect.Method)[pri:0, instance:test.apptest.common.AppCommonInquiry@17a8a02]" name="springTestContextAfterTestMethod" is-config="true" duration-ms="1" started-at="2016-11-28T11:19:04Z" finished-at="2016-11-28T11:19:04Z">
+        </test-method> <!-- funtest -->
+        <test-method status="PASS" signature="springTestContextAfterTestMethod(java.lang.reflect.Method)[pri:0, instance:test.apptest.common.AppCommonInquiry@1e13d52]" name="springTestContextAfterTestMethod" is-config="true" duration-ms="2" started-at="2016-11-28T16:12:42Z" finished-at="2016-11-28T16:12:42Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[public void test.apptest.common.AppCommonInquiry.commonInquiryProcess(java.util.Map) throws java.lang.Exception]]>
+                <![CDATA[public void test.apptest.common.AppCommonInquiry.funtest(java.util.Map) throws java.lang.Exception]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- springTestContextAfterTestMethod -->
-        <test-method status="PASS" signature="afterClass()[pri:0, instance:test.apptest.common.AppCommonInquiry@17a8a02]" name="afterClass" is-config="true" duration-ms="1" started-at="2016-11-28T11:19:05Z" finished-at="2016-11-28T11:19:05Z">
+        <test-method status="PASS" signature="afterClass()[pri:0, instance:test.apptest.common.AppCommonInquiry@1e13d52]" name="afterClass" is-config="true" duration-ms="1" started-at="2016-11-28T16:12:42Z" finished-at="2016-11-28T16:12:42Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterClass -->
       </class> <!-- test.apptest.common.AppCommonInquiry -->
-    </test> <!-- 普通问诊流程 -->
-    <test name="投资者发布以及需求响应" duration-ms="150932" started-at="2016-11-28T03:19:05Z" finished-at="2016-11-28T03:21:36Z">
-      <class name="test.apptest.fund.AppFundRequirement">
-        <test-method status="PASS" signature="springTestContextPrepareTestInstance()[pri:0, instance:test.apptest.fund.AppFundRequirement@cfec48]" name="springTestContextPrepareTestInstance" is-config="true" duration-ms="15" started-at="2016-11-28T11:19:05Z" finished-at="2016-11-28T11:19:05Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- springTestContextPrepareTestInstance -->
-        <test-method status="PASS" signature="beforeClass()[pri:0, instance:test.apptest.fund.AppFundRequirement@cfec48]" name="beforeClass" is-config="true" duration-ms="0" started-at="2016-11-28T11:19:05Z" finished-at="2016-11-28T11:19:05Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- beforeClass -->
-        <test-method status="PASS" signature="springTestContextBeforeTestMethod(java.lang.reflect.Method)[pri:0, instance:test.apptest.fund.AppFundRequirement@cfec48]" name="springTestContextBeforeTestMethod" is-config="true" duration-ms="0" started-at="2016-11-28T11:19:05Z" finished-at="2016-11-28T11:19:05Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[public void test.apptest.fund.AppFundRequirement.fundRequirement(java.util.Map) throws java.lang.Exception]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- springTestContextBeforeTestMethod -->
-        <test-method status="PASS" signature="fundRequirement(java.util.Map)[pri:0, instance:test.apptest.fund.AppFundRequirement@cfec48]" name="fundRequirement" duration-ms="103793" started-at="2016-11-28T11:19:05Z" description="需求响应" data-provider="testData" finished-at="2016-11-28T11:20:49Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[{fundApkName=EasyrongFund_pre_2_2_1.apk, Result=YYF TEST, fundPassword=xlh123456, interviewProject=谷泉橡木卡狠狠哭拉萨, changyeUserName=18200000099, changyeApkName=EasyrongChuangye_pre_2_3_1.apk, fundUserName=lkj123, chuangyePassword=xlh123456, interviewComments=app自动化测试用评论123, version=v2.3}]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- fundRequirement -->
-        <test-method status="PASS" signature="springTestContextAfterTestMethod(java.lang.reflect.Method)[pri:0, instance:test.apptest.fund.AppFundRequirement@cfec48]" name="springTestContextAfterTestMethod" is-config="true" duration-ms="1" started-at="2016-11-28T11:20:49Z" finished-at="2016-11-28T11:20:49Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[public void test.apptest.fund.AppFundRequirement.fundRequirement(java.util.Map) throws java.lang.Exception]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- springTestContextAfterTestMethod -->
-        <test-method status="PASS" signature="springTestContextBeforeTestMethod(java.lang.reflect.Method)[pri:0, instance:test.apptest.fund.AppFundRequirement@cfec48]" name="springTestContextBeforeTestMethod" is-config="true" duration-ms="1" started-at="2016-11-28T11:20:49Z" finished-at="2016-11-28T11:20:49Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[public void test.apptest.fund.AppFundRequirement.fundRespond(java.util.Map) throws java.lang.Exception]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- springTestContextBeforeTestMethod -->
-        <test-method status="PASS" signature="fundRespond(java.util.Map)[pri:0, instance:test.apptest.fund.AppFundRequirement@cfec48]" name="fundRespond" duration-ms="46100" started-at="2016-11-28T11:20:49Z" description="我的需求响应" data-provider="testData" finished-at="2016-11-28T11:21:35Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[{fundApkName=EasyrongFund_pre_2_2_1.apk, Result=YYF TEST, fundPassword=xlh123456, interviewProject=谷泉橡木卡狠狠哭拉萨, changyeUserName=18200000099, changyeApkName=EasyrongChuangye_pre_2_3_1.apk, fundUserName=lkj123, chuangyePassword=xlh123456, interviewComments=app自动化测试用评论123, version=v2.3}]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- fundRespond -->
-        <test-method status="PASS" signature="springTestContextAfterTestMethod(java.lang.reflect.Method)[pri:0, instance:test.apptest.fund.AppFundRequirement@cfec48]" name="springTestContextAfterTestMethod" is-config="true" duration-ms="1" started-at="2016-11-28T11:21:35Z" finished-at="2016-11-28T11:21:35Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[public void test.apptest.fund.AppFundRequirement.fundRespond(java.util.Map) throws java.lang.Exception]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- springTestContextAfterTestMethod -->
-      </class> <!-- test.apptest.fund.AppFundRequirement -->
-    </test> <!-- 投资者发布以及需求响应 -->
-  </suite> <!-- Suite_TestResults -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
 </testng-results>
