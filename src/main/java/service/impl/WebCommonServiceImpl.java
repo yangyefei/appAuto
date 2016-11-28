@@ -27,7 +27,7 @@ public class WebCommonServiceImpl implements WebCommonService{
 			String uploadFileName) throws Exception {
 		// TODO Auto-generated method stub
 		
-		String filePath =  String.valueOf(new File("./../../").getCanonicalPath()) + uploadFileName;
+		String filePath =  String.valueOf(new File("./").getCanonicalPath()) + "//testdata//uploadFiles//" + uploadFileName;
 		
 		System.out.println("文件上传路径为：" + filePath);
 		
