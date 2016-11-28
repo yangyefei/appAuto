@@ -8,6 +8,7 @@ import java.util.Iterator;
 import java.util.Map;
 import java.util.concurrent.TimeUnit;
 
+import org.openqa.selenium.Alert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
@@ -19,10 +20,11 @@ import org.testng.annotations.BeforeClass;
 import org.testng.annotations.AfterClass;
 
 
+
+
 import service.AppCommonService;
 import service.InitialService;
 import service.WebCommonService;
-
 import common.frame.helper.Utils;
 import common.frame.test.BaseTest;
 import common.utils.UrlsOfPre;
@@ -35,7 +37,7 @@ public class AppChuangyeEnterIncubator extends BaseTest {
 	private InitialService Initial;
 	@Autowired
 	private AppCommonService appCommonService;	
-	@Autowired
+//	@Autowired
 //	private WebCommonService webCommonService;
 
 	private AppiumDriver driver;
@@ -50,13 +52,14 @@ public class AppChuangyeEnterIncubator extends BaseTest {
 	@Test(enabled = true, dataProvider = "testData",description="企业入驻孵化器")
 	public void chuangyeEnterIncubator(Map<String, String> datadriven)throws Exception {
 		
-//		String commonContent = datadriven.get("comments");
 		String changyeApkName = datadriven.get("changyeApkName");//创业者apk
 		
 		logger.info("APP "+datadriven.get("version")+"---企业入驻孵化器测试开始---");
 		
+		logger.info("启动创业者app");
 		driver = Initial.appiumAndroidChuangyeSetUp(driver, changyeApkName);
 		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+		logger.info("退出登录");
 		new WebDriverWait(driver,60).until(ExpectedConditions.elementToBeClickable(By.name("我的"))).click();
 		appCommonService.appLogout(driver);
 
@@ -74,19 +77,41 @@ public class AppChuangyeEnterIncubator extends BaseTest {
 		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 		logger.info("点击进入申请入驻页面");
 		new WebDriverWait(driver,120).until(ExpectedConditions.elementToBeClickable(By.name("申请入驻"))).click();
-		logger.info("填写并提交入驻申请");
-		new WebDriverWait(driver,60).until(ExpectedConditions.elementToBeClickable(By.id("apply_company_name"))).sendKeys("企业名称");
-		driver.findElement(By.id("apply_company_number")).sendKeys("1234567891234");	
-		driver.findElement(By.id("apply_company_contact")).sendKeys("ceshi");
-		driver.findElement(By.id("apply_company_mobile")).sendKeys("18200000099");
-		driver.findElement(By.id("apply_company_email")).sendKeys("123@163.com");
-		driver.findElement(By.id("提交")).click();
+		
+		try {
+			
+			logger.info("填写并提交入驻申请");
+			new WebDriverWait(driver,60).until(ExpectedConditions.visibilityOfElementLocated(By.id("apply_company_name"))).sendKeys("企业名称");
+			driver.findElement(By.id("apply_company_number")).sendKeys("1234567891234");	
+			driver.findElement(By.id("apply_company_contact")).sendKeys("ceshi");
+			driver.findElement(By.id("apply_company_mobile")).sendKeys("18200000099");
+			driver.findElement(By.id("apply_company_email")).sendKeys("123@163.com");
+			driver.findElement(By.name("提交")).click();
+			driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+			logger.info("入驻成功");
+			
+		} catch (Exception e) {
+			// TODO: handle exception
+			
+			logger.info("已申请入驻孵化器，不能再次入驻");
+			driver.switchTo().alert();
+			new WebDriverWait(driver,120).until(ExpectedConditions.elementToBeClickable(By.name("确定"))).click();
+			driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+			logger.info("入驻失败");
+			
+			e.printStackTrace();
+		}
+		
+		new WebDriverWait(driver,60).until(ExpectedConditions.elementToBeClickable(By.id("title_back_img"))).click();
+		new WebDriverWait(driver,60).until(ExpectedConditions.elementToBeClickable(By.id("title_back_img"))).click();
 		
 		logger.info("退出登录");
 		new WebDriverWait(driver,60).until(ExpectedConditions.elementToBeClickable(By.name("我的"))).click();
 		appCommonService.appLogout(driver);
+		logger.info("APP "+datadriven.get("version")+"---入驻流程测试结束---");
 		
 		driver.quit();
+		
 	}
  
 	
