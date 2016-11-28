@@ -8,12 +8,9 @@ import java.util.concurrent.TimeUnit;
 import io.appium.java_client.AppiumDriver;
 
 import org.junit.Assert;
-import org.junit.internal.runners.statements.Fail;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.firefox.FirefoxDriver;
-import org.openqa.selenium.os.WindowsUtils;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -21,17 +18,11 @@ import org.testng.annotations.BeforeClass;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 
-import com.thoughtworks.selenium.webdriven.commands.GetText;
-
 import service.AppCommonService;
 import service.InitialService;
-import common.AssertionFailed;
 import common.frame.test.BaseTest;
 
-
-
-
-public class AppFundRequirement<E> extends BaseTest {
+public class AppFundRequirement extends BaseTest {
 	@Autowired
 	private InitialService Initial;
 	@Autowired
@@ -46,11 +37,11 @@ public class AppFundRequirement<E> extends BaseTest {
 	
 	}
 
-	@Test(enabled = true, dataProvider = "testData",description="需求响应")
-	public void FundRequirement (Map<String, String> datadriven)throws Exception {
+	@Test(enabled = true, dataProvider = "testData",description="需求发布")
+	public void fundRequirement (Map<String, String> datadriven)throws Exception {
 		
 		//driver.manage().timeouts().implicitlyWait(10,TimeUnit.SECONDS);
-		logger.info("APP "+datadriven.get("version")+"---发起问诊流程---");
+		logger.info("APP "+datadriven.get("version")+"---发起需求发布流程---");
 		//启动投资者app并且登录
 		logger.info("启动并登陆投资者app");
 		driver = Initial.appiumAndroidFundSetUp(driver, datadriven.get("fundApkName"));
@@ -59,7 +50,7 @@ public class AppFundRequirement<E> extends BaseTest {
 		new WebDriverWait(driver,10).until(ExpectedConditions.elementToBeClickable(By.name("我的"))).click();
 		new WebDriverWait(driver,10).until(ExpectedConditions.elementToBeClickable(By.id("mine_setting_img"))).click();
 		
-		driver.findElement(By.name("退出登录")).click();		
+		driver.findElement(By.name("退出登录")).click();
 		new WebDriverWait(driver,60).until(ExpectedConditions.elementToBeClickable(By.id("button1"))).click();
 		
 		driver=appCommonService.loginForApp(driver,datadriven.get("fundUserName"),datadriven.get("fundPassword"));
@@ -109,7 +100,7 @@ public class AppFundRequirement<E> extends BaseTest {
 	}
 	
 	@Test(enabled = true, dataProvider = "testData",description="我的需求响应")
-	public void FundRespond (Map<String, String> datadriven)throws Exception {
+	public void fundRespond (Map<String, String> datadriven)throws Exception {
 		
 		logger.info("APP "+datadriven.get("version")+"---我的需求响应---");
 		//启动投资者app并且登录
