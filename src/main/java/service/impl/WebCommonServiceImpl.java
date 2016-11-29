@@ -30,7 +30,7 @@ public class WebCommonServiceImpl implements WebCommonService{
 		 File classpathRoot = new File(System.getProperty("user.dir"));
 		 File testdataDir = new File(classpathRoot, "testdata");
 
-		 String filePath = String.valueOf(testdataDir)+"\\uploadFiles\\"+uploadFileName;
+		 String filePath = String.valueOf(testdataDir)+"/uploadFiles/"+uploadFileName;
 		
 //		String filePath =  String.valueOf(new File("./../..//").getCanonicalPath()) + uploadFileName;
 		
