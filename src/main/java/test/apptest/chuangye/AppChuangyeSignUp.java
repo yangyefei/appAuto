@@ -91,10 +91,8 @@ public class AppChuangyeSignUp extends BaseTest {
 			driver.findElementByAccessibilityId("获得 Link").click();
 			driver.findElementByAccessibilityId("请输入验证码").sendKeys("000000");
 			driver.findElementByAccessibilityId("其他").click();
-			
 //			driver.findElementByAccessibilityId("公司").click();
 //			driver.findElementByAccessibilityId("请输入名称").sendKeys("11111");
-			
 			driver.findElementByAccessibilityId("提交 Link").click();
 			
 //			driver.findElementByClassName("android.widget.EditText").sendKeys("ceshi");
@@ -126,7 +124,7 @@ public class AppChuangyeSignUp extends BaseTest {
 		try {
 
 			logger.info("去我的活动页面查看是否有活动");
-			new WebDriverWait(driver,30).until(ExpectedConditions.visibilityOfElementLocated(By.name("自动化活动")));
+			new WebDriverWait(driver,40).until(ExpectedConditions.visibilityOfElementLocated(By.name("自动化活动")));
 			logger.info("校验成功");
 			
 		} catch (Exception e) {//没有活动退出APP

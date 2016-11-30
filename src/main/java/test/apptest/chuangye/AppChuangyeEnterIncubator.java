@@ -80,7 +80,7 @@ public class AppChuangyeEnterIncubator extends BaseTest {
 		try {
 			
 			logger.info("填写并提交入驻申请");
-			new WebDriverWait(driver,30).until(ExpectedConditions.visibilityOfElementLocated(By.id("apply_company_name")));
+			new WebDriverWait(driver,40).until(ExpectedConditions.visibilityOfElementLocated(By.id("apply_company_name")));
 			driver.findElement(By.id("apply_company_name")).sendKeys("企业名称");
 			driver.findElement(By.id("apply_company_number")).sendKeys("1234567891234");	
 			driver.findElement(By.id("apply_company_contact")).sendKeys("ceshi");
