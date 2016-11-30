@@ -13,7 +13,7 @@ public interface WebCommonService {
 	 * @param driver
 	 * @return
 	 */
-	public WebDriver logoutOfBackgroundSystem(WebDriver driver);
+	public WebDriver logoutOfBackgroundSystem(WebDriver driver)throws InterruptedException;
 	
 	
 	/**
@@ -22,7 +22,7 @@ public interface WebCommonService {
 	 * @param filePath
 	 * @return
 	 */
-	public WebDriver uploadFilesOfBackgroundSystem(WebDriver driver, String filePath);
+	public WebDriver uploadFilesOfBackgroundSystem(WebDriver driver, String uploadFilePath)throws Exception;
 		
 	
 }

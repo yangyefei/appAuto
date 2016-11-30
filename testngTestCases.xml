@@ -2,7 +2,7 @@
 <!DOCTYPE suite SYSTEM "http://beust.com/testng/testng-1.0.dtd" >
 <suite name="Suite_TestResults" verbose="1">
     
-	<test name="约谈流程" preserve-order="true">
+	<test name="约谈流程" >
 		<classes>
 			<class name="test.apptest.common.AppCommonInterview">
 				<methods>
@@ -10,17 +10,28 @@
 				</methods>
 			</class>
 		</classes>
-	</test>	
+	</test>
 	
-<!-- 	<test name="testTestng" preserve-order="true">
+	<test name="普通问诊流程" >
 		<classes>
-			<class name="test.selftest.TestSel">
+			<class name="test.apptest.common.AppCommonInquiry">
 				<methods>
-					<include name="function" />
+					<include name="commonInquiryProcess" />
 				</methods>
 			</class>
-		</classes>		
-	</test>	 -->
+		</classes>
+	</test>	
+	
+	<test name="投资者发布以及需求响应"   preserve-order="true">
+		<classes>
+			<class name="test.apptest.fund.AppFundRequirement">
+				<methods>
+					<include name="fundRequirement" />
+					<include name="fundRespond" />
+				</methods>
+			</class>
+		</classes>
+	</test>
 
 </suite>
 

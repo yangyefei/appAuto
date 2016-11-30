@@ -65,11 +65,12 @@ public class AppChuangyeSignUp extends BaseTest {
 		logger.info("启动创业者app");
 		driver = Initial.appiumAndroidChuangyeSetUp(driver, changyeApkName);
 		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+
 		new WebDriverWait(driver,60).until(ExpectedConditions.elementToBeClickable(By.name("我的"))).click();
-		appCommonService.appLogout(driver);
+		appCommonService.logoutForApp(driver);
 
 		logger.info("登录创业者app");
-		driver = appCommonService.appLogin(driver,datadriven.get("changyeUserName"),datadriven.get("chuangyePassword"));
+		driver = appCommonService.loginForApp(driver,datadriven.get("changyeUserName"),datadriven.get("chuangyePassword"));
 		
 		//点击进入活动列表页
 		logger.info("发现-进入活动列表页");
@@ -132,13 +133,16 @@ public class AppChuangyeSignUp extends BaseTest {
 
 			logger.info("活动报名失败");
 			e.printStackTrace();
+			
 		}
 		
 		new WebDriverWait(driver,60).until(ExpectedConditions.elementToBeClickable(By.id("title_back_img"))).click();
 		logger.info("退出当前账号");
-		appCommonService.appLogout(driver);
+		appCommonService.logoutForApp(driver);
 		logger.info("APP "+datadriven.get("version")+"---报名流程测试结束---");
 		driver.quit();
+		
+	}
 		
 //		logger.info("启动并登录后台系统");
 //	    webDriver = Initial.browserOfFirefoxSetUp(webDriver);
@@ -183,19 +187,8 @@ public class AppChuangyeSignUp extends BaseTest {
 //			driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 //			logger.info("活动报名失败");		
 //			e.printStackTrace();
-		
-//		}
-//		
-//		logger.info("退出登录");
-//		new WebDriverWait(driver,60).until(ExpectedConditions.elementToBeClickable(By.name("我的"))).click();
-//		appCommonService.appLogout(driver);
-//		logger.info("APP "+datadriven.get("version")+"---报名流程测试结束---");
-//		
-//		driver.quit();
-		
-	}
- 
-	
+
+
 	@DataProvider(name = "testData")
 	public Iterator<Object[]> data1test() throws IOException {
 		return ExcelProviderByEnv(this, "testData");

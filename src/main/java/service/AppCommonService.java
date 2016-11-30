@@ -14,14 +14,14 @@ public interface AppCommonService {
 	 * @param userPassWord
 	 * @return
 	 */
-	public AppiumDriver appLogin(AppiumDriver driver, String userName, String userPassWord); 
+	public AppiumDriver loginForApp(AppiumDriver driver, String userName, String userPassWord); 
 	
 	/**
 	 * 退出app
 	 * @param driver
 	 * @return
 	 */
-	public AppiumDriver appLogout(AppiumDriver driver);
+	public AppiumDriver logoutForApp(AppiumDriver driver);
 	
 	
 	/**
@@ -46,6 +46,16 @@ public interface AppCommonService {
 	 * @throws Exception
 	 */
 	public AppiumDriver alipay(AppiumDriver driver) throws Exception;
+	
+	/**
+	 * 滚动并查找要找的内容
+	 * @param driver
+	 * @param searchName
+	 * @param nameId
+	 * @param totalNumId
+	 * @return
+	 */
+	public AppiumDriver scrollAndFindName(AppiumDriver driver, String searchName, String nameId, String totalNumId);
 	
 	
 }

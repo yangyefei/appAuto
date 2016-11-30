@@ -1,11 +1,13 @@
 package service.impl;
 
+import java.util.List;
 import java.util.concurrent.TimeUnit;
 
 import io.appium.java_client.AppiumDriver;
 import io.appium.java_client.TouchAction;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
@@ -14,7 +16,7 @@ import service.AppCommonService;
 public class AppCommonServiceImpl implements AppCommonService{
 
 	@Override
-	public AppiumDriver appLogin(AppiumDriver driver, String userName, String userPassWord) {
+	public AppiumDriver loginForApp(AppiumDriver driver, String userName, String userPassWord) {
 		// TODO Auto-generated method stub
 		
 		  //wait for 60s
@@ -35,8 +37,10 @@ public class AppCommonServiceImpl implements AppCommonService{
 	}
 
 	@Override
-	public AppiumDriver appLogout(AppiumDriver driver) {
+	public AppiumDriver logoutForApp(AppiumDriver driver) {
 		// TODO Auto-generated method stub
+		//点击我的
+		new WebDriverWait(driver,60).until(ExpectedConditions.elementToBeClickable(By.name("我的"))).click();
 		//点击设置按钮
 		new WebDriverWait(driver,60).until(ExpectedConditions.elementToBeClickable(By.id("mine_setting_img"))).click();
 		//退出登录
@@ -79,14 +83,58 @@ public class AppCommonServiceImpl implements AppCommonService{
 		int x =driver.manage().window().getSize().width;
 		int y =driver.manage().window().getSize().height;
 		TouchAction  touchAction =new TouchAction(driver);
-		touchAction.press(x/2, y-90).release().perform();
+		touchAction.press(x/2, y*19/20).release().perform();
 		
 		driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
 		new WebDriverWait(driver,60).until(ExpectedConditions.elementToBeClickable(By.name("付款"))).click();
 		
 		return driver;
 	}
-	
 
+	@Override
+	public AppiumDriver scrollAndFindName(AppiumDriver driver, String searchName, String nameId, String totalNumId) {		
+		// TODO Auto-generated method stub
+		
+		//获取项目总数
+		String totalNum = new WebDriverWait(driver,60).until(ExpectedConditions.elementToBeClickable(By.id(totalNumId))).getText();
+		//去掉数字两边的括号并且将其转换为int
+		int realTotalNum = Integer.valueOf(totalNum.substring(1,totalNum.length()-1))+3;
+		
+		Boolean isfound = false;
+		int allNum = 0;
+		
+		do {
+						
+			int currentNum;
+			List<WebElement> elements=driver.findElementsById(nameId);
+			currentNum = elements.size();
+			System.out.println("currentNum="+currentNum);
+			//查找当前页是否有匹配的内容
+			for (WebElement webElement : elements) {
+				
+				if(searchName.equals(webElement.getText())){
+					
+					System.out.println("内容已经被找到！");
+					
+					isfound = true;
+					
+					return driver;	
+			     	}				
+			}
+			
+			allNum = allNum + currentNum;
+
+			//滑动屏幕
+			int width=driver.manage().window().getSize().width;
+			int height=driver.manage().window().getSize().height;
+			driver.swipe(width/2,height*7/8, width/2,height*1/8, 1000);
+									
+			
+		} while (!isfound && allNum < realTotalNum);//如果没有找到内容并且查找的项目数已经超过项目总数，跳出循环
+		
+		System.out.println("内容没有被找到！");
+	
+		return driver;
+	}
 
 }
