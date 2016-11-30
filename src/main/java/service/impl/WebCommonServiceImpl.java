@@ -1,7 +1,5 @@
 package service.impl;
 
-import java.io.File;
-
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
@@ -26,17 +24,6 @@ public class WebCommonServiceImpl implements WebCommonService{
 	public WebDriver uploadFilesOfBackgroundSystem(WebDriver driver,
 			String uploadFilePath) throws Exception {
 		// TODO Auto-generated method stub
-		
-//		 File classpathRoot = new File(System.getProperty("user.dir"));
-//		 File testdataDir = new File(classpathRoot, "testdata");
-//
-//		 String filePath = String.valueOf(testdataDir)+"/uploadFiles/"+uploadFileName;
-		 
-		 
-		
-//		String filePath =  String.valueOf(new File("./../..//").getCanonicalPath()) + uploadFileName;
-		
-//		String filePath = "E:\\"+uploadFileName;
 		
 		System.out.println("文件上传路径为：" + uploadFilePath);
 		
