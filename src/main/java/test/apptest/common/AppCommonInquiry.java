@@ -120,7 +120,7 @@ public class AppCommonInquiry extends BaseTest {
 	    
 	    logger.info("上传报告");
 	    new WebDriverWait(webDriver,60).until(ExpectedConditions.elementToBeClickable(By.linkText("上传报告"))).click();	    
-	    webDriver = webCommonService.uploadFilesOfBackgroundSystem(webDriver, datadriven.get("uploadFileName"));
+	    webDriver = webCommonService.uploadFilesOfBackgroundSystem(webDriver, datadriven.get("uploadFilePath"));
 	    
 	    logger.info("退出后台系统");
 	    webDriver = webCommonService.logoutOfBackgroundSystem(webDriver);

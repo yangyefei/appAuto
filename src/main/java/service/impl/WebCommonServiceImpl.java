@@ -24,7 +24,7 @@ public class WebCommonServiceImpl implements WebCommonService{
 
 	@Override
 	public WebDriver uploadFilesOfBackgroundSystem(WebDriver driver,
-			String uploadFileName) throws Exception {
+			String uploadFilePath) throws Exception {
 		// TODO Auto-generated method stub
 		
 //		 File classpathRoot = new File(System.getProperty("user.dir"));
@@ -36,13 +36,13 @@ public class WebCommonServiceImpl implements WebCommonService{
 		
 //		String filePath =  String.valueOf(new File("./../..//").getCanonicalPath()) + uploadFileName;
 		
-		String filePath = "E:\\"+uploadFileName;
+//		String filePath = "E:\\"+uploadFileName;
 		
-		System.out.println("文件上传路径为：" + filePath);
+		System.out.println("文件上传路径为：" + uploadFilePath);
 		
 		driver.switchTo().frame(driver.findElement(By.id("sopop-iframe")));
 	    
-	    new WebDriverWait(driver,60).until(ExpectedConditions.elementToBeClickable(By.id("counsel_file"))).sendKeys(filePath);	    
+	    new WebDriverWait(driver,60).until(ExpectedConditions.elementToBeClickable(By.id("counsel_file"))).sendKeys(uploadFilePath);	    
 	    driver.findElement(By.xpath("//input[@type='submit'][@value='确 定']")).click();
 	    
 	    driver.switchTo().defaultContent();
