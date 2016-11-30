@@ -59,7 +59,6 @@ public class AppChuangyeEnterIncubator extends BaseTest {
 		logger.info("启动创业者app");
 		driver = Initial.appiumAndroidChuangyeSetUp(driver, changyeApkName);
 		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
-		logger.info("退出登录");
 		new WebDriverWait(driver,60).until(ExpectedConditions.elementToBeClickable(By.name("我的"))).click();
 		appCommonService.appLogout(driver);
 
@@ -76,12 +75,13 @@ public class AppChuangyeEnterIncubator extends BaseTest {
 		new WebDriverWait(driver,120).until(ExpectedConditions.elementToBeClickable(By.name(datadriven.get("incubator")))).click();
 		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 		logger.info("点击进入申请入驻页面");
-		new WebDriverWait(driver,120).until(ExpectedConditions.elementToBeClickable(By.name("申请入驻"))).click();
+		new WebDriverWait(driver,60).until(ExpectedConditions.elementToBeClickable(By.name("申请入驻"))).click();
 		
 		try {
 			
 			logger.info("填写并提交入驻申请");
-			new WebDriverWait(driver,60).until(ExpectedConditions.visibilityOfElementLocated(By.id("apply_company_name"))).sendKeys("企业名称");
+			new WebDriverWait(driver,30).until(ExpectedConditions.visibilityOfElementLocated(By.id("apply_company_name")));
+			driver.findElement(By.id("apply_company_name")).sendKeys("企业名称");
 			driver.findElement(By.id("apply_company_number")).sendKeys("1234567891234");	
 			driver.findElement(By.id("apply_company_contact")).sendKeys("ceshi");
 			driver.findElement(By.id("apply_company_mobile")).sendKeys("18200000099");
@@ -94,22 +94,19 @@ public class AppChuangyeEnterIncubator extends BaseTest {
 			// TODO: handle exception
 			
 			logger.info("已申请入驻孵化器，不能再次入驻");
-			driver.switchTo().alert();
-			new WebDriverWait(driver,120).until(ExpectedConditions.elementToBeClickable(By.name("确定"))).click();
+			new WebDriverWait(driver,60).until(ExpectedConditions.elementToBeClickable(By.name("确定"))).click();
 			driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
-			logger.info("入驻失败");
-			
+			logger.info("入驻失败");	
 			e.printStackTrace();
+			
 		}
 		
 		new WebDriverWait(driver,60).until(ExpectedConditions.elementToBeClickable(By.id("title_back_img"))).click();
 		new WebDriverWait(driver,60).until(ExpectedConditions.elementToBeClickable(By.id("title_back_img"))).click();
-		
 		logger.info("退出登录");
 		new WebDriverWait(driver,60).until(ExpectedConditions.elementToBeClickable(By.name("我的"))).click();
 		appCommonService.appLogout(driver);
 		logger.info("APP "+datadriven.get("version")+"---入驻流程测试结束---");
-		
 		driver.quit();
 		
 	}
