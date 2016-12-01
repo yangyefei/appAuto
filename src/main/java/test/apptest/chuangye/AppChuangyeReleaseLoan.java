@@ -76,17 +76,17 @@ public class AppChuangyeReleaseLoan extends BaseTest {
 	    new WebDriverWait(driver,60).until(ExpectedConditions.elementToBeClickable(By.name("发布贷款项目"))).click();
 		
 		logger.info("填写并提交申请");
-//		new WebDriverWait(driver,60).until(ExpectedConditions.visibilityOfElementLocated(By.name("请输入金额"))).sendKeys("500");
-//		driver.findElement(By.name("请输入1-120")).sendKeys("12");	
-//		driver.findElement(By.name("请选择")).click();
-//		driver.findElement(By.name("原材料采购")).click();
-//		driver.findElement(By.name("请选择")).click();
-//		driver.findElement(By.name("担保")).click();
-//		driver.findElement(By.name("个人担保")).click();
-//		driver.findElement(By.name("本公司股东担保")).click();
-//		driver.findElement(By.name("请输入")).sendKeys("XLH");
-//		driver.findElement(By.name("请选择")).click();
-//		driver.findElement(By.name("国有")).click();
+		new WebDriverWait(driver,60).until(ExpectedConditions.visibilityOfElementLocated(By.name("请输入金额"))).sendKeys("500");
+		driver.findElement(By.name("请输入1-120")).sendKeys("12");	
+		driver.findElement(By.name("请选择")).click();
+		driver.findElement(By.name("原材料采购")).click();
+		driver.findElement(By.name("请选择")).click();
+		driver.findElement(By.name("担保")).click();
+		driver.findElement(By.name("个人担保")).click();
+		driver.findElement(By.name("本公司股东担保")).click();
+		driver.findElement(By.name("请输入")).sendKeys("XLH");
+		driver.findElement(By.name("请选择")).click();
+		driver.findElement(By.name("国有")).click();
 		appCommonService.swipeToDown(driver);
 		driver.findElement(By.name("请输入")).sendKeys("XLH");
 		driver.findElement(By.name("请选择")).click();
@@ -118,7 +118,7 @@ public class AppChuangyeReleaseLoan extends BaseTest {
 			
 	        int width = driver.manage().window().getSize().width;
 	        int height = driver.manage().window().getSize().height;
-	        driver.swipe(width/6,height*3/4, width/6,height/4, 1000);//向下滑动，间隔1s        	
+	        driver.swipe(width/6,height*5/6, width/6,height*2/3, 1000);//向下滑动，间隔1s        	
 		}
 		
 		private void swipemiddum (AppiumDriver driver) {
@@ -126,7 +126,7 @@ public class AppChuangyeReleaseLoan extends BaseTest {
 			
 	        int width = driver.manage().window().getSize().width;
 	        int height = driver.manage().window().getSize().height;
-	        driver.swipe(width/2,height*3/4, width/2,height/4, 1000);//向下滑动，间隔1s        	
+	        driver.swipe(width/2,height*5/6, width/2,height*2/3, 1000);//向下滑动，间隔1s        	
 		}
 		
 		private void swiperight (AppiumDriver driver) {
@@ -134,7 +134,7 @@ public class AppChuangyeReleaseLoan extends BaseTest {
 			
 	        int width = driver.manage().window().getSize().width;
 	        int height = driver.manage().window().getSize().height;
-	        driver.swipe(width*5/6,height*3/4, width*5/6,height/4, 1000);//向下滑动，间隔1s        	
+	        driver.swipe(width*5/6,height*5/6, width*5/6,height*2/3, 1000);//向下滑动，间隔1s        	
 		}
 		
 
