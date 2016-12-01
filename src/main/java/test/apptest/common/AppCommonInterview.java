@@ -34,7 +34,7 @@ public class AppCommonInterview extends BaseTest {
 
 	@BeforeClass
 	public void beforeClass() {		
-	}		
+	}	
 
 	@Test(enabled = true, dataProvider = "testData", timeOut=600000, description="约谈流程")
 	public void interviewProcess(Map<String, String> datadriven)throws Exception {
@@ -42,7 +42,7 @@ public class AppCommonInterview extends BaseTest {
 		logger.info("APP "+datadriven.get("version")+"---约谈流程测试开始---");
 		//启动投资者app并且登录
 		logger.info("启动并登陆投资者app");
-		driver = Initial.appiumAndroidFundSetUp(driver, datadriven.get("fundApkName"));
+		driver = Initial.appiumAndroidFundSetUp(driver);
 		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 		driver = appCommonService.logoutForApp(driver);
 		driver = appCommonService.loginForApp(driver,datadriven.get("fundUserName"),datadriven.get("fundPassword"));
@@ -64,7 +64,7 @@ public class AppCommonInterview extends BaseTest {
 		
 		//启动创业者包并且登录
 		logger.info("启动并登陆创业者app");
-		driver = Initial.appiumAndroidChuangyeSetUp(driver, datadriven.get("changyeApkName"));
+		driver = Initial.appiumAndroidChuangyeSetUp(driver);
 		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 		driver = appCommonService.logoutForApp(driver);
 		driver = appCommonService.loginForApp(driver,datadriven.get("changyeUserName"),datadriven.get("chuangyePassword"));
@@ -99,7 +99,7 @@ public class AppCommonInterview extends BaseTest {
 			
 			//退出投资者app
 			logger.info("创业者中校验订单失败，未找到当天订单，将之前登录的投资者也进行退出操作");
-			driver = Initial.appiumAndroidFundSetUp(driver, datadriven.get("fundApkName"));
+			driver = Initial.appiumAndroidFundSetUp(driver);
 			new WebDriverWait(driver,60).until(ExpectedConditions.elementToBeClickable(By.name("我的"))).click();
 			appCommonService.logoutForApp(driver);
 			driver.quit();
@@ -117,7 +117,7 @@ public class AppCommonInterview extends BaseTest {
 		
 		//再次启动投资者app
 		logger.info("再次启动之前已经登录的投资者app");
-		driver = Initial.appiumAndroidFundSetUp(driver, datadriven.get("fundApkName"));
+		driver = Initial.appiumAndroidFundSetUp(driver);
 		logger.info("进入投资者我的-我的约谈页面");
 		new WebDriverWait(driver,60).until(ExpectedConditions.elementToBeClickable(By.name("我的"))).click();
 		new WebDriverWait(driver,60).until(ExpectedConditions.elementToBeClickable(By.name("我的约谈"))).click();

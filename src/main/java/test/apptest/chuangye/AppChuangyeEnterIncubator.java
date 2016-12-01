@@ -44,12 +44,10 @@ public class AppChuangyeEnterIncubator extends BaseTest {
 	@Test(enabled = true, dataProvider = "testData",description="企业入驻孵化器")
 	public void chuangyeEnterIncubator(Map<String, String> datadriven)throws Exception {
 		
-		String changyeApkName = datadriven.get("changyeApkName");//创业者apk
-		
 		logger.info("APP "+datadriven.get("version")+"---企业入驻孵化器测试开始---");
 		
 		logger.info("启动创业者app");
-		driver = Initial.appiumAndroidChuangyeSetUp(driver, changyeApkName);
+		driver = Initial.appiumAndroidChuangyeSetUp(driver);
 		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 		new WebDriverWait(driver,60).until(ExpectedConditions.elementToBeClickable(By.name("我的"))).click();
 		appCommonService.logoutForApp(driver);

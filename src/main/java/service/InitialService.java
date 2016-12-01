@@ -16,7 +16,7 @@ public interface InitialService {
 	 * @return
 	 * @throws MalformedURLException
 	 */
-	public AppiumDriver appiumAndroidChuangyeSetUp(AppiumDriver driver, String apkName) throws MalformedURLException;
+	public AppiumDriver appiumAndroidChuangyeSetUp(AppiumDriver driver) throws MalformedURLException;
 	
 	/**
 	 * Android 机构app初始化
@@ -25,7 +25,7 @@ public interface InitialService {
 	 * @return
 	 * @throws MalformedURLException
 	 */
-	public AppiumDriver appiumAndroidFundSetUp(AppiumDriver driver, String apkName) throws MalformedURLException;
+	public AppiumDriver appiumAndroidFundSetUp(AppiumDriver driver) throws MalformedURLException;
 	
 	
 	/**

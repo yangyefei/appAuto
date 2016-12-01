@@ -13,8 +13,11 @@
 	<bean id="initialService" class="service.impl.InitialServiceImpl">	    
 	    <property name="chuangyeAppPackage" value="${chuangyeAppPackage}"></property>
 	    <property name="chuangyeAppActivity" value="${chuangyeAppActivity}"></property>
+	    <property name="apkPathOfChuangye" value="${apkPathOfChuangye}"></property>
+	    
 	    <property name="fundAppPackage" value="${fundAppPackage}"></property>
 	    <property name="fundAppActivity" value="${fundAppActivity}"></property>
+	     <property name="apkPathOfFund" value="${apkPathOfFund}"></property>
 	    
 	    <property name="platformVersion" value="${platformVersion}"></property>
 	    <property name="appRunMachineIp" value="${appRunMachineIp}"></property>

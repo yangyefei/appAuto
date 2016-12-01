@@ -14,12 +14,11 @@ import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
-import org.testng.asserts.Assertion;
 import common.frame.test.BaseTest;
 import io.appium.java_client.AppiumDriver;
-import io.appium.java_client.TouchAction;
 import service.AppCommonService;
 import service.InitialService;
+
 @Test
 public class AppFundWallet extends BaseTest{
 	@Autowired
@@ -51,7 +50,7 @@ public class AppFundWallet extends BaseTest{
 		//启动企业app并且登录
 		logger.info("启动并登陆投资者app");
 		
-		driver = Initial.appiumAndroidFundSetUp(driver, datadriven.get("fundApkName"));
+		driver = Initial.appiumAndroidFundSetUp(driver);
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 		new WebDriverWait(driver, 60).until(ExpectedConditions.elementToBeClickable(By.name("我的"))).click();
 		appCommonService.logoutForApp(driver);

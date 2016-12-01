@@ -7,8 +7,6 @@ import java.util.Map;
 import java.util.concurrent.TimeUnit;
 import io.appium.java_client.AppiumDriver;
 
-import org.apache.commons.io.filefilter.FalseFileFilter;
-import org.hibernate.type.TrueFalseType;
 import org.junit.Assert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
@@ -56,7 +54,7 @@ public class AppFundRequirement extends BaseTest {
 		logger.info("APP "+datadriven.get("version")+"---发起需求发布流程---");
 		//启动投资者app并且登录
 		logger.info("启动并登陆投资者app");
-		driver = Initial.appiumAndroidFundSetUp(driver, datadriven.get("fundApkName"));
+		driver = Initial.appiumAndroidFundSetUp(driver);
 		driver.manage().timeouts().implicitlyWait(30,TimeUnit.SECONDS);
 		//退出登录
 		appCommonService.logoutForApp(driver);
@@ -122,7 +120,7 @@ public class AppFundRequirement extends BaseTest {
 		//启动投资者app并且登录
 
 		logger.info("启动并登陆投资者app");
-		driver = Initial.appiumAndroidFundSetUp(driver, datadriven.get("fundApkName"));
+		driver = Initial.appiumAndroidFundSetUp(driver);
 
 		driver.manage().timeouts().implicitlyWait(30,TimeUnit.SECONDS);
 		//退出登录
