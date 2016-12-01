@@ -8,6 +8,7 @@ import java.io.IOException;
 import java.util.Iterator;
 import java.util.Map;
 import java.util.concurrent.TimeUnit;
+import java.util.List;
 
 import org.openqa.selenium.Alert;
 import org.openqa.selenium.By;
@@ -28,6 +29,7 @@ import org.testng.annotations.AfterClass;
 
 
 
+//import antlr.collections.List;
 import service.AppCommonService;
 import service.InitialService;
 import service.WebCommonService;
@@ -47,7 +49,7 @@ public class AppChuangyeSignUp extends BaseTest {
 	private WebCommonService webCommonService;
 
 	private AppiumDriver driver;
-	private WebDriver webDriver;
+//	private WebDriver webDriver;
 
 
 	@BeforeClass
@@ -65,7 +67,6 @@ public class AppChuangyeSignUp extends BaseTest {
 		logger.info("启动创业者app");
 		driver = Initial.appiumAndroidChuangyeSetUp(driver, changyeApkName);
 		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
-
 		new WebDriverWait(driver,60).until(ExpectedConditions.elementToBeClickable(By.name("我的"))).click();
 		appCommonService.logoutForApp(driver);
 
@@ -85,23 +86,16 @@ public class AppChuangyeSignUp extends BaseTest {
 		try {
 			
 			logger.info("点击进入报名页面");
-//			new WebDriverWait(driver,60).until(ExpectedConditions.visibilityOfElementLocated(ByAccessibilityId("报名 Link")));
 			driver.findElementByAccessibilityId("报名 Link").click();
 			logger.info("填写并提交报名申请");
 			driver.findElementByClassName("android.widget.EditText").sendKeys("ceshi");
 			driver.findElementByAccessibilityId("获得 Link").click();
 			driver.findElementByAccessibilityId("请输入验证码").sendKeys("000000");
-			driver.findElementByAccessibilityId("其他").click();
-//			driver.findElementByAccessibilityId("公司").click();
-//			driver.findElementByAccessibilityId("请输入名称").sendKeys("11111");
+			driver.findElementByAccessibilityId("公司").click();
+			List<WebElement> list=driver.findElementsByClassName("android.widget.EditText");
+			WebElement target = list.get(3);
+			target.sendKeys("xinlonghang");
 			driver.findElementByAccessibilityId("提交 Link").click();
-			
-//			driver.findElementByClassName("android.widget.EditText").sendKeys("ceshi");
-//			driver.findElementByAccessibilityId("获得 Link").click();
-//			driver.findElement(By.name("请输入验证码")).sendKeys("000000");
-//			driver.findElementByAccessibilityId("公司").click();
-//			driver.findElement(By.name("请输入名称")).sendKeys("xinlonghang");
-//			driver.findElementByAccessibilityId("提交 Link").click();
 			
 			driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 			logger.info("报名成功");
@@ -132,15 +126,16 @@ public class AppChuangyeSignUp extends BaseTest {
 			// TODO Auto-generated catch block
 
 			logger.info("活动报名失败");
+			driver.quit();
 			e.printStackTrace();
 			
 		}
 		
-		new WebDriverWait(driver,60).until(ExpectedConditions.elementToBeClickable(By.id("title_back_img"))).click();
 		logger.info("退出当前账号");
+		new WebDriverWait(driver,60).until(ExpectedConditions.elementToBeClickable(By.id("title_back_img"))).click();
 		appCommonService.logoutForApp(driver);
-		logger.info("APP "+datadriven.get("version")+"---报名流程测试结束---");
 		driver.quit();
+		logger.info("APP "+datadriven.get("version")+"---报名流程测试结束---");
 		
 	}
 		
@@ -187,6 +182,7 @@ public class AppChuangyeSignUp extends BaseTest {
 //			driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 //			logger.info("活动报名失败");		
 //			e.printStackTrace();
+//		}
 
 
 	@DataProvider(name = "testData")
