@@ -93,14 +93,13 @@ public class AppChuangyeEnterIncubator extends BaseTest {
 			
 		}
 		
+		logger.info("返回并退出登录");
 		new WebDriverWait(driver,60).until(ExpectedConditions.elementToBeClickable(By.id("title_back_img"))).click();
 		new WebDriverWait(driver,60).until(ExpectedConditions.elementToBeClickable(By.id("title_back_img"))).click();
-		logger.info("退出登录");
 		new WebDriverWait(driver,60).until(ExpectedConditions.elementToBeClickable(By.name("我的"))).click();
 		appCommonService.logoutForApp(driver);
 		driver.quit();
-		
-		logger.info("APP "+datadriven.get("version")+"---入驻流程测试结束---");		
+		logger.info("APP "+datadriven.get("version")+"---入驻流程测试结束---");
 		
 	}
 	

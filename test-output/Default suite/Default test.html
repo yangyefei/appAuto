@@ -55,11 +55,19 @@ function toggleAllBoxes() {
 <body>
 <h2 align='center'>Default test</h2><table border='1' align="center">
 <tr>
-<td>Tests passed/Failed/Skipped:</td><td>1/0/0</td>
+<td>Tests passed/Failed/Skipped:</td><td>0/1/0</td>
 </tr><tr>
+<<<<<<< HEAD
 <td>Started on:</td><td>Thu Dec 01 15:36:28 CST 2016</td>
+=======
+<td>Started on:</td><td>Thu Dec 01 16:23:29 CST 2016</td>
+>>>>>>> branch 'master' of git@172.16.11.124:luyi/appAuto.git
 </tr>
+<<<<<<< HEAD
 <tr><td>Total time:</td><td>47 seconds (47698 ms)</td>
+=======
+<tr><td>Total time:</td><td>57 seconds (57589 ms)</td>
+>>>>>>> branch 'master' of git@172.16.11.124:luyi/appAuto.git
 </tr><tr>
 <td>Included groups:</td><td></td>
 </tr><tr>
@@ -67,18 +75,122 @@ function toggleAllBoxes() {
 </tr>
 </table><p/>
 <small><i>(Hover the method name to see the test class name)</i></small><p/>
-<table width='100%' border='1' class='invocation-passed'>
-<tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
+<table width='100%' border='1' class='invocation-failed'>
+<tr><td colspan='4' align='center'><b>FAILED TESTS</b></td></tr>
 <tr><td><b>Test method</b></td>
 <td width="30%"><b>Exception</b></td>
 <td width="10%"><b>Time (seconds)</b></td>
 <td><b>Instance</b></td>
 </tr>
 <tr>
+<<<<<<< HEAD
 <td title='test.apptest.chuangye.AppChuangyeSignUp.chuangyeSignUp()'><b>chuangyeSignUp</b><br>Test class: test.apptest.chuangye.AppChuangyeSignUp<br>Test method: Ê¥ªÂä®Êä•Âêç<br>Parameters: {fundApkName=EasyrongFund_pre_2_2_1.apk, fundPassword=xlh123456, backPassword=xlh123456, filePath=D:\\autotest.pdf, changyeUserName=13900110000, backUserName=zdhcs, changyeApkName=EasyrongChuangye_pre_2_3_1.apk, fundUserName=lkj123, comments=appËá™Âä®ÂåñÊµãËØïÁî®ËØÑËÆ∫123ÔºåÊúâÈïøÂ∫¶Ë¶ÅÊ±ÇË∂ÖËøá20‰∏™Â≠ó, activity=Ëá™Âä®ÂåñÊ¥ªÂä®, chuangyePassword=xlh123456, version=v2.3}</td>
 <td></td>
 <td>46</td>
 <td>test.apptest.chuangye.AppChuangyeSignUp@1b09468</td></tr>
+=======
+<td title='test.apptest.chuangye.AppChuangyeSignUp.chuangyeSignUp()'><b>chuangyeSignUp</b><br>Test class: test.apptest.chuangye.AppChuangyeSignUp<br>Test method: ªÓ∂Ø±®√˚<br>Parameters: {fundApkName=EasyrongFund_pre_2_2_1.apk, fundPassword=xlh123456, backPassword=xlh123456, filePath=D:\\autotest.pdf, changyeUserName=13900110000, backUserName=zdhcs, changyeApkName=EasyrongChuangye_pre_2_3_1.apk, fundUserName=lkj123, comments=app◊‘∂ØªØ≤‚ ‘”√∆¿¬€123£¨”–≥§∂»“™«Û≥¨π˝20∏ˆ◊÷, activity=◊‘∂ØªØªÓ∂Ø, chuangyePassword=xlh123456, version=v2.3}</td>
+<td><div><pre>org.openqa.selenium.remote.SessionNotFoundException: 
+Command duration or timeout: 20 milliseconds
+Build info: version: &apos;2.44.0&apos;, revision: &apos;76d78cf&apos;, time: &apos;2014-10-23 20:03:00&apos;
+System info: host: &apos;xlh-028&apos;, ip: &apos;172.16.22.236&apos;, os.name: &apos;Windows 8&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;6.2&apos;, java.version: &apos;1.6.0_43&apos;
+Session ID: e4704356-cde2-481f-b1c3-d6764d1455d0
+Driver info: io.appium.java_client.AppiumDriver
+Capabilities [{platform=LINUX, app=E:\GitLab\appAuto\apps\EasyrongChuangye_pre_2_3_1.apk, javascriptEnabled=true, appActivity=.activities.EasyrongChuangyeActivity, browserName=, networkConnectionEnabled=true, noSign=true, desired={platformVersion=4.4, app=E:\GitLab\appAuto\apps\EasyrongChuangye_pre_2_3_1.apk, platformName=Android, deviceName=Android Emulator, browserName=, appActivity=.activities.EasyrongChuangyeActivity, unicodeKeyboard=true, noSign=true, resetKeyboard=true, appPackage=com.easyrongchuangye, noReset=true}, locationContextEnabled=false, appPackage=com.easyrongchuangye, noReset=true, platformVersion=4.4.2, databaseEnabled=false, platformName=Android, deviceName=emulator-5554, webStorageEnabled=false, unicodeKeyboard=true, resetKeyboard=true, warnings={}, takesScreenshot=true}]
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
+	at java.lang.reflect.Constructor.newInstance(Unknown Source)
+	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:204)
+	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:162)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:599)
+	at io.appium.java_client.AppiumDriver.execute(AppiumDriver.java:81)
+	at org.openqa.selenium.remote.RemoteWebDriver$RemoteWebDriverOptions$RemoteTimeouts.implicitlyWait(RemoteWebDriver.java:770)
+	at test.apptest.chuangye.AppChuangyeSignUp.chuangyeSignUp(AppChuangyeSignUp.java:108)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:84)
+	at org.testng.internal.MethodInvocationHelper$1.runTestMethod(MethodInvocationHelper.java:200)
+	at org.springframework.test.context.testng.AbstractTestNGSpringContextTests.run(AbstractTestNGSpringContextTests.java:140)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeHookable(MethodInvocationHelper.java:212)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:707)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:901)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1231)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:127)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:111)
+	at org.testng.TestRunner.privateRun(TestRunner.java:767)
+	at org.testng.TestRunner.run(TestRunner.java:617)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:335)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:330)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:291)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:240)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1224)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1149)
+	at org.testng.TestNG.run(TestNG.java:1057)
+	at org.testng.remote.RemoteTestNG.run(RemoteTestNG.java:111)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:204)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:175)
+</pre></div><a href='#' onClick='toggleBox("stack-trace651497704", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace651497704'><pre>org.openqa.selenium.remote.SessionNotFoundException: 
+Command duration or timeout: 20 milliseconds
+Build info: version: &apos;2.44.0&apos;, revision: &apos;76d78cf&apos;, time: &apos;2014-10-23 20:03:00&apos;
+System info: host: &apos;xlh-028&apos;, ip: &apos;172.16.22.236&apos;, os.name: &apos;Windows 8&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;6.2&apos;, java.version: &apos;1.6.0_43&apos;
+Session ID: e4704356-cde2-481f-b1c3-d6764d1455d0
+Driver info: io.appium.java_client.AppiumDriver
+Capabilities [{platform=LINUX, app=E:\GitLab\appAuto\apps\EasyrongChuangye_pre_2_3_1.apk, javascriptEnabled=true, appActivity=.activities.EasyrongChuangyeActivity, browserName=, networkConnectionEnabled=true, noSign=true, desired={platformVersion=4.4, app=E:\GitLab\appAuto\apps\EasyrongChuangye_pre_2_3_1.apk, platformName=Android, deviceName=Android Emulator, browserName=, appActivity=.activities.EasyrongChuangyeActivity, unicodeKeyboard=true, noSign=true, resetKeyboard=true, appPackage=com.easyrongchuangye, noReset=true}, locationContextEnabled=false, appPackage=com.easyrongchuangye, noReset=true, platformVersion=4.4.2, databaseEnabled=false, platformName=Android, deviceName=emulator-5554, webStorageEnabled=false, unicodeKeyboard=true, resetKeyboard=true, warnings={}, takesScreenshot=true}]
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
+	at java.lang.reflect.Constructor.newInstance(Unknown Source)
+	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:204)
+	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:162)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:599)
+	at io.appium.java_client.AppiumDriver.execute(AppiumDriver.java:81)
+	at org.openqa.selenium.remote.RemoteWebDriver$RemoteWebDriverOptions$RemoteTimeouts.implicitlyWait(RemoteWebDriver.java:770)
+	at test.apptest.chuangye.AppChuangyeSignUp.chuangyeSignUp(AppChuangyeSignUp.java:108)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:84)
+	at org.testng.internal.MethodInvocationHelper$1.runTestMethod(MethodInvocationHelper.java:200)
+	at org.springframework.test.context.testng.AbstractTestNGSpringContextTests.run(AbstractTestNGSpringContextTests.java:140)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeHookable(MethodInvocationHelper.java:212)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:707)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:901)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1231)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:127)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:111)
+	at org.testng.TestRunner.privateRun(TestRunner.java:767)
+	at org.testng.TestRunner.run(TestRunner.java:617)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:335)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:330)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:291)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:240)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1224)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1149)
+	at org.testng.TestNG.run(TestNG.java:1057)
+	at org.testng.remote.RemoteTestNG.run(RemoteTestNG.java:111)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:204)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:175)
+</pre></div></td>
+<td>56</td>
+<td>test.apptest.chuangye.AppChuangyeSignUp@7d95d4fe</td></tr>
+>>>>>>> branch 'master' of git@172.16.11.124:luyi/appAuto.git
 </table><p>
 </body>
 </html>
