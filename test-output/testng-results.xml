@@ -2,20 +2,38 @@
 <testng-results skipped="0" failed="1" total="1" passed="0">
   <reporter-output>
   </reporter-output>
+<<<<<<< HEAD
+  <suite name="Default suite" duration-ms="47698" started-at="2016-12-01T07:36:28Z" finished-at="2016-12-01T07:37:16Z">
+=======
   <suite name="Default suite" duration-ms="57589" started-at="2016-12-01T08:23:29Z" finished-at="2016-12-01T08:24:26Z">
+>>>>>>> branch 'master' of git@172.16.11.124:luyi/appAuto.git
     <groups>
     </groups>
+<<<<<<< HEAD
+    <test name="Default test" duration-ms="47698" started-at="2016-12-01T07:36:28Z" finished-at="2016-12-01T07:37:16Z">
+      <class name="test.apptest.chuangye.AppChuangyeSignUp">
+        <test-method status="PASS" signature="springTestContextPrepareTestInstance()[pri:0, instance:test.apptest.chuangye.AppChuangyeSignUp@1b09468]" name="springTestContextPrepareTestInstance" is-config="true" duration-ms="753" started-at="2016-12-01T15:36:28Z" finished-at="2016-12-01T15:36:29Z">
+=======
     <test name="Default test" duration-ms="57589" started-at="2016-12-01T08:23:29Z" finished-at="2016-12-01T08:24:26Z">
       <class name="test.apptest.chuangye.AppChuangyeSignUp">
         <test-method status="PASS" signature="springTestContextPrepareTestInstance()[pri:0, instance:test.apptest.chuangye.AppChuangyeSignUp@7d95d4fe]" name="springTestContextPrepareTestInstance" is-config="true" duration-ms="441" started-at="2016-12-01T16:23:29Z" finished-at="2016-12-01T16:23:29Z">
+>>>>>>> branch 'master' of git@172.16.11.124:luyi/appAuto.git
           <reporter-output>
           </reporter-output>
         </test-method> <!-- springTestContextPrepareTestInstance -->
+<<<<<<< HEAD
+        <test-method status="PASS" signature="beforeClass()[pri:0, instance:test.apptest.chuangye.AppChuangyeSignUp@1b09468]" name="beforeClass" is-config="true" duration-ms="0" started-at="2016-12-01T15:36:29Z" finished-at="2016-12-01T15:36:29Z">
+=======
         <test-method status="PASS" signature="beforeClass()[pri:0, instance:test.apptest.chuangye.AppChuangyeSignUp@7d95d4fe]" name="beforeClass" is-config="true" duration-ms="0" started-at="2016-12-01T16:23:29Z" finished-at="2016-12-01T16:23:29Z">
+>>>>>>> branch 'master' of git@172.16.11.124:luyi/appAuto.git
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeClass -->
+<<<<<<< HEAD
+        <test-method status="PASS" signature="springTestContextBeforeTestMethod(java.lang.reflect.Method)[pri:0, instance:test.apptest.chuangye.AppChuangyeSignUp@1b09468]" name="springTestContextBeforeTestMethod" is-config="true" duration-ms="1" started-at="2016-12-01T15:36:29Z" finished-at="2016-12-01T15:36:29Z">
+=======
         <test-method status="PASS" signature="springTestContextBeforeTestMethod(java.lang.reflect.Method)[pri:0, instance:test.apptest.chuangye.AppChuangyeSignUp@7d95d4fe]" name="springTestContextBeforeTestMethod" is-config="true" duration-ms="1" started-at="2016-12-01T16:23:29Z" finished-at="2016-12-01T16:23:29Z">
+>>>>>>> branch 'master' of git@172.16.11.124:luyi/appAuto.git
           <params>
             <param index="0">
               <value>
@@ -26,11 +44,19 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- springTestContextBeforeTestMethod -->
+<<<<<<< HEAD
+        <test-method status="PASS" signature="chuangyeSignUp(java.util.Map)[pri:0, instance:test.apptest.chuangye.AppChuangyeSignUp@1b09468]" name="chuangyeSignUp" duration-ms="46519" started-at="2016-12-01T15:36:29Z" description="æ´»åŠ¨æŠ¥å" data-provider="testData" finished-at="2016-12-01T15:37:16Z">
+=======
         <test-method status="FAIL" signature="chuangyeSignUp(java.util.Map)[pri:0, instance:test.apptest.chuangye.AppChuangyeSignUp@7d95d4fe]" name="chuangyeSignUp" duration-ms="56970" started-at="2016-12-01T16:23:29Z" description="»î¶¯±¨Ãû" data-provider="testData" finished-at="2016-12-01T16:24:26Z">
+>>>>>>> branch 'master' of git@172.16.11.124:luyi/appAuto.git
           <params>
             <param index="0">
               <value>
+<<<<<<< HEAD
+                <![CDATA[{fundApkName=EasyrongFund_pre_2_2_1.apk, fundPassword=xlh123456, backPassword=xlh123456, filePath=D:\\autotest.pdf, changyeUserName=13900110000, backUserName=zdhcs, changyeApkName=EasyrongChuangye_pre_2_3_1.apk, fundUserName=lkj123, comments=appè‡ªåŠ¨åŒ–æµ‹è¯•ç”¨è¯„è®º123ï¼Œæœ‰é•¿åº¦è¦æ±‚è¶…è¿‡20ä¸ªå­—, activity=è‡ªåŠ¨åŒ–æ´»åŠ¨, chuangyePassword=xlh123456, version=v2.3}]]>
+=======
                 <![CDATA[{fundApkName=EasyrongFund_pre_2_2_1.apk, fundPassword=xlh123456, backPassword=xlh123456, filePath=D:\\autotest.pdf, changyeUserName=13900110000, backUserName=zdhcs, changyeApkName=EasyrongChuangye_pre_2_3_1.apk, fundUserName=lkj123, comments=app×Ô¶¯»¯²âÊÔÓÃÆÀÂÛ123£¬ÓÐ³¤¶ÈÒªÇó³¬¹ý20¸ö×Ö, activity=×Ô¶¯»¯»î¶¯, chuangyePassword=xlh123456, version=v2.3}]]>
+>>>>>>> branch 'master' of git@172.16.11.124:luyi/appAuto.git
               </value>
             </param>
           </params>
@@ -99,7 +125,11 @@ Capabilities [{platform=LINUX, app=E:\GitLab\appAuto\apps\EasyrongChuangye_pre_2
           <reporter-output>
           </reporter-output>
         </test-method> <!-- chuangyeSignUp -->
+<<<<<<< HEAD
+        <test-method status="PASS" signature="springTestContextAfterTestMethod(java.lang.reflect.Method)[pri:0, instance:test.apptest.chuangye.AppChuangyeSignUp@1b09468]" name="springTestContextAfterTestMethod" is-config="true" duration-ms="2" started-at="2016-12-01T15:37:16Z" finished-at="2016-12-01T15:37:16Z">
+=======
         <test-method status="PASS" signature="springTestContextAfterTestMethod(java.lang.reflect.Method)[pri:0, instance:test.apptest.chuangye.AppChuangyeSignUp@7d95d4fe]" name="springTestContextAfterTestMethod" is-config="true" duration-ms="0" started-at="2016-12-01T16:24:26Z" finished-at="2016-12-01T16:24:26Z">
+>>>>>>> branch 'master' of git@172.16.11.124:luyi/appAuto.git
           <params>
             <param index="0">
               <value>
@@ -110,7 +140,11 @@ Capabilities [{platform=LINUX, app=E:\GitLab\appAuto\apps\EasyrongChuangye_pre_2
           <reporter-output>
           </reporter-output>
         </test-method> <!-- springTestContextAfterTestMethod -->
+<<<<<<< HEAD
+        <test-method status="PASS" signature="afterClass()[pri:0, instance:test.apptest.chuangye.AppChuangyeSignUp@1b09468]" name="afterClass" is-config="true" duration-ms="0" started-at="2016-12-01T15:37:16Z" finished-at="2016-12-01T15:37:16Z">
+=======
         <test-method status="PASS" signature="afterClass()[pri:0, instance:test.apptest.chuangye.AppChuangyeSignUp@7d95d4fe]" name="afterClass" is-config="true" duration-ms="0" started-at="2016-12-01T16:24:26Z" finished-at="2016-12-01T16:24:26Z">
+>>>>>>> branch 'master' of git@172.16.11.124:luyi/appAuto.git
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterClass -->

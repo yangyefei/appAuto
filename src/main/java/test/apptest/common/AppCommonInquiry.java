@@ -47,7 +47,7 @@ public class AppCommonInquiry extends BaseTest {
 	}
 	
 
-	@Test(enabled = true, dataProvider = "testData",description="普通问诊流程")
+	@Test(enabled = true, dataProvider = "testData", timeOut=600000, description="普通问诊流程")
 	public void commonInquiryProcess(Map<String, String> datadriven)throws Exception {
 		
 		String commonContent = datadriven.get("comments");

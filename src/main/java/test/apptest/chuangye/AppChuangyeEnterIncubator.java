@@ -8,9 +8,7 @@ import java.util.Iterator;
 import java.util.Map;
 import java.util.concurrent.TimeUnit;
 
-import org.openqa.selenium.Alert;
 import org.openqa.selenium.By;
-import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -19,17 +17,9 @@ import org.testng.annotations.Test;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.AfterClass;
 
-
-
-
 import service.AppCommonService;
 import service.InitialService;
-import service.WebCommonService;
-import common.frame.helper.Utils;
 import common.frame.test.BaseTest;
-import common.utils.UrlsOfPre;
-
-
 
 public class AppChuangyeEnterIncubator extends BaseTest {
 
@@ -46,6 +36,8 @@ public class AppChuangyeEnterIncubator extends BaseTest {
 
 	@BeforeClass
 	public void beforeClass() {
+		
+		
 	}
 
 
@@ -110,6 +102,8 @@ public class AppChuangyeEnterIncubator extends BaseTest {
 		logger.info("APP "+datadriven.get("version")+"---入驻流程测试结束---");
 		
 	}
+	
+	
  
 	
 	@DataProvider(name = "testData")

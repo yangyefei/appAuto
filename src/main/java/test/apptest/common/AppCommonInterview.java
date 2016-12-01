@@ -36,7 +36,7 @@ public class AppCommonInterview extends BaseTest {
 	public void beforeClass() {		
 	}		
 
-	@Test(enabled = true, dataProvider = "testData",description="约谈流程")
+	@Test(enabled = true, dataProvider = "testData", timeOut=600000, description="约谈流程")
 	public void interviewProcess(Map<String, String> datadriven)throws Exception {
 		
 		logger.info("APP "+datadriven.get("version")+"---约谈流程测试开始---");
