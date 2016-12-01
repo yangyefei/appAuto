@@ -3,7 +3,6 @@
 <suite name="Failed suite [Default suite]">
   <test name="Default test(failed)">
     <classes>
-<<<<<<< HEAD
       <class name="test.apptest.chuangye.AppChuangyeSignUp">
         <methods>
           <include name="chuangyeSignUp" invocation-numbers="0"/>
@@ -14,18 +13,6 @@
           <include name="springTestContextAfterTestMethod"/>
         </methods>
       </class> <!-- test.apptest.chuangye.AppChuangyeSignUp -->
-=======
-      <class name="test.apptest.common.AppCommonInquiry">
-        <methods>
-          <include name="commonInquiryProcess" invocation-numbers="0"/>
-          <include name="springTestContextBeforeTestMethod"/>
-          <include name="beforeClass"/>
-          <include name="springTestContextPrepareTestInstance"/>
-          <include name="springTestContextAfterTestMethod"/>
-          <include name="afterClass"/>
-        </methods>
-      </class> <!-- test.apptest.common.AppCommonInquiry -->
->>>>>>> branch 'master' of http://172.16.11.124/luyi/appAuto.git
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
