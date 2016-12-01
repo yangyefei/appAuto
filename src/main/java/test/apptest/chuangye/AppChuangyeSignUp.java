@@ -6,6 +6,7 @@ import io.appium.java_client.MobileBy.ByAccessibilityId;
 
 import java.io.IOException;
 import java.util.Iterator;
+import java.util.List;
 import java.util.Map;
 import java.util.concurrent.TimeUnit;
 
@@ -87,31 +88,21 @@ public class AppChuangyeSignUp extends BaseTest {
 			logger.info("点击进入报名页面");
 //			new WebDriverWait(driver,60).until(ExpectedConditions.visibilityOfElementLocated(ByAccessibilityId("报名 Link")));
 			driver.findElementByAccessibilityId("报名 Link").click();
-			logger.info("填写并提交报名申请");
+			logger.info("填写并提交报名申请");		
 			driver.findElementByClassName("android.widget.EditText").sendKeys("ceshi");
 			driver.findElementByAccessibilityId("获得 Link").click();
 			driver.findElementByAccessibilityId("请输入验证码").sendKeys("000000");
 			driver.findElementByAccessibilityId("其他").click();
-//			driver.findElementByAccessibilityId("公司").click();
-//			driver.findElementByAccessibilityId("请输入名称").sendKeys("11111");
-			driver.findElementByAccessibilityId("提交 Link").click();
-			
-//			driver.findElementByClassName("android.widget.EditText").sendKeys("ceshi");
-//			driver.findElementByAccessibilityId("获得 Link").click();
-//			driver.findElement(By.name("请输入验证码")).sendKeys("000000");
-//			driver.findElementByAccessibilityId("公司").click();
-//			driver.findElement(By.name("请输入名称")).sendKeys("xinlonghang");
-//			driver.findElementByAccessibilityId("提交 Link").click();
-			
+			driver.findElementByAccessibilityId("请输入名称").sendKeys("11111");
+			driver.findElementByAccessibilityId("提交 Link").click();			
 			driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 			logger.info("报名成功");
 			
 		} catch (Exception e) {
 			// TODO: handle exception
 			
-			logger.info("已报名、报名截止或活动结束");
-			driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
-			logger.info("报名失败");
+			logger.info("报名失败,之前已经报名、报名截止或活动已结束");
+
 			e.printStackTrace();
 		
 		}
@@ -143,50 +134,6 @@ public class AppChuangyeSignUp extends BaseTest {
 		driver.quit();
 		
 	}
-		
-//		logger.info("启动并登录后台系统");
-//	    webDriver = Initial.browserOfFirefoxSetUp(webDriver);
-//	    webDriver = Initial.browserOfChromeSetUp(webDriver);
-//	    webDriver.manage().window().maximize();
-//	    webDriver.get(UrlsOfPre.BackGroundSystem.getUrl());
-//	
-//	    new WebDriverWait(webDriver,60).until(ExpectedConditions.elementToBeClickable(By.id("form_user"))).sendKeys(datadriven.get("backUserName"));
-//	    webDriver.findElement(By.id("form_password")).sendKeys(datadriven.get("backPassword"));
-//	    webDriver.findElement(By.className("btn-submit")).click();
-//	
-//	    logger.info("进入营销-活动报名-报名管理菜单");
-//	    new WebDriverWait(webDriver,60).until(ExpectedConditions.elementToBeClickable(By.linkText("营销"))).click();
-//	    new WebDriverWait(webDriver,60).until(ExpectedConditions.elementToBeClickable(By.id("li_40"))).click();
-//	    new WebDriverWait(webDriver,60).until(ExpectedConditions.elementToBeClickable(By.id("li_53"))).click();
-//	    Thread.sleep(5000);
-//	
-//	    logger.info("通过报名");
-//	    new WebDriverWait(webDriver,60).until(ExpectedConditions.elementToBeClickable(By.linkText("通过"))).click();
-//	    
-//	    logger.info("退出后台系统");
-//	    webDriver = webCommonService.logoutOfBackgroundSystem(webDriver);
-//	    webDriver.quit();
-//		
-//	    logger.info("再次启动创业者app");
-//		driver = Initial.appiumAndroidChuangyeSetUp(driver, changyeApkName);
-//		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
-//		logger.info("进入助理，查看已报名活动");
-//		new WebDriverWait(driver,60).until(ExpectedConditions.elementToBeClickable(By.name("助理"))).click();
-//		new WebDriverWait(driver,60).until(ExpectedConditions.elementToBeClickable(By.name("待参加"))).click();
-//		
-//		try {
-//
-//			logger.info("去待参加页面查看是否有活动");
-//			new WebDriverWait(driver,60).until(ExpectedConditions.visibilityOfElementLocated(By.name("自动化活动")));
-//			logger.info("校验成功");
-//			
-//		} catch (Exception e) {//没有活动退出APP
-//			// TODO Auto-generated catch block
-//
-//			logger.info("待参加中没有活动");
-//			driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
-//			logger.info("活动报名失败");		
-//			e.printStackTrace();
 
 
 	@DataProvider(name = "testData")

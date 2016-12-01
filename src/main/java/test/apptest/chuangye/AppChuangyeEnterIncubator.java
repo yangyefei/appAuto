@@ -8,9 +8,7 @@ import java.util.Iterator;
 import java.util.Map;
 import java.util.concurrent.TimeUnit;
 
-import org.openqa.selenium.Alert;
 import org.openqa.selenium.By;
-import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -19,17 +17,9 @@ import org.testng.annotations.Test;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.AfterClass;
 
-
-
-
 import service.AppCommonService;
 import service.InitialService;
-import service.WebCommonService;
-import common.frame.helper.Utils;
 import common.frame.test.BaseTest;
-import common.utils.UrlsOfPre;
-
-
 
 public class AppChuangyeEnterIncubator extends BaseTest {
 
@@ -46,6 +36,8 @@ public class AppChuangyeEnterIncubator extends BaseTest {
 
 	@BeforeClass
 	public void beforeClass() {
+		
+		
 	}
 
 
@@ -60,10 +52,10 @@ public class AppChuangyeEnterIncubator extends BaseTest {
 		driver = Initial.appiumAndroidChuangyeSetUp(driver, changyeApkName);
 		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 		new WebDriverWait(driver,60).until(ExpectedConditions.elementToBeClickable(By.name("我的"))).click();
-		appCommonService.appLogout(driver);
+		appCommonService.logoutForApp(driver);
 
 		logger.info("登录创业者app");
-		driver = appCommonService.appLogin(driver,datadriven.get("changyeUserName"),datadriven.get("chuangyePassword"));
+		driver = appCommonService.loginForApp(driver,datadriven.get("changyeUserName"),datadriven.get("chuangyePassword"));
 		
 		//点击进入孵化器列表页
 		logger.info("发现-进入孵化器列表页");
@@ -105,11 +97,14 @@ public class AppChuangyeEnterIncubator extends BaseTest {
 		new WebDriverWait(driver,60).until(ExpectedConditions.elementToBeClickable(By.id("title_back_img"))).click();
 		logger.info("退出登录");
 		new WebDriverWait(driver,60).until(ExpectedConditions.elementToBeClickable(By.name("我的"))).click();
-		appCommonService.appLogout(driver);
-		logger.info("APP "+datadriven.get("version")+"---入驻流程测试结束---");
+		appCommonService.logoutForApp(driver);
 		driver.quit();
 		
+		logger.info("APP "+datadriven.get("version")+"---入驻流程测试结束---");		
+		
 	}
+	
+	
  
 	
 	@DataProvider(name = "testData")

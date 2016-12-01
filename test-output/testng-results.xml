@@ -2,111 +2,57 @@
 <testng-results skipped="0" failed="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-<<<<<<< HEAD
-  <suite name="Default suite" duration-ms="92224" started-at="2016-11-30T07:28:33Z" finished-at="2016-11-30T07:30:05Z">
+  <suite name="Default suite" duration-ms="47698" started-at="2016-12-01T07:36:28Z" finished-at="2016-12-01T07:37:16Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="92224" started-at="2016-11-30T07:28:33Z" finished-at="2016-11-30T07:30:05Z">
-      <class name="test.apptest.chuangye.AppChuangyeEnterIncubator">
-        <test-method status="PASS" signature="springTestContextPrepareTestInstance()[pri:0, instance:test.apptest.chuangye.AppChuangyeEnterIncubator@2927fa12]" name="springTestContextPrepareTestInstance" is-config="true" duration-ms="437" started-at="2016-11-30T15:28:33Z" finished-at="2016-11-30T15:28:33Z">
+    <test name="Default test" duration-ms="47698" started-at="2016-12-01T07:36:28Z" finished-at="2016-12-01T07:37:16Z">
+      <class name="test.apptest.chuangye.AppChuangyeSignUp">
+        <test-method status="PASS" signature="springTestContextPrepareTestInstance()[pri:0, instance:test.apptest.chuangye.AppChuangyeSignUp@1b09468]" name="springTestContextPrepareTestInstance" is-config="true" duration-ms="753" started-at="2016-12-01T15:36:28Z" finished-at="2016-12-01T15:36:29Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- springTestContextPrepareTestInstance -->
-        <test-method status="PASS" signature="beforeClass()[pri:0, instance:test.apptest.chuangye.AppChuangyeEnterIncubator@2927fa12]" name="beforeClass" is-config="true" duration-ms="1" started-at="2016-11-30T15:28:33Z" finished-at="2016-11-30T15:28:33Z">
+        <test-method status="PASS" signature="beforeClass()[pri:0, instance:test.apptest.chuangye.AppChuangyeSignUp@1b09468]" name="beforeClass" is-config="true" duration-ms="0" started-at="2016-12-01T15:36:29Z" finished-at="2016-12-01T15:36:29Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeClass -->
-        <test-method status="PASS" signature="springTestContextBeforeTestMethod(java.lang.reflect.Method)[pri:0, instance:test.apptest.chuangye.AppChuangyeEnterIncubator@2927fa12]" name="springTestContextBeforeTestMethod" is-config="true" duration-ms="1" started-at="2016-11-30T15:28:33Z" finished-at="2016-11-30T15:28:33Z">
+        <test-method status="PASS" signature="springTestContextBeforeTestMethod(java.lang.reflect.Method)[pri:0, instance:test.apptest.chuangye.AppChuangyeSignUp@1b09468]" name="springTestContextBeforeTestMethod" is-config="true" duration-ms="1" started-at="2016-12-01T15:36:29Z" finished-at="2016-12-01T15:36:29Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[public void test.apptest.chuangye.AppChuangyeEnterIncubator.chuangyeEnterIncubator(java.util.Map) throws java.lang.Exception]]>
+                <![CDATA[public void test.apptest.chuangye.AppChuangyeSignUp.chuangyeSignUp(java.util.Map) throws java.lang.Exception]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- springTestContextBeforeTestMethod -->
-        <test-method status="PASS" signature="chuangyeEnterIncubator(java.util.Map)[pri:0, instance:test.apptest.chuangye.AppChuangyeEnterIncubator@2927fa12]" name="chuangyeEnterIncubator" duration-ms="91601" started-at="2016-11-30T15:28:33Z" description="ÆóÒµÈë×¤·õ»¯Æ÷" data-provider="testData" finished-at="2016-11-30T15:30:05Z">
+        <test-method status="PASS" signature="chuangyeSignUp(java.util.Map)[pri:0, instance:test.apptest.chuangye.AppChuangyeSignUp@1b09468]" name="chuangyeSignUp" duration-ms="46519" started-at="2016-12-01T15:36:29Z" description="æ´»åŠ¨æŠ¥å" data-provider="testData" finished-at="2016-12-01T15:37:16Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[{fundApkName=EasyrongFund_pre_2_2_1.apk, fundPassword=xlh123456, backPassword=xlh123456, incubator=×¢²átest(ÉÏº£w)+, filePath=D:\\autotest.pdf, changyeUserName=18200000099, backUserName=zdhcs, changyeApkName=EasyrongChuangye_pre_2_3_1.apk, fundUserName=lkj123, comments=app×Ô¶¯»¯²âÊÔÓÃÆÀÂÛ123£¬ÓÐ³¤¶ÈÒªÇó³¬¹ý20¸ö×Ö, chuangyePassword=xlh123456, version=v2.3}]]>
+                <![CDATA[{fundApkName=EasyrongFund_pre_2_2_1.apk, fundPassword=xlh123456, backPassword=xlh123456, filePath=D:\\autotest.pdf, changyeUserName=13900110000, backUserName=zdhcs, changyeApkName=EasyrongChuangye_pre_2_3_1.apk, fundUserName=lkj123, comments=appè‡ªåŠ¨åŒ–æµ‹è¯•ç”¨è¯„è®º123ï¼Œæœ‰é•¿åº¦è¦æ±‚è¶…è¿‡20ä¸ªå­—, activity=è‡ªåŠ¨åŒ–æ´»åŠ¨, chuangyePassword=xlh123456, version=v2.3}]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- chuangyeEnterIncubator -->
-        <test-method status="PASS" signature="springTestContextAfterTestMethod(java.lang.reflect.Method)[pri:0, instance:test.apptest.chuangye.AppChuangyeEnterIncubator@2927fa12]" name="springTestContextAfterTestMethod" is-config="true" duration-ms="1" started-at="2016-11-30T15:30:05Z" finished-at="2016-11-30T15:30:05Z">
+        </test-method> <!-- chuangyeSignUp -->
+        <test-method status="PASS" signature="springTestContextAfterTestMethod(java.lang.reflect.Method)[pri:0, instance:test.apptest.chuangye.AppChuangyeSignUp@1b09468]" name="springTestContextAfterTestMethod" is-config="true" duration-ms="2" started-at="2016-12-01T15:37:16Z" finished-at="2016-12-01T15:37:16Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[public void test.apptest.chuangye.AppChuangyeEnterIncubator.chuangyeEnterIncubator(java.util.Map) throws java.lang.Exception]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- springTestContextAfterTestMethod -->
-        <test-method status="PASS" signature="afterClass()[pri:0, instance:test.apptest.chuangye.AppChuangyeEnterIncubator@2927fa12]" name="afterClass" is-config="true" duration-ms="0" started-at="2016-11-30T15:30:05Z" finished-at="2016-11-30T15:30:05Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- afterClass -->
-      </class> <!-- test.apptest.chuangye.AppChuangyeEnterIncubator -->
-=======
-  <suite name="Default suite" duration-ms="223494" started-at="2016-11-30T03:00:00Z" finished-at="2016-11-30T03:03:44Z">
-    <groups>
-    </groups>
-    <test name="Default test" duration-ms="223494" started-at="2016-11-30T03:00:00Z" finished-at="2016-11-30T03:03:44Z">
-      <class name="test.apptest.common.AppCommonInquiry">
-        <test-method status="PASS" signature="springTestContextPrepareTestInstance()[pri:0, instance:test.apptest.common.AppCommonInquiry@1b09468]" name="springTestContextPrepareTestInstance" is-config="true" duration-ms="612" started-at="2016-11-30T11:00:00Z" finished-at="2016-11-30T11:00:01Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- springTestContextPrepareTestInstance -->
-        <test-method status="PASS" signature="beforeClass()[pri:0, instance:test.apptest.common.AppCommonInquiry@1b09468]" name="beforeClass" is-config="true" duration-ms="1" started-at="2016-11-30T11:00:01Z" finished-at="2016-11-30T11:00:01Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- beforeClass -->
-        <test-method status="PASS" signature="springTestContextBeforeTestMethod(java.lang.reflect.Method)[pri:0, instance:test.apptest.common.AppCommonInquiry@1b09468]" name="springTestContextBeforeTestMethod" is-config="true" duration-ms="1" started-at="2016-11-30T11:00:01Z" finished-at="2016-11-30T11:00:01Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[public void test.apptest.common.AppCommonInquiry.commonInquiryProcess(java.util.Map) throws java.lang.Exception]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- springTestContextBeforeTestMethod -->
-        <test-method status="PASS" signature="commonInquiryProcess(java.util.Map)[pri:0, instance:test.apptest.common.AppCommonInquiry@1b09468]" name="commonInquiryProcess" duration-ms="222471" started-at="2016-11-30T11:00:01Z" description="æ™®é€šé—®è¯Šæµç¨‹" data-provider="testData" finished-at="2016-11-30T11:03:44Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[{fundApkName=EasyrongFund_pre_2_2_1.apk, fundPassword=xlh123456, uploadFilePath=E:\uploadFiles\autotest.pdf, backPassword=xlh123456, inquiryTutor=ç©ºç©º, changyeUserName=18200000099, backUserName=zdhcs, changyeApkName=EasyrongChuangye_pre_2_3_1.apk, fundUserName=lkj123, comments=appè‡ªåŠ¨åŒ–æµ‹è¯•ç”¨è¯„è®º123ï¼Œæœ‰é•¿åº¦è¦æ±‚è¶…è¿‡20ä¸ªå­—, chuangyePassword=xlh123456, version=v2.3}]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- commonInquiryProcess -->
-        <test-method status="PASS" signature="springTestContextAfterTestMethod(java.lang.reflect.Method)[pri:0, instance:test.apptest.common.AppCommonInquiry@1b09468]" name="springTestContextAfterTestMethod" is-config="true" duration-ms="3" started-at="2016-11-30T11:03:44Z" finished-at="2016-11-30T11:03:44Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[public void test.apptest.common.AppCommonInquiry.commonInquiryProcess(java.util.Map) throws java.lang.Exception]]>
+                <![CDATA[public void test.apptest.chuangye.AppChuangyeSignUp.chuangyeSignUp(java.util.Map) throws java.lang.Exception]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- springTestContextAfterTestMethod -->
-        <test-method status="PASS" signature="afterClass()[pri:0, instance:test.apptest.common.AppCommonInquiry@1b09468]" name="afterClass" is-config="true" duration-ms="1" started-at="2016-11-30T11:03:44Z" finished-at="2016-11-30T11:03:44Z">
+        <test-method status="PASS" signature="afterClass()[pri:0, instance:test.apptest.chuangye.AppChuangyeSignUp@1b09468]" name="afterClass" is-config="true" duration-ms="0" started-at="2016-12-01T15:37:16Z" finished-at="2016-12-01T15:37:16Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterClass -->
-      </class> <!-- test.apptest.common.AppCommonInquiry -->
->>>>>>> branch 'master' of http://172.16.11.124/luyi/appAuto.git
+      </class> <!-- test.apptest.chuangye.AppChuangyeSignUp -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>
