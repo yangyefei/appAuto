@@ -6,13 +6,17 @@ import io.appium.java_client.AppiumDriver;
 import java.io.IOException;
 import java.security.PrivateKey;
 import java.util.Iterator;
+import java.util.List;
 import java.util.Map;
 import java.util.concurrent.TimeUnit;
+
+import net.sf.saxon.functions.Substring;
 
 import org.omg.CORBA.PRIVATE_MEMBER;
 import org.openqa.selenium.Alert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -20,6 +24,12 @@ import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.AfterClass;
+
+
+
+
+
+
 
 
 
@@ -53,7 +63,7 @@ public class AppChuangyeReleaseLoan extends BaseTest {
 	}
 
 
-	@Test(enabled = true, dataProvider = "testData",description="发布贷款",timeOut=600)
+	@Test(enabled = true, dataProvider = "testData",description="发布贷款")
 	public void chuangyeEnterIncubator(Map<String, String> datadriven)throws Exception {
 		
 		String changyeApkName = datadriven.get("changyeApkName");//创业者apk
@@ -63,10 +73,10 @@ public class AppChuangyeReleaseLoan extends BaseTest {
 		logger.info("启动创业者app");
 		driver = Initial.appiumAndroidChuangyeSetUp(driver, changyeApkName);
 		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
-//		appCommonService.logoutForApp(driver);
-//
-//		logger.info("登录创业者app");
-//		driver = appCommonService.loginForApp(driver,datadriven.get("changyeUserName"),datadriven.get("chuangyePassword"));
+		appCommonService.logoutForApp(driver);
+
+		logger.info("登录创业者app");
+		driver = appCommonService.loginForApp(driver,datadriven.get("changyeUserName"),datadriven.get("chuangyePassword"));
 		
 		//点击进入发布贷款页
 		logger.info("一融-进入发布贷款页");
@@ -89,18 +99,30 @@ public class AppChuangyeReleaseLoan extends BaseTest {
 		appCommonService.swipeToDown(driver);
 		driver.findElement(By.name("请输入")).sendKeys("XLH");
 		driver.findElement(By.name("请选择")).click();
-		driver.findElement(By.name("Dec")).click();
-		driver.findElement(By.name("01")).click();
-		driver.findElement(By.name("2015")).click();
+		dateswipeleft(driver);
+		Thread.sleep(1500);
+		swipemiddum(driver);
+		Thread.sleep(1500);
+		dateswiperight(driver);
+		Thread.sleep(1500);
 		driver.findElement(By.name("确定")).click();
 		driver.findElement(By.name("请选择")).click();
 		swipeleft(driver);
 		Thread.sleep(1500);
 		swipemiddum(driver);
-		Thread.sleep(1500);
+		Thread.sleep(1500);		
 		swiperight(driver);
 		Thread.sleep(1500);
 		driver.findElement(By.name("确定")).click();
+		
+		//获取地区
+		List<WebElement> list=driver.findElements(By.id("message_tv"));
+		WebElement target = list.get(2);
+		String area = target.getText();
+		//截取市级名称
+		String province = area.substring(3, 5);
+//		System.out.print(province+"房地产行业项目");
+		
 		driver.findElement(By.name("请选择")).click();
 		driver.findElement(By.name("房地产")).click();
 		driver.findElement(By.name("请输入")).sendKeys("50");
@@ -113,14 +135,17 @@ public class AppChuangyeReleaseLoan extends BaseTest {
 		driver.findElement(By.name("立即提交")).click();
 		
 		logger.info("项目发布成功，返回首页");
-		driver.findElement(By.name("返回首页")).click();
+		new WebDriverWait(driver,60).until(ExpectedConditions.elementToBeClickable(By.name("返回首页"))).click();
 		logger.info("去我的-贷款项目,校验");
-		driver.findElement(By.name("我的")).click();
-		driver.findElement(By.name("贷款项目")).click();
+		new WebDriverWait(driver,60).until(ExpectedConditions.elementToBeClickable(By.name("我的"))).click();
+		new WebDriverWait(driver,60).until(ExpectedConditions.elementToBeClickable(By.name("贷款项目"))).click();
 		
 		try {
 			
-			new WebDriverWait(driver,40).until(ExpectedConditions.visibilityOfElementLocated(By.id("apply_company_name")));
+			String date = Utils.getCurrentDate();
+			String month = date.substring(5, 7);
+			String day = date.substring(8, 10);	
+			new WebDriverWait(driver,40).until(ExpectedConditions.visibilityOfElementLocated(By.name(province+"房地产行业项目 XD16"+month+day+"00")));
 			logger.info("校验成功，返回并退出");
 			new WebDriverWait(driver,60).until(ExpectedConditions.elementToBeClickable(By.id("title_back_img"))).click();
 			appCommonService.logoutForApp(driver);
@@ -138,30 +163,46 @@ public class AppChuangyeReleaseLoan extends BaseTest {
 		
 	}
 		
+
 		private void swipeleft (AppiumDriver driver) {
-			// TODO Auto-generated method stub
 			
 	        int width = driver.manage().window().getSize().width;
 	        int height = driver.manage().window().getSize().height;
-	        driver.swipe(width/6,height*5/6, width/6,height*2/3, 1000);//向下滑动，间隔1s        	
+	        driver.swipe(width/6,height*5/6, width/6,height*2/3, 1000);//向下滑动，间隔1s  
+	        
 		}
 		
 		private void swipemiddum (AppiumDriver driver) {
-			// TODO Auto-generated method stub
 			
 	        int width = driver.manage().window().getSize().width;
 	        int height = driver.manage().window().getSize().height;
-	        driver.swipe(width/2,height*5/6, width/2,height*8/15, 1000);//向下滑动，间隔1s        	
+	        driver.swipe(width/2,height*5/6, width/2,height*2/5, 1000);//向下滑动，间隔1s   
+	        
 		}
 		
 		private void swiperight (AppiumDriver driver) {
-			// TODO Auto-generated method stub
 			
 	        int width = driver.manage().window().getSize().width;
 	        int height = driver.manage().window().getSize().height;
-	        driver.swipe(width*5/6,height*5/6, width*5/6,height*2/3, 1000);//向下滑动，间隔1s        	
+	        driver.swipe(width*5/6,height*5/6, width*5/6,height*2/3, 1000);//向下滑动，间隔1s    
+	        
 		}
 		
+		private void dateswipeleft (AppiumDriver driver) {
+			
+	        int width = driver.manage().window().getSize().width;
+	        int height = driver.manage().window().getSize().height;
+	        driver.swipe(width*3/10,height*5/6, width*3/10,height*99/100, 1000);//向上滑动，间隔1s     
+	        
+		}
+		
+		private void dateswiperight (AppiumDriver driver) {
+			
+	        int width = driver.manage().window().getSize().width;
+	        int height = driver.manage().window().getSize().height;
+	        driver.swipe(width*7/10,height*5/6, width*7/10,height*99/100, 1000);//向上滑动，间隔1s      
+	        
+		}
 
 	@DataProvider(name = "testData")
 	public Iterator<Object[]> data1test() throws IOException {
