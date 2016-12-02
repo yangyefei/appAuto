@@ -14,11 +14,7 @@ platformVersion=4.4
 #android chuangye AppPackage&AppActivity
 chuangyeAppPackage=com.easyrongchuangye
 chuangyeAppActivity=.activities.EasyrongChuangyeActivity
-#android chuangye apk path
-apkPathOfChuangye=D:\\autoApp\\testAPK\\EasyrongChuangye_pre_2_3_1.apk
 
 #android fund AppPackage&AppActivity
 fundAppPackage=com.easyrongfund
 fundAppActivity=.activities.EasyrongFundMainActivity
-#android fund apk path
-apkPathOfFund=D:\\autoApp\\testAPK\\EasyrongFund_pre_2_2_1.apk
