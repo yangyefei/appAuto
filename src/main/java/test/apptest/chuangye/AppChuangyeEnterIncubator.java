@@ -41,7 +41,7 @@ public class AppChuangyeEnterIncubator extends BaseTest {
 	}
 
 
-	@Test(enabled = true, dataProvider = "testData",description="企业入驻孵化器")
+	@Test(enabled = true, dataProvider = "testData",description="企业入驻孵化器",timeOut=300)
 	public void chuangyeEnterIncubator(Map<String, String> datadriven)throws Exception {
 		
 		String changyeApkName = datadriven.get("changyeApkName");//创业者apk
@@ -51,7 +51,6 @@ public class AppChuangyeEnterIncubator extends BaseTest {
 		logger.info("启动创业者app");
 		driver = Initial.appiumAndroidChuangyeSetUp(driver, changyeApkName);
 		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
-		new WebDriverWait(driver,60).until(ExpectedConditions.elementToBeClickable(By.name("我的"))).click();
 		appCommonService.logoutForApp(driver);
 
 		logger.info("登录创业者app");
@@ -96,7 +95,6 @@ public class AppChuangyeEnterIncubator extends BaseTest {
 		logger.info("返回并退出登录");
 		new WebDriverWait(driver,60).until(ExpectedConditions.elementToBeClickable(By.id("title_back_img"))).click();
 		new WebDriverWait(driver,60).until(ExpectedConditions.elementToBeClickable(By.id("title_back_img"))).click();
-		new WebDriverWait(driver,60).until(ExpectedConditions.elementToBeClickable(By.name("我的"))).click();
 		appCommonService.logoutForApp(driver);
 		driver.quit();
 		logger.info("APP "+datadriven.get("version")+"---入驻流程测试结束---");

@@ -40,7 +40,7 @@ public class AppChuangyeSignUp extends BaseTest {
 	}
 
 
-	@Test(enabled = true, dataProvider = "testData",description="活动报名")
+	@Test(enabled = true, dataProvider = "testData",description="活动报名",timeOut=300)
 	public void chuangyeSignUp(Map<String, String> datadriven)throws Exception {
 		
 		String changyeApkName = datadriven.get("changyeApkName");//创业者apk
@@ -50,7 +50,6 @@ public class AppChuangyeSignUp extends BaseTest {
 		logger.info("启动创业者app");
 		driver = Initial.appiumAndroidChuangyeSetUp(driver, changyeApkName);
 		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
-		new WebDriverWait(driver,60).until(ExpectedConditions.elementToBeClickable(By.name("我的"))).click();
 		appCommonService.logoutForApp(driver);
 
 		logger.info("登录创业者app");
@@ -79,8 +78,7 @@ public class AppChuangyeSignUp extends BaseTest {
 			List<WebElement> list=driver.findElementsByClassName("android.widget.EditText");
 			WebElement target = list.get(3);
 			target.sendKeys("xinlonghang");
-			driver.findElementByAccessibilityId("提交 Link").click();
-			
+			driver.findElementByAccessibilityId("提交 Link").click();	
 			driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 			logger.info("报名成功");
 			
@@ -88,18 +86,19 @@ public class AppChuangyeSignUp extends BaseTest {
 			// TODO: handle exception
 			
 			logger.info("报名失败,之前已经报名、报名截止或活动已结束");
+			driver.quit();
 			e.printStackTrace();		
 		}
 		
+		logger.info("返回，去我的活动页面校验");
 		new WebDriverWait(driver,60).until(ExpectedConditions.elementToBeClickable(By.id("detail_back_view"))).click();
-		new WebDriverWait(driver,60).until(ExpectedConditions.elementToBeClickable(By.id("title_back_img"))).click();
+		new WebDriverWait(driver,60).until(ExpectedConditions.elementToBeClickable(By.id("title_back_img"))).click();	
 		new WebDriverWait(driver,60).until(ExpectedConditions.elementToBeClickable(By.name("我的"))).click();
 		driver = appCommonService.swipeToDown(driver);
 		new WebDriverWait(driver,60).until(ExpectedConditions.elementToBeClickable(By.name("我的活动"))).click();
 		
 		try {
 
-			logger.info("去我的活动页面查看是否有活动");
 			new WebDriverWait(driver,40).until(ExpectedConditions.visibilityOfElementLocated(By.name("自动化活动")));
 			logger.info("校验成功");
 			
