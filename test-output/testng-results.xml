@@ -1,32 +1,38 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <testng-results skipped="0" failed="0" total="1" passed="1">
   <reporter-output>
+    <line>
+      <![CDATA[更新企业状态...]]>
+    </line>
+    <line>
+      <![CDATA[mysql预发环境数据库连接信息为：172.16.11.80:3306]]>
+    </line>
   </reporter-output>
-  <suite name="Default suite" duration-ms="188638" started-at="2016-12-02T03:43:19Z" finished-at="2016-12-02T03:46:27Z">
+  <suite name="Default suite" duration-ms="1186" started-at="2016-12-06T10:34:35Z" finished-at="2016-12-06T10:34:36Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="188638" started-at="2016-12-02T03:43:19Z" finished-at="2016-12-02T03:46:27Z">
+    <test name="Default test" duration-ms="1186" started-at="2016-12-06T10:34:35Z" finished-at="2016-12-06T10:34:36Z">
       <class name="test.apptest.common.AppCommonInterview">
-        <test-method status="PASS" signature="springTestContextPrepareTestInstance()[pri:0, instance:test.apptest.common.AppCommonInterview@1b09468]" name="springTestContextPrepareTestInstance" is-config="true" duration-ms="802" started-at="2016-12-02T11:43:19Z" finished-at="2016-12-02T11:43:20Z">
+        <test-method status="PASS" signature="springTestContextPrepareTestInstance()[pri:0, instance:test.apptest.common.AppCommonInterview@c7b00c]" name="springTestContextPrepareTestInstance" is-config="true" duration-ms="645" started-at="2016-12-06T18:34:35Z" finished-at="2016-12-06T18:34:36Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- springTestContextPrepareTestInstance -->
-        <test-method status="PASS" signature="beforeClass()[pri:0, instance:test.apptest.common.AppCommonInterview@1b09468]" name="beforeClass" is-config="true" duration-ms="0" started-at="2016-12-02T11:43:20Z" finished-at="2016-12-02T11:43:20Z">
+        <test-method status="PASS" signature="beforeClass()[pri:0, instance:test.apptest.common.AppCommonInterview@c7b00c]" name="beforeClass" is-config="true" duration-ms="0" started-at="2016-12-06T18:34:36Z" finished-at="2016-12-06T18:34:36Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeClass -->
-        <test-method status="PASS" signature="springTestContextBeforeTestMethod(java.lang.reflect.Method)[pri:0, instance:test.apptest.common.AppCommonInterview@1b09468]" name="springTestContextBeforeTestMethod" is-config="true" duration-ms="0" started-at="2016-12-02T11:43:20Z" finished-at="2016-12-02T11:43:20Z">
+        <test-method status="PASS" signature="springTestContextBeforeTestMethod(java.lang.reflect.Method)[pri:0, instance:test.apptest.common.AppCommonInterview@c7b00c]" name="springTestContextBeforeTestMethod" is-config="true" duration-ms="1" started-at="2016-12-06T18:34:36Z" finished-at="2016-12-06T18:34:36Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[public void test.apptest.common.AppCommonInterview.interviewProcess(java.util.Map) throws java.lang.Exception]]>
+                <![CDATA[public void test.apptest.common.AppCommonInterview.updateTest(java.util.Map) throws java.lang.Exception]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- springTestContextBeforeTestMethod -->
-        <test-method status="PASS" signature="interviewProcess(java.util.Map)[pri:0, instance:test.apptest.common.AppCommonInterview@1b09468]" name="interviewProcess" duration-ms="187422" started-at="2016-12-02T11:43:20Z" description="约谈流程" data-provider="testData" finished-at="2016-12-02T11:46:27Z">
+        <test-method status="PASS" signature="updateTest(java.util.Map)[pri:0, instance:test.apptest.common.AppCommonInterview@c7b00c]" name="updateTest" duration-ms="308" started-at="2016-12-06T18:34:36Z" data-provider="testData" finished-at="2016-12-06T18:34:36Z">
           <params>
             <param index="0">
               <value>
@@ -35,20 +41,26 @@
             </param>
           </params>
           <reporter-output>
+            <line>
+              <![CDATA[更新企业状态...]]>
+            </line>
+            <line>
+              <![CDATA[mysql预发环境数据库连接信息为：172.16.11.80:3306]]>
+            </line>
           </reporter-output>
-        </test-method> <!-- interviewProcess -->
-        <test-method status="PASS" signature="springTestContextAfterTestMethod(java.lang.reflect.Method)[pri:0, instance:test.apptest.common.AppCommonInterview@1b09468]" name="springTestContextAfterTestMethod" is-config="true" duration-ms="5" started-at="2016-12-02T11:46:27Z" finished-at="2016-12-02T11:46:27Z">
+        </test-method> <!-- updateTest -->
+        <test-method status="PASS" signature="springTestContextAfterTestMethod(java.lang.reflect.Method)[pri:0, instance:test.apptest.common.AppCommonInterview@c7b00c]" name="springTestContextAfterTestMethod" is-config="true" duration-ms="1" started-at="2016-12-06T18:34:36Z" finished-at="2016-12-06T18:34:36Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[public void test.apptest.common.AppCommonInterview.interviewProcess(java.util.Map) throws java.lang.Exception]]>
+                <![CDATA[public void test.apptest.common.AppCommonInterview.updateTest(java.util.Map) throws java.lang.Exception]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- springTestContextAfterTestMethod -->
-        <test-method status="PASS" signature="afterClass()[pri:0, instance:test.apptest.common.AppCommonInterview@1b09468]" name="afterClass" is-config="true" duration-ms="0" started-at="2016-12-02T11:46:27Z" finished-at="2016-12-02T11:46:27Z">
+        <test-method status="PASS" signature="afterClass()[pri:0, instance:test.apptest.common.AppCommonInterview@c7b00c]" name="afterClass" is-config="true" duration-ms="0" started-at="2016-12-06T18:34:36Z" finished-at="2016-12-06T18:34:36Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterClass -->

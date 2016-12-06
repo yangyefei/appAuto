@@ -5,7 +5,7 @@
     <classes>
       <class name="test.apptest.common.AppCommonInterview">
         <methods>
-          <include name="interviewProcess" invocation-numbers="0"/>
+          <include name="dataTest" invocation-numbers="0"/>
           <include name="springTestContextBeforeTestMethod"/>
           <include name="afterClass"/>
           <include name="springTestContextPrepareTestInstance"/>
