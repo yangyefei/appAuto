@@ -65,7 +65,7 @@ public class AppChuangyeApplyLoan extends BaseTest {
 	}
 
 
-	@Test(enabled = true, dataProvider = "testData",description="申请贷款")
+	@Test(enabled = true, dataProvider = "testData",description="申请贷款",timeOut=240000)
 	public void chuangyeApplyLoan(Map<String, String> datadriven)throws Exception {
 		
 		String changyeApkName = datadriven.get("changyeApkName");//创业者apk
@@ -131,7 +131,7 @@ public class AppChuangyeApplyLoan extends BaseTest {
 		driver.findElement(By.name("立即提交")).click();
 		SimpleDateFormat date = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
 		String time = date.format(new Date());
-//		System.out.println(time);
+		System.out.println(time);
 		
 		logger.info("贷款申请成功，返回首页");
 		new WebDriverWait(driver,60).until(ExpectedConditions.elementToBeClickable(By.name("返回首页"))).click();

@@ -40,7 +40,7 @@ public class AppChuangyeSignUp extends BaseTest {
 	}
 
 
-	@Test(enabled = true, dataProvider = "testData",description="活动报名",timeOut=300)
+	@Test(enabled = true, dataProvider = "testData",description="活动报名",timeOut=300000)
 	public void chuangyeSignUp(Map<String, String> datadriven)throws Exception {
 		
 		String changyeApkName = datadriven.get("changyeApkName");//创业者apk

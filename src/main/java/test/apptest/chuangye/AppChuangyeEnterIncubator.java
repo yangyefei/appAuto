@@ -41,7 +41,7 @@ public class AppChuangyeEnterIncubator extends BaseTest {
 	}
 
 
-	@Test(enabled = true, dataProvider = "testData",description="企业入驻孵化器",timeOut=300)
+	@Test(enabled = true, dataProvider = "testData",description="企业入驻孵化器",timeOut=180000)
 	public void chuangyeEnterIncubator(Map<String, String> datadriven)throws Exception {
 		
 		String changyeApkName = datadriven.get("changyeApkName");//创业者apk
