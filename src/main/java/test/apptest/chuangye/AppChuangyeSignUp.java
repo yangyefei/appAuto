@@ -20,6 +20,8 @@ import org.testng.annotations.BeforeClass;
 import org.testng.annotations.AfterClass;
 
 
+
+import orm.jdbc.MysqlDataDeal;
 //import antlr.collections.List;
 import service.AppCommonService;
 import service.InitialService;
@@ -30,7 +32,11 @@ public class AppChuangyeSignUp extends BaseTest {
 	@Autowired
 	private InitialService Initial;
 	@Autowired
-	private AppCommonService appCommonService;	
+	private AppCommonService appCommonService;
+	@Autowired
+	private MysqlDataDeal mysqlDataDeal;
+	
+	
 	private AppiumDriver driver;
 //	private WebDriver webDriver;
 
@@ -38,9 +44,9 @@ public class AppChuangyeSignUp extends BaseTest {
 	@BeforeClass
 	public void beforeClass() {
 	}
+	
 
-
-	@Test(enabled = true, dataProvider = "testData",description="活动报名",timeOut=300000)
+	@Test(enabled = true, dataProvider = "testData",description="活动报名",timeOut=480000)
 	public void chuangyeSignUp(Map<String, String> datadriven)throws Exception {
 		
 		String apkPathOfChuangye = datadriven.get("apkPathOfChuangye");
@@ -51,7 +57,6 @@ public class AppChuangyeSignUp extends BaseTest {
 
 		driver = Initial.appiumAndroidChuangyeSetUp(driver,apkPathOfChuangye);
 		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
-
 		appCommonService.logoutForApp(driver);
 
 		logger.info("登录创业者app");
@@ -74,8 +79,10 @@ public class AppChuangyeSignUp extends BaseTest {
 			logger.info("填写并提交报名申请");		
 			driver.findElementByClassName("android.widget.EditText").sendKeys("ceshi");
 			driver.findElementByAccessibilityId("获得 Link").click();
-			driver.findElementByAccessibilityId("请输入验证码").sendKeys("000000");
-
+			//获取验证码
+			String code = mysqlDataDeal.getSignUpComfirmCode(datadriven.get("changyeUserName"));
+			driver.findElementByAccessibilityId("请输入验证码").sendKeys(code);
+			
 			driver.findElementByAccessibilityId("公司").click();
 			List<WebElement> list=driver.findElementsByClassName("android.widget.EditText");
 			WebElement target = list.get(3);
@@ -101,8 +108,13 @@ public class AppChuangyeSignUp extends BaseTest {
 		
 		try {
 
-			new WebDriverWait(driver,40).until(ExpectedConditions.visibilityOfElementLocated(By.name("自动化活动")));
+			new WebDriverWait(driver,40).until(ExpectedConditions.visibilityOfElementLocated(By.name("自动化测试活动-长期")));
 			logger.info("校验成功");
+			logger.info("退出当前账号");
+			new WebDriverWait(driver,60).until(ExpectedConditions.elementToBeClickable(By.id("title_back_img"))).click();
+			appCommonService.logoutForApp(driver);
+			driver.quit();
+			logger.info("APP "+datadriven.get("version")+"---报名流程测试结束---");
 			
 		} catch (Exception e) {//没有活动退出APP
 			// TODO Auto-generated catch block
@@ -112,12 +124,6 @@ public class AppChuangyeSignUp extends BaseTest {
 			e.printStackTrace();
 			
 		}
-		
-		logger.info("退出当前账号");
-		new WebDriverWait(driver,60).until(ExpectedConditions.elementToBeClickable(By.id("title_back_img"))).click();
-		appCommonService.logoutForApp(driver);
-		driver.quit();
-		logger.info("APP "+datadriven.get("version")+"---报名流程测试结束---");
 		
 	}
 

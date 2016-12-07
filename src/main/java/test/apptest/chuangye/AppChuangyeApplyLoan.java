@@ -38,6 +38,7 @@ import org.testng.annotations.AfterClass;
 
 
 
+
 import service.AppCommonService;
 import service.InitialService;
 import service.WebCommonService;
@@ -65,15 +66,15 @@ public class AppChuangyeApplyLoan extends BaseTest {
 	}
 
 
-	@Test(enabled = true, dataProvider = "testData",description="申请贷款",timeOut=240000)
+	@Test(enabled = true, dataProvider = "testData",description="申请贷款",timeOut=480000)
 	public void chuangyeApplyLoan(Map<String, String> datadriven)throws Exception {
 		
-		String changyeApkName = datadriven.get("changyeApkName");//创业者apk
+		String apkPathOfChuangye = datadriven.get("apkPathOfChuangye");
 		
 		logger.info("APP "+datadriven.get("version")+"---申请贷款测试开始---");
 		
 		logger.info("启动创业者app");
-		driver = Initial.appiumAndroidChuangyeSetUp(driver, changyeApkName);
+		driver = Initial.appiumAndroidChuangyeSetUp(driver, apkPathOfChuangye);
 		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 		appCommonService.logoutForApp(driver);
 
