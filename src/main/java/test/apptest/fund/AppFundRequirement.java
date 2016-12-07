@@ -7,8 +7,6 @@ import java.util.Map;
 import java.util.concurrent.TimeUnit;
 import io.appium.java_client.AppiumDriver;
 
-import org.apache.commons.io.filefilter.FalseFileFilter;
-import org.hibernate.type.TrueFalseType;
 import org.junit.Assert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
@@ -51,12 +49,13 @@ public class AppFundRequirement extends BaseTest {
 
 	@Test(enabled = true, dataProvider = "testData",description="需求发布",timeOut=300000)
 	public void fundRequirement (Map<String, String> datadriven)throws Exception {
+
+		String apkPathOfFund = datadriven.get("apkPathOfFund");
 		
-		//driver.manage().timeouts().implicitlyWait(30,TimeUnit.SECONDS);
 		logger.info("APP "+datadriven.get("version")+"---发起需求发布流程---");
 		//启动投资者app并且登录
 		logger.info("启动并登陆投资者app");
-		driver = Initial.appiumAndroidFundSetUp(driver, datadriven.get("fundApkName"));
+		driver = Initial.appiumAndroidFundSetUp(driver,apkPathOfFund);
 		driver.manage().timeouts().implicitlyWait(30,TimeUnit.SECONDS);
 		//退出登录
 		appCommonService.logoutForApp(driver);
@@ -118,11 +117,13 @@ public class AppFundRequirement extends BaseTest {
 	@Test(enabled =true, dataProvider = "testData",description="我的需求响应",timeOut=300000)
 	public void fundRespond (Map<String, String> datadriven)throws Exception {
 		
+		String apkPathOfFund = datadriven.get("apkPathOfFund");
+		
 		logger.info("APP "+datadriven.get("version")+"---我的需求响应---");
 		//启动投资者app并且登录
 
 		logger.info("启动并登陆投资者app");
-		driver = Initial.appiumAndroidFundSetUp(driver, datadriven.get("fundApkName"));
+		driver = Initial.appiumAndroidFundSetUp(driver,apkPathOfFund);
 
 		driver.manage().timeouts().implicitlyWait(30,TimeUnit.SECONDS);
 		//退出登录

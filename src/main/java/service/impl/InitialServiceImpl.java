@@ -2,7 +2,6 @@ package service.impl;
 
 import io.appium.java_client.AppiumDriver;
 
-import java.io.File;
 import java.net.MalformedURLException;
 import java.net.URL;
 
@@ -17,6 +16,7 @@ public class InitialServiceImpl implements InitialService{
 	
 	  private String chuangyeAppPackage;
 	  private String chuangyeAppActivity;
+	  
 	  private String fundAppPackage;
 	  private String fundAppActivity;
 	  
@@ -26,12 +26,13 @@ public class InitialServiceImpl implements InitialService{
 	  private String appiumPort;
 
 	@Override
-	public AppiumDriver appiumAndroidChuangyeSetUp(AppiumDriver driver, String apkName) throws MalformedURLException {
+	public AppiumDriver appiumAndroidChuangyeSetUp(AppiumDriver driver, String apkPath) throws MalformedURLException {
 		// TODO Auto-generated method stub
 		
-		 File classpathRoot = new File(System.getProperty("user.dir"));
-		 File appDir = new File(classpathRoot, "apps");
-		 File app = new File(appDir, apkName);
+//		 File classpathRoot = new File(System.getProperty("user.dir"));
+//		 File appDir = new File(classpathRoot, "apps");
+//		 File app = new File(appDir, apkName);
+		 System.out.println("创业者app安装包路径为："+apkPath);
 		 
 		 DesiredCapabilities capabilities = new DesiredCapabilities();		 
 		 capabilities.setCapability(CapabilityType.BROWSER_NAME, "");
@@ -51,8 +52,8 @@ public class InitialServiceImpl implements InitialService{
 		 capabilities.setCapability("platformVersion", platformVersion);
 //		 capabilities.setCapability("udid", "emulator-5554");//如果要远程调用模拟器，这个参数必须要有
 		 
-		 capabilities.setCapability("app", app.getAbsolutePath());
-		 
+//		 capabilities.setCapability("app", app.getAbsolutePath());
+		 capabilities.setCapability("app", apkPath);
 		 capabilities.setCapability("appPackage", chuangyeAppPackage);
 		 capabilities.setCapability("appActivity", chuangyeAppActivity);
 
@@ -65,13 +66,13 @@ public class InitialServiceImpl implements InitialService{
 	
 	
 	@Override
-	public AppiumDriver appiumAndroidFundSetUp(AppiumDriver driver,
-			String apkName) throws MalformedURLException {
+	public AppiumDriver appiumAndroidFundSetUp(AppiumDriver driver, String apkPath) throws MalformedURLException {
 		// TODO Auto-generated method stub
 		
-		 File classpathRoot = new File(System.getProperty("user.dir"));
-		 File appDir = new File(classpathRoot, "apps");
-		 File app = new File(appDir, apkName);
+//		 File classpathRoot = new File(System.getProperty("user.dir"));
+//		 File appDir = new File(classpathRoot, "apps");
+//		 File app = new File(appDir, apkName);
+		System.out.println("投资者app安装包路径为："+apkPath);
 		 
 		 DesiredCapabilities capabilities = new DesiredCapabilities();		 
 		 capabilities.setCapability(CapabilityType.BROWSER_NAME, "");
@@ -90,7 +91,7 @@ public class InitialServiceImpl implements InitialService{
 		 capabilities.setCapability("platformVersion", platformVersion);
 //		 capabilities.setCapability("udid", "emulator-5554");//如果要远程调用模拟器，这个参数必须要有
 		 
-		 capabilities.setCapability("app", app.getAbsolutePath());
+		 capabilities.setCapability("app", apkPath);
 		 
 		 capabilities.setCapability("appPackage", fundAppPackage);
 		 capabilities.setCapability("appActivity", fundAppActivity);

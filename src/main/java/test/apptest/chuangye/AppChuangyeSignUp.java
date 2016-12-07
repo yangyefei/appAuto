@@ -43,13 +43,15 @@ public class AppChuangyeSignUp extends BaseTest {
 	@Test(enabled = true, dataProvider = "testData",description="活动报名",timeOut=300000)
 	public void chuangyeSignUp(Map<String, String> datadriven)throws Exception {
 		
-		String changyeApkName = datadriven.get("changyeApkName");//创业者apk
+		String apkPathOfChuangye = datadriven.get("apkPathOfChuangye");
 		
 		logger.info("APP "+datadriven.get("version")+"---活动报名测试开始---");
 		
 		logger.info("启动创业者app");
-		driver = Initial.appiumAndroidChuangyeSetUp(driver, changyeApkName);
+
+		driver = Initial.appiumAndroidChuangyeSetUp(driver,apkPathOfChuangye);
 		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+
 		appCommonService.logoutForApp(driver);
 
 		logger.info("登录创业者app");

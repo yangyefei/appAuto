@@ -9,8 +9,6 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.firefox.FirefoxDriver;
-import org.openqa.selenium.os.WindowsUtils;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -42,10 +40,12 @@ public class AppFundSpeedInquiry extends BaseTest{
 	@Test(enabled = true, dataProvider = "testData",description="快速问诊")
 	public void Wallet(Map<String, String> datadriven)throws Exception {
 		
+		String apkPathOfChuangye = datadriven.get("apkPathOfChuangye");
+		
 		logger.info("APP "+datadriven.get("version")+"---导师问诊流程开始--");
 		//启动企业app并且登录
 		logger.info("启动并登陆企业者app");
-		driver = Initial.appiumAndroidChuangyeSetUp(driver, datadriven.get("changyeApkName"));
+		driver = Initial.appiumAndroidChuangyeSetUp(driver,apkPathOfChuangye);
 		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 		new WebDriverWait(driver, 30).until(ExpectedConditions.elementToBeClickable(By.name("我的"))).click();
 		driver =appCommonService.logoutForApp(driver);

@@ -4,18 +4,13 @@ package test.apptest.chuangye;
 import io.appium.java_client.AppiumDriver;
 
 import java.io.IOException;
-import java.security.PrivateKey;
 import java.util.Iterator;
 import java.util.List;
 import java.util.Map;
 import java.util.concurrent.TimeUnit;
 
-import net.sf.saxon.functions.Substring;
 
-import org.omg.CORBA.PRIVATE_MEMBER;
-import org.openqa.selenium.Alert;
 import org.openqa.selenium.By;
-import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
@@ -34,15 +29,10 @@ import org.testng.annotations.AfterClass;
 
 
 
-
-
 import service.AppCommonService;
 import service.InitialService;
-import service.WebCommonService;
 import common.frame.helper.Utils;
 import common.frame.test.BaseTest;
-import common.utils.UrlsOfPre;
-
 
 
 public class AppChuangyeReleaseLoan extends BaseTest {
@@ -66,12 +56,12 @@ public class AppChuangyeReleaseLoan extends BaseTest {
 	@Test(enabled = true, dataProvider = "testData",description="发布贷款",timeOut=240000)
 	public void chuangyeReleaseLoan(Map<String, String> datadriven)throws Exception {
 		
-		String changyeApkName = datadriven.get("changyeApkName");//创业者apk
+		String apkPathOfChuangye = datadriven.get("apkPathOfChuangye");
 		
 		logger.info("APP "+datadriven.get("version")+"---发布贷款测试开始---");
 		
 		logger.info("启动创业者app");
-		driver = Initial.appiumAndroidChuangyeSetUp(driver, changyeApkName);
+		driver = Initial.appiumAndroidChuangyeSetUp(driver,apkPathOfChuangye);
 		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 		appCommonService.logoutForApp(driver);
 

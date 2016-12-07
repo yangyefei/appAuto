@@ -50,14 +50,14 @@ public class AppCommonInquiry extends BaseTest {
 	@Test(enabled = true, dataProvider = "testData", timeOut=600000, description="普通问诊流程")
 	public void commonInquiryProcess(Map<String, String> datadriven)throws Exception {
 		
+		String apkPathOfChuangye = datadriven.get("apkPathOfChuangye");
+		String apkPathOfFund = datadriven.get("apkPathOfFund");
 		String commonContent = datadriven.get("comments");
-		String changyeApkName = datadriven.get("changyeApkName");//创业者apk
-		String fundApkName = datadriven.get("fundApkName");//投资者apk
 		
 		logger.info("APP "+datadriven.get("version")+"---普通问诊流程测试开始---");
 
 		logger.info("启动并登录创业者app");
-		driver = Initial.appiumAndroidChuangyeSetUp(driver, changyeApkName);
+		driver = Initial.appiumAndroidChuangyeSetUp(driver,apkPathOfChuangye);
 		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 		driver = appCommonService.logoutForApp(driver);//先退出登录下		
 		driver = appCommonService.loginForApp(driver,datadriven.get("changyeUserName"),datadriven.get("chuangyePassword"));
@@ -85,7 +85,7 @@ public class AppCommonInquiry extends BaseTest {
 
 		//启动投资者app并且登录
 		logger.info("启动并登录投资者app");
-		driver = Initial.appiumAndroidFundSetUp(driver, fundApkName);
+		driver = Initial.appiumAndroidFundSetUp(driver,apkPathOfFund);
 		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 		driver = appCommonService.logoutForApp(driver);//先退出登录下
 		driver = appCommonService.loginForApp(driver,datadriven.get("fundUserName"),datadriven.get("fundPassword"));
@@ -128,7 +128,7 @@ public class AppCommonInquiry extends BaseTest {
 	    
 		//再次启动投资者app
 		logger.info("再次启动之前已经登录的投资者app");
-		driver = Initial.appiumAndroidFundSetUp(driver, fundApkName);
+		driver = Initial.appiumAndroidFundSetUp(driver,apkPathOfFund);
 		
 		logger.info("进入投资者我的-我的问诊页面");
 		new WebDriverWait(driver,60).until(ExpectedConditions.elementToBeClickable(By.name("我的"))).click();
@@ -148,7 +148,7 @@ public class AppCommonInquiry extends BaseTest {
 			logger.info("校验失败，进行退出登录");
 			logoutOfcurrentApp();
 			
-			driver = Initial.appiumAndroidChuangyeSetUp(driver, changyeApkName);
+			driver = Initial.appiumAndroidChuangyeSetUp(driver, apkPathOfChuangye);
 			logoutOfAnotherApp();
 			
 			logger.info("APP "+datadriven.get("version")+"---校验失败，问诊流程测试结束---");
@@ -159,7 +159,7 @@ public class AppCommonInquiry extends BaseTest {
 		driver.quit();
 
 		logger.info("再次启动创业者app");
-		driver = Initial.appiumAndroidChuangyeSetUp(driver, changyeApkName);
+		driver = Initial.appiumAndroidChuangyeSetUp(driver,apkPathOfChuangye);
 		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 		
 		logger.info("进入我的问诊");
@@ -187,7 +187,7 @@ public class AppCommonInquiry extends BaseTest {
 			logger.info("校验失败，进行退出登录");
 			logoutOfcurrentApp();
 			
-			driver = Initial.appiumAndroidFundSetUp(driver, fundApkName);
+			driver = Initial.appiumAndroidFundSetUp(driver,apkPathOfFund);
 			logoutOfAnotherApp();
 			
 			logger.info("APP "+datadriven.get("version")+"---校验失败，问诊流程测试结束---");
@@ -199,7 +199,7 @@ public class AppCommonInquiry extends BaseTest {
 		logoutOfcurrentApp();
 		
 		logger.info("最后启动投资者app");
-		driver = Initial.appiumAndroidFundSetUp(driver, fundApkName);
+		driver = Initial.appiumAndroidFundSetUp(driver,apkPathOfFund);
 		logger.info("进入我的问诊");
 		new WebDriverWait(driver,60).until(ExpectedConditions.elementToBeClickable(By.name("我的"))).click();
 		new WebDriverWait(driver,60).until(ExpectedConditions.elementToBeClickable(By.name("我的问诊"))).click();

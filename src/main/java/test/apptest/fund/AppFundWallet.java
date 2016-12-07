@@ -14,12 +14,11 @@ import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
-import org.testng.asserts.Assertion;
 import common.frame.test.BaseTest;
 import io.appium.java_client.AppiumDriver;
-import io.appium.java_client.TouchAction;
 import service.AppCommonService;
 import service.InitialService;
+
 @Test
 public class AppFundWallet extends BaseTest{
 	@Autowired
@@ -45,13 +44,14 @@ public class AppFundWallet extends BaseTest{
 	}
 	@Test(enabled = true, dataProvider ="testData",description="我的钱包提现",timeOut=300000)
 	public void wallet(Map<String, String> datadriven)throws Exception {
-		
+
+		String apkPathOfFund = datadriven.get("apkPathOfFund");
 	
 		logger.info("APP "+datadriven.get("version")+"---提现流程开始--");
 		//启动企业app并且登录
 		logger.info("启动并登陆投资者app");
 		
-		driver = Initial.appiumAndroidFundSetUp(driver, datadriven.get("fundApkName"));
+		driver = Initial.appiumAndroidFundSetUp(driver,apkPathOfFund);
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 		new WebDriverWait(driver, 60).until(ExpectedConditions.elementToBeClickable(By.name("我的"))).click();
 		appCommonService.logoutForApp(driver);

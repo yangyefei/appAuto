@@ -7,8 +7,7 @@ import java.net.MalformedURLException;
 import org.openqa.selenium.WebDriver;
 
 public interface InitialService {
-	
-	
+		
 	/**
 	 * Android 创业者app初始化
 	 * @param driver
@@ -16,7 +15,7 @@ public interface InitialService {
 	 * @return
 	 * @throws MalformedURLException
 	 */
-	public AppiumDriver appiumAndroidChuangyeSetUp(AppiumDriver driver, String apkName) throws MalformedURLException;
+	public AppiumDriver appiumAndroidChuangyeSetUp(AppiumDriver driver, String apkPath) throws MalformedURLException;
 	
 	/**
 	 * Android 机构app初始化
@@ -25,9 +24,8 @@ public interface InitialService {
 	 * @return
 	 * @throws MalformedURLException
 	 */
-	public AppiumDriver appiumAndroidFundSetUp(AppiumDriver driver, String apkName) throws MalformedURLException;
-	
-	
+	public AppiumDriver appiumAndroidFundSetUp(AppiumDriver driver, String apkPath) throws MalformedURLException;
+		
 	/**
 	 * 启动远程ie浏览器
 	 * @param driver

@@ -59,7 +59,7 @@ public class AppTestA extends BaseTest{
   @Test(enabled=false)
   public void demo() throws MalformedURLException {
 	  
-	  this.driver = Initial.appiumAndroidFundSetUp(driver,this.fundApkNameString);
+	  this.driver = Initial.appiumAndroidFundSetUp(driver,"");
 	  
 //	  this.driver = Initial.appiumAndroidChuangyeSetUp(driver,changyeApkNameString);
 	  
