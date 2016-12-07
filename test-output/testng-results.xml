@@ -2,118 +2,69 @@
 <testng-results skipped="0" failed="0" total="1" passed="1">
   <reporter-output>
     <line>
-      <![CDATA[更新企业状态...]]>
+      <![CDATA[从数据库中获取活动报名验证码...]]>
     </line>
     <line>
       <![CDATA[mysql预发环境数据库连接信息为：172.16.11.80:3306]]>
     </line>
   </reporter-output>
-<<<<<<< HEAD
-  <suite name="Default suite" duration-ms="186675" started-at="2016-12-07T02:56:28Z" finished-at="2016-12-07T02:59:35Z">
-=======
-  <suite name="Default suite" duration-ms="1186" started-at="2016-12-06T10:34:35Z" finished-at="2016-12-06T10:34:36Z">
->>>>>>> branch 'master' of http://172.16.11.124/luyi/appAuto.git
+  <suite name="Default suite" duration-ms="1144" started-at="2016-12-07T09:43:33Z" finished-at="2016-12-07T09:43:34Z">
     <groups>
     </groups>
-<<<<<<< HEAD
-    <test name="Default test" duration-ms="186675" started-at="2016-12-07T02:56:28Z" finished-at="2016-12-07T02:59:35Z">
-      <class name="test.apptest.chuangye.AppChuangyeApplyLoan">
-        <test-method status="PASS" signature="springTestContextPrepareTestInstance()[pri:0, instance:test.apptest.chuangye.AppChuangyeApplyLoan@7054c4ad]" name="springTestContextPrepareTestInstance" is-config="true" duration-ms="428" started-at="2016-12-07T10:56:28Z" finished-at="2016-12-07T10:56:28Z">
-=======
-    <test name="Default test" duration-ms="1186" started-at="2016-12-06T10:34:35Z" finished-at="2016-12-06T10:34:36Z">
+    <test name="Default test" duration-ms="1144" started-at="2016-12-07T09:43:33Z" finished-at="2016-12-07T09:43:34Z">
       <class name="test.apptest.common.AppCommonInterview">
-        <test-method status="PASS" signature="springTestContextPrepareTestInstance()[pri:0, instance:test.apptest.common.AppCommonInterview@c7b00c]" name="springTestContextPrepareTestInstance" is-config="true" duration-ms="645" started-at="2016-12-06T18:34:35Z" finished-at="2016-12-06T18:34:36Z">
->>>>>>> branch 'master' of http://172.16.11.124/luyi/appAuto.git
+        <test-method status="PASS" signature="springTestContextPrepareTestInstance()[pri:0, instance:test.apptest.common.AppCommonInterview@406199]" name="springTestContextPrepareTestInstance" is-config="true" duration-ms="621" started-at="2016-12-07T17:43:33Z" finished-at="2016-12-07T17:43:34Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- springTestContextPrepareTestInstance -->
-<<<<<<< HEAD
-        <test-method status="PASS" signature="beforeClass()[pri:0, instance:test.apptest.chuangye.AppChuangyeApplyLoan@7054c4ad]" name="beforeClass" is-config="true" duration-ms="0" started-at="2016-12-07T10:56:28Z" finished-at="2016-12-07T10:56:28Z">
-=======
-        <test-method status="PASS" signature="beforeClass()[pri:0, instance:test.apptest.common.AppCommonInterview@c7b00c]" name="beforeClass" is-config="true" duration-ms="0" started-at="2016-12-06T18:34:36Z" finished-at="2016-12-06T18:34:36Z">
->>>>>>> branch 'master' of http://172.16.11.124/luyi/appAuto.git
+        <test-method status="PASS" signature="beforeClass()[pri:0, instance:test.apptest.common.AppCommonInterview@406199]" name="beforeClass" is-config="true" duration-ms="1" started-at="2016-12-07T17:43:34Z" finished-at="2016-12-07T17:43:34Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeClass -->
-<<<<<<< HEAD
-        <test-method status="PASS" signature="chuangyeApplyLoan(java.util.Map)[pri:0, instance:test.apptest.chuangye.AppChuangyeApplyLoan@7054c4ad]" name="chuangyeApplyLoan" duration-ms="186055" started-at="2016-12-07T10:56:28Z" description="�������" data-provider="testData" finished-at="2016-12-07T10:59:34Z">
-=======
-        <test-method status="PASS" signature="springTestContextBeforeTestMethod(java.lang.reflect.Method)[pri:0, instance:test.apptest.common.AppCommonInterview@c7b00c]" name="springTestContextBeforeTestMethod" is-config="true" duration-ms="1" started-at="2016-12-06T18:34:36Z" finished-at="2016-12-06T18:34:36Z">
->>>>>>> branch 'master' of http://172.16.11.124/luyi/appAuto.git
+        <test-method status="PASS" signature="springTestContextBeforeTestMethod(java.lang.reflect.Method)[pri:0, instance:test.apptest.common.AppCommonInterview@406199]" name="springTestContextBeforeTestMethod" is-config="true" duration-ms="1" started-at="2016-12-07T17:43:34Z" finished-at="2016-12-07T17:43:34Z">
           <params>
             <param index="0">
               <value>
-<<<<<<< HEAD
-                <![CDATA[{fundApkName=EasyrongFund_pre_2_2_1.apk, fundPassword=xlh123456, backPassword=xlh123456, loanProducts=����ͨ, filePath=D:\autotest.pdf, changyeUserName=18200000099, backUserName=zdhcs, changyeApkName=EasyrongChuangye_pre_2_3_1.apk, fundUserName=lkj123, comments=app�Զ�������������123���г���Ҫ�󳬹�20����, chuangyePassword=xlh123456, version=v2.3}]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- chuangyeApplyLoan -->
-        <test-method status="PASS" signature="springTestContextBeforeTestMethod(java.lang.reflect.Method)[pri:0, instance:test.apptest.chuangye.AppChuangyeApplyLoan@7054c4ad]" name="springTestContextBeforeTestMethod" is-config="true" duration-ms="0" started-at="2016-12-07T10:56:28Z" finished-at="2016-12-07T10:56:28Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[public void test.apptest.chuangye.AppChuangyeApplyLoan.chuangyeApplyLoan(java.util.Map) throws java.lang.Exception]]>
-=======
-                <![CDATA[public void test.apptest.common.AppCommonInterview.updateTest(java.util.Map) throws java.lang.Exception]]>
->>>>>>> branch 'master' of http://172.16.11.124/luyi/appAuto.git
+                <![CDATA[public void test.apptest.common.AppCommonInterview.dataTest(java.util.Map) throws java.lang.Exception]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- springTestContextBeforeTestMethod -->
-<<<<<<< HEAD
-        <test-method status="PASS" signature="springTestContextAfterTestMethod(java.lang.reflect.Method)[pri:0, instance:test.apptest.chuangye.AppChuangyeApplyLoan@7054c4ad]" name="springTestContextAfterTestMethod" is-config="true" duration-ms="1" started-at="2016-12-07T10:59:34Z" finished-at="2016-12-07T10:59:34Z">
-=======
-        <test-method status="PASS" signature="updateTest(java.util.Map)[pri:0, instance:test.apptest.common.AppCommonInterview@c7b00c]" name="updateTest" duration-ms="308" started-at="2016-12-06T18:34:36Z" data-provider="testData" finished-at="2016-12-06T18:34:36Z">
->>>>>>> branch 'master' of http://172.16.11.124/luyi/appAuto.git
+        <test-method status="PASS" signature="dataTest(java.util.Map)[pri:0, instance:test.apptest.common.AppCommonInterview@406199]" name="dataTest" duration-ms="286" started-at="2016-12-07T17:43:34Z" data-provider="testData" finished-at="2016-12-07T17:43:34Z">
           <params>
             <param index="0">
               <value>
-<<<<<<< HEAD
-                <![CDATA[public void test.apptest.chuangye.AppChuangyeApplyLoan.chuangyeApplyLoan(java.util.Map) throws java.lang.Exception]]>
-=======
                 <![CDATA[{apkPathOfChuangye=D:\autoApp\testAPK\Easyrongchuangye_pre_2_3_1.apk, fundPassword=xlh123456, interviewProject=自动化测试用勿操作, apkPathOfFund=D:\autoApp\testAPK\EasyrongFund_pre_2_2_1.apk, changyeUserName=18200000099, fundUserName=lkj123, chuangyePassword=xlh123456, interviewComments=app自动化测试用评论123, version=v2.3}]]>
               </value>
             </param>
           </params>
           <reporter-output>
             <line>
-              <![CDATA[更新企业状态...]]>
+              <![CDATA[从数据库中获取活动报名验证码...]]>
             </line>
             <line>
               <![CDATA[mysql预发环境数据库连接信息为：172.16.11.80:3306]]>
             </line>
           </reporter-output>
-        </test-method> <!-- updateTest -->
-        <test-method status="PASS" signature="springTestContextAfterTestMethod(java.lang.reflect.Method)[pri:0, instance:test.apptest.common.AppCommonInterview@c7b00c]" name="springTestContextAfterTestMethod" is-config="true" duration-ms="1" started-at="2016-12-06T18:34:36Z" finished-at="2016-12-06T18:34:36Z">
+        </test-method> <!-- dataTest -->
+        <test-method status="PASS" signature="springTestContextAfterTestMethod(java.lang.reflect.Method)[pri:0, instance:test.apptest.common.AppCommonInterview@406199]" name="springTestContextAfterTestMethod" is-config="true" duration-ms="1" started-at="2016-12-07T17:43:34Z" finished-at="2016-12-07T17:43:34Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[public void test.apptest.common.AppCommonInterview.updateTest(java.util.Map) throws java.lang.Exception]]>
->>>>>>> branch 'master' of http://172.16.11.124/luyi/appAuto.git
+                <![CDATA[public void test.apptest.common.AppCommonInterview.dataTest(java.util.Map) throws java.lang.Exception]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- springTestContextAfterTestMethod -->
-<<<<<<< HEAD
-        <test-method status="PASS" signature="afterClass()[pri:0, instance:test.apptest.chuangye.AppChuangyeApplyLoan@7054c4ad]" name="afterClass" is-config="true" duration-ms="1" started-at="2016-12-07T10:59:35Z" finished-at="2016-12-07T10:59:35Z">
-=======
-        <test-method status="PASS" signature="afterClass()[pri:0, instance:test.apptest.common.AppCommonInterview@c7b00c]" name="afterClass" is-config="true" duration-ms="0" started-at="2016-12-06T18:34:36Z" finished-at="2016-12-06T18:34:36Z">
->>>>>>> branch 'master' of http://172.16.11.124/luyi/appAuto.git
+        <test-method status="PASS" signature="afterClass()[pri:0, instance:test.apptest.common.AppCommonInterview@406199]" name="afterClass" is-config="true" duration-ms="0" started-at="2016-12-07T17:43:34Z" finished-at="2016-12-07T17:43:34Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterClass -->
-<<<<<<< HEAD
-      </class> <!-- test.apptest.chuangye.AppChuangyeApplyLoan -->
-=======
       </class> <!-- test.apptest.common.AppCommonInterview -->
->>>>>>> branch 'master' of http://172.16.11.124/luyi/appAuto.git
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>
