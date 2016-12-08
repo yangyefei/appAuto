@@ -88,8 +88,28 @@ public class AppChuangyeSignUp extends BaseTest {
 			WebElement target = list.get(3);
 			target.sendKeys("xinlonghang");
 			driver.findElementByAccessibilityId("提交 Link").click();	
-			driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
-			logger.info("报名成功");
+			driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);	
+			logger.info("返回，去我的活动页面校验");
+			new WebDriverWait(driver,60).until(ExpectedConditions.elementToBeClickable(By.id("detail_back_view"))).click();
+			new WebDriverWait(driver,60).until(ExpectedConditions.elementToBeClickable(By.id("title_back_img"))).click();	
+			new WebDriverWait(driver,60).until(ExpectedConditions.elementToBeClickable(By.name("我的"))).click();
+			driver = appCommonService.swipeToDown(driver);
+			new WebDriverWait(driver,60).until(ExpectedConditions.elementToBeClickable(By.name("我的活动"))).click();
+			
+			try {
+				new WebDriverWait(driver,40).until(ExpectedConditions.visibilityOfElementLocated(By.name("自动化测试活动-长期")));
+				logger.info("校验成功");
+				logger.info("退出当前账号");
+				new WebDriverWait(driver,60).until(ExpectedConditions.elementToBeClickable(By.id("title_back_img"))).click();
+				appCommonService.logoutForApp(driver);
+				driver.quit();
+				logger.info("APP "+datadriven.get("version")+"---报名流程测试结束---");			
+			} catch (Exception e) {
+				// TODO Auto-generated catch block
+				logger.info("活动报名失败");
+				driver.quit();
+				e.printStackTrace();	
+			}
 			
 		} catch (Exception e) {
 			// TODO: handle exception
@@ -97,34 +117,11 @@ public class AppChuangyeSignUp extends BaseTest {
 			logger.info("报名失败,之前已经报名、报名截止或活动已结束");
 			driver.quit();
 			e.printStackTrace();		
-		}
-		
-		logger.info("返回，去我的活动页面校验");
-		new WebDriverWait(driver,60).until(ExpectedConditions.elementToBeClickable(By.id("detail_back_view"))).click();
-		new WebDriverWait(driver,60).until(ExpectedConditions.elementToBeClickable(By.id("title_back_img"))).click();	
-		new WebDriverWait(driver,60).until(ExpectedConditions.elementToBeClickable(By.name("我的"))).click();
-		driver = appCommonService.swipeToDown(driver);
-		new WebDriverWait(driver,60).until(ExpectedConditions.elementToBeClickable(By.name("我的活动"))).click();
-		
-		try {
-
-			new WebDriverWait(driver,40).until(ExpectedConditions.visibilityOfElementLocated(By.name("自动化测试活动-长期")));
-			logger.info("校验成功");
-			logger.info("退出当前账号");
-			new WebDriverWait(driver,60).until(ExpectedConditions.elementToBeClickable(By.id("title_back_img"))).click();
-			appCommonService.logoutForApp(driver);
-			driver.quit();
-			logger.info("APP "+datadriven.get("version")+"---报名流程测试结束---");
 			
-		} catch (Exception e) {//没有活动退出APP
-			// TODO Auto-generated catch block
-
-			logger.info("活动报名失败");
-			driver.quit();
-			e.printStackTrace();
+		}	
 			
-		}
-		
+			mysqlDataDeal.deleteActivitySignUp(datadriven.get("activity"), datadriven.get("changyeUserName"));
+			
 	}
 
 
@@ -135,7 +132,8 @@ public class AppChuangyeSignUp extends BaseTest {
 
 	
 	@AfterClass
-	public void afterClass() {
+	public void afterClass(){	
 	}
 
+	
 }
