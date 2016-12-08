@@ -11,4 +11,9 @@ public class MysqlDBName {
 	 * 孵化器
 	 */
 	public static final String XLH_FHQ = "xlh_fhq";
+	
+	/**
+	 * 活动报名
+	 */
+	public static final String XLH_YRT = "xlh_yrt";
 }

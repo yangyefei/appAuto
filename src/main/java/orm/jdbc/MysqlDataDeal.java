@@ -6,5 +6,7 @@ public interface MysqlDataDeal {
 	
 	public void updateEnterpriseStatus(String enterpriseName, int statusValue);
 	
+	public void deleteActivitySignUp(String activityName, String mobile);
+	
 
 }

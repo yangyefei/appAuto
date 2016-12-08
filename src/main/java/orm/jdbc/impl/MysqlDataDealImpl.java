@@ -4,10 +4,9 @@ import org.testng.Reporter;
 
 import orm.jdbc.DataBaseDao;
 import orm.jdbc.MysqlDataDeal;
-
 import shelper.db.MySql;
-
 import orm.DBType;
+import orm.MysqlDBName;
 
 public class MysqlDataDealImpl implements MysqlDataDeal {
 
@@ -19,9 +18,9 @@ public class MysqlDataDealImpl implements MysqlDataDeal {
 
 		Reporter.log("从数据库中获取活动报名验证码...", true);
 
-		msql = dataBaseDao.getInstanceOfMySql(DBType.MYSQL_PRE, "xlh_sms");
+		msql = dataBaseDao.getInstanceOfMySql(DBType.MYSQL_PRE, MysqlDBName.XLH_SMS);
 
-		String sql = "select s.content from sms_record s where phone="+userId+" ORDER BY s.id DESC LIMIT 1";
+		String sql = "select substring((select s.content from sms_record s where phone="+userId+" ORDER BY s.id DESC LIMIT 1),11,6)";
 		String queryInfo = msql.query(sql);
 
 		msql.closeDBcon();
@@ -35,10 +34,25 @@ public class MysqlDataDealImpl implements MysqlDataDeal {
 		// TODO Auto-generated method stub
 		Reporter.log("更新企业状态...", true);
 
-		msql = dataBaseDao.getInstanceOfMySql(DBType.MYSQL_PRE, "xlh_fhq");
+		msql = dataBaseDao.getInstanceOfMySql(DBType.MYSQL_PRE, MysqlDBName.XLH_FHQ);
 
 		String sql = "UPDATE incubator_enterprises SET enterprise_status="+statusValue+" WHERE enterprise_name="+"'"+enterpriseName+"'";
 		msql.Update(sql);
+
+		msql.closeDBcon();
+
+	}
+	
+	
+	@Override
+	public void deleteActivitySignUp(String activityName, String mobile) {
+		// TODO Auto-generated method stub
+		Reporter.log("删除报名信息...", true);
+
+		msql = dataBaseDao.getInstanceOfMySql(DBType.MYSQL_PRE, MysqlDBName.XLH_YRT);
+
+		String sql = "delete from yrt_hd_bm where hd_title='" + activityName + "'" + " and mobi=" + mobile;
+		msql.Delete(sql);
 
 		msql.closeDBcon();
 
