@@ -155,6 +155,8 @@ public class AppFundRequirement extends BaseTest {
 
 		Assert.assertEquals("响应提交页面失败", "您已响应需求", Responetext.getText());
 		driver.quit();
+		
+		logger.info("APP "+datadriven.get("version")+"---我的需求响应测试结束---");
 	}
 
 	@DataProvider(name = "testData")
