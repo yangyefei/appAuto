@@ -27,10 +27,8 @@ public class AppFundSpeedInquiry extends BaseTest{
 	private InitialService Initial;
 	@Autowired
 	private AppCommonService appCommonService;
-
 	private AppiumDriver driver;
-
-
+	private WebDriver webDriver;
 	@BeforeClass
 	public void beforeClass()  {		
 	
@@ -109,11 +107,11 @@ public class AppFundSpeedInquiry extends BaseTest{
 	public Iterator<Object[]> data1test() throws IOException {
 		return ExcelProviderByEnv(this, "testData");
 	}
-	public static void oderConfrim() throws InterruptedException { 
-//		  webDriver = Initial.browserOfChromeSetUp(webDriver);
+	public  void oderConfrim() throws Exception { 
+	  webDriver = Initial.browserOfChromeSetUp(webDriver);
 		
-		System.setProperty("webdriver.chrome.driver", "C:\\Program Files (x86)\\Google\\Chrome\\Application\\chromedriver.exe");
-		WebDriver webDriver = new ChromeDriver();
+//		System.setProperty("webdriver.chrome.driver", "C:\\Program Files (x86)\\Google\\Chrome\\Application\\chromedriver.exe");
+//		WebDriver webDriver = new ChromeDriver();
 	   //运行时关闭之前启动的浏览器
 
 	    webDriver.manage().timeouts().pageLoadTimeout(60, TimeUnit.SECONDS);
