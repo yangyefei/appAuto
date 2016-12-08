@@ -1,4 +1,4 @@
-package test.apptest.fund;
+package test.apptest.common;
 
 import java.io.IOException;
 import java.util.Iterator;
