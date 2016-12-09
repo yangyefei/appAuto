@@ -1,4 +1,4 @@
-package test.apptest.chuangye;
+package test.apptest.fund;
 
 
 import io.appium.java_client.AppiumDriver;
@@ -27,7 +27,7 @@ import service.AppCommonService;
 import service.InitialService;
 import common.frame.test.BaseTest;
 
-public class AppChuangyeSignUp extends BaseTest {
+public class AppFundSignUp extends BaseTest {
 
 	@Autowired
 	private InitialService Initial;
@@ -47,20 +47,20 @@ public class AppChuangyeSignUp extends BaseTest {
 	
 
 	@Test(enabled = true, dataProvider = "testData",description="活动报名",timeOut=480000)
-	public void chuangyeSignUp(Map<String, String> datadriven)throws Exception {
+	public void fundSignUp(Map<String, String> datadriven)throws Exception {
 		
-		String apkPathOfChuangye = datadriven.get("apkPathOfChuangye");
+		String apkPathOfFund = datadriven.get("apkPathOfFund");
 		
 		logger.info("APP "+datadriven.get("version")+"---活动报名测试开始---");
 		
-		logger.info("启动创业者app");
+		logger.info("启动投资者app");
 
-		driver = Initial.appiumAndroidChuangyeSetUp(driver,apkPathOfChuangye);
+		driver = Initial.appiumAndroidFundSetUp(driver, apkPathOfFund);
 		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 		appCommonService.logoutForApp(driver);
 
-		logger.info("登录创业者app");
-		driver = appCommonService.loginForApp(driver,datadriven.get("changyeUserName"),datadriven.get("chuangyePassword"));
+		logger.info("登录投资者app");
+		driver = appCommonService.loginForApp(driver,datadriven.get("fundUserName"),datadriven.get("fundPassword"));
 		
 		//点击进入活动列表页
 		logger.info("发现-进入活动列表页");
@@ -80,7 +80,7 @@ public class AppChuangyeSignUp extends BaseTest {
 			driver.findElementByClassName("android.widget.EditText").sendKeys("ceshi");
 			driver.findElementByAccessibilityId("获得 Link").click();
 			//获取验证码
-			String code = mysqlDataDeal.getSignUpComfirmCode(datadriven.get("changyeUserName"));
+			String code = mysqlDataDeal.getSignUpComfirmCode(datadriven.get("fundUserName"));
 			driver.findElementByAccessibilityId("请输入验证码").sendKeys(code);
 			
 			driver.findElementByAccessibilityId("公司").click();
@@ -120,7 +120,7 @@ public class AppChuangyeSignUp extends BaseTest {
 			
 		}	
 			
-			mysqlDataDeal.deleteActivitySignUp(datadriven.get("activity"), datadriven.get("changyeUserName"));
+			mysqlDataDeal.deleteActivitySignUp(datadriven.get("activity"), datadriven.get("fundUserName"));
 			
 	}
 

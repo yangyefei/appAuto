@@ -53,7 +53,7 @@ public class AppChuangyeReleaseLoan extends BaseTest {
 	}
 
 
-	@Test(enabled = true, dataProvider = "testData",description="发布贷款",timeOut=240000)
+	@Test(enabled = true, dataProvider = "testData",description="发布贷款",timeOut=480000)
 	public void chuangyeReleaseLoan(Map<String, String> datadriven)throws Exception {
 		
 		String apkPathOfChuangye = datadriven.get("apkPathOfChuangye");

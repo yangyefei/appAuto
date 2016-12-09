@@ -17,6 +17,7 @@ import org.testng.annotations.Test;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.AfterClass;
 
+import orm.jdbc.MysqlDataDeal;
 import service.AppCommonService;
 import service.InitialService;
 import common.frame.test.BaseTest;
@@ -29,6 +30,9 @@ public class AppChuangyeEnterIncubator extends BaseTest {
 	private AppCommonService appCommonService;	
 //	@Autowired
 //	private WebCommonService webCommonService;
+	
+	@Autowired
+	private MysqlDataDeal mysqlDataDeal;
 
 	private AppiumDriver driver;
 //	private WebDriver webDriver;
@@ -37,11 +41,12 @@ public class AppChuangyeEnterIncubator extends BaseTest {
 	@BeforeClass
 	public void beforeClass() {
 		
+		mysqlDataDeal.updateEnterpriseStatus("SHXLHEnterprise", 4);
 		
 	}
 
 
-	@Test(enabled = true, dataProvider = "testData",description="企业入驻孵化器",timeOut=180000)
+	@Test(enabled = true, dataProvider = "testData",description="企业入驻孵化器",timeOut=480000)
 	public void chuangyeEnterIncubator(Map<String, String> datadriven)throws Exception {
 		
 		String apkPathOfChuangye = datadriven.get("apkPathOfChuangye");
