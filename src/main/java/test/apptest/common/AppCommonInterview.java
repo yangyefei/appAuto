@@ -17,7 +17,6 @@ import org.testng.annotations.BeforeClass;
 import org.testng.annotations.AfterClass;
 
 
-
 import service.AppCommonService;
 import service.InitialService;
 
@@ -31,13 +30,13 @@ public class AppCommonInterview extends BaseTest {
 	@Autowired
 	private AppCommonService appCommonService;
 
-	private AppiumDriver driver;
+	private AppiumDriver driver;	
 
 	@BeforeClass
 	public void beforeClass() {		
 	}	
 
-	@Test(enabled = false, dataProvider = "testData", timeOut=600000, description="约谈流程")
+	@Test(enabled = true, dataProvider = "testData", timeOut=600000, description="约谈流程")
 	public void interviewProcess(Map<String, String> datadriven)throws Exception {
 		
 		String apkPathOfChuangye = datadriven.get("apkPathOfChuangye");

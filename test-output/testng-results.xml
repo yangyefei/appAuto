@@ -2,23 +2,42 @@
 <testng-results skipped="0" failed="1" total="1" passed="0">
   <reporter-output>
   </reporter-output>
+<<<<<<< HEAD
   <suite name="Default suite" duration-ms="115670" started-at="2016-12-09T03:45:44Z" finished-at="2016-12-09T03:47:40Z">
+=======
+  <suite name="Default suite" duration-ms="92042" started-at="2016-12-08T07:35:40Z" finished-at="2016-12-08T07:37:12Z">
+>>>>>>> branch 'master' of http://172.16.11.124/luyi/appAuto.git
     <groups>
     </groups>
+<<<<<<< HEAD
     <test name="Default test" duration-ms="115670" started-at="2016-12-09T03:45:44Z" finished-at="2016-12-09T03:47:40Z">
       <class name="test.apptest.chuangye.AppChuangyeBuyService">
         <test-method status="PASS" signature="springTestContextPrepareTestInstance()[pri:0, instance:test.apptest.chuangye.AppChuangyeBuyService@60de1b8a]" name="springTestContextPrepareTestInstance" is-config="true" duration-ms="429" started-at="2016-12-09T11:45:44Z" finished-at="2016-12-09T11:45:44Z">
+=======
+    <test name="Default test" duration-ms="92042" started-at="2016-12-08T07:35:40Z" finished-at="2016-12-08T07:37:12Z">
+      <class name="test.apptest.common.AppFundSpeedInquiry">
+        <test-method status="PASS" signature="springTestContextPrepareTestInstance()[pri:0, instance:test.apptest.common.AppFundSpeedInquiry@1f6f296]" name="springTestContextPrepareTestInstance" is-config="true" duration-ms="611" started-at="2016-12-08T15:35:40Z" finished-at="2016-12-08T15:35:40Z">
+>>>>>>> branch 'master' of http://172.16.11.124/luyi/appAuto.git
           <reporter-output>
           </reporter-output>
         </test-method> <!-- springTestContextPrepareTestInstance -->
+<<<<<<< HEAD
         <test-method status="PASS" signature="beforeClass()[pri:0, instance:test.apptest.chuangye.AppChuangyeBuyService@60de1b8a]" name="beforeClass" is-config="true" duration-ms="0" started-at="2016-12-09T11:45:44Z" finished-at="2016-12-09T11:45:44Z">
+=======
+        <test-method status="PASS" signature="beforeClass()[pri:0, instance:test.apptest.common.AppFundSpeedInquiry@1f6f296]" name="beforeClass" is-config="true" duration-ms="0" started-at="2016-12-08T15:35:40Z" finished-at="2016-12-08T15:35:40Z">
+>>>>>>> branch 'master' of http://172.16.11.124/luyi/appAuto.git
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeClass -->
+<<<<<<< HEAD
         <test-method status="FAIL" signature="chuangyeBuyService(java.util.Map)[pri:0, instance:test.apptest.chuangye.AppChuangyeBuyService@60de1b8a]" name="chuangyeBuyService" duration-ms="115054" started-at="2016-12-09T11:45:44Z" description="¹ºÂò·þÎñ" data-provider="testData" finished-at="2016-12-09T11:47:39Z">
+=======
+        <test-method status="PASS" signature="springTestContextBeforeTestMethod(java.lang.reflect.Method)[pri:0, instance:test.apptest.common.AppFundSpeedInquiry@1f6f296]" name="springTestContextBeforeTestMethod" is-config="true" duration-ms="0" started-at="2016-12-08T15:35:40Z" finished-at="2016-12-08T15:35:40Z">
+>>>>>>> branch 'master' of http://172.16.11.124/luyi/appAuto.git
           <params>
             <param index="0">
               <value>
+<<<<<<< HEAD
                 <![CDATA[{apkPathOfChuangye=D:\autoApp\testAPK\EasyrongChuangye_pre_2_3_1.apk, fundPassword=xlh123456, backPassword=xlh123456, apkPathOfFund=D:\autoApp\testAPK\EasyrongFund_pre_2_2_1.apk, filePath=D:\autotest.pdf, service=´ó¿§ÎÊÕï, changyeUserName=18200000099, backUserName=zdhcs, fundUserName=lkj123, comments=app×Ô¶¯»¯²âÊÔÓÃÆÀÂÛ123£¬ÓÐ³¤¶ÈÒªÇó³¬¹ý20¸ö×Ö, chuangyePassword=xlh123456, version=v2.3}]]>
               </value>
             </param>
@@ -98,28 +117,54 @@ Driver info: driver.version: unknown
             <param index="0">
               <value>
                 <![CDATA[public void test.apptest.chuangye.AppChuangyeBuyService.chuangyeBuyService(java.util.Map) throws java.lang.Exception]]>
+=======
+                <![CDATA[public void test.apptest.common.AppFundSpeedInquiry.Wallet(java.util.Map) throws java.lang.Exception]]>
+>>>>>>> branch 'master' of http://172.16.11.124/luyi/appAuto.git
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- springTestContextBeforeTestMethod -->
+<<<<<<< HEAD
         <test-method status="PASS" signature="springTestContextAfterTestMethod(java.lang.reflect.Method)[pri:0, instance:test.apptest.chuangye.AppChuangyeBuyService@60de1b8a]" name="springTestContextAfterTestMethod" is-config="true" duration-ms="0" started-at="2016-12-09T11:47:39Z" finished-at="2016-12-09T11:47:39Z">
+=======
+        <test-method status="PASS" signature="Wallet(java.util.Map)[pri:0, instance:test.apptest.common.AppFundSpeedInquiry@1f6f296]" name="Wallet" duration-ms="91037" started-at="2016-12-08T15:35:40Z" description="å¿«é€Ÿé—®è¯Š" data-provider="testData" finished-at="2016-12-08T15:37:11Z">
+>>>>>>> branch 'master' of http://172.16.11.124/luyi/appAuto.git
           <params>
             <param index="0">
               <value>
+<<<<<<< HEAD
                 <![CDATA[public void test.apptest.chuangye.AppChuangyeBuyService.chuangyeBuyService(java.util.Map) throws java.lang.Exception]]>
+=======
+                <![CDATA[{Result=YYF TEST, apkPathOfChuangye=D:\autoApp\testAPK\Easyrongchuangye_pre_2_3_1.apk, fundPassword=xlh123456, interviewProject=è°·æ³‰æ©¡æœ¨å¡ç‹ ç‹ å“­æ‹‰è¨, changyeUserName=13000000001, fundUserName=13774364001, chuangyePassword=xlh123456, interviewComments=appè‡ªåŠ¨åŒ–æµ‹è¯•ç”¨è¯„è®º123, version=v2.3}]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Wallet -->
+        <test-method status="PASS" signature="springTestContextAfterTestMethod(java.lang.reflect.Method)[pri:0, instance:test.apptest.common.AppFundSpeedInquiry@1f6f296]" name="springTestContextAfterTestMethod" is-config="true" duration-ms="1" started-at="2016-12-08T15:37:11Z" finished-at="2016-12-08T15:37:11Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void test.apptest.common.AppFundSpeedInquiry.Wallet(java.util.Map) throws java.lang.Exception]]>
+>>>>>>> branch 'master' of http://172.16.11.124/luyi/appAuto.git
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- springTestContextAfterTestMethod -->
+<<<<<<< HEAD
         <test-method status="PASS" signature="afterClass()[pri:0, instance:test.apptest.chuangye.AppChuangyeBuyService@60de1b8a]" name="afterClass" is-config="true" duration-ms="0" started-at="2016-12-09T11:47:40Z" finished-at="2016-12-09T11:47:40Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterClass -->
       </class> <!-- test.apptest.chuangye.AppChuangyeBuyService -->
+=======
+      </class> <!-- test.apptest.common.AppFundSpeedInquiry -->
+>>>>>>> branch 'master' of http://172.16.11.124/luyi/appAuto.git
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>
