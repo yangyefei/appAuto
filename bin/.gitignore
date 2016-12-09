@@ -1,3 +1,6 @@
-/properties/
-/test/
+/common/
 /orm/
+/properties/
+/qacontext/
+/service/
+/test/
