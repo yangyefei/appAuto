@@ -33,7 +33,7 @@ public class AppFundRequirement extends BaseTest {
 
 	private AppiumDriver driver;
 
-	WebDriver  driverweb;
+	private WebDriver webDriver ;
 	
     
 
@@ -155,6 +155,8 @@ public class AppFundRequirement extends BaseTest {
 
 		Assert.assertEquals("响应提交页面失败", "您已响应需求", Responetext.getText());
 		driver.quit();
+		
+		logger.info("APP "+datadriven.get("version")+"---我的需求响应测试结束---");
 	}
 
 	@DataProvider(name = "testData")
@@ -185,10 +187,10 @@ public class AppFundRequirement extends BaseTest {
 
 	public void oderConfrim() throws Exception {
 		
-//		  webDriver = Initial.browserOfChromeSetUp(webDriver);
+  webDriver = Initial.browserOfChromeSetUp(webDriver);
 		
-		System.setProperty("webdriver.chrome.driver", "C:\\Program Files (x86)\\Google\\Chrome\\Application\\chromedriver.exe");
-		WebDriver webDriver = new ChromeDriver();
+//		System.setProperty("webdriver.chrome.driver", "C:\\Program Files (x86)\\Google\\Chrome\\Application\\chromedriver.exe");
+//		WebDriver webDriver = new ChromeDriver();
 		webDriver.manage().timeouts().pageLoadTimeout(60, TimeUnit.SECONDS);
 		webDriver.get("http://fwgl.yirongbang.net/");
 
