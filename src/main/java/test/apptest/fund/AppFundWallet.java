@@ -78,12 +78,13 @@ public class AppFundWallet extends BaseTest{
     		WebElement getMonkey =driver.findElementById("com.easyrongfund:id/money_number_tv");
     		String getmon=getMonkey.getText();
     		Assert.assertEquals(avamon, getmon,"提现金额和可提现金额不对应");
+    		logger.info("验证判断提现成功");
 		} catch (Exception e) {
 		logger.info("验证判断提现失败");
 		    Assert.assertTrue(false);
 		}	
 		driver.quit();
- 
+		logger.info("测试完成");
 	}	@DataProvider(name = "testData")
 	public Iterator<Object[]> data1test() throws IOException {
 		return ExcelProviderByEnv(this, "testData");
