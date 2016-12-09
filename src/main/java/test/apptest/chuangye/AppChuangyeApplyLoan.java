@@ -130,6 +130,7 @@ public class AppChuangyeApplyLoan extends BaseTest {
 		driver.findElement(By.name("请输入姓名")).sendKeys("ceshi");
 		driver.findElement(By.name("请输入手机号")).sendKeys("13900000000");
 		driver.findElement(By.name("立即提交")).click();
+		//获取申请时间
 		SimpleDateFormat date = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
 		String time = date.format(new Date());
 		System.out.println(time);
