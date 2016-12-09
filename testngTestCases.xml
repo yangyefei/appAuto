@@ -22,12 +22,42 @@
 		</classes>
 	</test>	
 	
+	<test name="快速问诊流程" >
+		<classes>
+			<class name="test.apptest.common.AppCommonSpeedInquiry">
+				<methods>
+					<include name="appCommonSpeedInquiry" />
+				</methods>
+			</class>
+		</classes>
+	</test>
+
 	<test name="投资者发布以及需求响应"   preserve-order="true">
 		<classes>
 			<class name="test.apptest.fund.AppFundRequirement">
 				<methods>
 					<include name="fundRequirement" />
 					<include name="fundRespond" />
+				</methods>
+			</class>
+		</classes>
+	</test>
+	
+	<test name="孵化入驻" >
+		<classes>
+			<class name="test.apptest.chuangye.AppChuangyeEnterIncubator">
+				<methods>
+					<include name="chuangyeEnterIncubator" />
+				</methods>
+			</class>
+		</classes>
+	</test>
+	
+	<test name="提现" >
+		<classes>
+			<class name="test.apptest.fund.AppFundWallet">
+				<methods>
+					<include name="wallet" />
 				</methods>
 			</class>
 		</classes>

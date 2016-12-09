@@ -1,33 +1,44 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite name="Failed suite [Default suite]">
-  <test name="Default test(failed)">
+<suite name="Failed suite [Suite_TestResults]">
+  <test name="提现(failed)">
     <classes>
-<<<<<<< HEAD
-      <class name="test.apptest.chuangye.AppChuangyeBuyService">
-=======
-      <class name="test.apptest.common.AppFundSpeedInquiry">
->>>>>>> branch 'master' of http://172.16.11.124/luyi/appAuto.git
+      <class name="test.apptest.fund.AppFundWallet">
         <methods>
-<<<<<<< HEAD
+          <include name="springTestContextBeforeTestMethod"/>
+          <include name="beforeClass"/>
+          <include name="springTestContextPrepareTestInstance"/>
+          <include name="wallet" invocation-numbers="0"/>
+          <include name="springTestContextAfterTestMethod"/>
           <include name="afterClass"/>
-          <include name="chuangyeBuyService" invocation-numbers="0"/>
-=======
->>>>>>> branch 'master' of http://172.16.11.124/luyi/appAuto.git
+        </methods>
+      </class> <!-- test.apptest.fund.AppFundWallet -->
+      <class name="test.apptest.common.AppCommonSpeedInquiry">
+        <methods>
+          <include name="springTestContextBeforeTestMethod"/>
+          <include name="beforeClass"/>
+          <include name="springTestContextPrepareTestInstance"/>
+          <include name="springTestContextAfterTestMethod"/>
+        </methods>
+      </class> <!-- test.apptest.common.AppCommonSpeedInquiry -->
+      <class name="test.apptest.chuangye.AppChuangyeEnterIncubator">
+        <methods>
+          <include name="beforeClass"/>
           <include name="springTestContextBeforeTestMethod"/>
           <include name="springTestContextPrepareTestInstance"/>
           <include name="springTestContextAfterTestMethod"/>
-<<<<<<< HEAD
-=======
-          <include name="Wallet" invocation-numbers="0"/>
->>>>>>> branch 'master' of http://172.16.11.124/luyi/appAuto.git
+          <include name="afterClass"/>
+        </methods>
+      </class> <!-- test.apptest.chuangye.AppChuangyeEnterIncubator -->
+      <class name="test.apptest.fund.AppFundRequirement">
+        <methods>
+          <include name="afterClass"/>
+          <include name="springTestContextBeforeTestMethod"/>
+          <include name="springTestContextPrepareTestInstance"/>
+          <include name="springTestContextAfterTestMethod"/>
           <include name="beforeClass"/>
         </methods>
-<<<<<<< HEAD
-      </class> <!-- test.apptest.chuangye.AppChuangyeBuyService -->
-=======
-      </class> <!-- test.apptest.common.AppFundSpeedInquiry -->
->>>>>>> branch 'master' of http://172.16.11.124/luyi/appAuto.git
+      </class> <!-- test.apptest.fund.AppFundRequirement -->
     </classes>
-  </test> <!-- Default test(failed) -->
-</suite> <!-- Failed suite [Default suite] -->
+  </test> <!-- 提现(failed) -->
+</suite> <!-- Failed suite [Suite_TestResults] -->

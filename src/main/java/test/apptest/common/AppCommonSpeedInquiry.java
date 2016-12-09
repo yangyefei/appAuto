@@ -22,7 +22,7 @@ import io.appium.java_client.TouchAction;
 import service.AppCommonService;
 import service.InitialService;
 
-public class AppFundSpeedInquiry extends BaseTest{
+public class AppCommonSpeedInquiry extends BaseTest{
 	@Autowired
 	private InitialService Initial;
 	@Autowired
@@ -36,7 +36,7 @@ public class AppFundSpeedInquiry extends BaseTest{
 
 
 	@Test(enabled = true, dataProvider = "testData",description="快速问诊")
-	public void Wallet(Map<String, String> datadriven)throws Exception {
+	public void appCommonSpeedInquiry(Map<String, String> datadriven)throws Exception {
 		
 		String apkPathOfChuangye = datadriven.get("apkPathOfChuangye");
 		
@@ -86,6 +86,9 @@ public class AppFundSpeedInquiry extends BaseTest{
                 			
 			}
 		driver.quit();
+		
+		
+		logger.info("APP "+datadriven.get("version")+"---导师问诊流程测试结束--");
 
 	}
 
@@ -97,16 +100,7 @@ public class AppFundSpeedInquiry extends BaseTest{
 		touchAction.press(x/2, y*19/20).release().perform();
 	}
 
-        
-        
-		
-	
-	
-	
-	@DataProvider(name = "testData")
-	public Iterator<Object[]> data1test() throws IOException {
-		return ExcelProviderByEnv(this, "testData");
-	}
+
 	public  void oderConfrim() throws Exception { 
 	  webDriver = Initial.browserOfChromeSetUp(webDriver);
 		
@@ -140,5 +134,11 @@ public class AppFundSpeedInquiry extends BaseTest{
 	        //Select fruits = new Select(option1);
 //		    fruits.selectByValue("4");
 	}
-	}	
+	
+	@DataProvider(name = "testData")
+	public Iterator<Object[]> data1test() throws IOException {
+		return ExcelProviderByEnv(this, "testData");
+	}
+	
+}	
 	
