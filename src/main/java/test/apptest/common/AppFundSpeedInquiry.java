@@ -86,7 +86,7 @@ public class AppFundSpeedInquiry extends BaseTest{
                 			
 			}
 		driver.quit();
-
+		logger.info("快速问诊测试完成");
 	}
 
 	public void PayButton(){
