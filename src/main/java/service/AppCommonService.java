@@ -55,7 +55,7 @@ public interface AppCommonService {
 	 * @param totalNumId
 	 * @return
 	 */
-	public AppiumDriver scrollAndFindName(AppiumDriver driver, String searchName, String nameId, String totalNumId);
+	public AppiumDriver scrollAndFindName(AppiumDriver driver, String searchName, String nameId, String totalNum);
 	
 	
 }
