@@ -31,8 +31,18 @@
 			</class>
 		</classes>
 	</test>
+	
+	<test name="投资人提现" >
+		<classes>
+			<class name="test.apptest.fund.AppFundWallet">
+				<methods>
+					<include name="wallet" />
+				</methods>
+			</class>
+		</classes>
+	</test>
 
-	<test name="投资者发布以及需求响应"   preserve-order="true">
+	<test name="投资人发布以及需求响应"   preserve-order="true">
 		<classes>
 			<class name="test.apptest.fund.AppFundRequirement">
 				<methods>
@@ -43,7 +53,7 @@
 		</classes>
 	</test>
 	
-	<test name="孵化入驻" >
+	<test name="创业者孵化入驻" >
 		<classes>
 			<class name="test.apptest.chuangye.AppChuangyeEnterIncubator">
 				<methods>
@@ -53,15 +63,6 @@
 		</classes>
 	</test>
 	
-	<test name="提现" >
-		<classes>
-			<class name="test.apptest.fund.AppFundWallet">
-				<methods>
-					<include name="wallet" />
-				</methods>
-			</class>
-		</classes>
-	</test>
 
 </suite>
 

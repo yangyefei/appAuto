@@ -139,7 +139,11 @@
 	        </fileset>
 <!-- 	        <to address="luyi@xinlonghang.cn"/> -->
 	        <to address="qa@xinlonghang.cn"/>
-	        <cc address="techmanager@xinlonghang.cn"/>
+<!-- 	        <to address="yangyu@xinlonghang.cn"/>    
+	        <to address="liucheng@xinlonghang.cn"/>
+	        <to address="cjz@xinlonghang.cn"/>
+	        <to address="chenke@xinlonghang.cn"/>
+	        <cc address="techmanager@xinlonghang.cn"/> -->
 	     <message> 预发环境自动化测试结果请查看附件压缩包中的appTestResults.html文件，谢谢！</message>
 	    </mail>  
 	 </target>
