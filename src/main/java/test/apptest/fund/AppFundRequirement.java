@@ -11,7 +11,6 @@ import org.junit.Assert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -94,6 +93,8 @@ public class AppFundRequirement extends BaseTest {
 			assertTrue("我的需求 中提交的需求不存在", res.isDisplayed());
 			logger.info("我的需求提交成功");
 		} else {
+			
+			driver.quit();
 			assertTrue("我的需求提交失败", false);
 		}
 		// 进入web 管理后台,确认需求申请
@@ -108,9 +109,11 @@ public class AppFundRequirement extends BaseTest {
 		if (icon.isDisplayed()) {
 			icon.click();
 		} else {
+			driver.quit();
 			assertTrue(false);
 		}
 		driver.quit();
+		logger.info("APP "+datadriven.get("version")+"---需求发布流程测试结束---");
 	}
 
 	
@@ -119,7 +122,7 @@ public class AppFundRequirement extends BaseTest {
 		
 		String apkPathOfFund = datadriven.get("apkPathOfFund");
 		
-		logger.info("APP "+datadriven.get("version")+"---我的需求响应---");
+		logger.info("APP "+datadriven.get("version")+"---我的需求响应测试开始---");
 		//启动投资者app并且登录
 
 		logger.info("启动并登陆投资者app");

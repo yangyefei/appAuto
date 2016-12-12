@@ -109,14 +109,15 @@
 	
 	 <testng classpathref="run.classpath" outputdir="${output.dir}" delegateCommandSystemProperties="true"> 
 	    <xmlfileset dir="${dist.dir}" includes="testngTestCases.xml"/>
+	    <sysproperty key="org.uncommons.reportng.title" value="APP自动化测试报告"/>
+	    <jvmarg value="-Dfile.encoding=UTF-8"/>
 	 </testng>	     	
 <!--   <antcall target="clean" /> 	 -->
    </target>
   
   <target name="transform" depends="run_tests">
 		<echo message="going to optimize the test reports" />
-	     <xslt in="${output.dir}/testng-results.xml" style="${basedir}/testng-results.xsl" out="${output.dir}/AppReports/appTestResults.html" 
-	     	classpathref="run.classpath">
+	     <xslt in="${output.dir}/testng-results.xml"  style="${basedir}/testng-results.xsl"  out="${output.dir}/AppReports/appTestResults.html"  classpathref="run.classpath">
 	     	
 	         <param name="testNgXslt.outputDir" expression="${output.dir}/AppReports" />
 	         <param name="testNgXslt.showRuntimeTotals" expression="true"/>
@@ -132,13 +133,14 @@
 	<target name="send-mail" depends="make_zip"> 
 		<echo message="going to send mail" />
 	    <mail mailhost="smtp.qiye.163.com" user="qatech@xinlonghang.cn" password="xlhQA222"
-	    	subject="[Pre-Automation]AppAutoTestReport_${date}">
+	    	subject="[Pre-Automation]AppAutoTestReport_${date}" >
 	        <from address="qatech@xinlonghang.cn"/>
+<!-- 	        <tolist address="qatech@xinlonghang.cn"/> -->
 	        <fileset dir="${output.dir}">
 	           <include name="AppReports_${date}.zip" />
 	        </fileset>
-<!-- 	        <to address="luyi@xinlonghang.cn"/> -->
-	        <to address="qa@xinlonghang.cn"/>
+	        <to address="luyi@xinlonghang.cn"/>
+<!-- 	        <to address="qa@xinlonghang.cn"/> -->
 <!-- 	        <to address="yangyu@xinlonghang.cn"/>    
 	        <to address="liucheng@xinlonghang.cn"/>
 	        <to address="cjz@xinlonghang.cn"/>
