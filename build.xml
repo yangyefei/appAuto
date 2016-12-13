@@ -7,8 +7,8 @@
 	<property name="output.dir" value="${basedir}/test-output"/>
 	<property name="jar.file" value="auto.jar" />
 	<property name="dist.dir" value="./automationRun" />
-	<property name="mailtolist" value="luyi@xinlonghang.cn,yyf@xinlonghang.cn" />
-	<property name="mailcclist" value="luyi@xinlonghang.cn" />
+	<property name="mailtolist" value="qa@xinlonghang.cn,yangyu@xinlonghang.cn,liucheng@xinlonghang.cn,cjz@xinlonghang.cn,chenke@xinlonghang.cn,chenke@xinlonghang.cn" />
+	<property name="mailcclist" value="techmanager@xinlonghang.cn" />
 <!-- 	<property name="testdata.dir" value="./testdata" /> -->
 <!-- 	<property name="appApk.dir" value="./../apps" /> -->
 	

@@ -33,7 +33,7 @@ public class AppCommonSpeedInquiry extends BaseTest{
 	
 	}
 	
-	@Test(enabled = false, dataProvider = "testData",description="快速问诊")
+	@Test(enabled = true, dataProvider = "testData",description="快速问诊")
 	public void appCommonSpeedInquiry(Map<String, String> datadriven)throws Exception {
 		
 		String apkPathOfChuangye = datadriven.get("apkPathOfChuangye");
