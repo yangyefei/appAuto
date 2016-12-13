@@ -12,7 +12,7 @@
 		</classes>
 	</test>
 	
-	<test name="普通问诊流程" >
+<!-- 	<test name="普通问诊流程" >
 		<classes>
 			<class name="test.apptest.common.AppCommonInquiry">
 				<methods>
@@ -61,7 +61,7 @@
 				</methods>
 			</class>
 		</classes>
-	</test>
+	</test> -->
 	
 
 </suite>

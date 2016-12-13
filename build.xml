@@ -7,8 +7,11 @@
 	<property name="output.dir" value="${basedir}/test-output"/>
 	<property name="jar.file" value="auto.jar" />
 	<property name="dist.dir" value="./automationRun" />
-	<property name="mailtolist" value="qa@xinlonghang.cn,yangyu@xinlonghang.cn,liucheng@xinlonghang.cn,cjz@xinlonghang.cn,chenke@xinlonghang.cn" />
-	<property name="mailcclist" value="techmanager@xinlonghang.cn" />
+<!-- 	<property name="mailtolist" value="qa@xinlonghang.cn,yangyu@xinlonghang.cn,liucheng@xinlonghang.cn,cjz@xinlonghang.cn,chenke@xinlonghang.cn" />
+	<property name="mailcclist" value="techmanager@xinlonghang.cn" /> -->
+	
+	<property name="mailtolist" value="qa@xinlonghang.cn" />
+<!-- 	<property name="mailcclist" value="techmanager@xinlonghang.cn" /> -->
 <!-- 	<property name="testdata.dir" value="./testdata" /> -->
 <!-- 	<property name="appApk.dir" value="./../apps" /> -->
 	
@@ -135,21 +138,16 @@
 	<target name="send-mail" depends="make_zip"> 
 		<echo message="going to send mail" />
 	    <mail mailhost="smtp.qiye.163.com" user="qatech@xinlonghang.cn" password="xlhQA222"
-	    	subject="[Pre-Automation]AppAutoTestReport_${date}"  from="qatech@xinlonghang.cn" 
+	    	subject="[Pre-Automation]APP自动化测试报告_${date}"  from="qatech@xinlonghang.cn" 
 	    	tolist="${mailtolist}"
 	    	cclist="${mailcclist}">
 <!-- 	        <from address="qatech@xinlonghang.cn"/> -->
-<!-- 	        <tolist address="qatech@xinlonghang.cn"/> -->
 	        <fileset dir="${output.dir}">
 	           <include name="AppReports_${date}.zip" />
 	        </fileset>
 <!-- 	        <to address="luyi@xinlonghang.cn"/> -->
 <!-- 	        <to address="qa@xinlonghang.cn"/> -->
-<!-- 	        <to address="yangyu@xinlonghang.cn"/>    
-	        <to address="liucheng@xinlonghang.cn"/>
-	        <to address="cjz@xinlonghang.cn"/>
-	        <to address="chenke@xinlonghang.cn"/>
-	        <cc address="techmanager@xinlonghang.cn"/> -->
+<!-- 	        <cc address="techmanager@xinlonghang.cn"/> -->
 	     <message> APP预发环境自动化测试结果请查看附件压缩包中的appTestResults.html文件，谢谢！</message>
 	    </mail>  
 	 </target>
