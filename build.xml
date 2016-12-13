@@ -10,7 +10,7 @@
 <!-- 	<property name="mailtolist" value="qa@xinlonghang.cn,yangyu@xinlonghang.cn,liucheng@xinlonghang.cn,cjz@xinlonghang.cn,chenke@xinlonghang.cn" />
 	<property name="mailcclist" value="techmanager@xinlonghang.cn" /> -->
 	
-	<property name="mailtolist" value="qa@xinlonghang.cn" />
+	<property name="MAIL_LIST" value="qa@xinlonghang.cn" />
 <!-- 	<property name="mailcclist" value="techmanager@xinlonghang.cn" /> -->
 <!-- 	<property name="testdata.dir" value="./testdata" /> -->
 <!-- 	<property name="appApk.dir" value="./../apps" /> -->
@@ -139,7 +139,7 @@
 		<echo message="going to send mail" />
 	    <mail mailhost="smtp.qiye.163.com" user="qatech@xinlonghang.cn" password="xlhQA222"
 	    	subject="[Pre-Automation]APP自动化测试报告_${date}"  from="qatech@xinlonghang.cn" 
-	    	tolist="${mailtolist}"
+	    	tolist="${MAIL_LIST}"
 	    	cclist="${mailcclist}">
 <!-- 	        <from address="qatech@xinlonghang.cn"/> -->
 	        <fileset dir="${output.dir}">
