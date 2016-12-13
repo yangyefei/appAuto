@@ -8,7 +8,6 @@ import java.util.concurrent.TimeUnit;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -33,14 +32,13 @@ public class AppCommonSpeedInquiry extends BaseTest{
 	public void beforeClass()  {		
 	
 	}
-
-
-	@Test(enabled = true, dataProvider = "testData",description="快速问诊")
+	
+	@Test(enabled = false, dataProvider = "testData",description="快速问诊")
 	public void appCommonSpeedInquiry(Map<String, String> datadriven)throws Exception {
 		
 		String apkPathOfChuangye = datadriven.get("apkPathOfChuangye");
 		
-		logger.info("APP "+datadriven.get("version")+"---导师问诊流程开始--");
+		logger.info("APP "+datadriven.get("version")+"---导师快速问诊流程开始--");
 		//启动企业app并且登录
 		logger.info("启动并登陆企业者app");
 		driver = Initial.appiumAndroidChuangyeSetUp(driver,apkPathOfChuangye);
@@ -88,7 +86,7 @@ public class AppCommonSpeedInquiry extends BaseTest{
 		driver.quit();
 		
 		
-		logger.info("APP "+datadriven.get("version")+"---导师问诊流程测试结束--");
+		logger.info("APP "+datadriven.get("version")+"---导师快速问诊流程测试结束--");
 
 	}
 

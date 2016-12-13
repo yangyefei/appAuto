@@ -1,54 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" total="1" passed="1">
+<testng-results skipped="0" failed="0" total="0" passed="0">
   <reporter-output>
   </reporter-output>
-  <suite name="Suite_TestResults" duration-ms="91583" started-at="2016-12-12T09:49:57Z" finished-at="2016-12-12T09:51:28Z">
+  <suite name="Suite_TestResults" duration-ms="7" started-at="2016-12-13T06:06:27Z" finished-at="2016-12-13T06:06:27Z">
     <groups>
     </groups>
-    <test name="快速问诊流程" duration-ms="91583" started-at="2016-12-12T09:49:57Z" finished-at="2016-12-12T09:51:28Z">
-      <class name="test.apptest.common.AppCommonSpeedInquiry">
-        <test-method status="PASS" signature="springTestContextPrepareTestInstance()[pri:0, instance:test.apptest.common.AppCommonSpeedInquiry@f11404]" name="springTestContextPrepareTestInstance" is-config="true" duration-ms="746" started-at="2016-12-12T17:49:57Z" finished-at="2016-12-12T17:49:57Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- springTestContextPrepareTestInstance -->
-        <test-method status="PASS" signature="beforeClass()[pri:0, instance:test.apptest.common.AppCommonSpeedInquiry@f11404]" name="beforeClass" is-config="true" duration-ms="0" started-at="2016-12-12T17:49:57Z" finished-at="2016-12-12T17:49:57Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- beforeClass -->
-        <test-method status="PASS" signature="springTestContextBeforeTestMethod(java.lang.reflect.Method)[pri:0, instance:test.apptest.common.AppCommonSpeedInquiry@f11404]" name="springTestContextBeforeTestMethod" is-config="true" duration-ms="1" started-at="2016-12-12T17:49:58Z" finished-at="2016-12-12T17:49:58Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[public void test.apptest.common.AppCommonSpeedInquiry.appCommonSpeedInquiry(java.util.Map) throws java.lang.Exception]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- springTestContextBeforeTestMethod -->
-        <test-method status="PASS" signature="appCommonSpeedInquiry(java.util.Map)[pri:0, instance:test.apptest.common.AppCommonSpeedInquiry@f11404]" name="appCommonSpeedInquiry" duration-ms="90442" started-at="2016-12-12T17:49:58Z" description="快速问诊" data-provider="testData" finished-at="2016-12-12T17:51:28Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[{Result=YYF TEST, apkPathOfChuangye=D:\autoApp\testAPK\Easyrongchuangye_pre_2_3_1.apk, fundPassword=xlh123456, interviewProject=谷泉橡木卡狠狠哭拉萨, changyeUserName=13000000001, fundUserName=13774364001, chuangyePassword=xlh123456, interviewComments=app自动化测试用评论123, version=v2.3}]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- appCommonSpeedInquiry -->
-        <test-method status="PASS" signature="springTestContextAfterTestMethod(java.lang.reflect.Method)[pri:0, instance:test.apptest.common.AppCommonSpeedInquiry@f11404]" name="springTestContextAfterTestMethod" is-config="true" duration-ms="3" started-at="2016-12-12T17:51:28Z" finished-at="2016-12-12T17:51:28Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[public void test.apptest.common.AppCommonSpeedInquiry.appCommonSpeedInquiry(java.util.Map) throws java.lang.Exception]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- springTestContextAfterTestMethod -->
-      </class> <!-- test.apptest.common.AppCommonSpeedInquiry -->
+    <test name="快速问诊流程" duration-ms="7" started-at="2016-12-13T06:06:27Z" finished-at="2016-12-13T06:06:27Z">
     </test> <!-- 快速问诊流程 -->
   </suite> <!-- Suite_TestResults -->
 </testng-results>
