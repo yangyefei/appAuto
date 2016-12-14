@@ -63,10 +63,10 @@ public class AppChuangyeSignUp extends BaseTest {
 
 		driver = Initial.appiumAndroidChuangyeSetUp(driver,apkPathOfChuangye);
 		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
-//		appCommonService.logoutForApp(driver);
+		appCommonService.logoutForApp(driver);
 
 		logger.info("登录创业者app");
-//		driver = appCommonService.loginForApp(driver,datadriven.get("changyeUserName"),datadriven.get("chuangyePassword"));
+		driver = appCommonService.loginForApp(driver,datadriven.get("changyeUserName"),datadriven.get("chuangyePassword"));
 		
 		//点击进入活动列表页
 		logger.info("发现-进入活动列表页");
@@ -76,10 +76,11 @@ public class AppChuangyeSignUp extends BaseTest {
 		//选择活动并报名
 	    logger.info("选择活动并报名");
 	    String total = driver.findElementById("huo_dong_number_tv").getText();
-	    String totalNumId=total.substring(6, total.length()-1);
+	    String totalNumId=total.substring(6, total.length()-2);
 	    System.out.print(totalNumId);
 	    driver = appCommonService.scrollAndFindName(driver, datadriven.get("activity"), "huo_dong_name_tv", totalNumId);
-		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+		driver.findElementByName(datadriven.get("activity")).click();
+	    driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 		
 		try {
 			

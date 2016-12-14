@@ -21,6 +21,7 @@ import org.testng.annotations.AfterClass;
 
 
 
+
 import orm.jdbc.MysqlDataDeal;
 //import antlr.collections.List;
 import service.AppCommonService;
@@ -69,7 +70,11 @@ public class AppFundSignUp extends BaseTest {
 		
 		//选择活动并报名
 	    logger.info("选择活动并报名");
-		new WebDriverWait(driver,120).until(ExpectedConditions.elementToBeClickable(By.name(datadriven.get("activity")))).click();
+	    String total = driver.findElementById("huo_dong_number_tv").getText();
+	    String totalNumId=total.substring(6, total.length()-2);
+	    System.out.print(totalNumId);
+	    driver = appCommonService.scrollAndFindName(driver, datadriven.get("activity"), "huo_dong_name_tv", totalNumId);
+		driver.findElementByName(datadriven.get("activity")).click();
 		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 		
 		try {

@@ -1,30 +1,33 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<<<<<<< HEAD
-<testng-results skipped="0" failed="1" total="1" passed="0">
-=======
-<testng-results skipped="0" failed="0" total="0" passed="0">
->>>>>>> branch 'master' of http://172.16.11.124/luyi/appAuto.git
+<testng-results skipped="0" failed="0" total="1" passed="1">
   <reporter-output>
+    <line>
+      <![CDATA[´ÓÊý¾Ý¿âÖÐ»ñÈ¡»î¶¯±¨ÃûÑéÖ¤Âë...]]>
+    </line>
+    <line>
+      <![CDATA[mysqlÔ¤·¢»·¾³Êý¾Ý¿âÁ¬½ÓÐÅÏ¢Îª£º172.16.11.80:3306]]>
+    </line>
+    <line>
+      <![CDATA[É¾³ý±¨ÃûÐÅÏ¢...]]>
+    </line>
+    <line>
+      <![CDATA[mysqlÔ¤·¢»·¾³Êý¾Ý¿âÁ¬½ÓÐÅÏ¢Îª£º172.16.11.80:3306]]>
+    </line>
   </reporter-output>
-<<<<<<< HEAD
-  <suite name="Default suite" duration-ms="78453" started-at="2016-12-14T03:21:32Z" finished-at="2016-12-14T03:22:51Z">
-=======
-  <suite name="Suite_TestResults" duration-ms="7" started-at="2016-12-13T06:06:27Z" finished-at="2016-12-13T06:06:27Z">
->>>>>>> branch 'master' of http://172.16.11.124/luyi/appAuto.git
+  <suite name="Default suite" duration-ms="90174" started-at="2016-12-14T03:33:09Z" finished-at="2016-12-14T03:34:39Z">
     <groups>
     </groups>
-<<<<<<< HEAD
-    <test name="Default test" duration-ms="78453" started-at="2016-12-14T03:21:32Z" finished-at="2016-12-14T03:22:51Z">
+    <test name="Default test" duration-ms="90174" started-at="2016-12-14T03:33:09Z" finished-at="2016-12-14T03:34:39Z">
       <class name="test.apptest.chuangye.AppChuangyeSignUp">
-        <test-method status="PASS" signature="springTestContextPrepareTestInstance()[pri:0, instance:test.apptest.chuangye.AppChuangyeSignUp@7f92c8d9]" name="springTestContextPrepareTestInstance" is-config="true" duration-ms="440" started-at="2016-12-14T11:21:32Z" finished-at="2016-12-14T11:21:33Z">
+        <test-method status="PASS" signature="springTestContextPrepareTestInstance()[pri:0, instance:test.apptest.chuangye.AppChuangyeSignUp@7f92c8d9]" name="springTestContextPrepareTestInstance" is-config="true" duration-ms="443" started-at="2016-12-14T11:33:09Z" finished-at="2016-12-14T11:33:09Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- springTestContextPrepareTestInstance -->
-        <test-method status="PASS" signature="beforeClass()[pri:0, instance:test.apptest.chuangye.AppChuangyeSignUp@7f92c8d9]" name="beforeClass" is-config="true" duration-ms="0" started-at="2016-12-14T11:21:33Z" finished-at="2016-12-14T11:21:33Z">
+        <test-method status="PASS" signature="beforeClass()[pri:0, instance:test.apptest.chuangye.AppChuangyeSignUp@7f92c8d9]" name="beforeClass" is-config="true" duration-ms="0" started-at="2016-12-14T11:33:09Z" finished-at="2016-12-14T11:33:09Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeClass -->
-        <test-method status="PASS" signature="springTestContextBeforeTestMethod(java.lang.reflect.Method)[pri:0, instance:test.apptest.chuangye.AppChuangyeSignUp@7f92c8d9]" name="springTestContextBeforeTestMethod" is-config="true" duration-ms="0" started-at="2016-12-14T11:21:33Z" finished-at="2016-12-14T11:21:33Z">
+        <test-method status="PASS" signature="springTestContextBeforeTestMethod(java.lang.reflect.Method)[pri:0, instance:test.apptest.chuangye.AppChuangyeSignUp@7f92c8d9]" name="springTestContextBeforeTestMethod" is-config="true" duration-ms="1" started-at="2016-12-14T11:33:10Z" finished-at="2016-12-14T11:33:10Z">
           <params>
             <param index="0">
               <value>
@@ -35,7 +38,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- springTestContextBeforeTestMethod -->
-        <test-method status="FAIL" signature="chuangyeSignUp(java.util.Map)[pri:0, instance:test.apptest.chuangye.AppChuangyeSignUp@7f92c8d9]" name="chuangyeSignUp" duration-ms="77822" started-at="2016-12-14T11:21:33Z" description="»î¶¯±¨Ãû" data-provider="testData" finished-at="2016-12-14T11:22:51Z">
+        <test-method status="PASS" signature="chuangyeSignUp(java.util.Map)[pri:0, instance:test.apptest.chuangye.AppChuangyeSignUp@7f92c8d9]" name="chuangyeSignUp" duration-ms="89539" started-at="2016-12-14T11:33:10Z" description="»î¶¯±¨Ãû" data-provider="testData" finished-at="2016-12-14T11:34:39Z">
           <params>
             <param index="0">
               <value>
@@ -43,74 +46,22 @@
               </value>
             </param>
           </params>
-          <exception class="org.openqa.selenium.TimeoutException">
-            <message>
-              <![CDATA[Timed out after 60 seconds waiting for element to be clickable: By.id: 3 
-Build info: version: '2.44.0', revision: '76d78cf', time: '2014-10-23 20:03:00'
-System info: host: 'xlh-028', ip: '172.16.22.236', os.name: 'Windows 8', os.arch: 'amd64', os.version: '6.2', java.version: '1.6.0_43'
-Session ID: 47edea8b-e12b-4964-88a2-ea440b14da6c
-Driver info: io.appium.java_client.AppiumDriver
-Capabilities [{platform=LINUX, app=D:\autoApp\testAPK\Easyrongchuangye_pre_2_3_1.apk, javascriptEnabled=true, appActivity=.activities.EasyrongChuangyeActivity, browserName=, networkConnectionEnabled=true, noSign=true, desired={platformVersion=4.4, app=D:\autoApp\testAPK\Easyrongchuangye_pre_2_3_1.apk, platformName=Android, deviceName=Android Emulator, browserName=, appActivity=.activities.EasyrongChuangyeActivity, unicodeKeyboard=true, noSign=true, resetKeyboard=true, appPackage=com.easyrongchuangye, noReset=true}, locationContextEnabled=false, appPackage=com.easyrongchuangye, noReset=true, platformVersion=4.4.2, databaseEnabled=false, platformName=Android, deviceName=emulator-5554, webStorageEnabled=false, unicodeKeyboard=true, resetKeyboard=true, warnings={}, takesScreenshot=true}]]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[org.openqa.selenium.TimeoutException: Timed out after 60 seconds waiting for element to be clickable: By.id: 3 
-Build info: version: '2.44.0', revision: '76d78cf', time: '2014-10-23 20:03:00'
-System info: host: 'xlh-028', ip: '172.16.22.236', os.name: 'Windows 8', os.arch: 'amd64', os.version: '6.2', java.version: '1.6.0_43'
-Session ID: 47edea8b-e12b-4964-88a2-ea440b14da6c
-Driver info: io.appium.java_client.AppiumDriver
-Capabilities [{platform=LINUX, app=D:\autoApp\testAPK\Easyrongchuangye_pre_2_3_1.apk, javascriptEnabled=true, appActivity=.activities.EasyrongChuangyeActivity, browserName=, networkConnectionEnabled=true, noSign=true, desired={platformVersion=4.4, app=D:\autoApp\testAPK\Easyrongchuangye_pre_2_3_1.apk, platformName=Android, deviceName=Android Emulator, browserName=, appActivity=.activities.EasyrongChuangyeActivity, unicodeKeyboard=true, noSign=true, resetKeyboard=true, appPackage=com.easyrongchuangye, noReset=true}, locationContextEnabled=false, appPackage=com.easyrongchuangye, noReset=true, platformVersion=4.4.2, databaseEnabled=false, platformName=Android, deviceName=emulator-5554, webStorageEnabled=false, unicodeKeyboard=true, resetKeyboard=true, warnings={}, takesScreenshot=true}]
-	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:79)
-	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:228)
-	at service.impl.AppCommonServiceImpl.scrollAndFindName(AppCommonServiceImpl.java:99)
-	at test.apptest.chuangye.AppChuangyeSignUp.chuangyeSignUp(AppChuangyeSignUp.java:81)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
-	at java.lang.reflect.Method.invoke(Unknown Source)
-	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:84)
-	at org.testng.internal.InvokeMethodRunnable.runOne(InvokeMethodRunnable.java:46)
-	at org.testng.internal.InvokeMethodRunnable.run(InvokeMethodRunnable.java:37)
-	at java.util.concurrent.Executors$RunnableAdapter.call(Unknown Source)
-	at java.util.concurrent.FutureTask$Sync.innerRun(Unknown Source)
-	at java.util.concurrent.FutureTask.run(Unknown Source)
-	at java.util.concurrent.ThreadPoolExecutor$Worker.runTask(Unknown Source)
-	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
-	at java.lang.Thread.run(Unknown Source)
-Caused by: org.openqa.selenium.NoSuchElementException: An element could not be located on the page using the given search parameters. (WARNING: The server did not provide any stacktrace information)
-Command duration or timeout: 10.49 seconds
-For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
-Build info: version: '2.44.0', revision: '76d78cf', time: '2014-10-23 20:03:00'
-System info: host: 'xlh-028', ip: '172.16.22.236', os.name: 'Windows 8', os.arch: 'amd64', os.version: '6.2', java.version: '1.6.0_43'
-Session ID: 47edea8b-e12b-4964-88a2-ea440b14da6c
-Driver info: io.appium.java_client.AppiumDriver
-Capabilities [{platform=LINUX, app=D:\autoApp\testAPK\Easyrongchuangye_pre_2_3_1.apk, javascriptEnabled=true, appActivity=.activities.EasyrongChuangyeActivity, browserName=, networkConnectionEnabled=true, noSign=true, desired={platformVersion=4.4, app=D:\autoApp\testAPK\Easyrongchuangye_pre_2_3_1.apk, platformName=Android, deviceName=Android Emulator, browserName=, appActivity=.activities.EasyrongChuangyeActivity, unicodeKeyboard=true, noSign=true, resetKeyboard=true, appPackage=com.easyrongchuangye, noReset=true}, locationContextEnabled=false, appPackage=com.easyrongchuangye, noReset=true, platformVersion=4.4.2, databaseEnabled=false, platformName=Android, deviceName=emulator-5554, webStorageEnabled=false, unicodeKeyboard=true, resetKeyboard=true, warnings={}, takesScreenshot=true}]
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
-	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
-	at java.lang.reflect.Constructor.newInstance(Unknown Source)
-	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:204)
-	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:156)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:599)
-	at io.appium.java_client.AppiumDriver.execute(AppiumDriver.java:81)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:352)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElementById(RemoteWebDriver.java:393)
-	at org.openqa.selenium.By$ById.findElement(By.java:214)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:344)
-	at org.openqa.selenium.support.ui.ExpectedConditions.findElement(ExpectedConditions.java:730)
-	at org.openqa.selenium.support.ui.ExpectedConditions.access$0(ExpectedConditions.java:728)
-	at org.openqa.selenium.support.ui.ExpectedConditions$4.apply(ExpectedConditions.java:130)
-	at org.openqa.selenium.support.ui.ExpectedConditions$4.apply(ExpectedConditions.java:1)
-	at org.openqa.selenium.support.ui.ExpectedConditions$17.apply(ExpectedConditions.java:528)
-	at org.openqa.selenium.support.ui.ExpectedConditions$17.apply(ExpectedConditions.java:1)
-	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:208)
-	... 15 more
-]]>
-            </full-stacktrace>
-          </exception> <!-- org.openqa.selenium.TimeoutException -->
           <reporter-output>
+            <line>
+              <![CDATA[´ÓÊý¾Ý¿âÖÐ»ñÈ¡»î¶¯±¨ÃûÑéÖ¤Âë...]]>
+            </line>
+            <line>
+              <![CDATA[mysqlÔ¤·¢»·¾³Êý¾Ý¿âÁ¬½ÓÐÅÏ¢Îª£º172.16.11.80:3306]]>
+            </line>
+            <line>
+              <![CDATA[É¾³ý±¨ÃûÐÅÏ¢...]]>
+            </line>
+            <line>
+              <![CDATA[mysqlÔ¤·¢»·¾³Êý¾Ý¿âÁ¬½ÓÐÅÏ¢Îª£º172.16.11.80:3306]]>
+            </line>
           </reporter-output>
         </test-method> <!-- chuangyeSignUp -->
-        <test-method status="PASS" signature="springTestContextAfterTestMethod(java.lang.reflect.Method)[pri:0, instance:test.apptest.chuangye.AppChuangyeSignUp@7f92c8d9]" name="springTestContextAfterTestMethod" is-config="true" duration-ms="1" started-at="2016-12-14T11:22:51Z" finished-at="2016-12-14T11:22:51Z">
+        <test-method status="PASS" signature="springTestContextAfterTestMethod(java.lang.reflect.Method)[pri:0, instance:test.apptest.chuangye.AppChuangyeSignUp@7f92c8d9]" name="springTestContextAfterTestMethod" is-config="true" duration-ms="0" started-at="2016-12-14T11:34:39Z" finished-at="2016-12-14T11:34:39Z">
           <params>
             <param index="0">
               <value>
@@ -121,16 +72,11 @@ Capabilities [{platform=LINUX, app=D:\autoApp\testAPK\Easyrongchuangye_pre_2_3_1
           <reporter-output>
           </reporter-output>
         </test-method> <!-- springTestContextAfterTestMethod -->
-        <test-method status="PASS" signature="afterClass()[pri:0, instance:test.apptest.chuangye.AppChuangyeSignUp@7f92c8d9]" name="afterClass" is-config="true" duration-ms="1" started-at="2016-12-14T11:22:51Z" finished-at="2016-12-14T11:22:51Z">
+        <test-method status="PASS" signature="afterClass()[pri:0, instance:test.apptest.chuangye.AppChuangyeSignUp@7f92c8d9]" name="afterClass" is-config="true" duration-ms="0" started-at="2016-12-14T11:34:39Z" finished-at="2016-12-14T11:34:39Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterClass -->
       </class> <!-- test.apptest.chuangye.AppChuangyeSignUp -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
-=======
-    <test name="å¿«é€Ÿé—®è¯Šæµç¨‹" duration-ms="7" started-at="2016-12-13T06:06:27Z" finished-at="2016-12-13T06:06:27Z">
-    </test> <!-- å¿«é€Ÿé—®è¯Šæµç¨‹ -->
-  </suite> <!-- Suite_TestResults -->
->>>>>>> branch 'master' of http://172.16.11.124/luyi/appAuto.git
 </testng-results>
