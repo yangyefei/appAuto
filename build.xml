@@ -139,8 +139,7 @@
 		<echo message="going to send mail" />
 	    <mail mailhost="smtp.qiye.163.com" user="qatech@xinlonghang.cn" password="xlhQA222"
 	    	subject="[Pre-Automation]APP自动化测试报告_${date}"  from="qatech@xinlonghang.cn" 
-	    	tolist="${MAIL_LIST}"
-	    	cclist="${mailcclist}">
+	    	tolist="${MAIL_LIST}">
 <!-- 	        <from address="qatech@xinlonghang.cn"/> -->
 	        <fileset dir="${output.dir}">
 	           <include name="AppReports_${date}.zip" />
