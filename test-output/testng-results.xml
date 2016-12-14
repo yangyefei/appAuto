@@ -1,30 +1,32 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<<<<<<< HEAD
 <testng-results skipped="0" failed="0" total="1" passed="1">
-=======
-<testng-results skipped="0" failed="0" total="0" passed="0">
->>>>>>> branch 'master' of http://172.16.11.124/luyi/appAuto.git
   <reporter-output>
   </reporter-output>
-<<<<<<< HEAD
-  <suite name="Default suite" duration-ms="101612" started-at="2016-12-14T03:35:14Z" finished-at="2016-12-14T03:36:56Z">
-=======
-  <suite name="Suite_TestResults" duration-ms="7" started-at="2016-12-13T06:06:27Z" finished-at="2016-12-13T06:06:27Z">
->>>>>>> branch 'master' of http://172.16.11.124/luyi/appAuto.git
+  <suite name="Default suite" duration-ms="95864" started-at="2016-12-14T05:10:19Z" finished-at="2016-12-14T05:11:54Z">
     <groups>
     </groups>
-<<<<<<< HEAD
-    <test name="Default test" duration-ms="101612" started-at="2016-12-14T03:35:14Z" finished-at="2016-12-14T03:36:56Z">
-      <class name="test.apptest.common.AppFundSpeedInquiry">
-        <test-method status="PASS" signature="springTestContextPrepareTestInstance()[pri:0, instance:test.apptest.common.AppFundSpeedInquiry@3aeaafa6]" name="springTestContextPrepareTestInstance" is-config="true" duration-ms="447" started-at="2016-12-14T11:35:14Z" finished-at="2016-12-14T11:35:15Z">
+    <test name="Default test" duration-ms="95864" started-at="2016-12-14T05:10:19Z" finished-at="2016-12-14T05:11:54Z">
+      <class name="test.apptest.common.AppCommonSpeedInquiry">
+        <test-method status="PASS" signature="springTestContextPrepareTestInstance()[pri:0, instance:test.apptest.common.AppCommonSpeedInquiry@3aeaafa6]" name="springTestContextPrepareTestInstance" is-config="true" duration-ms="511" started-at="2016-12-14T13:10:19Z" finished-at="2016-12-14T13:10:19Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- springTestContextPrepareTestInstance -->
-        <test-method status="PASS" signature="beforeClass()[pri:0, instance:test.apptest.common.AppFundSpeedInquiry@3aeaafa6]" name="beforeClass" is-config="true" duration-ms="1" started-at="2016-12-14T11:35:15Z" finished-at="2016-12-14T11:35:15Z">
+        <test-method status="PASS" signature="beforeClass()[pri:0, instance:test.apptest.common.AppCommonSpeedInquiry@3aeaafa6]" name="beforeClass" is-config="true" duration-ms="0" started-at="2016-12-14T13:10:19Z" finished-at="2016-12-14T13:10:19Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeClass -->
-        <test-method status="PASS" signature="speedInquiry(java.util.Map)[pri:0, instance:test.apptest.common.AppFundSpeedInquiry@3aeaafa6]" name="speedInquiry" duration-ms="100950" started-at="2016-12-14T11:35:15Z" description="快速问诊" data-provider="testData" finished-at="2016-12-14T11:36:56Z">
+        <test-method status="PASS" signature="springTestContextBeforeTestMethod(java.lang.reflect.Method)[pri:0, instance:test.apptest.common.AppCommonSpeedInquiry@3aeaafa6]" name="springTestContextBeforeTestMethod" is-config="true" duration-ms="1" started-at="2016-12-14T13:10:19Z" finished-at="2016-12-14T13:10:19Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void test.apptest.common.AppCommonSpeedInquiry.appCommonSpeedInquiry(java.util.Map) throws java.lang.Exception]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- springTestContextBeforeTestMethod -->
+        <test-method status="PASS" signature="appCommonSpeedInquiry(java.util.Map)[pri:0, instance:test.apptest.common.AppCommonSpeedInquiry@3aeaafa6]" name="appCommonSpeedInquiry" duration-ms="95077" started-at="2016-12-14T13:10:19Z" description="快速问诊" data-provider="testData" finished-at="2016-12-14T13:11:54Z">
           <params>
             <param index="0">
               <value>
@@ -34,35 +36,19 @@
           </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- speedInquiry -->
-        <test-method status="PASS" signature="springTestContextBeforeTestMethod(java.lang.reflect.Method)[pri:0, instance:test.apptest.common.AppFundSpeedInquiry@3aeaafa6]" name="springTestContextBeforeTestMethod" is-config="true" duration-ms="0" started-at="2016-12-14T11:35:15Z" finished-at="2016-12-14T11:35:15Z">
+        </test-method> <!-- appCommonSpeedInquiry -->
+        <test-method status="PASS" signature="springTestContextAfterTestMethod(java.lang.reflect.Method)[pri:0, instance:test.apptest.common.AppCommonSpeedInquiry@3aeaafa6]" name="springTestContextAfterTestMethod" is-config="true" duration-ms="1" started-at="2016-12-14T13:11:54Z" finished-at="2016-12-14T13:11:54Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[public void test.apptest.common.AppFundSpeedInquiry.speedInquiry(java.util.Map) throws java.lang.Exception]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- springTestContextBeforeTestMethod -->
-        <test-method status="PASS" signature="springTestContextAfterTestMethod(java.lang.reflect.Method)[pri:0, instance:test.apptest.common.AppFundSpeedInquiry@3aeaafa6]" name="springTestContextAfterTestMethod" is-config="true" duration-ms="0" started-at="2016-12-14T11:36:56Z" finished-at="2016-12-14T11:36:56Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[public void test.apptest.common.AppFundSpeedInquiry.speedInquiry(java.util.Map) throws java.lang.Exception]]>
+                <![CDATA[public void test.apptest.common.AppCommonSpeedInquiry.appCommonSpeedInquiry(java.util.Map) throws java.lang.Exception]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- springTestContextAfterTestMethod -->
-      </class> <!-- test.apptest.common.AppFundSpeedInquiry -->
+      </class> <!-- test.apptest.common.AppCommonSpeedInquiry -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
-=======
-    <test name="快速问诊流程" duration-ms="7" started-at="2016-12-13T06:06:27Z" finished-at="2016-12-13T06:06:27Z">
-    </test> <!-- 快速问诊流程 -->
-  </suite> <!-- Suite_TestResults -->
->>>>>>> branch 'master' of http://172.16.11.124/luyi/appAuto.git
 </testng-results>

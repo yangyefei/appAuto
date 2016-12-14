@@ -3,15 +3,15 @@
 <suite name="Failed suite [Default suite]">
   <test name="Default test(failed)">
     <classes>
-      <class name="test.apptest.common.AppFundSpeedInquiry">
+      <class name="test.apptest.common.AppCommonSpeedInquiry">
         <methods>
-          <include name="beforeClass"/>
+          <include name="appCommonSpeedInquiry" invocation-numbers="0"/>
           <include name="springTestContextPrepareTestInstance"/>
           <include name="springTestContextBeforeTestMethod"/>
           <include name="springTestContextAfterTestMethod"/>
-          <include name="oderConfrim" invocation-numbers="0"/>
+          <include name="beforeClass"/>
         </methods>
-      </class> <!-- test.apptest.common.AppFundSpeedInquiry -->
+      </class> <!-- test.apptest.common.AppCommonSpeedInquiry -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
