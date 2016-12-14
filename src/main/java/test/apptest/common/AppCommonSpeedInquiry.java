@@ -113,11 +113,11 @@ public class AppCommonSpeedInquiry extends BaseTest{
 
 	@Test(enabled = false, dataProvider = "testData")
 	public void oderConfrim(Map<String, String> datadriven) throws Exception {
-		// webDriver = Initial.browserOfChromeSetUp(webDriver);
+		 webDriver = Initial.browserOfChromeSetUp(webDriver);
 
-		System.setProperty("webdriver.chrome.driver",
-				"C:\\Program Files (x86)\\Google\\Chrome\\Application\\chromedriver.exe");
-		WebDriver webDriver = new ChromeDriver();
+//		System.setProperty("webdriver.chrome.driver",
+//				"C:\\Program Files (x86)\\Google\\Chrome\\Application\\chromedriver.exe");
+//		WebDriver webDriver = new ChromeDriver();
 		// 运行时关闭之前启动的浏览器
 
 		webDriver.manage().timeouts().pageLoadTimeout(60, TimeUnit.SECONDS);
