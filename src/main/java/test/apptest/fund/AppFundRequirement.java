@@ -23,7 +23,6 @@ import service.AppCommonService;
 import service.InitialService;
 import common.frame.test.BaseTest;
 
-
 public class AppFundRequirement extends BaseTest {
 
 	@Autowired
@@ -33,44 +32,46 @@ public class AppFundRequirement extends BaseTest {
 
 	private AppiumDriver driver;
 
-	private WebDriver webDriver ;
-	
-    
+	private WebDriver webDriver;
 
 	@BeforeClass
-	public void beforeClass() throws Exception {	
+	public void beforeClass() throws Exception {
 
 	}
+
 	@AfterClass
-	public void afterClass() throws Exception {	
-	
+	public void afterClass() throws Exception {
+
 	}
 
-
-	@Test(enabled = true, dataProvider = "testData",description="需求发布",timeOut=300000)
-	public void fundRequirement (Map<String, String> datadriven)throws Exception {
+	@Test(enabled = true, dataProvider = "testData", description = "需求发布", timeOut = 300000)
+	public void fundRequirement(Map<String, String> datadriven) throws Exception {
 
 		String apkPathOfFund = datadriven.get("apkPathOfFund");
-		
-		logger.info("APP "+datadriven.get("version")+"---发起需求发布流程---");
-		//启动投资者app并且登录
+
+		logger.info("APP " + datadriven.get("version") + "---发起需求发布流程---");
+		// 启动投资者app并且登录
 		logger.info("启动并登陆投资者app");
-		driver = Initial.appiumAndroidFundSetUp(driver,apkPathOfFund);
-		driver.manage().timeouts().implicitlyWait(30,TimeUnit.SECONDS);
-		//退出登录
+		driver = Initial.appiumAndroidFundSetUp(driver, apkPathOfFund);
+		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+		// 退出登录
 		appCommonService.logoutForApp(driver);
 		appCommonService.loginForApp(driver, datadriven.get("fundUserName"), datadriven.get("fundPassword"));
 
-		
 		// 进入我有我的需求菜单,填写信息
 		logger.info("进入我的需求，填写信息");
 		new WebDriverWait(driver, 30).until(ExpectedConditions.elementToBeClickable(By.name("一融"))).click();
-		new WebDriverWait(driver, 30).until(ExpectedConditions.elementToBeClickable(By.id("com.easyrongfund:id/xu_qiu_jie_tv"))).click();
-		new WebDriverWait(driver, 30).until(ExpectedConditions.elementToBeClickable(By.id("com.easyrongfund:id/demand_my_publish_btn"))).click();
-		new WebDriverWait(driver, 30).until(ExpectedConditions.elementToBeClickable(By.id("com.easyrongfund:id/back_title_right_img"))).click();
+		new WebDriverWait(driver, 30)
+				.until(ExpectedConditions.elementToBeClickable(By.id("com.easyrongfund:id/xu_qiu_jie_tv"))).click();
+		new WebDriverWait(driver, 30)
+				.until(ExpectedConditions.elementToBeClickable(By.id("com.easyrongfund:id/demand_my_publish_btn")))
+				.click();
+		new WebDriverWait(driver, 30)
+				.until(ExpectedConditions.elementToBeClickable(By.id("com.easyrongfund:id/back_title_right_img")))
+				.click();
 		new WebDriverWait(driver, 30).until(ExpectedConditions.elementToBeClickable(By.name("需求类型"))).click();
 		new WebDriverWait(driver, 30).until(ExpectedConditions.elementToBeClickable(By.name("投资需求"))).click();
-		WebElement XuQu=new WebDriverWait(driver, 30).until(ExpectedConditions.elementToBeClickable(By.name("请输入")));
+		WebElement XuQu = new WebDriverWait(driver, 30).until(ExpectedConditions.elementToBeClickable(By.name("请输入")));
 		XuQu.sendKeys(datadriven.get("Result"));
 		driver.findElementByName("投资金额").click();
 		new WebDriverWait(driver, 30).until(ExpectedConditions.elementToBeClickable(By.name("500万以下"))).click();
@@ -84,10 +85,11 @@ public class AppFundRequirement extends BaseTest {
 		new WebDriverWait(driver, 30).until(ExpectedConditions.elementToBeClickable(By.name("确定"))).click();
 		appCommonService.swipeToDown(driver);
 		new WebDriverWait(driver, 30).until(ExpectedConditions.elementToBeClickable(By.name("发布"))).click();
-		WebElement SubmitSuccess =new WebDriverWait(driver, 60).until(ExpectedConditions.elementToBeClickable(By.name("提交成功")));
-		
-		//提交需求测试结果判断
-		if(SubmitSuccess.isDisplayed()){	
+		WebElement SubmitSuccess = new WebDriverWait(driver, 60)
+				.until(ExpectedConditions.elementToBeClickable(By.name("提交成功")));
+
+		// 提交需求测试结果判断
+		if (SubmitSuccess.isDisplayed()) {
 			new WebDriverWait(driver, 60).until(ExpectedConditions.elementToBeClickable(By.name("关闭"))).click();
 			WebElement res = new WebDriverWait(driver, 30)
 					.until(ExpectedConditions.elementToBeClickable(By.name(datadriven.get("Result"))));
@@ -98,7 +100,7 @@ public class AppFundRequirement extends BaseTest {
 		}
 		// 进入web 管理后台,确认需求申请
 		logger.info("进入web 管理后台,确认需求申请");
-		
+
 		oderConfrim();
 
 		// APP投资者 确认状态是否改变
@@ -113,50 +115,56 @@ public class AppFundRequirement extends BaseTest {
 		driver.quit();
 	}
 
-	
-	@Test(enabled =true, dataProvider = "testData",description="我的需求响应",timeOut=300000)
-	public void fundRespond (Map<String, String> datadriven)throws Exception {
-		
+	@Test(enabled = true, dataProvider = "testData", description = "我的需求响应", timeOut = 300000)
+	public void fundRespond(Map<String, String> datadriven) throws Exception {
+
 		String apkPathOfFund = datadriven.get("apkPathOfFund");
-		
-		logger.info("APP "+datadriven.get("version")+"---我的需求响应---");
-		//启动投资者app并且登录
+
+		logger.info("APP " + datadriven.get("version") + "---我的需求响应---");
+		// 启动投资者app并且登录
 
 		logger.info("启动并登陆投资者app");
-		driver = Initial.appiumAndroidFundSetUp(driver,apkPathOfFund);
+		driver = Initial.appiumAndroidFundSetUp(driver, apkPathOfFund);
 
-		driver.manage().timeouts().implicitlyWait(30,TimeUnit.SECONDS);
-		//退出登录
-		new WebDriverWait(driver,30).until(ExpectedConditions.elementToBeClickable(By.name("我的"))).click();
-		new WebDriverWait(driver,30).until(ExpectedConditions.elementToBeClickable(By.id("mine_setting_img"))).click();
-		
-		driver.findElement(By.name("退出登录")).click();		
-		new WebDriverWait(driver,60).until(ExpectedConditions.elementToBeClickable(By.id("button1"))).click();
-		driver=appCommonService.loginForApp(driver,"13774364001","xlh123456");	
-		//进入需求街，响应需求
+		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+		// 退出登录
+		new WebDriverWait(driver, 30).until(ExpectedConditions.elementToBeClickable(By.name("我的"))).click();
+		new WebDriverWait(driver, 30).until(ExpectedConditions.elementToBeClickable(By.id("mine_setting_img"))).click();
+
+		driver.findElement(By.name("退出登录")).click();
+		new WebDriverWait(driver, 60).until(ExpectedConditions.elementToBeClickable(By.id("button1"))).click();
+		driver = appCommonService.loginForApp(driver, "13774364001", "xlh123456");
+		// 进入需求街，响应需求
 
 		logger.info("进入响应需求流程");
 		new WebDriverWait(driver, 30).until(ExpectedConditions.elementToBeClickable(By.name("一融"))).click();
 
-		new WebDriverWait(driver, 30).until(ExpectedConditions.elementToBeClickable(By.id("com.easyrongfund:id/xu_qiu_jie_tv"))).click();
-		WebElement ResponeName= new WebDriverWait(driver, 30).until(ExpectedConditions.elementToBeClickable(By.name(datadriven.get("Result"))));
-	
-		if(ResponeName.isDisplayed()){
-			ResponeName.click();}
-		else{
-			Assert.fail("响应失败");}
-	
+		new WebDriverWait(driver, 30)
+				.until(ExpectedConditions.elementToBeClickable(By.id("com.easyrongfund:id/xu_qiu_jie_tv"))).click();
+		WebElement ResponeName = new WebDriverWait(driver, 30)
+				.until(ExpectedConditions.elementToBeClickable(By.name(datadriven.get("Result"))));
+
+		if (ResponeName.isDisplayed()) {
+			ResponeName.click();
+		} else {
+			driver.quit();
+			Assert.fail("响应失败");
+		}
 
 		new WebDriverWait(driver, 30).until(ExpectedConditions.elementToBeClickable(By.name("我来响应"))).click();
 
-		WebElement Responetext= new WebDriverWait(driver, 30).until(ExpectedConditions.elementToBeClickable(By.id("com.easyrongfund:id/success_name")));
-		
-		//响应需求测试结果判断
+		WebElement Responetext = new WebDriverWait(driver, 30)
+				.until(ExpectedConditions.elementToBeClickable(By.id("com.easyrongfund:id/success_name")));
 
-		Assert.assertEquals("响应提交页面失败", "您已响应需求", Responetext.getText());
-		driver.quit();
-		
-		logger.info("APP "+datadriven.get("version")+"---我的需求响应测试结束---");
+		// 响应需求测试结果判断
+		try {
+			Assert.assertEquals("响应提交页面失败", "您已响应需求", Responetext.getText());
+		} catch (Exception e) {
+			driver.quit();
+
+		}
+
+		logger.info("APP " + datadriven.get("version") + "---我的需求响应测试结束---");
 	}
 
 	@DataProvider(name = "testData")
@@ -166,36 +174,33 @@ public class AppFundRequirement extends BaseTest {
 
 	public void refresh() {
 		// TODO Auto-generated method stub
-        int width = driver.manage().window().getSize().width;
-        int height = driver.manage().window().getSize().height;
-        driver.swipe(width/2,height/4, width/2,height*3/4, 1000);
+		int width = driver.manage().window().getSize().width;
+		int height = driver.manage().window().getSize().height;
+		driver.swipe(width / 2, height / 4, width / 2, height * 3 / 4, 1000);
 	}
 
-
-//	    System.setProperty("webdriver.firefox.bin", "C:\\Program Files (x86)\\Mozilla Firefox\\firefox.exe");
-//	    System.setProperty("webdriver.gecko.marionette","C:\\Program Files (x86)\\Mozilla Firefox\\geckodriver.exe");
-//	   //运行时关闭之前启动的浏览器
-////	    WindowsUtils.tryToKillByName("firefox.exe");
-//	    WebDriver  driverweb=new FirefoxDriver();  
-//	    driverweb.manage().timeouts().pageLoadTimeout(60, TimeUnit.SECONDS);
-//	    driverweb.get("http://fwgl.yirongbang.net/");
-		
-		
-
-
-
+	// System.setProperty("webdriver.firefox.bin", "C:\\Program Files
+	// (x86)\\Mozilla Firefox\\firefox.exe");
+	// System.setProperty("webdriver.gecko.marionette","C:\\Program Files
+	// (x86)\\Mozilla Firefox\\geckodriver.exe");
+	// //运行时关闭之前启动的浏览器
+	//// WindowsUtils.tryToKillByName("firefox.exe");
+	// WebDriver driverweb=new FirefoxDriver();
+	// driverweb.manage().timeouts().pageLoadTimeout(60, TimeUnit.SECONDS);
+	// driverweb.get("http://fwgl.yirongbang.net/");
 
 	public void oderConfrim() throws Exception {
-		
-  webDriver = Initial.browserOfChromeSetUp(webDriver);
-		
-//		System.setProperty("webdriver.chrome.driver", "C:\\Program Files (x86)\\Google\\Chrome\\Application\\chromedriver.exe");
-//		WebDriver webDriver = new ChromeDriver();
+
+		webDriver = Initial.browserOfChromeSetUp(webDriver);
+
+		// System.setProperty("webdriver.chrome.driver", "C:\\Program Files
+		// (x86)\\Google\\Chrome\\Application\\chromedriver.exe");
+		// WebDriver webDriver = new ChromeDriver();
 		webDriver.manage().timeouts().pageLoadTimeout(60, TimeUnit.SECONDS);
 		webDriver.get("http://fwgl.yirongbang.net/");
 
 		// 运行时关闭之前启动的浏览器
-		//WindowsUtils.tryToKillByName("firefox.exe");
+		// WindowsUtils.tryToKillByName("firefox.exe");
 		webDriver.manage().window().maximize();
 
 		webDriver.findElement(By.name("form_user")).sendKeys("zdhcs");
