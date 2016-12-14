@@ -10,7 +10,7 @@
 <!-- 	<property name="mailtolist" value="qa@xinlonghang.cn,yangyu@xinlonghang.cn,liucheng@xinlonghang.cn,cjz@xinlonghang.cn,chenke@xinlonghang.cn" />
 	<property name="mailcclist" value="techmanager@xinlonghang.cn" /> -->
 	
-	<property name="MAIL_LIST" value="qa@xinlonghang.cn" />
+	<property name="MAIL_LIST" value="qatech@xinlonghang.cn" />
 <!-- 	<property name="mailcclist" value="techmanager@xinlonghang.cn" /> -->
 <!-- 	<property name="testdata.dir" value="./testdata" /> -->
 <!-- 	<property name="appApk.dir" value="./../apps" /> -->
