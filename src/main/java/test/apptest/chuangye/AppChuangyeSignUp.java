@@ -9,6 +9,8 @@ import java.util.List;
 import java.util.Map;
 import java.util.concurrent.TimeUnit;
 
+import net.sf.saxon.functions.Substring;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
@@ -20,6 +22,10 @@ import org.testng.annotations.BeforeClass;
 import org.testng.annotations.AfterClass;
 
 
+
+
+
+import com.thoughtworks.selenium.webdriven.commands.GetText;
 
 import orm.jdbc.MysqlDataDeal;
 //import antlr.collections.List;
@@ -57,10 +63,10 @@ public class AppChuangyeSignUp extends BaseTest {
 
 		driver = Initial.appiumAndroidChuangyeSetUp(driver,apkPathOfChuangye);
 		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
-		appCommonService.logoutForApp(driver);
+//		appCommonService.logoutForApp(driver);
 
 		logger.info("登录创业者app");
-		driver = appCommonService.loginForApp(driver,datadriven.get("changyeUserName"),datadriven.get("chuangyePassword"));
+//		driver = appCommonService.loginForApp(driver,datadriven.get("changyeUserName"),datadriven.get("chuangyePassword"));
 		
 		//点击进入活动列表页
 		logger.info("发现-进入活动列表页");
@@ -69,7 +75,10 @@ public class AppChuangyeSignUp extends BaseTest {
 		
 		//选择活动并报名
 	    logger.info("选择活动并报名");
-		new WebDriverWait(driver,120).until(ExpectedConditions.elementToBeClickable(By.name(datadriven.get("activity")))).click();
+	    String total = driver.findElementById("huo_dong_number_tv").getText();
+	    String totalNumId=total.substring(6, total.length()-1);
+	    System.out.print(totalNumId);
+	    driver = appCommonService.scrollAndFindName(driver, datadriven.get("activity"), "huo_dong_name_tv", totalNumId);
 		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 		
 		try {
