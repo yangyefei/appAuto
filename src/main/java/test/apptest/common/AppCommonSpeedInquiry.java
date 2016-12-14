@@ -131,16 +131,16 @@ public class AppCommonSpeedInquiry extends BaseTest{
 		new WebDriverWait(webDriver, 30).until(ExpectedConditions.elementToBeClickable(By.linkText("一融赋"))).click();
 		new WebDriverWait(webDriver, 30).until(ExpectedConditions.elementToBeClickable(By.id("li_73"))).click();
 		new WebDriverWait(webDriver, 30).until(ExpectedConditions.elementToBeClickable(By.linkText("问诊订单"))).click();
-		new WebDriverWait(webDriver, 30).until(ExpectedConditions.elementToBeClickable(By.linkText("确认到账"))).click();
-		new WebDriverWait(webDriver, 30).until(ExpectedConditions.elementToBeClickable(By.id("add_freeReason")))
-				.sendKeys("123456");
-		new WebDriverWait(webDriver, 30)
-				.until(ExpectedConditions.elementToBeClickable(By.xpath("/html/body/div[2]/p/a[1]/span"))).click();
-		new WebDriverWait(webDriver, 30)
-				.until(ExpectedConditions.elementToBeClickable(By.xpath("/html/body/div[2]/p/a/span"))).click();
-		Thread.sleep(3000);
+//		new WebDriverWait(webDriver, 30).until(ExpectedConditions.elementToBeClickable(By.linkText("确认到账"))).click();
+//		new WebDriverWait(webDriver, 30).until(ExpectedConditions.elementToBeClickable(By.id("add_freeReason")))
+//				.sendKeys("123456");
+//		new WebDriverWait(webDriver, 30)
+//				.until(ExpectedConditions.elementToBeClickable(By.xpath("/html/body/div[2]/p/a[1]/span"))).click();
+//		new WebDriverWait(webDriver, 30)
+//				.until(ExpectedConditions.elementToBeClickable(By.xpath("/html/body/div[2]/p/a/span"))).click();
+//		Thread.sleep(3000);
 	    logger.info("上传报告");
-	    new WebDriverWait(webDriver,60).until(ExpectedConditions.elementToBeClickable(By.linkText("上传报告"))).click();	    
+	    new WebDriverWait(webDriver,60).until(ExpectedConditions.elementToBeClickable(By.linkText("上传报告"))).click();	
 	    webDriver = webCommonService.uploadFilesOfBackgroundSystem(webDriver, datadriven.get("uploadFilePath")); 
 //	    logger.info("退出后台系统");
 //	    webDriver = webCommonService.logoutOfBackgroundSystem(webDriver);
