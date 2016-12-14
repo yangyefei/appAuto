@@ -23,5 +23,11 @@ public interface MysqlDataDeal {
 	 */
 	public void deleteActivitySignUp(String activityName, String mobile);
 	
-
+	/**
+	 * 校验企业是否入驻
+	 * @param enterpriseName 入驻企业名称
+	 * @return
+	 */
+	public String checkEnterIncubator(String enterpriseName);
+	
 }

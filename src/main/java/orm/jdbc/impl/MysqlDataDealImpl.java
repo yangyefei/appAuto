@@ -55,8 +55,26 @@ public class MysqlDataDealImpl implements MysqlDataDeal {
 		msql.Delete(sql);
 
 		msql.closeDBcon();
-
+		
 	}
+		
+		
+		@Override
+		public String checkEnterIncubator(String enterpriseName) {
+			// TODO Auto-generated method stub
+			Reporter.log("校验企业是否入驻...", true);
+
+			msql = dataBaseDao.getInstanceOfMySql(DBType.MYSQL_PRE, MysqlDBName.XLH_FHQ);
+
+			String sql = "SELECT COUNT(*) FROM incubator_enterprises WHERE enterprise_name='"+enterpriseName+"' and enterprise_status=0";
+			String num = msql.query(sql);
+
+			msql.closeDBcon();
+			// System.out.println(num);
+			return num;
+			
+		}
+
 	
 	
 	
