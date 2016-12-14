@@ -41,8 +41,9 @@ public class AppChuangyeEnterIncubator extends BaseTest {
 	@BeforeClass
 	public void beforeClass() {
 		
-		mysqlDataDeal.updateEnterpriseStatus("SHXLHEnterprise", 4);
 		
+		mysqlDataDeal.updateEnterpriseStatus("SHXLHEnterprise", 4);
+		    
 	}
 
 

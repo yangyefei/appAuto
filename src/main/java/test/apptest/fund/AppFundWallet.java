@@ -40,11 +40,14 @@ public class AppFundWallet extends BaseTest {
 	}
 
 	@AfterClass
-	public void afterClass() throws Exception {
-		// Runtime.getRuntime().exec("cmd /c taskkill -f -im node.exe");
-		// Runtime.getRuntime().exec("cmd.exe /C start wmic process where
-		// name='cmd.exe' call terminate");
-		// Thread.sleep(5000);
+
+	public void afterClass() throws Exception {	
+		
+		
+	//	Runtime.getRuntime().exec("cmd /c taskkill -f -im node.exe");
+//		Runtime.getRuntime().exec("cmd.exe /C start wmic process where name='cmd.exe' call terminate");
+//		Thread.sleep(5000);
+
 
 	}
 
@@ -86,13 +89,19 @@ public class AppFundWallet extends BaseTest {
 			Assert.assertEquals(avamon, getmon, "提现金额和可提现金额不对应");
 			logger.info("验证判断提现成功");
 		} catch (Exception e) {
-			driver.quit();
-			logger.info("验证判断提现失败");
-			Assert.assertTrue(false);
-		}
+
+		logger.info("验证判断提现失败");
+		    driver.quit();
+		    logger.info("APP "+datadriven.get("version")+"---提现流程测试结束--");
+		    Assert.assertTrue(false);
+		}	
+
 		driver.quit();
-		logger.info("测试完成");
-	}
+		
+		logger.info("APP "+datadriven.get("version")+"---提现流程测试结束--");
+ 
+	}	
+	
 
 	@DataProvider(name = "testData")
 	public Iterator<Object[]> data1test() throws IOException {
