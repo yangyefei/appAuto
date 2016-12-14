@@ -85,7 +85,16 @@ public class AppChuangyeEnterIncubator extends BaseTest {
 			driver.findElement(By.id("apply_company_email")).sendKeys("123@163.com");
 			driver.findElement(By.name("提交")).click();
 			driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
-			logger.info("入驻成功");
+			Thread.sleep(5000);
+			logger.info("校验是否入驻成功");
+			String num = mysqlDataDeal.checkEnterIncubator("SHXLHEnterprise");
+			int number=Integer.parseInt(num);
+			System.out.print(number);
+			if (number==1) {
+				logger.info("入驻成功");
+			} else {
+				logger.info("入驻失败");
+			}
 			
 		} catch (Exception e) {
 			// TODO: handle exception
