@@ -92,13 +92,15 @@ public class AppCommonServiceImpl implements AppCommonService{
 	}
 
 	@Override
-	public AppiumDriver scrollAndFindName(AppiumDriver driver, String searchName, String nameId, String totalNumId) {		
+	public AppiumDriver scrollAndFindName(AppiumDriver driver, String searchName, String nameId, String totalNum) {		
 		// TODO Auto-generated method stub
 		
-		//获取项目总数
-		String totalNum = new WebDriverWait(driver,60).until(ExpectedConditions.elementToBeClickable(By.id(totalNumId))).getText();
-		//去掉数字两边的括号并且将其转换为int
-		int realTotalNum = Integer.valueOf(totalNum.substring(1,totalNum.length()-1))+3;
+//		//获取项目总数
+//		String totalNum = new WebDriverWait(driver,60).until(ExpectedConditions.elementToBeClickable(By.id(totalNumId))).getText();
+//		//去掉数字两边的括号并且将其转换为int
+//		int realTotalNum = Integer.valueOf(totalNum.substring(1,totalNum.length()-1))+3;
+		//总数
+		int realTotalNum = Integer.valueOf(totalNum)+6;
 		
 		Boolean isfound = false;
 		int allNum = 0;

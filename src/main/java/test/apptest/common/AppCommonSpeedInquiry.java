@@ -8,7 +8,6 @@ import java.util.concurrent.TimeUnit;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -22,7 +21,7 @@ import io.appium.java_client.TouchAction;
 import service.AppCommonService;
 import service.InitialService;
 
-public class AppFundSpeedInquiry extends BaseTest{
+public class AppCommonSpeedInquiry extends BaseTest{
 	@Autowired
 	private InitialService Initial;
 	@Autowired
@@ -33,14 +32,13 @@ public class AppFundSpeedInquiry extends BaseTest{
 	public void beforeClass()  {		
 	
 	}
-
-
+	
 	@Test(enabled = true, dataProvider = "testData",description="快速问诊")
-	public void Wallet(Map<String, String> datadriven)throws Exception {
+	public void appCommonSpeedInquiry(Map<String, String> datadriven)throws Exception {
 		
 		String apkPathOfChuangye = datadriven.get("apkPathOfChuangye");
 		
-		logger.info("APP "+datadriven.get("version")+"---导师问诊流程开始--");
+		logger.info("APP "+datadriven.get("version")+"---导师快速问诊流程开始--");
 		//启动企业app并且登录
 		logger.info("启动并登陆企业者app");
 		driver = Initial.appiumAndroidChuangyeSetUp(driver,apkPathOfChuangye);
@@ -86,6 +84,9 @@ public class AppFundSpeedInquiry extends BaseTest{
                 			
 			}
 		driver.quit();
+		
+		
+		logger.info("APP "+datadriven.get("version")+"---导师快速问诊流程测试结束--");
 
 	}
 
@@ -97,16 +98,7 @@ public class AppFundSpeedInquiry extends BaseTest{
 		touchAction.press(x/2, y*19/20).release().perform();
 	}
 
-        
-        
-		
-	
-	
-	
-	@DataProvider(name = "testData")
-	public Iterator<Object[]> data1test() throws IOException {
-		return ExcelProviderByEnv(this, "testData");
-	}
+
 	public  void oderConfrim() throws Exception { 
 	  webDriver = Initial.browserOfChromeSetUp(webDriver);
 		
@@ -140,5 +132,11 @@ public class AppFundSpeedInquiry extends BaseTest{
 	        //Select fruits = new Select(option1);
 //		    fruits.selectByValue("4");
 	}
-	}	
+	
+	@DataProvider(name = "testData")
+	public Iterator<Object[]> data1test() throws IOException {
+		return ExcelProviderByEnv(this, "testData");
+	}
+	
+}	
 	

@@ -1,10 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<<<<<<< HEAD
 <testng-results skipped="0" failed="1" total="1" passed="0">
+=======
+<testng-results skipped="0" failed="0" total="0" passed="0">
+>>>>>>> branch 'master' of http://172.16.11.124/luyi/appAuto.git
   <reporter-output>
   </reporter-output>
+<<<<<<< HEAD
   <suite name="Default suite" duration-ms="78453" started-at="2016-12-14T03:21:32Z" finished-at="2016-12-14T03:22:51Z">
+=======
+  <suite name="Suite_TestResults" duration-ms="7" started-at="2016-12-13T06:06:27Z" finished-at="2016-12-13T06:06:27Z">
+>>>>>>> branch 'master' of http://172.16.11.124/luyi/appAuto.git
     <groups>
     </groups>
+<<<<<<< HEAD
     <test name="Default test" duration-ms="78453" started-at="2016-12-14T03:21:32Z" finished-at="2016-12-14T03:22:51Z">
       <class name="test.apptest.chuangye.AppChuangyeSignUp">
         <test-method status="PASS" signature="springTestContextPrepareTestInstance()[pri:0, instance:test.apptest.chuangye.AppChuangyeSignUp@7f92c8d9]" name="springTestContextPrepareTestInstance" is-config="true" duration-ms="440" started-at="2016-12-14T11:21:32Z" finished-at="2016-12-14T11:21:33Z">
@@ -119,4 +128,9 @@ Capabilities [{platform=LINUX, app=D:\autoApp\testAPK\Easyrongchuangye_pre_2_3_1
       </class> <!-- test.apptest.chuangye.AppChuangyeSignUp -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
+=======
+    <test name="快速问诊流程" duration-ms="7" started-at="2016-12-13T06:06:27Z" finished-at="2016-12-13T06:06:27Z">
+    </test> <!-- 快速问诊流程 -->
+  </suite> <!-- Suite_TestResults -->
+>>>>>>> branch 'master' of http://172.16.11.124/luyi/appAuto.git
 </testng-results>
