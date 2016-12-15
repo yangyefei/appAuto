@@ -84,6 +84,7 @@
         <copy todir="${dist.dir}"> 
              <fileset dir="${basedir}">
                 <include name="testngTestCases.xml" />
+                <include name="testng.xml" />
              </fileset>  
         </copy>
         
