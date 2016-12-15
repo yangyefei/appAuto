@@ -83,7 +83,7 @@
     <target name="copy" depends="jar" >
         <copy todir="${dist.dir}"> 
              <fileset dir="${basedir}">
-                <include name="{TESTNG_XML}" />
+                <include name="${TESTNG_XML}" />
              </fileset>  
         </copy>
         
