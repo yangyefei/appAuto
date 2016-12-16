@@ -4,6 +4,7 @@ import java.io.IOException;
 import java.util.Iterator;
 import java.util.Map;
 import java.util.concurrent.TimeUnit;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
@@ -14,10 +15,12 @@ import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
-import common.frame.test.BaseTest;
-import io.appium.java_client.AppiumDriver;
+
 import service.AppCommonService;
 import service.InitialService;
+import common.frame.test.BaseTest;
+import io.appium.java_client.AppiumDriver;
+
 
 @Test
 public class AppFundWallet extends BaseTest{
@@ -79,9 +82,11 @@ public class AppFundWallet extends BaseTest{
         try {
     		WebElement getMonkey =driver.findElementById("com.easyrongfund:id/money_number_tv");
     		String getmon=getMonkey.getText();
-    		Assert.assertEquals(avamon, getmon,"提现金额和可提现金额不对应");
+    		Assert.assertEquals(avamon+1, getmon,"提现金额和可提现金额不对应");
 		} catch (Exception e) {
+
 		logger.info("验证判断提现失败");
+
 		    driver.quit();
 		    logger.info("APP "+datadriven.get("version")+"---提现流程测试结束--");
 		    Assert.assertTrue(false);

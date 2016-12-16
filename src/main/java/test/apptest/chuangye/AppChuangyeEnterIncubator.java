@@ -100,6 +100,7 @@ public class AppChuangyeEnterIncubator extends BaseTest {
 		
 		logger.info("返回并退出登录");
 		new WebDriverWait(driver,60).until(ExpectedConditions.elementToBeClickable(By.id("title_back_img"))).click();
+		Thread.sleep(2000);
 		new WebDriverWait(driver,60).until(ExpectedConditions.elementToBeClickable(By.id("title_back_img"))).click();
 		appCommonService.logoutForApp(driver);
 		driver.quit();

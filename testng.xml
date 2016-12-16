@@ -1,22 +1,66 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://beust.com/testng/testng-1.0.dtd" >
-<suite name="Suite_Mail" verbose="1">
-
-    <suite-files>     
-      <suite-file path="./testngTestCases.xml" />
-      <suite-file path="./testng.xml" />  
-    </suite-files>
-	
-	<test name="email">
-		<parameter name="attachName" value="appForAndroid" />
+<suite name="自动化测试运行结果" verbose="1">
+    
+<!-- 	<test name="约谈流程" >
 		<classes>
-			<class name="test.utils.Mail">
+			<class name="test.apptest.common.AppCommonInterview">
 				<methods>
-					<include name="sendAutomationReports" />
+					<include name="inquiryProcess" />
+				</methods>
+			</class>
+		</classes>
+	</test>
+	
+	<test name="普通问诊流程" >
+		<classes>
+			<class name="test.apptest.common.AppCommonInquiry">
+				<methods>
+					<include name="commonInquiryProcess" />
+				</methods>
+			</class>
+		</classes>
+	</test>	
+	
+	<test name="快速问诊流程" >
+		<classes>
+			<class name="test.apptest.common.AppCommonSpeedInquiry">
+				<methods>
+					<include name="appCommonSpeedInquiry" />
+				</methods>
+			</class>
+		</classes>
+	</test>
+	
+	<test name="投资人提现" >
+		<classes>
+			<class name="test.apptest.fund.AppFundWallet">
+				<methods>
+					<include name="wallet" />
 				</methods>
 			</class>
 		</classes>
 	</test>
 
+	<test name="投资人发布以及需求响应"   preserve-order="true">
+		<classes>
+			<class name="test.apptest.fund.AppFundRequirement">
+				<methods>
+					<include name="fundRequirement" />
+					<include name="fundRespond" />
+				</methods>
+			</class>
+		</classes>
+	</test> -->
+	
+	<test name="创业者孵化入驻" >
+		<classes>
+			<class name="test.apptest.chuangye.AppChuangyeEnterIncubator">
+				<methods>
+					<include name="chuangyeEnterIncubator" />
+				</methods>
+			</class>
+		</classes>
+	</test>
+	
 </suite>
-
