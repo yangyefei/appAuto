@@ -96,6 +96,16 @@ public class AppCommonInquiry extends BaseTest {
 		driver.findElement(By.name("接受问诊")).click();
 		driver.quit();
 		
+/*		//启动创业者app
+		driver = Initial.appiumAndroidChuangyeSetUp(driver,apkPathOfChuangye);
+		new WebDriverWait(driver,60).until(ExpectedConditions.elementToBeClickable(By.name("我的"))).click();
+		new WebDriverWait(driver,60).until(ExpectedConditions.elementToBeClickable(By.name("我的问诊"))).click();
+		//支付费用
+		new WebDriverWait(driver,60).until(ExpectedConditions.elementToBeClickable(By.name("支付费用"))).click();
+		appCommonService.alipay(driver);
+		new WebDriverWait(driver,60).until(ExpectedConditions.elementToBeClickable(By.name("我的问诊"))).click();
+		driver.quit();*/
+		
 		logger.info("启动并登录后台系统");
 //	    webDriver = Initial.browserOfFirefoxSetUp(webDriver);
 	    webDriver = Initial.browserOfChromeSetUp(webDriver);
