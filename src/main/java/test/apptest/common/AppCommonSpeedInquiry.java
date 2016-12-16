@@ -81,7 +81,7 @@ public class AppCommonSpeedInquiry extends BaseTest{
 		for (WebElement webElement : set) {
                 if (webElement.getText().contains("快速问诊")) {
                 	Assert.assertTrue(true);
-                	logger.info("快速问诊测试成功");
+          
 				} else {
 					Assert.assertTrue(false);
 					logger.info("快速问诊测试失败");
@@ -89,6 +89,8 @@ public class AppCommonSpeedInquiry extends BaseTest{
 			
                 			
 			}
+      	logger.info("快速问诊测试成功");
+      	
 		new WebDriverWait(driver, 30).until(ExpectedConditions.elementToBeClickable(By.name("确认服务"))).click();
 		appCommonService.commentSubmit(driver, "123");
 		driver.quit();
@@ -108,11 +110,11 @@ public class AppCommonSpeedInquiry extends BaseTest{
 
 
 	public void oderConfrim(Map<String, String> datadriven) throws Exception {
-//		 webDriver = Initial.browserOfChromeSetUp(webDriver);
+		 webDriver = Initial.browserOfChromeSetUp(webDriver);
 
-		System.setProperty("webdriver.chrome.driver",
-				"C:\\Program Files (x86)\\Google\\Chrome\\Application\\chromedriver.exe");
-		WebDriver webDriver = new ChromeDriver();
+//		System.setProperty("webdriver.chrome.driver",
+//				"C:\\Program Files (x86)\\Google\\Chrome\\Application\\chromedriver.exe");
+//		WebDriver webDriver = new ChromeDriver();
 		// 运行时关闭之前启动的浏览器
 
 		webDriver.manage().timeouts().pageLoadTimeout(60, TimeUnit.SECONDS);
