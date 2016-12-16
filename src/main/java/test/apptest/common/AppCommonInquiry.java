@@ -94,7 +94,6 @@ public class AppCommonInquiry extends BaseTest {
 		driver.findElement(By.name("我的问诊")).click();
 		logger.info("接受问诊");
 		driver.findElement(By.name("接受问诊")).click();
-		driver.quit();
 		
 /*		//启动创业者app
 		driver = Initial.appiumAndroidChuangyeSetUp(driver,apkPathOfChuangye);
