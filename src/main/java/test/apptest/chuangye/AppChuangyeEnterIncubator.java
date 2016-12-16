@@ -12,6 +12,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.testng.Assert;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 import org.testng.annotations.BeforeClass;
@@ -85,15 +86,6 @@ public class AppChuangyeEnterIncubator extends BaseTest {
 			driver.findElement(By.id("apply_company_email")).sendKeys("123@163.com");
 			driver.findElement(By.name("提交")).click();
 			Thread.sleep(5000);
-			logger.info("校验是否入驻成功");
-			String num = mysqlDataDeal.checkEnterIncubator("SHXLHEnterprise");
-			int number=Integer.parseInt(num);
-			System.out.print(number);
-			if (number==1) {
-				logger.info("入驻成功");
-			} else {
-				logger.info("入驻失败");
-			}
 			
 		} catch (Exception e) {
 			// TODO: handle exception
@@ -111,12 +103,31 @@ public class AppChuangyeEnterIncubator extends BaseTest {
 		new WebDriverWait(driver,60).until(ExpectedConditions.elementToBeClickable(By.id("title_back_img"))).click();
 		appCommonService.logoutForApp(driver);
 		driver.quit();
+		
+		logger.info("校验是否入驻成功");
+		Assert.assertTrue(checkResult(), "入驻失败！");				
+		
 		logger.info("APP "+datadriven.get("version")+"---入驻流程测试结束---");
 		
 	}
 	
+	private Boolean checkResult(){		
+		
+		boolean result=false;
+		String num = mysqlDataDeal.checkEnterIncubator("SHXLHEnterprise");
+		int number=Integer.parseInt(num);
+		logger.info("入驻企业数量为:"+ number);
+
+		if (1==number) {
+			
+			result = true;
+			logger.info("入驻成功");
+		} 
+		
+		return result;
+		
+	}
 	
- 
 	
 	@DataProvider(name = "testData")
 	public Iterator<Object[]> data1test() throws IOException {
