@@ -81,7 +81,9 @@ public class AppFundWallet extends BaseTest{
     		String getmon=getMonkey.getText();
     		Assert.assertEquals(avamon, getmon,"提现金额和可提现金额不对应");
 		} catch (Exception e) {
+
 		logger.info("验证判断提现失败");
+
 		    driver.quit();
 		    logger.info("APP "+datadriven.get("version")+"---提现流程测试结束--");
 		    Assert.assertTrue(false);

@@ -20,12 +20,16 @@ import io.appium.java_client.AppiumDriver;
 import io.appium.java_client.TouchAction;
 import service.AppCommonService;
 import service.InitialService;
+import service.WebCommonService;
 
 public class AppCommonSpeedInquiry extends BaseTest{
 	@Autowired
 	private InitialService Initial;
 	@Autowired
 	private AppCommonService appCommonService;
+	@Autowired
+	private WebCommonService webCommonService;
+	
 	private AppiumDriver driver;
 	private WebDriver webDriver;
 	@BeforeClass
@@ -66,7 +70,8 @@ public class AppCommonSpeedInquiry extends BaseTest{
 		PayButton();
 		new WebDriverWait(driver, 30).until(ExpectedConditions.elementToBeClickable(By.className("android.widget.Button"))).click();
 		driver.findElementByName("我的问诊 Link").click();
-		oderConfrim();
+		
+		oderConfrim(datadriven);
 		
 		new WebDriverWait(driver, 30).until(ExpectedConditions.elementToBeClickable(By.name("待问诊"))).click();
 	
@@ -99,44 +104,45 @@ public class AppCommonSpeedInquiry extends BaseTest{
 	}
 
 
-	public  void oderConfrim() throws Exception { 
-	  webDriver = Initial.browserOfChromeSetUp(webDriver);
-		
-//		System.setProperty("webdriver.chrome.driver", "C:\\Program Files (x86)\\Google\\Chrome\\Application\\chromedriver.exe");
-//		WebDriver webDriver = new ChromeDriver();
-	   //运行时关闭之前启动的浏览器
+	public void oderConfrim(Map<String, String> datadriven) throws Exception {
+		 webDriver = Initial.browserOfChromeSetUp(webDriver);
 
-	    webDriver.manage().timeouts().pageLoadTimeout(60, TimeUnit.SECONDS);
-	    webDriver.get("http://fwgl.yirongbang.net/");
-	    //webDriver.manage().window().maximize();
-	  
-		    webDriver.findElement(By.name("form_user")).sendKeys("zdhcs");
-		    webDriver.findElement(By.name("form_password")).sendKeys("xlh123456");
-		    new WebDriverWait(webDriver,30).until(ExpectedConditions.elementToBeClickable(By.className("btn-submit"))).click();
-//		    new WebDriverWait(driver,10).until(ExpectedConditions.alertIsPresent();
-//	      alert = driver.switchTo().alert();
-//	      alert.accept();
-		    System.out.println(webDriver.getTitle());
-//	  	SwitchToWindow(s,driver);
-		    new WebDriverWait(webDriver,30).until(ExpectedConditions.elementToBeClickable(By.linkText("一融赋"))).click();
-		    new WebDriverWait(webDriver,30).until(ExpectedConditions.elementToBeClickable(By.id("li_73"))).click();
-		    new WebDriverWait(webDriver,30).until(ExpectedConditions.elementToBeClickable(By.linkText("问诊订单"))).click();
-//		    new WebDriverWait(driver,30).until(ExpectedConditions.elementToBeClickable(By.linkText("分配供应商"))).click();
-//		    new WebDriverWait(driver,30).until(ExpectedConditions.elementToBeClickable(By.linkText("确定"))).click();
-//		    new WebDriverWait(driver,30).until(ExpectedConditions.elementToBeClickable(By.linkText("确定"))).click();
-		    new WebDriverWait(webDriver,30).until(ExpectedConditions.elementToBeClickable(By.linkText("确认到账"))).click();
-	        new WebDriverWait(webDriver,30).until(ExpectedConditions.elementToBeClickable(By.id("add_freeReason"))).sendKeys("123456");
-	        new WebDriverWait(webDriver,30).until(ExpectedConditions.elementToBeClickable(By.xpath("/html/body/div[2]/p/a[1]/span"))).click();
-	        Thread.sleep(5000);
-	        webDriver.quit();
-	        //Select fruits = new Select(option1);
-//		    fruits.selectByValue("4");
-	}
+//		System.setProperty("webdriver.chrome.driver",
+//				"C:\\Program Files (x86)\\Google\\Chrome\\Application\\chromedriver.exe");
+//		WebDriver webDriver = new ChromeDriver();
+		// 运行时关闭之前启动的浏览器
+
+		webDriver.manage().timeouts().pageLoadTimeout(60, TimeUnit.SECONDS);
+		webDriver.get("http://fwgl.yirongbang.net/");
+		// webDriver.manage().window().maximize();
+
+		webDriver.findElement(By.name("form_user")).sendKeys("zdhcs");
+		webDriver.findElement(By.name("form_password")).sendKeys("xlh123456");
+		new WebDriverWait(webDriver, 30).until(ExpectedConditions.elementToBeClickable(By.className("btn-submit")))
+				.click();
+		new WebDriverWait(webDriver, 30).until(ExpectedConditions.elementToBeClickable(By.linkText("一融赋"))).click();
+		new WebDriverWait(webDriver, 30).until(ExpectedConditions.elementToBeClickable(By.id("li_73"))).click();
+		new WebDriverWait(webDriver, 30).until(ExpectedConditions.elementToBeClickable(By.linkText("问诊订单"))).click();
+		new WebDriverWait(webDriver, 30).until(ExpectedConditions.elementToBeClickable(By.linkText("确认到账"))).click();
+		new WebDriverWait(webDriver, 30).until(ExpectedConditions.elementToBeClickable(By.id("add_freeReason")))
+				.sendKeys("123456");
+		new WebDriverWait(webDriver, 30)
+				.until(ExpectedConditions.elementToBeClickable(By.xpath("/html/body/div[2]/p/a[1]/span"))).click();
+		new WebDriverWait(webDriver, 30)
+				.until(ExpectedConditions.elementToBeClickable(By.xpath("/html/body/div[2]/p/a/span"))).click();
+		Thread.sleep(3000);
+	    logger.info("上传报告");
+	    new WebDriverWait(webDriver,60).until(ExpectedConditions.elementToBeClickable(By.linkText("上传报告"))).click();	
+	    webDriver = webCommonService.uploadFilesOfBackgroundSystem(webDriver, datadriven.get("uploadFilePath")); 
+//	    logger.info("退出后台系统");
+//	    webDriver = webCommonService.logoutOfBackgroundSystem(webDriver);
+		webDriver.quit();
+		}
+
 	
 	@DataProvider(name = "testData")
 	public Iterator<Object[]> data1test() throws IOException {
 		return ExcelProviderByEnv(this, "testData");
 	}
 	
-}	
-	
+}		
