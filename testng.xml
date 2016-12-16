@@ -10,7 +10,7 @@
 				</methods>
 			</class>
 		</classes>
-	</test>
+	</test> -->
 	
 	<test name="普通问诊流程" >
 		<classes>
@@ -22,7 +22,7 @@
 		</classes>
 	</test>	
 	
-	<test name="快速问诊流程" >
+<!-- 	<test name="快速问诊流程" >
 		<classes>
 			<class name="test.apptest.common.AppCommonSpeedInquiry">
 				<methods>
@@ -30,9 +30,9 @@
 				</methods>
 			</class>
 		</classes>
-	</test>
+	</test> -->
 	
-	<test name="投资人提现" >
+<!-- 	<test name="投资人提现" >
 		<classes>
 			<class name="test.apptest.fund.AppFundWallet">
 				<methods>
@@ -53,7 +53,7 @@
 		</classes>
 	</test> -->
 	
-	<test name="创业者孵化入驻" >
+<!-- 	<test name="创业者孵化入驻" >
 		<classes>
 			<class name="test.apptest.chuangye.AppChuangyeEnterIncubator">
 				<methods>
@@ -61,6 +61,6 @@
 				</methods>
 			</class>
 		</classes>
-	</test>
+	</test> -->
 	
 </suite>
