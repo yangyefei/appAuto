@@ -14,20 +14,20 @@
       <![CDATA[mysql预发环境数据库连接信息为：172.16.11.80:3306]]>
     </line>
   </reporter-output>
-  <suite name="Default suite" duration-ms="90174" started-at="2016-12-14T03:33:09Z" finished-at="2016-12-14T03:34:39Z">
+  <suite name="Default suite" duration-ms="91742" started-at="2016-12-16T07:09:39Z" finished-at="2016-12-16T07:11:11Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="90174" started-at="2016-12-14T03:33:09Z" finished-at="2016-12-14T03:34:39Z">
+    <test name="Default test" duration-ms="91742" started-at="2016-12-16T07:09:39Z" finished-at="2016-12-16T07:11:11Z">
       <class name="test.apptest.chuangye.AppChuangyeSignUp">
-        <test-method status="PASS" signature="springTestContextPrepareTestInstance()[pri:0, instance:test.apptest.chuangye.AppChuangyeSignUp@7f92c8d9]" name="springTestContextPrepareTestInstance" is-config="true" duration-ms="443" started-at="2016-12-14T11:33:09Z" finished-at="2016-12-14T11:33:09Z">
+        <test-method status="PASS" signature="springTestContextPrepareTestInstance()[pri:0, instance:test.apptest.chuangye.AppChuangyeSignUp@7dc05ffd]" name="springTestContextPrepareTestInstance" is-config="true" duration-ms="435" started-at="2016-12-16T15:09:39Z" finished-at="2016-12-16T15:09:40Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- springTestContextPrepareTestInstance -->
-        <test-method status="PASS" signature="beforeClass()[pri:0, instance:test.apptest.chuangye.AppChuangyeSignUp@7f92c8d9]" name="beforeClass" is-config="true" duration-ms="0" started-at="2016-12-14T11:33:09Z" finished-at="2016-12-14T11:33:09Z">
+        <test-method status="PASS" signature="beforeClass()[pri:0, instance:test.apptest.chuangye.AppChuangyeSignUp@7dc05ffd]" name="beforeClass" is-config="true" duration-ms="0" started-at="2016-12-16T15:09:40Z" finished-at="2016-12-16T15:09:40Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeClass -->
-        <test-method status="PASS" signature="springTestContextBeforeTestMethod(java.lang.reflect.Method)[pri:0, instance:test.apptest.chuangye.AppChuangyeSignUp@7f92c8d9]" name="springTestContextBeforeTestMethod" is-config="true" duration-ms="1" started-at="2016-12-14T11:33:10Z" finished-at="2016-12-14T11:33:10Z">
+        <test-method status="PASS" signature="springTestContextBeforeTestMethod(java.lang.reflect.Method)[pri:0, instance:test.apptest.chuangye.AppChuangyeSignUp@7dc05ffd]" name="springTestContextBeforeTestMethod" is-config="true" duration-ms="1" started-at="2016-12-16T15:09:40Z" finished-at="2016-12-16T15:09:40Z">
           <params>
             <param index="0">
               <value>
@@ -38,7 +38,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- springTestContextBeforeTestMethod -->
-        <test-method status="PASS" signature="chuangyeSignUp(java.util.Map)[pri:0, instance:test.apptest.chuangye.AppChuangyeSignUp@7f92c8d9]" name="chuangyeSignUp" duration-ms="89539" started-at="2016-12-14T11:33:10Z" description="活动报名" data-provider="testData" finished-at="2016-12-14T11:34:39Z">
+        <test-method status="PASS" signature="chuangyeSignUp(java.util.Map)[pri:0, instance:test.apptest.chuangye.AppChuangyeSignUp@7dc05ffd]" name="chuangyeSignUp" duration-ms="91108" started-at="2016-12-16T15:09:40Z" description="活动报名" data-provider="testData" finished-at="2016-12-16T15:11:11Z">
           <params>
             <param index="0">
               <value>
@@ -61,7 +61,7 @@
             </line>
           </reporter-output>
         </test-method> <!-- chuangyeSignUp -->
-        <test-method status="PASS" signature="springTestContextAfterTestMethod(java.lang.reflect.Method)[pri:0, instance:test.apptest.chuangye.AppChuangyeSignUp@7f92c8d9]" name="springTestContextAfterTestMethod" is-config="true" duration-ms="0" started-at="2016-12-14T11:34:39Z" finished-at="2016-12-14T11:34:39Z">
+        <test-method status="PASS" signature="springTestContextAfterTestMethod(java.lang.reflect.Method)[pri:0, instance:test.apptest.chuangye.AppChuangyeSignUp@7dc05ffd]" name="springTestContextAfterTestMethod" is-config="true" duration-ms="1" started-at="2016-12-16T15:11:11Z" finished-at="2016-12-16T15:11:11Z">
           <params>
             <param index="0">
               <value>
@@ -72,7 +72,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- springTestContextAfterTestMethod -->
-        <test-method status="PASS" signature="afterClass()[pri:0, instance:test.apptest.chuangye.AppChuangyeSignUp@7f92c8d9]" name="afterClass" is-config="true" duration-ms="0" started-at="2016-12-14T11:34:39Z" finished-at="2016-12-14T11:34:39Z">
+        <test-method status="PASS" signature="afterClass()[pri:0, instance:test.apptest.chuangye.AppChuangyeSignUp@7dc05ffd]" name="afterClass" is-config="true" duration-ms="0" started-at="2016-12-16T15:11:11Z" finished-at="2016-12-16T15:11:11Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterClass -->
