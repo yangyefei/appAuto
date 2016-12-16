@@ -8,6 +8,7 @@ import java.util.concurrent.TimeUnit;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -52,7 +53,7 @@ public class AppCommonSpeedInquiry extends BaseTest{
 		driver = appCommonService.loginForApp(driver,datadriven.get("changyeUserName"),datadriven.get("chuangyePassword"));
 		
 		//进入企业快速问诊流程
-		logger.info("进入企业专人问诊流程");
+		logger.info("进入企业快速问诊流程");
 		new WebDriverWait(driver, 30).until(ExpectedConditions.elementToBeClickable(By.name("一融"))).click();
 		new WebDriverWait(driver, 30).until(ExpectedConditions.elementToBeClickable(By.id("com.easyrongchuangye:id/wen_zhen_layout"))).click();
 		new WebDriverWait(driver, 30).until(ExpectedConditions.elementToBeClickable(By.id("com.easyrongchuangye:id/speend_wen_zhen"))).click();
@@ -74,7 +75,7 @@ public class AppCommonSpeedInquiry extends BaseTest{
 		oderConfrim(datadriven);
 		
 		new WebDriverWait(driver, 30).until(ExpectedConditions.elementToBeClickable(By.name("待问诊"))).click();
-	
+		
 		//快速问诊结果判断
 		List<WebElement>  set = driver.findElementsById("com.easyrongchuangye:id/contact_name");
 		for (WebElement webElement : set) {
@@ -88,6 +89,8 @@ public class AppCommonSpeedInquiry extends BaseTest{
 			
                 			
 			}
+		new WebDriverWait(driver, 30).until(ExpectedConditions.elementToBeClickable(By.name("确认服务"))).click();
+		appCommonService.commentSubmit(driver, "123");
 		driver.quit();
 		
 		
@@ -105,11 +108,11 @@ public class AppCommonSpeedInquiry extends BaseTest{
 
 
 	public void oderConfrim(Map<String, String> datadriven) throws Exception {
-		 webDriver = Initial.browserOfChromeSetUp(webDriver);
+//		 webDriver = Initial.browserOfChromeSetUp(webDriver);
 
-//		System.setProperty("webdriver.chrome.driver",
-//				"C:\\Program Files (x86)\\Google\\Chrome\\Application\\chromedriver.exe");
-//		WebDriver webDriver = new ChromeDriver();
+		System.setProperty("webdriver.chrome.driver",
+				"C:\\Program Files (x86)\\Google\\Chrome\\Application\\chromedriver.exe");
+		WebDriver webDriver = new ChromeDriver();
 		// 运行时关闭之前启动的浏览器
 
 		webDriver.manage().timeouts().pageLoadTimeout(60, TimeUnit.SECONDS);
