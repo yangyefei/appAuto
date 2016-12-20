@@ -86,6 +86,7 @@ public class AppCommonSpeedInquiry extends BaseTest{
           
 				} else {
 					logger.info("快速问诊测试失败");
+//					driver.quit();
 					Assert.assertTrue(false);
 				}
 			
