@@ -12,7 +12,7 @@
 		</classes>
 	</test> -->
 	
-	<test name="普通问诊流程" >
+<!-- 	<test name="普通问诊流程" >
 		<classes>
 			<class name="test.apptest.common.AppCommonInquiry">
 				<methods>
@@ -20,9 +20,9 @@
 				</methods>
 			</class>
 		</classes>
-	</test>	
+	</test>	 -->
 	
-<!-- 	<test name="快速问诊流程" >
+	<test name="快速问诊流程" >
 		<classes>
 			<class name="test.apptest.common.AppCommonSpeedInquiry">
 				<methods>
@@ -30,7 +30,7 @@
 				</methods>
 			</class>
 		</classes>
-	</test> -->
+	</test>
 	
 <!-- 	<test name="投资人提现" >
 		<classes>

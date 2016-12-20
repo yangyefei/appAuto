@@ -80,16 +80,16 @@ public class AppCommonSpeedInquiry extends BaseTest{
 		List<WebElement>  set = driver.findElementsById("com.easyrongchuangye:id/contact_name");
 		for (WebElement webElement : set) {
                 if (webElement.getText().contains("快速问诊")) {
+                	logger.info("快速问诊测试成功");
                 	Assert.assertTrue(true);
           
 				} else {
-					Assert.assertTrue(false);
 					logger.info("快速问诊测试失败");
+					Assert.assertTrue(false);
 				}
 			
                 			
 			}
-      	logger.info("快速问诊测试成功");
       	
 		new WebDriverWait(driver, 30).until(ExpectedConditions.elementToBeClickable(By.name("确认服务"))).click();
 		appCommonService.commentSubmit(driver, "123");
