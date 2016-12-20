@@ -13,6 +13,7 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.testng.Assert;
+import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
@@ -93,9 +94,7 @@ public class AppCommonSpeedInquiry extends BaseTest{
       	
 		new WebDriverWait(driver, 30).until(ExpectedConditions.elementToBeClickable(By.name("确认服务"))).click();
 		appCommonService.commentSubmit(driver, "123");
-		driver.quit();
-		
-		
+				
 		logger.info("APP "+datadriven.get("version")+"---导师快速问诊流程测试结束--");
 
 	}
@@ -148,6 +147,13 @@ public class AppCommonSpeedInquiry extends BaseTest{
 	@DataProvider(name = "testData")
 	public Iterator<Object[]> data1test() throws IOException {
 		return ExcelProviderByEnv(this, "testData");
+	}
+	
+	@AfterClass
+	public void afterClass()  {	
+		logger.info("最后退出driver");
+		driver.quit();
+	
 	}
 	
 }		
