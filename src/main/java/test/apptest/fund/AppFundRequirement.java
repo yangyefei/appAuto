@@ -42,7 +42,7 @@ public class AppFundRequirement extends BaseTest {
 	}
 	@AfterClass
 	public void afterClass() throws Exception {	
-	
+	driver.quit();
 	}
 
 

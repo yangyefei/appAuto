@@ -1,10 +1,14 @@
 package test.apptest.common;
 
 import java.io.IOException;
+import java.text.SimpleDateFormat;
+import java.util.Calendar;
+import java.util.Date;
 import java.util.Iterator;
 import java.util.List;
 import java.util.Map;
 import java.util.concurrent.TimeUnit;
+import org.apache.commons.logging.Log;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -36,7 +40,8 @@ public class AppCommonSpeedInquiry extends BaseTest{
 	private WebDriver webDriver;
 	@BeforeClass
 	public void beforeClass()  {		
-	
+
+		
 	}
 	
 	@Test(enabled = true, dataProvider = "testData",description="快速问诊")
@@ -60,7 +65,6 @@ public class AppCommonSpeedInquiry extends BaseTest{
 		new WebDriverWait(driver, 30).until(ExpectedConditions.elementToBeClickable(By.id("com.easyrongchuangye:id/speend_wen_zhen"))).click();
 		
 		new WebDriverWait(driver, 30).until(ExpectedConditions.elementToBeClickable(By.id("com.easyrongchuangye:id/detai_op_view"))).click();
-		
 	
 		driver.findElementById("com.easyrongchuangye:id/qi_ye_xin_xi_edit").sendKeys("adlkjjjjk123456两点上课是老款的解放路");
 		appCommonService.swipeToDown(driver);
@@ -77,13 +81,23 @@ public class AppCommonSpeedInquiry extends BaseTest{
 		
 		new WebDriverWait(driver, 30).until(ExpectedConditions.elementToBeClickable(By.name("待问诊"))).click();
 		
+		//获取当前时间
+		Calendar calendar = Calendar.getInstance(); 
+		SimpleDateFormat timeformat=new SimpleDateFormat("yyyy-MM-dd"); 
+		Date date=calendar.getTime();
+		String time=timeformat.format(date);
+		logger.info("获取当前时间："+time);
+		
+		WebElement yaoyue=new  WebDriverWait(driver, 30).until(ExpectedConditions.elementToBeClickable(By.id("com.easyrongchuangye:id/yao_yue_shi_jian")));
+		
 		//快速问诊结果判断
+		logger.info("判断问诊是否成功？");
 		List<WebElement>  set = driver.findElementsById("com.easyrongchuangye:id/contact_name");
 		for (WebElement webElement : set) {
-                if (webElement.getText().contains("快速问诊")) {
+                if (webElement.getText().contains("快速问诊")&& time.equals(yaoyue.getText())) {
                 	logger.info("快速问诊测试成功");
                 	Assert.assertTrue(true);
-          
+          break;
 				} else {
 					logger.info("快速问诊测试失败");
 //					driver.quit();
@@ -100,6 +114,11 @@ public class AppCommonSpeedInquiry extends BaseTest{
 
 	}
 
+	private Log info(String string) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
 	public void PayButton(){
 		int x =driver.manage().window().getSize().width;
 		int y =driver.manage().window().getSize().height;
@@ -110,11 +129,11 @@ public class AppCommonSpeedInquiry extends BaseTest{
 
 
 	public void oderConfrim(Map<String, String> datadriven) throws Exception {
-		 webDriver = Initial.browserOfChromeSetUp(webDriver);
-
-//		System.setProperty("webdriver.chrome.driver",
-//				"C:\\Program Files (x86)\\Google\\Chrome\\Application\\chromedriver.exe");
-//		WebDriver webDriver = new ChromeDriver();
+//		 webDriver = Initial.browserOfChromeSetUp(webDriver);
+//
+		System.setProperty("webdriver.chrome.driver",
+				"C:\\Program Files (x86)\\Google\\Chrome\\Application\\chromedriver.exe");
+		WebDriver webDriver = new ChromeDriver();
 		// 运行时关闭之前启动的浏览器
 
 		webDriver.manage().timeouts().pageLoadTimeout(60, TimeUnit.SECONDS);
@@ -152,9 +171,7 @@ public class AppCommonSpeedInquiry extends BaseTest{
 	
 	@AfterClass
 	public void afterClass()  {	
-		logger.info("最后退出driver");
-		driver.quit();
-	
+			driver.quit();
 	}
 	
 }		

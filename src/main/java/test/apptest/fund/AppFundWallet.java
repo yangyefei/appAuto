@@ -40,7 +40,7 @@ public class AppFundWallet extends BaseTest{
 
 	@AfterClass
 	public void afterClass() throws Exception {	
-		
+		driver.quit();
 		
 	//	Runtime.getRuntime().exec("cmd /c taskkill -f -im node.exe");
 //		Runtime.getRuntime().exec("cmd.exe /C start wmic process where name='cmd.exe' call terminate");
