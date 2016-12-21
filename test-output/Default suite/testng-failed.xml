@@ -3,29 +3,16 @@
 <suite name="Failed suite [Default suite]">
   <test name="Default test(failed)">
     <classes>
-<<<<<<< HEAD
-      <class name="test.apptest.chuangye.AppChuangyeEnterIncubator">
+      <class name="test.apptest.common.AppCommonSpeedInquiry">
         <methods>
-          <include name="beforeClass"/>
-          <include name="springTestContextBeforeTestMethod"/>
-          <include name="springTestContextPrepareTestInstance"/>
-          <include name="springTestContextAfterTestMethod"/>
-          <include name="chuangyeEnterIncubator" invocation-numbers="0"/>
+          <include name="appCommonSpeedInquiry" invocation-numbers="0"/>
           <include name="afterClass"/>
-        </methods>
-      </class> <!-- test.apptest.chuangye.AppChuangyeEnterIncubator -->
-=======
-      <class name="test.apptest.fund.AppFundWallet">
-        <methods>
-          <include name="beforeClass"/>
-          <include name="wallet" invocation-numbers="0"/>
           <include name="springTestContextPrepareTestInstance"/>
-          <include name="afterClass"/>
           <include name="springTestContextBeforeTestMethod"/>
           <include name="springTestContextAfterTestMethod"/>
+          <include name="beforeClass"/>
         </methods>
-      </class> <!-- test.apptest.fund.AppFundWallet -->
->>>>>>> branch 'master' of http://172.16.11.124/luyi/appAuto.git
+      </class> <!-- test.apptest.common.AppCommonSpeedInquiry -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
