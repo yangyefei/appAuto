@@ -108,12 +108,9 @@ public class AppChuangyeBuyService extends BaseTest {
 		SimpleDateFormat date = new SimpleDateFormat("MM-dd HH:mm");
 		String time = date.format(new Date());
 		System.out.println(time);
-		Thread.sleep(3000);
 		
 		logger.info("去支付");
-		clickzhifu();
-		Thread.sleep(5000);
-		new WebDriverWait(driver,60).until(ExpectedConditions.elementToBeClickable(By.name("付款"))).click();
+		appCommonService.alipay(driver);
 		new WebDriverWait(driver,60).until(ExpectedConditions.elementToBeClickable(By.name("返回首页 Link"))).click();
 		driver.quit();
 		
@@ -170,17 +167,6 @@ public class AppChuangyeBuyService extends BaseTest {
 			
 		}
 		
-	}
-	
-	
-	private void clickzhifu () {
-		
-		int x =driver.manage().window().getSize().width;
-		int y =driver.manage().window().getSize().height;
-
-		TouchAction  touchAction =new TouchAction(driver);
-		touchAction.press(x/2, y*19/20).release().perform();
-        
 	}
 		
 
