@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://beust.com/testng/testng-1.0.dtd" >
-<suite name="自动化测试运行结果" verbose="1">
+<suite name="自动化测试运行结果" verbose="1" skipfailedinvocationcounts="true">
     
 	<test name="约谈流程" >
 		<classes>
@@ -53,6 +53,16 @@
 		</classes>
 	</test>
 	
+	<test name="投资人活动报名"  >
+		<classes>
+			<class name="test.apptest.fund.AppFundSignUp">
+				<methods>
+					<include name="fundSignUp" />
+				</methods>
+			</class>
+		</classes>
+	</test>
+	
 	<test name="创业者孵化入驻" >
 		<classes>
 			<class name="test.apptest.chuangye.AppChuangyeEnterIncubator">
@@ -63,6 +73,15 @@
 		</classes>
 	</test>
 	
+	<test name="创业者活动报名" >
+		<classes>
+			<class name="test.apptest.chuangye.AppChuangyeSignUp">
+				<methods>
+					<include name="chuangyeSignUp" />
+				</methods>
+			</class>
+		</classes>
+	</test>		
 
 </suite>
 
