@@ -22,6 +22,8 @@ public class MysqlDataDealImpl implements MysqlDataDeal {
 
 		String sql = "select substring((select s.content from sms_record s where phone="+userId+" ORDER BY s.id DESC LIMIT 1),11,6)";
 		String queryInfo = msql.query(sql);
+		
+		Reporter.log("数据查询成功！", true);
 
 		msql.closeDBcon();
 		// System.out.println(queryInfo);
@@ -38,6 +40,8 @@ public class MysqlDataDealImpl implements MysqlDataDeal {
 
 		String sql = "UPDATE incubator_enterprises SET enterprise_status="+statusValue+" WHERE enterprise_name="+"'"+enterpriseName+"'";
 		msql.Update(sql);
+		
+		Reporter.log("数据更新成功！", true);
 
 		msql.closeDBcon();
 
@@ -53,6 +57,8 @@ public class MysqlDataDealImpl implements MysqlDataDeal {
 
 		String sql = "delete from yrt_hd_bm where hd_title='" + activityName + "'" + " and mobi=" + mobile;
 		msql.Delete(sql);
+		
+		Reporter.log("数据删除成功！", true);
 
 		msql.closeDBcon();
 		
@@ -68,6 +74,8 @@ public class MysqlDataDealImpl implements MysqlDataDeal {
 
 			String sql = "SELECT COUNT(*) FROM incubator_enterprises WHERE enterprise_name='"+enterpriseName+"' and enterprise_status=0";
 			String num = msql.query(sql);
+			
+			Reporter.log("数据查询成功！", true);
 
 			msql.closeDBcon();
 			// System.out.println(num);
@@ -75,9 +83,6 @@ public class MysqlDataDealImpl implements MysqlDataDeal {
 			
 		}
 
-	
-	
-	
 
 	public DataBaseDao getDataBaseDao() {
 		return dataBaseDao;
@@ -86,7 +91,6 @@ public class MysqlDataDealImpl implements MysqlDataDeal {
 	public void setDataBaseDao(DataBaseDao dataBaseDao) {
 		this.dataBaseDao = dataBaseDao;
 	}
-
 
 
 }

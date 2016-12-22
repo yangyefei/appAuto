@@ -110,7 +110,17 @@ public class AppCommonServiceImpl implements AppCommonService{
 			int currentNum;
 			List<WebElement> elements=driver.findElementsById(nameId);
 			currentNum = elements.size();
-			System.out.println("currentNum="+currentNum);
+			System.out.println("当前页面元素总数currentNum="+currentNum);
+			
+			//页面中如果没有任何元素，直接返回
+			if (0==currentNum) {
+				
+				System.out.println("页面中没有任何所要查找的内容！");
+				
+				return driver;
+				
+			}
+			
 			//查找当前页是否有匹配的内容
 			for (WebElement webElement : elements) {
 				
@@ -120,7 +130,7 @@ public class AppCommonServiceImpl implements AppCommonService{
 					
 					isfound = true;
 					
-					return driver;	
+					return driver;
 			     	}				
 			}
 			

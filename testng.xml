@@ -22,7 +22,7 @@
 		</classes>
 	</test>	 -->
 	
-	<test name="快速问诊流程" >
+<!-- 	<test name="快速问诊流程" >
 		<classes>
 			<class name="test.apptest.common.AppCommonSpeedInquiry">
 				<methods>
@@ -30,7 +30,7 @@
 				</methods>
 			</class>
 		</classes>
-	</test>
+	</test> -->
 	
 <!-- 	<test name="投资人提现" >
 		<classes>
@@ -62,5 +62,15 @@
 			</class>
 		</classes>
 	</test> -->
+	
+	<test name="投资人活动报名"  >
+		<classes>
+			<class name="test.apptest.fund.AppFundSignUp">
+				<methods>
+					<include name="fundSignUp" />
+				</methods>
+			</class>
+		</classes>
+	</test>
 	
 </suite>
