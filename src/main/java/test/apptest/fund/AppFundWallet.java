@@ -82,7 +82,7 @@ public class AppFundWallet extends BaseTest{
         try {
     		WebElement getMonkey =driver.findElementById("com.easyrongfund:id/money_number_tv");
     		String getmon=getMonkey.getText();
-    		Assert.assertEquals(avamon+1, getmon,"提现金额和可提现金额不对应");
+    		Assert.assertEquals(avamon, getmon,"提现金额和可提现金额不对应");
 		} catch (Exception e) {
 
 		logger.info("验证判断提现失败");
