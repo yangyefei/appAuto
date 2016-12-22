@@ -62,7 +62,7 @@ public class MysqlDataDealImpl implements MysqlDataDeal {
 		@Override
 		public String checkEnterIncubator(String enterpriseName) {
 			// TODO Auto-generated method stub
-			Reporter.log("校验企业是否入驻...", true);
+			Reporter.log("获取待处理企业数量...", true);
 
 			msql = dataBaseDao.getInstanceOfMySql(DBType.MYSQL_PRE, MysqlDBName.XLH_FHQ);
 
