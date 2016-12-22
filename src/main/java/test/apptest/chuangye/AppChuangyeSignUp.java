@@ -16,10 +16,12 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.testng.Assert;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.AfterClass;
+
 
 
 
@@ -57,7 +59,7 @@ public class AppChuangyeSignUp extends BaseTest {
 		
 		String apkPathOfChuangye = datadriven.get("apkPathOfChuangye");
 		
-		logger.info("APP "+datadriven.get("version")+"---活动报名测试开始---");
+		logger.info("APP "+datadriven.get("version")+"---创业者活动报名测试开始---");
 		
 		logger.info("启动创业者app");
 
@@ -80,22 +82,23 @@ public class AppChuangyeSignUp extends BaseTest {
 	    System.out.print(totalNumId);
 	    driver = appCommonService.scrollAndFindName(driver, datadriven.get("activity"), "huo_dong_name_tv", totalNumId);
 		driver.findElementByName(datadriven.get("activity")).click();
-	    driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 		
 		try {
 			
 			logger.info("点击进入报名页面");
-			driver.findElementByAccessibilityId("报名 Link").click();
+			new WebDriverWait(driver, 60).until(ExpectedConditions.elementToBeClickable(By.name("报名 Link"))).click();
 			logger.info("填写并提交报名申请");		
 			driver.findElementByClassName("android.widget.EditText").sendKeys("ceshi");
 			driver.findElementByAccessibilityId("获得 Link").click();
+			Thread.sleep(3000);
 			//获取验证码
 			String code = mysqlDataDeal.getSignUpComfirmCode(datadriven.get("changyeUserName"));
-			driver.findElementByAccessibilityId("请输入验证码").sendKeys(code);
-			
-			driver.findElementByAccessibilityId("公司").click();
 			List<WebElement> list=driver.findElementsByClassName("android.widget.EditText");
-			WebElement target = list.get(3);
+			WebElement num = list.get(2);
+			num.sendKeys(code);
+			driver.findElementByAccessibilityId("公司").click();
+			List<WebElement> list1=driver.findElementsByClassName("android.widget.EditText");
+			WebElement target = list1.get(3);
 			target.sendKeys("xinlonghang");
 			driver.findElementByAccessibilityId("提交 Link").click();	
 			driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);	
@@ -118,14 +121,16 @@ public class AppChuangyeSignUp extends BaseTest {
 				// TODO Auto-generated catch block
 				logger.info("活动报名失败");
 				driver.quit();
+				Assert.assertTrue(false);
 				e.printStackTrace();	
 			}
 			
 		} catch (Exception e) {
 			// TODO: handle exception
 			
-			logger.info("报名失败,之前已经报名、报名截止或活动已结束");
+			logger.info("报名失败,已经报名、报名截止或活动已结束");
 			driver.quit();
+			Assert.assertTrue(false);
 			e.printStackTrace();		
 			
 		}	
@@ -143,6 +148,7 @@ public class AppChuangyeSignUp extends BaseTest {
 	
 	@AfterClass
 	public void afterClass(){	
+		driver.quit();
 	}
 
 	
