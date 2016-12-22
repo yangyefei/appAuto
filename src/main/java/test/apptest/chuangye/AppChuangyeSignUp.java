@@ -80,17 +80,18 @@ public class AppChuangyeSignUp extends BaseTest {
 	    System.out.print(totalNumId);
 	    driver = appCommonService.scrollAndFindName(driver, datadriven.get("activity"), "huo_dong_name_tv", totalNumId);
 		driver.findElementByName(datadriven.get("activity")).click();
-	    driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 		
 		try {
 			
 			logger.info("点击进入报名页面");
-			driver.findElementByAccessibilityId("报名 Link").click();
+			new WebDriverWait(driver, 60).until(ExpectedConditions.elementToBeClickable(By.name("报名 Link"))).click();
 			logger.info("填写并提交报名申请");		
 			driver.findElementByClassName("android.widget.EditText").sendKeys("ceshi");
 			driver.findElementByAccessibilityId("获得 Link").click();
+			Thread.sleep(3000);
 			//获取验证码
 			String code = mysqlDataDeal.getSignUpComfirmCode(datadriven.get("changyeUserName"));
+			System.out.println(code);
 			driver.findElementByAccessibilityId("请输入验证码").sendKeys(code);
 			
 			driver.findElementByAccessibilityId("公司").click();
