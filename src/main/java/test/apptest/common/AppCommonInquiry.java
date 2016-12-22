@@ -186,9 +186,10 @@ public class AppCommonInquiry extends BaseTest {
 		try {
 
 			logger.info("去成功页面校验状态和订单");
+			String dateString = Utils.getCurrentDate();
 			new WebDriverWait(driver,60).until(ExpectedConditions.elementToBeClickable(By.name("已成功"))).click();
 			new WebDriverWait(driver,60).until(ExpectedConditions.visibilityOfElementLocated(By.name("已评价")));
-			new WebDriverWait(driver,60).until(ExpectedConditions.visibilityOfElementLocated(By.name(Utils.getCurrentDate())));//和当前日期比较，检查是否可以找到当天下的订单
+			new WebDriverWait(driver,60).until(ExpectedConditions.visibilityOfElementLocated(By.name(dateString)));//和当前日期比较，检查是否可以找到当天下的订单
 			logger.info("校验成功");
 			
 		} catch (Exception e) {//检查失败后创业者和投资者app都退出登录
@@ -270,6 +271,9 @@ public class AppCommonInquiry extends BaseTest {
 
 	@AfterClass
 	public void afterClass() {
+		
+		driver.quit();
+		webDriver.quit();
 
 	}
 

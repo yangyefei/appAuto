@@ -107,7 +107,7 @@ public class AppChuangyeApplyLoan extends BaseTest {
 		driver.findElement(By.name("请选择")).click();
 		dateswipeleft(driver);
 		Thread.sleep(1500);
-		swipemiddum(driver);
+		appCommonService.swipeToDown(driver);
 		Thread.sleep(1500);
 		dateswiperight(driver);
 		Thread.sleep(1500);
@@ -115,7 +115,7 @@ public class AppChuangyeApplyLoan extends BaseTest {
 		driver.findElement(By.name("请选择")).click();
 		swipeleft(driver);
 		Thread.sleep(1500);
-		swipemiddum(driver);
+		appCommonService.swipeToDown(driver);
 		Thread.sleep(1500);		
 		swiperight(driver);
 		Thread.sleep(1500);
@@ -170,15 +170,7 @@ public class AppChuangyeApplyLoan extends BaseTest {
 	        driver.swipe(width/6,height*5/6, width/6,height*2/3, 1000);//向下滑动，间隔1s  
 	        
 		}
-		
-		private void swipemiddum (AppiumDriver driver) {
 			
-	        int width = driver.manage().window().getSize().width;
-	        int height = driver.manage().window().getSize().height;
-	        driver.swipe(width/2,height*5/6, width/2,height*2/5, 1000);//向下滑动，间隔1s   
-	        
-		}
-		
 		private void swiperight (AppiumDriver driver) {
 			
 	        int width = driver.manage().window().getSize().width;

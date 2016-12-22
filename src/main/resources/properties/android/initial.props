@@ -2,8 +2,10 @@
 #appRunMachineIp=172.16.22.180
 webRunMachineIp=172.16.22.180
 
-appRunMachineIp=172.16.22.117
-#webRunMachineIp=172.16.22.117
+
+appRunMachineIp=172.16.22.236
+webRunMachineIp=172.16.22.236
+
 
 #appium port
 appiumPort=4723
