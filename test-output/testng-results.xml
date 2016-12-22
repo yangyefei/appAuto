@@ -1,58 +1,120 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" total="1" passed="1">
+<testng-results skipped="0" failed="1" total="1" passed="0">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="102354" started-at="2016-12-20T10:15:45Z" finished-at="2016-12-20T10:17:27Z">
+  <suite name="Default suite" duration-ms="108255" started-at="2016-12-22T08:45:32Z" finished-at="2016-12-22T08:47:20Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="102354" started-at="2016-12-20T10:15:45Z" finished-at="2016-12-20T10:17:27Z">
-      <class name="test.apptest.common.AppCommonSpeedInquiry">
-        <test-method status="PASS" signature="springTestContextPrepareTestInstance()[pri:0, instance:test.apptest.common.AppCommonSpeedInquiry@76a3e297]" name="springTestContextPrepareTestInstance" is-config="true" duration-ms="464" started-at="2016-12-20T18:15:45Z" finished-at="2016-12-20T18:15:45Z">
+    <test name="Default test" duration-ms="108255" started-at="2016-12-22T08:45:32Z" finished-at="2016-12-22T08:47:20Z">
+      <class name="test.apptest.fund.AppFundSignUp">
+        <test-method status="PASS" signature="springTestContextPrepareTestInstance()[pri:0, instance:test.apptest.fund.AppFundSignUp@406199]" name="springTestContextPrepareTestInstance" is-config="true" duration-ms="645" started-at="2016-12-22T16:45:32Z" finished-at="2016-12-22T16:45:33Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- springTestContextPrepareTestInstance -->
-        <test-method status="PASS" signature="beforeClass()[pri:0, instance:test.apptest.common.AppCommonSpeedInquiry@76a3e297]" name="beforeClass" is-config="true" duration-ms="0" started-at="2016-12-20T18:15:45Z" finished-at="2016-12-20T18:15:45Z">
+        <test-method status="PASS" signature="beforeClass()[pri:0, instance:test.apptest.fund.AppFundSignUp@406199]" name="beforeClass" is-config="true" duration-ms="0" started-at="2016-12-22T16:45:33Z" finished-at="2016-12-22T16:45:33Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeClass -->
-        <test-method status="PASS" signature="springTestContextBeforeTestMethod(java.lang.reflect.Method)[pri:0, instance:test.apptest.common.AppCommonSpeedInquiry@76a3e297]" name="springTestContextBeforeTestMethod" is-config="true" duration-ms="1" started-at="2016-12-20T18:15:45Z" finished-at="2016-12-20T18:15:45Z">
+        <test-method status="PASS" signature="springTestContextBeforeTestMethod(java.lang.reflect.Method)[pri:0, instance:test.apptest.fund.AppFundSignUp@406199]" name="springTestContextBeforeTestMethod" is-config="true" duration-ms="0" started-at="2016-12-22T16:45:33Z" finished-at="2016-12-22T16:45:33Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[public void test.apptest.common.AppCommonSpeedInquiry.appCommonSpeedInquiry(java.util.Map) throws java.lang.Exception]]>
+                <![CDATA[public void test.apptest.fund.AppFundSignUp.fundSignUp(java.util.Map) throws java.lang.Exception]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- springTestContextBeforeTestMethod -->
-        <test-method status="PASS" signature="appCommonSpeedInquiry(java.util.Map)[pri:0, instance:test.apptest.common.AppCommonSpeedInquiry@76a3e297]" name="appCommonSpeedInquiry" duration-ms="100456" started-at="2016-12-20T18:15:45Z" description="快速问诊" data-provider="testData" finished-at="2016-12-20T18:17:26Z">
+        <test-method status="FAIL" signature="fundSignUp(java.util.Map)[pri:0, instance:test.apptest.fund.AppFundSignUp@406199]" name="fundSignUp" duration-ms="107343" started-at="2016-12-22T16:45:33Z" description="活动报名" data-provider="testData" finished-at="2016-12-22T16:47:20Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[{chuangyePassword=xlh123456, fundUserName=13774364001, apkPathOfChuangye=D:\autoApp\testAPK\Easyrongchuangye_pre_2_3_1.apk, changyeUserName=13000000001, uploadFilePath=E:\uploadFiles\autotest.pdf, fundPassword=xlh123456, version=v2.3, interviewProject=谷泉橡木卡狠狠哭拉萨, interviewComments=app自动化测试用评论123, Result=YYF TEST}]]>
+                <![CDATA[{fundPassword=xlh123456, backPassword=xlh123456, apkPathOfFund=D:\autoApp\testAPK\EasyrongFund_pre_2_2_1.apk, filePath=D:\autotest.pdf, changyeUserName=18200000099, backUserName=zdhcs, fundUserName=18220000000, comments=app自动化测试用评论123，有长度要求超过20个字, activity=自动化测试活动-长期, chuangyePassword=xlh123456, version=v2.3}]]>
               </value>
             </param>
           </params>
+          <exception class="org.openqa.selenium.TimeoutException">
+            <message>
+              <![CDATA[Timed out after 60 seconds waiting for visibility of element located by By.id: mine_user_name
+Build info: version: '2.44.0', revision: '76d78cf', time: '2014-10-23 20:03:00'
+System info: host: 'ALLen-PC', ip: '172.16.22.117', os.name: 'Windows Vista', os.arch: 'x86', os.version: '6.1', java.version: '1.6.0_10-rc2'
+Session ID: f9c76bf8-f65f-41b8-a3b6-19513a203bcc
+Driver info: io.appium.java_client.AppiumDriver
+Capabilities [{platform=LINUX, app=D:\autoApp\testAPK\EasyrongFund_pre_2_2_1.apk, javascriptEnabled=true, appActivity=.activities.EasyrongFundMainActivity, browserName=, networkConnectionEnabled=true, noSign=true, desired={platformVersion=4.4, app=D:\autoApp\testAPK\EasyrongFund_pre_2_2_1.apk, platformName=Android, deviceName=Android Emulator, browserName=, appActivity=.activities.EasyrongFundMainActivity, unicodeKeyboard=true, noSign=true, resetKeyboard=true, appPackage=com.easyrongfund, noReset=true}, locationContextEnabled=false, appPackage=com.easyrongfund, noReset=true, platformVersion=4.4.2, databaseEnabled=false, platformName=Android, deviceName=emulator-5554, webStorageEnabled=false, unicodeKeyboard=true, resetKeyboard=true, warnings={}, takesScreenshot=true}]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.TimeoutException: Timed out after 60 seconds waiting for visibility of element located by By.id: mine_user_name
+Build info: version: '2.44.0', revision: '76d78cf', time: '2014-10-23 20:03:00'
+System info: host: 'ALLen-PC', ip: '172.16.22.117', os.name: 'Windows Vista', os.arch: 'x86', os.version: '6.1', java.version: '1.6.0_10-rc2'
+Session ID: f9c76bf8-f65f-41b8-a3b6-19513a203bcc
+Driver info: io.appium.java_client.AppiumDriver
+Capabilities [{platform=LINUX, app=D:\autoApp\testAPK\EasyrongFund_pre_2_2_1.apk, javascriptEnabled=true, appActivity=.activities.EasyrongFundMainActivity, browserName=, networkConnectionEnabled=true, noSign=true, desired={platformVersion=4.4, app=D:\autoApp\testAPK\EasyrongFund_pre_2_2_1.apk, platformName=Android, deviceName=Android Emulator, browserName=, appActivity=.activities.EasyrongFundMainActivity, unicodeKeyboard=true, noSign=true, resetKeyboard=true, appPackage=com.easyrongfund, noReset=true}, locationContextEnabled=false, appPackage=com.easyrongfund, noReset=true, platformVersion=4.4.2, databaseEnabled=false, platformName=Android, deviceName=emulator-5554, webStorageEnabled=false, unicodeKeyboard=true, resetKeyboard=true, warnings={}, takesScreenshot=true}]
+	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:79)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:228)
+	at service.impl.AppCommonServiceImpl.loginForApp(AppCommonServiceImpl.java:34)
+	at test.apptest.fund.AppFundSignUp.fundSignUp(AppFundSignUp.java:64)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:80)
+	at org.testng.internal.InvokeMethodRunnable.runOne(InvokeMethodRunnable.java:46)
+	at org.testng.internal.InvokeMethodRunnable.run(InvokeMethodRunnable.java:37)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Unknown Source)
+	at java.util.concurrent.FutureTask$Sync.innerRun(Unknown Source)
+	at java.util.concurrent.FutureTask.run(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.runTask(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+Caused by: org.openqa.selenium.NoSuchElementException: An element could not be located on the page using the given search parameters. (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 10.46 seconds
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '2.44.0', revision: '76d78cf', time: '2014-10-23 20:03:00'
+System info: host: 'ALLen-PC', ip: '172.16.22.117', os.name: 'Windows Vista', os.arch: 'x86', os.version: '6.1', java.version: '1.6.0_10-rc2'
+Session ID: f9c76bf8-f65f-41b8-a3b6-19513a203bcc
+Driver info: io.appium.java_client.AppiumDriver
+Capabilities [{platform=LINUX, app=D:\autoApp\testAPK\EasyrongFund_pre_2_2_1.apk, javascriptEnabled=true, appActivity=.activities.EasyrongFundMainActivity, browserName=, networkConnectionEnabled=true, noSign=true, desired={platformVersion=4.4, app=D:\autoApp\testAPK\EasyrongFund_pre_2_2_1.apk, platformName=Android, deviceName=Android Emulator, browserName=, appActivity=.activities.EasyrongFundMainActivity, unicodeKeyboard=true, noSign=true, resetKeyboard=true, appPackage=com.easyrongfund, noReset=true}, locationContextEnabled=false, appPackage=com.easyrongfund, noReset=true, platformVersion=4.4.2, databaseEnabled=false, platformName=Android, deviceName=emulator-5554, webStorageEnabled=false, unicodeKeyboard=true, resetKeyboard=true, warnings={}, takesScreenshot=true}]
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
+	at java.lang.reflect.Constructor.newInstance(Unknown Source)
+	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:204)
+	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:156)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:599)
+	at io.appium.java_client.AppiumDriver.execute(AppiumDriver.java:81)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:352)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementById(RemoteWebDriver.java:393)
+	at org.openqa.selenium.By$ById.findElement(By.java:214)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:344)
+	at org.openqa.selenium.support.ui.ExpectedConditions.findElement(ExpectedConditions.java:730)
+	at org.openqa.selenium.support.ui.ExpectedConditions.access$0(ExpectedConditions.java:728)
+	at org.openqa.selenium.support.ui.ExpectedConditions$4.apply(ExpectedConditions.java:130)
+	at org.openqa.selenium.support.ui.ExpectedConditions$4.apply(ExpectedConditions.java:1)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:208)
+	... 15 more
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.TimeoutException -->
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- appCommonSpeedInquiry -->
-        <test-method status="PASS" signature="springTestContextAfterTestMethod(java.lang.reflect.Method)[pri:0, instance:test.apptest.common.AppCommonSpeedInquiry@76a3e297]" name="springTestContextAfterTestMethod" is-config="true" duration-ms="1" started-at="2016-12-20T18:17:26Z" finished-at="2016-12-20T18:17:26Z">
+        </test-method> <!-- fundSignUp -->
+        <test-method status="PASS" signature="springTestContextAfterTestMethod(java.lang.reflect.Method)[pri:0, instance:test.apptest.fund.AppFundSignUp@406199]" name="springTestContextAfterTestMethod" is-config="true" duration-ms="1" started-at="2016-12-22T16:47:20Z" finished-at="2016-12-22T16:47:20Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[public void test.apptest.common.AppCommonSpeedInquiry.appCommonSpeedInquiry(java.util.Map) throws java.lang.Exception]]>
+                <![CDATA[public void test.apptest.fund.AppFundSignUp.fundSignUp(java.util.Map) throws java.lang.Exception]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- springTestContextAfterTestMethod -->
-        <test-method status="PASS" signature="afterClass()[pri:0, instance:test.apptest.common.AppCommonSpeedInquiry@76a3e297]" name="afterClass" is-config="true" duration-ms="1230" started-at="2016-12-20T18:17:26Z" finished-at="2016-12-20T18:17:27Z">
+        <test-method status="PASS" signature="afterClass()[pri:0, instance:test.apptest.fund.AppFundSignUp@406199]" name="afterClass" is-config="true" duration-ms="0" started-at="2016-12-22T16:47:20Z" finished-at="2016-12-22T16:47:20Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterClass -->
-      </class> <!-- test.apptest.common.AppCommonSpeedInquiry -->
+      </class> <!-- test.apptest.fund.AppFundSignUp -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>
