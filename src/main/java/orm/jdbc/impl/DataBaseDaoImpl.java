@@ -25,6 +25,8 @@ public class DataBaseDaoImpl implements DataBaseDao{
 			
 			mysql_general = null;
 			mysql_general = new MySql(mysqlPreUrl, mysqlPreUser, mysqlPrePwd);
+			
+			Reporter.log("mysql预发环境数据库初始化成功！", true);
 
 			return mysql_general;
 		}

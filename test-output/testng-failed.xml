@@ -3,31 +3,16 @@
 <suite name="Failed suite [Default suite]">
   <test name="Default test(failed)">
     <classes>
-<<<<<<< HEAD
-      <class name="test.apptest.chuangye.AppChuangyeReleaseLoan">
-=======
-      <class name="test.apptest.common.AppCommonSpeedInquiry">
->>>>>>> branch 'master' of http://172.16.11.124/luyi/appAuto.git
+      <class name="test.apptest.chuangye.AppChuangyeEnterIncubator">
         <methods>
-<<<<<<< HEAD
-          <include name="afterClass"/>
-=======
-          <include name="appCommonSpeedInquiry" invocation-numbers="0"/>
-          <include name="afterClass"/>
-          <include name="springTestContextPrepareTestInstance"/>
->>>>>>> branch 'master' of http://172.16.11.124/luyi/appAuto.git
+          <include name="beforeClass"/>
           <include name="springTestContextBeforeTestMethod"/>
-          <include name="chuangyeReleaseLoan" invocation-numbers="0"/>
           <include name="springTestContextPrepareTestInstance"/>
-          <include name="beforeClass"/>
           <include name="springTestContextAfterTestMethod"/>
-          <include name="beforeClass"/>
+          <include name="chuangyeEnterIncubator" invocation-numbers="0"/>
+          <include name="afterClass"/>
         </methods>
-<<<<<<< HEAD
-      </class> <!-- test.apptest.chuangye.AppChuangyeReleaseLoan -->
-=======
-      </class> <!-- test.apptest.common.AppCommonSpeedInquiry -->
->>>>>>> branch 'master' of http://172.16.11.124/luyi/appAuto.git
+      </class> <!-- test.apptest.chuangye.AppChuangyeEnterIncubator -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
