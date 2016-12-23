@@ -58,8 +58,8 @@ public class AppFundRequirement extends BaseTest {
 		driver = Initial.appiumAndroidFundSetUp(driver,apkPathOfFund);
 		driver.manage().timeouts().implicitlyWait(30,TimeUnit.SECONDS);
 		//退出登录
-		appCommonService.logoutForApp(driver);
-		appCommonService.loginForApp(driver, datadriven.get("fundUserName"), datadriven.get("fundPassword"));
+		driver = appCommonService.logoutForApp(driver);
+		driver = appCommonService.loginForApp(driver, datadriven.get("fundUserName"), datadriven.get("fundPassword"));
 
 		
 		// 进入我有我的需求菜单,填写信息
@@ -82,7 +82,7 @@ public class AppFundRequirement extends BaseTest {
 		new WebDriverWait(driver, 30).until(ExpectedConditions.elementToBeClickable(By.name("投资地区"))).click();
 		new WebDriverWait(driver, 30).until(ExpectedConditions.elementToBeClickable(By.name("湖南"))).click();
 		new WebDriverWait(driver, 30).until(ExpectedConditions.elementToBeClickable(By.name("确定"))).click();
-		appCommonService.swipeToDown(driver);
+		driver = appCommonService.swipeToDown(driver);
 		new WebDriverWait(driver, 30).until(ExpectedConditions.elementToBeClickable(By.name("发布"))).click();
 		WebElement SubmitSuccess =new WebDriverWait(driver, 60).until(ExpectedConditions.elementToBeClickable(By.name("提交成功")));
 		
@@ -191,7 +191,7 @@ public class AppFundRequirement extends BaseTest {
 
 	public void oderConfrim() throws Exception {
 		
-  webDriver = Initial.browserOfChromeSetUp(webDriver);
+		webDriver = Initial.browserOfChromeSetUp(webDriver);
 		
 //		System.setProperty("webdriver.chrome.driver", "C:\\Program Files (x86)\\Google\\Chrome\\Application\\chromedriver.exe");
 //		WebDriver webDriver = new ChromeDriver();
