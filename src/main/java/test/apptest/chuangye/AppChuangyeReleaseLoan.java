@@ -10,15 +10,18 @@ import java.util.Map;
 import java.util.concurrent.TimeUnit;
 
 
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.testng.Assert;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.AfterClass;
+
 
 
 
@@ -63,10 +66,10 @@ public class AppChuangyeReleaseLoan extends BaseTest {
 		logger.info("启动创业者app");
 		driver = Initial.appiumAndroidChuangyeSetUp(driver,apkPathOfChuangye);
 		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
-		appCommonService.logoutForApp(driver);
+//		driver=appCommonService.logoutForApp(driver);
 
 		logger.info("登录创业者app");
-		driver = appCommonService.loginForApp(driver,datadriven.get("changyeUserName"),datadriven.get("chuangyePassword"));
+//		driver = appCommonService.loginForApp(driver,datadriven.get("changyeUserName"),datadriven.get("chuangyePassword"));
 		
 		//点击进入发布贷款页
 		logger.info("一融-进入发布贷款页");
@@ -75,8 +78,8 @@ public class AppChuangyeReleaseLoan extends BaseTest {
 	    new WebDriverWait(driver,60).until(ExpectedConditions.elementToBeClickable(By.name("发布贷款项目"))).click();
 		
 		logger.info("填写并提交申请");
-		new WebDriverWait(driver,60).until(ExpectedConditions.visibilityOfElementLocated(By.name("请输入金额"))).sendKeys("500");
-		driver.findElement(By.name("请输入1-120")).sendKeys("12");	
+//		new WebDriverWait(driver,60).until(ExpectedConditions.visibilityOfElementLocated(By.name("请输入金额"))).sendKeys("500");
+//		driver.findElement(By.name("请输入1-120")).sendKeys("12");	
 		driver.findElement(By.name("请选择")).click();
 		driver.findElement(By.name("原材料采购")).click();
 		driver.findElement(By.name("请选择")).click();
@@ -86,12 +89,12 @@ public class AppChuangyeReleaseLoan extends BaseTest {
 		driver.findElement(By.name("请输入")).sendKeys("XLH");
 		driver.findElement(By.name("请选择")).click();
 		driver.findElement(By.name("国有")).click();
-		appCommonService.swipeToDown(driver);
+		driver=appCommonService.swipeToDown(driver);
 		driver.findElement(By.name("请输入")).sendKeys("XLH");
 		driver.findElement(By.name("请选择")).click();
 		dateswipeleft(driver);
 		Thread.sleep(1500);
-		appCommonService.swipeToDown(driver);
+		driver=appCommonService.swipeToDown(driver);
 		Thread.sleep(1500);
 		dateswiperight(driver);
 		Thread.sleep(1500);
@@ -99,7 +102,7 @@ public class AppChuangyeReleaseLoan extends BaseTest {
 		driver.findElement(By.name("请选择")).click();
 		swipeleft(driver);
 		Thread.sleep(1500);
-		appCommonService.swipeToDown(driver);
+		driver=appCommonService.swipeToDown(driver);
 		Thread.sleep(1500);		
 		swiperight(driver);
 		Thread.sleep(1500);
@@ -109,6 +112,7 @@ public class AppChuangyeReleaseLoan extends BaseTest {
 		List<WebElement> list=driver.findElements(By.id("message_tv"));
 		WebElement target = list.get(2);
 		String area = target.getText();
+		System.out.println(area);
 		//截取市级名称
 		String province = area.substring(3, 5);
 		System.out.print(province+"房地产行业项目");
@@ -118,7 +122,7 @@ public class AppChuangyeReleaseLoan extends BaseTest {
 		driver.findElement(By.name("请输入")).sendKeys("50");
 		driver.findElement(By.name("请输入")).sendKeys("50");
 		driver.findElement(By.name("请输入")).sendKeys("50");
-		appCommonService.swipeToDown(driver);
+		driver=appCommonService.swipeToDown(driver);
 		driver.findElement(By.name("请输入")).sendKeys("50");
 		driver.findElement(By.name("请输入姓名")).sendKeys("ceshi");
 		driver.findElement(By.name("请输入手机号")).sendKeys("13900000000");
@@ -138,7 +142,7 @@ public class AppChuangyeReleaseLoan extends BaseTest {
 			new WebDriverWait(driver,40).until(ExpectedConditions.visibilityOfElementLocated(By.name(province+"房地产行业项目 XD16"+month+day+"00")));
 			logger.info("校验成功，返回并退出");
 			new WebDriverWait(driver,60).until(ExpectedConditions.elementToBeClickable(By.id("title_back_img"))).click();
-			appCommonService.logoutForApp(driver);
+			driver=appCommonService.logoutForApp(driver);
 			driver.quit();
 			logger.info("APP "+datadriven.get("version")+"---发布贷款项目测试结束---");
 			
@@ -147,6 +151,7 @@ public class AppChuangyeReleaseLoan extends BaseTest {
 			
 			logger.info("校验失败");
 			driver.quit();
+			Assert.assertTrue(false);
 			e.printStackTrace();
 			
 		}
@@ -194,6 +199,7 @@ public class AppChuangyeReleaseLoan extends BaseTest {
 	
 	@AfterClass
 	public void afterClass() {
+		driver.quit();
 	}
 
 }

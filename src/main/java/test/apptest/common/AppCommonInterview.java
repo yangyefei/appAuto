@@ -167,7 +167,7 @@ public class AppCommonInterview extends BaseTest {
 
 	@AfterClass
 	public void afterClass() {
-
+		driver.quit();
 	}
 
 }

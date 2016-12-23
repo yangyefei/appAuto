@@ -270,7 +270,8 @@ public class AppCommonInquiry extends BaseTest {
 
 	@AfterClass
 	public void afterClass() {
-
+		driver.quit();
+		webDriver.quit();
 	}
 
 }
