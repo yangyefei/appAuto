@@ -58,6 +58,9 @@ function toggleAllBoxes() {
 <td>Tests passed/Failed/Skipped:</td><td>0/1/0</td>
 </tr><tr>
 <<<<<<< HEAD
+<td>Started on:</td><td>Fri Dec 23 17:15:45 CST 2016</td>
+=======
+<<<<<<< HEAD
 <td>Started on:</td><td>Thu Dec 22 16:45:32 CST 2016</td>
 </tr>
 <tr><td>Total time:</td><td>108 seconds (108255 ms)</td>
@@ -181,8 +184,9 @@ Capabilities [{platform=LINUX, app=D:\autoApp\testAPK\EasyrongFund_pre_2_2_1.apk
 <td>test.apptest.fund.AppFundSignUp@406199</td></tr>
 =======
 <td>Started on:</td><td>Thu Dec 22 15:52:24 CST 2016</td>
+>>>>>>> branch 'master' of http://172.16.11.124/luyi/appAuto.git
 </tr>
-<tr><td>Total time:</td><td>105 seconds (105709 ms)</td>
+<tr><td>Total time:</td><td>47 seconds (47618 ms)</td>
 </tr><tr>
 <td>Included groups:</td><td></td>
 </tr><tr>
@@ -198,17 +202,28 @@ Capabilities [{platform=LINUX, app=D:\autoApp\testAPK\EasyrongFund_pre_2_2_1.apk
 <td><b>Instance</b></td>
 </tr>
 <tr>
-<td title='test.apptest.fund.AppFundSignUp.fundSignUp()'><b>fundSignUp</b><br>Test class: test.apptest.fund.AppFundSignUp<br>Test method: 活动报名<br>Parameters: {fundPassword=a123456, backPassword=xlh123456, apkPathOfFund=D:\autoApp\testAPK\EasyrongFund_pre_2_2_1.apk, filePath=D:\autotest.pdf, backUserName=zdhcs, fundUserName=13900000001, comments=app自动化测试用评论123，有长度要求超过20个字, activity=自动化测试活动-长期, version=v2.3}</td>
-<td><div><pre>org.openqa.selenium.TimeoutException: Timed out after 60 seconds waiting for visibility of element located by By.id: mine_user_name
+<td title='test.apptest.chuangye.AppChuangyeReleaseLoan.chuangyeReleaseLoan()'><b>chuangyeReleaseLoan</b><br>Test class: test.apptest.chuangye.AppChuangyeReleaseLoan<br>Test method: 发布贷款<br>Parameters: {apkPathOfChuangye=D:\autoApp\testAPK\Easyrongchuangye_pre_2_3_1.apk, fundPassword=xlh123456, backPassword=xlh123456, incubator=注册test(上海w)+, filePath=D:\autotest.pdf, changyeUserName=15000000002, backUserName=zdhcs, fundUserName=lkj123, comments=app自动化测试用评论123，有长度要求超过20个字, chuangyePassword=xlh123456, version=v2.3}</td>
+<td><div><pre>org.openqa.selenium.NoSuchElementException: An element could not be located on the page using the given search parameters. (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 10.38 seconds
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
 Build info: version: &apos;2.44.0&apos;, revision: &apos;76d78cf&apos;, time: &apos;2014-10-23 20:03:00&apos;
 System info: host: &apos;xlh-028&apos;, ip: &apos;172.16.22.236&apos;, os.name: &apos;Windows 8&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;6.2&apos;, java.version: &apos;1.6.0_43&apos;
-Session ID: c6cbb30e-1eff-4424-b405-9c8ce4e4fa6e
+Session ID: a4491aaf-abb3-4e61-ad96-9afb60ffe16a
 Driver info: io.appium.java_client.AppiumDriver
-Capabilities [{platform=LINUX, app=D:\autoApp\testAPK\EasyrongFund_pre_2_2_1.apk, javascriptEnabled=true, appActivity=.activities.EasyrongFundMainActivity, browserName=, networkConnectionEnabled=true, noSign=true, desired={platformVersion=4.4, app=D:\autoApp\testAPK\EasyrongFund_pre_2_2_1.apk, platformName=Android, deviceName=Android Emulator, browserName=, appActivity=.activities.EasyrongFundMainActivity, unicodeKeyboard=true, noSign=true, resetKeyboard=true, appPackage=com.easyrongfund, noReset=true}, locationContextEnabled=false, appPackage=com.easyrongfund, noReset=true, platformVersion=4.4.2, databaseEnabled=false, platformName=Android, deviceName=emulator-5554, webStorageEnabled=false, unicodeKeyboard=true, resetKeyboard=true, warnings={}, takesScreenshot=true}]
-	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:79)
-	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:228)
-	at service.impl.AppCommonServiceImpl.loginForApp(AppCommonServiceImpl.java:34)
-	at test.apptest.fund.AppFundSignUp.fundSignUp(AppFundSignUp.java:69)
+Capabilities [{platform=LINUX, app=D:\autoApp\testAPK\Easyrongchuangye_pre_2_3_1.apk, javascriptEnabled=true, appActivity=.activities.EasyrongChuangyeActivity, browserName=, networkConnectionEnabled=true, noSign=true, desired={platformVersion=4.4, app=D:\autoApp\testAPK\Easyrongchuangye_pre_2_3_1.apk, platformName=Android, deviceName=Android Emulator, browserName=, appActivity=.activities.EasyrongChuangyeActivity, unicodeKeyboard=true, noSign=true, resetKeyboard=true, appPackage=com.easyrongchuangye, noReset=true}, locationContextEnabled=false, appPackage=com.easyrongchuangye, noReset=true, platformVersion=4.4.2, databaseEnabled=false, platformName=Android, deviceName=emulator-5554, webStorageEnabled=false, unicodeKeyboard=true, resetKeyboard=true, warnings={}, takesScreenshot=true}]
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
+	at java.lang.reflect.Constructor.newInstance(Unknown Source)
+	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:204)
+	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:156)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:599)
+	at io.appium.java_client.AppiumDriver.execute(AppiumDriver.java:81)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:352)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementByName(RemoteWebDriver.java:425)
+	at org.openqa.selenium.By$ByName.findElement(By.java:299)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:344)
+	at test.apptest.chuangye.AppChuangyeReleaseLoan.chuangyeReleaseLoan(AppChuangyeReleaseLoan.java:91)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
@@ -222,43 +237,28 @@ Capabilities [{platform=LINUX, app=D:\autoApp\testAPK\EasyrongFund_pre_2_2_1.apk
 	at java.util.concurrent.ThreadPoolExecutor$Worker.runTask(Unknown Source)
 	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
 	at java.lang.Thread.run(Unknown Source)
-Caused by: org.openqa.selenium.NoSuchElementException: An element could not be located on the page using the given search parameters. (WARNING: The server did not provide any stacktrace information)
-Command duration or timeout: 10.21 seconds
-For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
-Build info: version: &apos;2.44.0&apos;, revision: &apos;76d78cf&apos;, time: &apos;2014-10-23 20:03:00&apos;
-System info: host: &apos;xlh-028&apos;, ip: &apos;172.16.22.236&apos;, os.name: &apos;Windows 8&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;6.2&apos;, java.version: &apos;1.6.0_43&apos;
-Session ID: c6cbb30e-1eff-4424-b405-9c8ce4e4fa6e
-Driver info: io.appium.java_client.AppiumDriver
-Capabilities [{platform=LINUX, app=D:\autoApp\testAPK\EasyrongFund_pre_2_2_1.apk, javascriptEnabled=true, appActivity=.activities.EasyrongFundMainActivity, browserName=, networkConnectionEnabled=true, noSign=true, desired={platformVersion=4.4, app=D:\autoApp\testAPK\EasyrongFund_pre_2_2_1.apk, platformName=Android, deviceName=Android Emulator, browserName=, appActivity=.activities.EasyrongFundMainActivity, unicodeKeyboard=true, noSign=true, resetKeyboard=true, appPackage=com.easyrongfund, noReset=true}, locationContextEnabled=false, appPackage=com.easyrongfund, noReset=true, platformVersion=4.4.2, databaseEnabled=false, platformName=Android, deviceName=emulator-5554, webStorageEnabled=false, unicodeKeyboard=true, resetKeyboard=true, warnings={}, takesScreenshot=true}]
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
-	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
-	at java.lang.reflect.Constructor.newInstance(Unknown Source)
-	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:204)
-	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:156)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:599)
-	at io.appium.java_client.AppiumDriver.execute(AppiumDriver.java:81)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:352)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElementById(RemoteWebDriver.java:393)
-	at org.openqa.selenium.By$ById.findElement(By.java:214)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:344)
-	at org.openqa.selenium.support.ui.ExpectedConditions.findElement(ExpectedConditions.java:730)
-	at org.openqa.selenium.support.ui.ExpectedConditions.access$0(ExpectedConditions.java:728)
-	at org.openqa.selenium.support.ui.ExpectedConditions$4.apply(ExpectedConditions.java:130)
-	at org.openqa.selenium.support.ui.ExpectedConditions$4.apply(ExpectedConditions.java:1)
-	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:208)
-	... 15 more
 </pre></div><a href='#' onClick='toggleBox("stack-trace1144704103", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace1144704103'><pre>org.openqa.selenium.TimeoutException: Timed out after 60 seconds waiting for visibility of element located by By.id: mine_user_name
+<div class='stack-trace' id='stack-trace1144704103'><pre>org.openqa.selenium.NoSuchElementException: An element could not be located on the page using the given search parameters. (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 10.38 seconds
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
 Build info: version: &apos;2.44.0&apos;, revision: &apos;76d78cf&apos;, time: &apos;2014-10-23 20:03:00&apos;
 System info: host: &apos;xlh-028&apos;, ip: &apos;172.16.22.236&apos;, os.name: &apos;Windows 8&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;6.2&apos;, java.version: &apos;1.6.0_43&apos;
-Session ID: c6cbb30e-1eff-4424-b405-9c8ce4e4fa6e
+Session ID: a4491aaf-abb3-4e61-ad96-9afb60ffe16a
 Driver info: io.appium.java_client.AppiumDriver
-Capabilities [{platform=LINUX, app=D:\autoApp\testAPK\EasyrongFund_pre_2_2_1.apk, javascriptEnabled=true, appActivity=.activities.EasyrongFundMainActivity, browserName=, networkConnectionEnabled=true, noSign=true, desired={platformVersion=4.4, app=D:\autoApp\testAPK\EasyrongFund_pre_2_2_1.apk, platformName=Android, deviceName=Android Emulator, browserName=, appActivity=.activities.EasyrongFundMainActivity, unicodeKeyboard=true, noSign=true, resetKeyboard=true, appPackage=com.easyrongfund, noReset=true}, locationContextEnabled=false, appPackage=com.easyrongfund, noReset=true, platformVersion=4.4.2, databaseEnabled=false, platformName=Android, deviceName=emulator-5554, webStorageEnabled=false, unicodeKeyboard=true, resetKeyboard=true, warnings={}, takesScreenshot=true}]
-	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:79)
-	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:228)
-	at service.impl.AppCommonServiceImpl.loginForApp(AppCommonServiceImpl.java:34)
-	at test.apptest.fund.AppFundSignUp.fundSignUp(AppFundSignUp.java:69)
+Capabilities [{platform=LINUX, app=D:\autoApp\testAPK\Easyrongchuangye_pre_2_3_1.apk, javascriptEnabled=true, appActivity=.activities.EasyrongChuangyeActivity, browserName=, networkConnectionEnabled=true, noSign=true, desired={platformVersion=4.4, app=D:\autoApp\testAPK\Easyrongchuangye_pre_2_3_1.apk, platformName=Android, deviceName=Android Emulator, browserName=, appActivity=.activities.EasyrongChuangyeActivity, unicodeKeyboard=true, noSign=true, resetKeyboard=true, appPackage=com.easyrongchuangye, noReset=true}, locationContextEnabled=false, appPackage=com.easyrongchuangye, noReset=true, platformVersion=4.4.2, databaseEnabled=false, platformName=Android, deviceName=emulator-5554, webStorageEnabled=false, unicodeKeyboard=true, resetKeyboard=true, warnings={}, takesScreenshot=true}]
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
+	at java.lang.reflect.Constructor.newInstance(Unknown Source)
+	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:204)
+	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:156)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:599)
+	at io.appium.java_client.AppiumDriver.execute(AppiumDriver.java:81)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:352)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementByName(RemoteWebDriver.java:425)
+	at org.openqa.selenium.By$ByName.findElement(By.java:299)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:344)
+	at test.apptest.chuangye.AppChuangyeReleaseLoan.chuangyeReleaseLoan(AppChuangyeReleaseLoan.java:91)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
@@ -272,35 +272,14 @@ Capabilities [{platform=LINUX, app=D:\autoApp\testAPK\EasyrongFund_pre_2_2_1.apk
 	at java.util.concurrent.ThreadPoolExecutor$Worker.runTask(Unknown Source)
 	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
 	at java.lang.Thread.run(Unknown Source)
-Caused by: org.openqa.selenium.NoSuchElementException: An element could not be located on the page using the given search parameters. (WARNING: The server did not provide any stacktrace information)
-Command duration or timeout: 10.21 seconds
-For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
-Build info: version: &apos;2.44.0&apos;, revision: &apos;76d78cf&apos;, time: &apos;2014-10-23 20:03:00&apos;
-System info: host: &apos;xlh-028&apos;, ip: &apos;172.16.22.236&apos;, os.name: &apos;Windows 8&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;6.2&apos;, java.version: &apos;1.6.0_43&apos;
-Session ID: c6cbb30e-1eff-4424-b405-9c8ce4e4fa6e
-Driver info: io.appium.java_client.AppiumDriver
-Capabilities [{platform=LINUX, app=D:\autoApp\testAPK\EasyrongFund_pre_2_2_1.apk, javascriptEnabled=true, appActivity=.activities.EasyrongFundMainActivity, browserName=, networkConnectionEnabled=true, noSign=true, desired={platformVersion=4.4, app=D:\autoApp\testAPK\EasyrongFund_pre_2_2_1.apk, platformName=Android, deviceName=Android Emulator, browserName=, appActivity=.activities.EasyrongFundMainActivity, unicodeKeyboard=true, noSign=true, resetKeyboard=true, appPackage=com.easyrongfund, noReset=true}, locationContextEnabled=false, appPackage=com.easyrongfund, noReset=true, platformVersion=4.4.2, databaseEnabled=false, platformName=Android, deviceName=emulator-5554, webStorageEnabled=false, unicodeKeyboard=true, resetKeyboard=true, warnings={}, takesScreenshot=true}]
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
-	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
-	at java.lang.reflect.Constructor.newInstance(Unknown Source)
-	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:204)
-	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:156)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:599)
-	at io.appium.java_client.AppiumDriver.execute(AppiumDriver.java:81)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:352)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElementById(RemoteWebDriver.java:393)
-	at org.openqa.selenium.By$ById.findElement(By.java:214)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:344)
-	at org.openqa.selenium.support.ui.ExpectedConditions.findElement(ExpectedConditions.java:730)
-	at org.openqa.selenium.support.ui.ExpectedConditions.access$0(ExpectedConditions.java:728)
-	at org.openqa.selenium.support.ui.ExpectedConditions$4.apply(ExpectedConditions.java:130)
-	at org.openqa.selenium.support.ui.ExpectedConditions$4.apply(ExpectedConditions.java:1)
-	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:208)
-	... 15 more
 </pre></div></td>
+<<<<<<< HEAD
+<td>45</td>
+<td>test.apptest.chuangye.AppChuangyeReleaseLoan@3bc0f2e5</td></tr>
+=======
 <td>103</td>
 <td>test.apptest.fund.AppFundSignUp@77d2b01b</td></tr>
+>>>>>>> branch 'master' of http://172.16.11.124/luyi/appAuto.git
 >>>>>>> branch 'master' of http://172.16.11.124/luyi/appAuto.git
 </table><p>
 </body>

@@ -63,7 +63,7 @@ public class AppFundSignUp extends BaseTest {
 
 		driver = Initial.appiumAndroidFundSetUp(driver, apkPathOfFund);
 		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
-		appCommonService.logoutForApp(driver);
+		driver=appCommonService.logoutForApp(driver);
 
 		logger.info("登录投资者app");
 		driver = appCommonService.loginForApp(driver,datadriven.get("fundUserName"),datadriven.get("fundPassword"));
@@ -112,7 +112,7 @@ public class AppFundSignUp extends BaseTest {
 				logger.info("校验成功");
 				logger.info("退出当前账号");
 				new WebDriverWait(driver,60).until(ExpectedConditions.elementToBeClickable(By.id("title_back_img"))).click();
-				appCommonService.logoutForApp(driver);
+				driver=appCommonService.logoutForApp(driver);
 				driver.quit();
 				logger.info("APP "+datadriven.get("version")+"---报名流程测试结束---");			
 			} catch (Exception e) {

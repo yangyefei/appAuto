@@ -22,10 +22,12 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.testng.Assert;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.AfterClass;
+
 
 
 
@@ -76,7 +78,7 @@ public class AppChuangyeApplyLoan extends BaseTest {
 		logger.info("启动创业者app");
 		driver = Initial.appiumAndroidChuangyeSetUp(driver, apkPathOfChuangye);
 		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
-		appCommonService.logoutForApp(driver);
+		driver=appCommonService.logoutForApp(driver);
 
 		logger.info("登录创业者app");
 		driver = appCommonService.loginForApp(driver,datadriven.get("changyeUserName"),datadriven.get("chuangyePassword"));
@@ -103,11 +105,11 @@ public class AppChuangyeApplyLoan extends BaseTest {
 		target.click();
 		driver.findElement(By.name("请输入")).sendKeys("10");
 		driver.findElement(By.name("请输入")).sendKeys("XLH");
-		appCommonService.swipeToDown(driver);
+		driver=appCommonService.swipeToDown(driver);
 		driver.findElement(By.name("请选择")).click();
 		dateswipeleft(driver);
 		Thread.sleep(1500);
-		appCommonService.swipeToDown(driver);
+		driver=appCommonService.swipeToDown(driver);
 		Thread.sleep(1500);
 		dateswiperight(driver);
 		Thread.sleep(1500);
@@ -115,7 +117,7 @@ public class AppChuangyeApplyLoan extends BaseTest {
 		driver.findElement(By.name("请选择")).click();
 		swipeleft(driver);
 		Thread.sleep(1500);
-		appCommonService.swipeToDown(driver);
+		driver=appCommonService.swipeToDown(driver);
 		Thread.sleep(1500);		
 		swiperight(driver);
 		Thread.sleep(1500);
@@ -125,7 +127,7 @@ public class AppChuangyeApplyLoan extends BaseTest {
 		driver.findElement(By.name("请输入")).sendKeys("50");
 		driver.findElement(By.name("请输入")).sendKeys("50");
 		driver.findElement(By.name("请输入")).sendKeys("50");
-		appCommonService.swipeToDown(driver);
+		driver=appCommonService.swipeToDown(driver);
 		driver.findElement(By.name("请输入")).sendKeys("50");
 		driver.findElement(By.name("请输入姓名")).sendKeys("ceshi");
 		driver.findElement(By.name("请输入手机号")).sendKeys("13900000000");
@@ -144,10 +146,10 @@ public class AppChuangyeApplyLoan extends BaseTest {
 		try {
 			
 			new WebDriverWait(driver,40).until(ExpectedConditions.visibilityOfElementLocated(By.name(datadriven.get("loanProducts"))));
-			new WebDriverWait(driver,40).until(ExpectedConditions.visibilityOfElementLocated(By.name(time)));
+//			new WebDriverWait(driver,40).until(ExpectedConditions.visibilityOfElementLocated(By.name(time)));
 			logger.info("校验成功，返回并退出");	
 			new WebDriverWait(driver,60).until(ExpectedConditions.elementToBeClickable(By.id("title_back_img"))).click();
-			appCommonService.logoutForApp(driver);
+			driver=appCommonService.logoutForApp(driver);
 			driver.quit();
 			logger.info("APP "+datadriven.get("version")+"---申请贷款测试结束---");
 			
@@ -156,6 +158,7 @@ public class AppChuangyeApplyLoan extends BaseTest {
 			
 			logger.info("校验失败");
 			driver.quit();
+			Assert.assertTrue(false);
 			e.printStackTrace();
 			
 		}
@@ -203,6 +206,8 @@ public class AppChuangyeApplyLoan extends BaseTest {
 	
 	@AfterClass
 	public void afterClass() {
+		driver.quit();
+		
 	}
 
 }
