@@ -127,9 +127,10 @@ public class AppCommonInterview extends BaseTest {
 				
 		try {
 			//去投资者约谈成功页面检查
-			logger.info("进入投资者我的-我的约谈-已成功页面校验当天约谈订单是否存在");
+			logger.info("进入投资者我的-我的约谈-已成功页面校验当天约谈订单是否存在");			
+			String datString = Utils.getCurrentDate();
 			new WebDriverWait(driver,60).until(ExpectedConditions.elementToBeClickable(By.name("已成功"))).click();
-			new WebDriverWait(driver,60).until(ExpectedConditions.visibilityOfElementLocated(By.name(Utils.getCurrentDate())));//和当前日期比较，检查是否可以找到当天下的订单
+			new WebDriverWait(driver,60).until(ExpectedConditions.visibilityOfElementLocated(By.name(datString)));//和当前日期比较，检查是否可以找到当天下的订单
 			
 		} catch (Exception e) {//检查失败退出投资者app
 			// TODO Auto-generated catch block
@@ -168,6 +169,7 @@ public class AppCommonInterview extends BaseTest {
 	@AfterClass
 	public void afterClass() {
 		driver.quit();
+
 	}
 
 }
