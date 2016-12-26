@@ -58,7 +58,7 @@ public class AppChuangyeEnterIncubator extends BaseTest {
 		logger.info("启动创业者app");
 		driver = Initial.appiumAndroidChuangyeSetUp(driver,apkPathOfChuangye);
 		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
-		appCommonService.logoutForApp(driver);
+		driver=appCommonService.logoutForApp(driver);
 
 		logger.info("登录创业者app");
 		driver = appCommonService.loginForApp(driver,datadriven.get("changyeUserName"),datadriven.get("chuangyePassword"));
@@ -82,7 +82,7 @@ public class AppChuangyeEnterIncubator extends BaseTest {
 			driver.findElement(By.id("apply_company_name")).sendKeys("SHXLHEnterprise");
 			driver.findElement(By.id("apply_company_number")).sendKeys("1234567891234");	
 			driver.findElement(By.id("apply_company_contact")).sendKeys("ceshi");
-			driver.findElement(By.id("apply_company_mobile")).sendKeys("18200000099");
+			driver.findElement(By.id("apply_company_mobile")).sendKeys("15000000002");
 			driver.findElement(By.id("apply_company_email")).sendKeys("123@163.com");
 			driver.findElement(By.name("提交")).click();
 			Thread.sleep(5000);
@@ -94,6 +94,8 @@ public class AppChuangyeEnterIncubator extends BaseTest {
 			new WebDriverWait(driver,60).until(ExpectedConditions.elementToBeClickable(By.name("确定"))).click();
 			driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 			logger.info("入驻失败");	
+			driver.quit();
+			Assert.assertTrue(false);
 			e.printStackTrace();
 			
 		}
@@ -102,7 +104,7 @@ public class AppChuangyeEnterIncubator extends BaseTest {
 		new WebDriverWait(driver,60).until(ExpectedConditions.elementToBeClickable(By.id("title_back_img"))).click();
 		Thread.sleep(2000);
 		new WebDriverWait(driver,60).until(ExpectedConditions.elementToBeClickable(By.id("title_back_img"))).click();
-		appCommonService.logoutForApp(driver);
+		driver=appCommonService.logoutForApp(driver);
 		driver.quit();
 		
 		logger.info("校验是否入驻成功");
@@ -138,6 +140,8 @@ public class AppChuangyeEnterIncubator extends BaseTest {
 	
 	@AfterClass
 	public void afterClass() {
+		driver.quit();
+		
 	}
 
 }

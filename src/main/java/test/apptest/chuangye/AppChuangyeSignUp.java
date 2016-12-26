@@ -65,7 +65,7 @@ public class AppChuangyeSignUp extends BaseTest {
 
 		driver = Initial.appiumAndroidChuangyeSetUp(driver,apkPathOfChuangye);
 		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
-		appCommonService.logoutForApp(driver);
+		driver=appCommonService.logoutForApp(driver);
 
 		logger.info("登录创业者app");
 		driver = appCommonService.loginForApp(driver,datadriven.get("changyeUserName"),datadriven.get("chuangyePassword"));
@@ -114,7 +114,7 @@ public class AppChuangyeSignUp extends BaseTest {
 				logger.info("校验成功");
 				logger.info("退出当前账号");
 				new WebDriverWait(driver,60).until(ExpectedConditions.elementToBeClickable(By.id("title_back_img"))).click();
-				appCommonService.logoutForApp(driver);
+				driver=appCommonService.logoutForApp(driver);
 				driver.quit();
 				logger.info("APP "+datadriven.get("version")+"---报名流程测试结束---");			
 			} catch (Exception e) {

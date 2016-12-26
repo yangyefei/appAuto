@@ -23,10 +23,12 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.testng.Assert;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.AfterClass;
+
 
 
 
@@ -81,7 +83,7 @@ public class AppChuangyeBuyService extends BaseTest {
 		logger.info("启动创业者app");
 		driver = Initial.appiumAndroidChuangyeSetUp(driver, apkPathOfChuangye);
 		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
-		appCommonService.logoutForApp(driver);
+		driver=appCommonService.logoutForApp(driver);
 
 		logger.info("登录创业者app");
 		driver = appCommonService.loginForApp(driver,datadriven.get("changyeUserName"),datadriven.get("chuangyePassword"));
@@ -99,10 +101,9 @@ public class AppChuangyeBuyService extends BaseTest {
 		driver.findElement(By.name("确定")).click();
 		driver.findElement(By.name("请选择")).click();
 		driver.findElement(By.name("打发第三方第三方")).click();
-		appCommonService.swipeToDown(driver);
 		driver.findElement(By.name("立即购买")).click();
 		Thread.sleep(3000);
-		appCommonService.swipeToDown(driver);
+		driver=appCommonService.swipeToDown(driver);
 		new WebDriverWait(driver,60).until(ExpectedConditions.elementToBeClickable(By.name("同意服务协议并下单"))).click();
 		//获取下单时间
 		SimpleDateFormat date = new SimpleDateFormat("MM-dd HH:mm");
@@ -110,13 +111,13 @@ public class AppChuangyeBuyService extends BaseTest {
 		System.out.println(time);
 		
 		logger.info("去支付");
-		appCommonService.alipay(driver);
+		driver=appCommonService.alipay(driver);
 		new WebDriverWait(driver,60).until(ExpectedConditions.elementToBeClickable(By.name("返回首页 Link"))).click();
 		driver.quit();
 		
 		logger.info("启动并登录后台系统");
-	    webDriver = Initial.browserOfFirefoxSetUp(webDriver);
-//	    webDriver = Initial.browserOfChromeSetUp(webDriver);
+//	    webDriver = Initial.browserOfFirefoxSetUp(webDriver);
+	    webDriver = Initial.browserOfChromeSetUp(webDriver);
 	    webDriver.manage().window().maximize();
 	    webDriver.get(UrlsOfPre.BackGroundSystem.getUrl());
 	    new WebDriverWait(webDriver,60).until(ExpectedConditions.elementToBeClickable(By.id("form_user"))).sendKeys(datadriven.get("backUserName"));
@@ -145,7 +146,7 @@ public class AppChuangyeBuyService extends BaseTest {
 		driver = Initial.appiumAndroidChuangyeSetUp(driver, apkPathOfChuangye);
 		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 		new WebDriverWait(driver,60).until(ExpectedConditions.elementToBeClickable(By.name("我的"))).click();
-		appCommonService.swipeToDown(driver);
+		driver=appCommonService.swipeToDown(driver);
 		new WebDriverWait(driver,60).until(ExpectedConditions.elementToBeClickable(By.name("服务订单"))).click();	
 		try {
 			
@@ -154,7 +155,7 @@ public class AppChuangyeBuyService extends BaseTest {
 			new WebDriverWait(driver,40).until(ExpectedConditions.visibilityOfElementLocated(By.name("服务完成")));
 			logger.info("校验成功，返回并退出");	
 			new WebDriverWait(driver,60).until(ExpectedConditions.elementToBeClickable(By.id("title_back_img"))).click();
-			appCommonService.logoutForApp(driver);
+			driver=appCommonService.logoutForApp(driver);
 			driver.quit();
 			logger.info("APP "+datadriven.get("version")+"---购买服务测试结束---");
 			
@@ -163,6 +164,7 @@ public class AppChuangyeBuyService extends BaseTest {
 			
 			logger.info("校验失败");
 			driver.quit();
+			Assert.assertTrue(false);
 			e.printStackTrace();
 			
 		}
@@ -178,6 +180,8 @@ public class AppChuangyeBuyService extends BaseTest {
 	
 	@AfterClass
 	public void afterClass() {
+		driver.quit();
+		webDriver.quit();
 	}
 
 }
