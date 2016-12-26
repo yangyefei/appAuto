@@ -121,7 +121,7 @@ public class AppChuangyeSignUp extends BaseTest {
 				// TODO Auto-generated catch block
 				logger.info("活动报名失败");
 				driver.quit();
-				Assert.assertTrue(false);
+//				Assert.assertTrue(false);
 				e.printStackTrace();	
 			}
 			
