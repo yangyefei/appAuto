@@ -73,10 +73,12 @@ public class AppCommonSpeedInquiry extends BaseTest{
 		Thread.sleep(3000);
 		//调用付款
 		logger.info(" 点击付款");
-		PayButton();
+		appCommonService.alipay(driver);
+		//PayButton();
 		new WebDriverWait(driver, 30).until(ExpectedConditions.elementToBeClickable(By.className("android.widget.Button"))).click();
 		driver.findElementByName("我的问诊 Link").click();
 		
+		logger.info(" 付款成功");
 		oderConfrim(datadriven);
 		
 		new WebDriverWait(driver, 30).until(ExpectedConditions.elementToBeClickable(By.name("待问诊"))).click();
@@ -120,9 +122,10 @@ public class AppCommonSpeedInquiry extends BaseTest{
 	}
 
 	public void PayButton(){
+		
 		int x =driver.manage().window().getSize().width;
 		int y =driver.manage().window().getSize().height;
-
+     
 		TouchAction  touchAction =new TouchAction(driver);
 		touchAction.press(x/2, y*19/20).release().perform();
 	}

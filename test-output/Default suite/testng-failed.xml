@@ -3,16 +3,16 @@
 <suite name="Failed suite [Default suite]">
   <test name="Default test(failed)">
     <classes>
-      <class name="test.apptest.chuangye.AppChuangyeReleaseLoan">
+      <class name="test.apptest.common.AppCommonSpeedInquiry">
         <methods>
+          <include name="appCommonSpeedInquiry" invocation-numbers="0"/>
           <include name="afterClass"/>
-          <include name="springTestContextBeforeTestMethod"/>
-          <include name="chuangyeReleaseLoan" invocation-numbers="0"/>
           <include name="springTestContextPrepareTestInstance"/>
-          <include name="beforeClass"/>
+          <include name="springTestContextBeforeTestMethod"/>
           <include name="springTestContextAfterTestMethod"/>
+          <include name="beforeClass"/>
         </methods>
-      </class> <!-- test.apptest.chuangye.AppChuangyeReleaseLoan -->
+      </class> <!-- test.apptest.common.AppCommonSpeedInquiry -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
