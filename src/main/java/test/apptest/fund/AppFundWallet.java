@@ -52,7 +52,7 @@ public class AppFundWallet extends BaseTest{
 
 		String apkPathOfFund = datadriven.get("apkPathOfFund");
 	
-		logger.info("APP "+datadriven.get("version")+"---提现流程开始--");
+		logger.info("APP "+datadriven.get("version")+"---投资人提现流程开始--");
 		//启动企业app并且登录
 		logger.info("启动并登陆投资者app");
 		
@@ -88,12 +88,12 @@ public class AppFundWallet extends BaseTest{
 		logger.info("验证判断提现失败");
 
 		    driver.quit();
-		    logger.info("APP "+datadriven.get("version")+"---提现流程测试结束--");
+		    logger.info("APP "+datadriven.get("version")+"---投资人提现流程测试结束--");
 		    Assert.assertTrue(false);
 		}	
 		driver.quit();
 		
-		logger.info("APP "+datadriven.get("version")+"---提现流程测试结束--");
+		logger.info("APP "+datadriven.get("version")+"---投资人提现流程测试结束--");
  
 	}	
 	

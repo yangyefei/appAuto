@@ -116,7 +116,7 @@ public class AppChuangyeSignUp extends BaseTest {
 				new WebDriverWait(driver,60).until(ExpectedConditions.elementToBeClickable(By.id("title_back_img"))).click();
 				driver=appCommonService.logoutForApp(driver);
 				driver.quit();
-				logger.info("APP "+datadriven.get("version")+"---报名流程测试结束---");			
+	
 			} catch (Exception e) {
 				// TODO Auto-generated catch block
 				logger.info("活动报名失败");
@@ -136,6 +136,7 @@ public class AppChuangyeSignUp extends BaseTest {
 		}	
 			
 			mysqlDataDeal.deleteActivitySignUp(datadriven.get("activity"), datadriven.get("changyeUserName"));
+			logger.info("APP "+datadriven.get("version")+"---创业者报名流程测试结束---");
 			
 	}
 
