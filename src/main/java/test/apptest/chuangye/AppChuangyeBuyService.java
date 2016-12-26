@@ -103,7 +103,7 @@ public class AppChuangyeBuyService extends BaseTest {
 		driver.findElement(By.name("打发第三方第三方")).click();
 		driver.findElement(By.name("立即购买")).click();
 		Thread.sleep(3000);
-		driver=appCommonService.swipeToDown(driver);
+		driver = appCommonService.swipeToDown(driver);
 		new WebDriverWait(driver,60).until(ExpectedConditions.elementToBeClickable(By.name("同意服务协议并下单"))).click();
 		//获取下单时间
 		SimpleDateFormat date = new SimpleDateFormat("MM-dd HH:mm");
@@ -111,7 +111,7 @@ public class AppChuangyeBuyService extends BaseTest {
 		System.out.println(time);
 		
 		logger.info("去支付");
-		driver=appCommonService.alipay(driver);
+		driver = appCommonService.alipay(driver);
 		new WebDriverWait(driver,60).until(ExpectedConditions.elementToBeClickable(By.name("返回首页 Link"))).click();
 		driver.quit();
 		

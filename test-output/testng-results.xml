@@ -2,27 +2,110 @@
 <testng-results skipped="0" failed="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
+<<<<<<< HEAD
   <suite name="Default suite" duration-ms="98182" started-at="2016-12-26T10:30:39Z" finished-at="2016-12-26T10:32:17Z">
+=======
+<<<<<<< HEAD
+  <suite name="Default suite" duration-ms="115381" started-at="2016-12-22T09:23:25Z" finished-at="2016-12-22T09:25:21Z">
+=======
+<<<<<<< HEAD
+  <suite name="Default suite" duration-ms="47618" started-at="2016-12-23T09:15:45Z" finished-at="2016-12-23T09:16:33Z">
+=======
+<<<<<<< HEAD
+  <suite name="Default suite" duration-ms="108255" started-at="2016-12-22T08:45:32Z" finished-at="2016-12-22T08:47:20Z">
+=======
+  <suite name="Default suite" duration-ms="105709" started-at="2016-12-22T07:52:24Z" finished-at="2016-12-22T07:54:09Z">
+>>>>>>> branch 'master' of http://172.16.11.124/luyi/appAuto.git
+>>>>>>> branch 'master' of http://172.16.11.124/luyi/appAuto.git
+>>>>>>> branch 'master' of http://172.16.11.124/luyi/appAuto.git
+>>>>>>> branch 'master' of http://172.16.11.124/luyi/appAuto.git
     <groups>
     </groups>
+<<<<<<< HEAD
     <test name="Default test" duration-ms="98182" started-at="2016-12-26T10:30:39Z" finished-at="2016-12-26T10:32:17Z">
       <class name="test.apptest.common.AppCommonSpeedInquiry">
         <test-method status="PASS" signature="springTestContextPrepareTestInstance()[pri:0, instance:test.apptest.common.AppCommonSpeedInquiry@87f383f]" name="springTestContextPrepareTestInstance" is-config="true" duration-ms="456" started-at="2016-12-26T18:30:39Z" finished-at="2016-12-26T18:30:40Z">
+=======
+<<<<<<< HEAD
+    <test name="Default test" duration-ms="115381" started-at="2016-12-22T09:23:25Z" finished-at="2016-12-22T09:25:21Z">
+      <class name="test.apptest.chuangye.AppChuangyeSignUp">
+        <test-method status="PASS" signature="springTestContextPrepareTestInstance()[pri:0, instance:test.apptest.chuangye.AppChuangyeSignUp@406199]" name="springTestContextPrepareTestInstance" is-config="true" duration-ms="665" started-at="2016-12-22T17:23:25Z" finished-at="2016-12-22T17:23:26Z">
+=======
+<<<<<<< HEAD
+    <test name="Default test" duration-ms="47618" started-at="2016-12-23T09:15:45Z" finished-at="2016-12-23T09:16:33Z">
+      <class name="test.apptest.chuangye.AppChuangyeReleaseLoan">
+        <test-method status="PASS" signature="springTestContextPrepareTestInstance()[pri:0, instance:test.apptest.chuangye.AppChuangyeReleaseLoan@3bc0f2e5]" name="springTestContextPrepareTestInstance" is-config="true" duration-ms="440" started-at="2016-12-23T17:15:45Z" finished-at="2016-12-23T17:15:46Z">
+=======
+<<<<<<< HEAD
+    <test name="Default test" duration-ms="108255" started-at="2016-12-22T08:45:32Z" finished-at="2016-12-22T08:47:20Z">
+      <class name="test.apptest.fund.AppFundSignUp">
+        <test-method status="PASS" signature="springTestContextPrepareTestInstance()[pri:0, instance:test.apptest.fund.AppFundSignUp@406199]" name="springTestContextPrepareTestInstance" is-config="true" duration-ms="645" started-at="2016-12-22T16:45:32Z" finished-at="2016-12-22T16:45:33Z">
+=======
+    <test name="Default test" duration-ms="105709" started-at="2016-12-22T07:52:24Z" finished-at="2016-12-22T07:54:09Z">
+      <class name="test.apptest.fund.AppFundSignUp">
+        <test-method status="PASS" signature="springTestContextPrepareTestInstance()[pri:0, instance:test.apptest.fund.AppFundSignUp@77d2b01b]" name="springTestContextPrepareTestInstance" is-config="true" duration-ms="434" started-at="2016-12-22T15:52:24Z" finished-at="2016-12-22T15:52:24Z">
+>>>>>>> branch 'master' of http://172.16.11.124/luyi/appAuto.git
+>>>>>>> branch 'master' of http://172.16.11.124/luyi/appAuto.git
+>>>>>>> branch 'master' of http://172.16.11.124/luyi/appAuto.git
+>>>>>>> branch 'master' of http://172.16.11.124/luyi/appAuto.git
           <reporter-output>
           </reporter-output>
         </test-method> <!-- springTestContextPrepareTestInstance -->
+<<<<<<< HEAD
         <test-method status="PASS" signature="beforeClass()[pri:0, instance:test.apptest.common.AppCommonSpeedInquiry@87f383f]" name="beforeClass" is-config="true" duration-ms="0" started-at="2016-12-26T18:30:40Z" finished-at="2016-12-26T18:30:40Z">
+=======
+<<<<<<< HEAD
+        <test-method status="PASS" signature="beforeClass()[pri:0, instance:test.apptest.chuangye.AppChuangyeSignUp@406199]" name="beforeClass" is-config="true" duration-ms="0" started-at="2016-12-22T17:23:26Z" finished-at="2016-12-22T17:23:26Z">
+=======
+<<<<<<< HEAD
+        <test-method status="PASS" signature="beforeClass()[pri:0, instance:test.apptest.chuangye.AppChuangyeReleaseLoan@3bc0f2e5]" name="beforeClass" is-config="true" duration-ms="0" started-at="2016-12-23T17:15:46Z" finished-at="2016-12-23T17:15:46Z">
+=======
+<<<<<<< HEAD
+        <test-method status="PASS" signature="beforeClass()[pri:0, instance:test.apptest.fund.AppFundSignUp@406199]" name="beforeClass" is-config="true" duration-ms="0" started-at="2016-12-22T16:45:33Z" finished-at="2016-12-22T16:45:33Z">
+=======
+        <test-method status="PASS" signature="beforeClass()[pri:0, instance:test.apptest.fund.AppFundSignUp@77d2b01b]" name="beforeClass" is-config="true" duration-ms="0" started-at="2016-12-22T15:52:24Z" finished-at="2016-12-22T15:52:24Z">
+>>>>>>> branch 'master' of http://172.16.11.124/luyi/appAuto.git
+>>>>>>> branch 'master' of http://172.16.11.124/luyi/appAuto.git
+>>>>>>> branch 'master' of http://172.16.11.124/luyi/appAuto.git
+>>>>>>> branch 'master' of http://172.16.11.124/luyi/appAuto.git
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeClass -->
+<<<<<<< HEAD
         <test-method status="PASS" signature="springTestContextBeforeTestMethod(java.lang.reflect.Method)[pri:0, instance:test.apptest.common.AppCommonSpeedInquiry@87f383f]" name="springTestContextBeforeTestMethod" is-config="true" duration-ms="1" started-at="2016-12-26T18:30:40Z" finished-at="2016-12-26T18:30:40Z">
+=======
+<<<<<<< HEAD
+        <test-method status="FAIL" signature="chuangyeSignUp(java.util.Map)[pri:0, instance:test.apptest.chuangye.AppChuangyeSignUp@406199]" name="chuangyeSignUp" duration-ms="114356" started-at="2016-12-22T17:23:26Z" description="活动报名" data-provider="testData" finished-at="2016-12-22T17:25:20Z">
+=======
+<<<<<<< HEAD
+        <test-method status="PASS" signature="springTestContextBeforeTestMethod(java.lang.reflect.Method)[pri:0, instance:test.apptest.chuangye.AppChuangyeReleaseLoan@3bc0f2e5]" name="springTestContextBeforeTestMethod" is-config="true" duration-ms="0" started-at="2016-12-23T17:15:46Z" finished-at="2016-12-23T17:15:46Z">
+=======
+<<<<<<< HEAD
+        <test-method status="PASS" signature="springTestContextBeforeTestMethod(java.lang.reflect.Method)[pri:0, instance:test.apptest.fund.AppFundSignUp@406199]" name="springTestContextBeforeTestMethod" is-config="true" duration-ms="0" started-at="2016-12-22T16:45:33Z" finished-at="2016-12-22T16:45:33Z">
+=======
+        <test-method status="PASS" signature="springTestContextBeforeTestMethod(java.lang.reflect.Method)[pri:0, instance:test.apptest.fund.AppFundSignUp@77d2b01b]" name="springTestContextBeforeTestMethod" is-config="true" duration-ms="1" started-at="2016-12-22T15:52:24Z" finished-at="2016-12-22T15:52:24Z">
+>>>>>>> branch 'master' of http://172.16.11.124/luyi/appAuto.git
+>>>>>>> branch 'master' of http://172.16.11.124/luyi/appAuto.git
+>>>>>>> branch 'master' of http://172.16.11.124/luyi/appAuto.git
+>>>>>>> branch 'master' of http://172.16.11.124/luyi/appAuto.git
           <params>
             <param index="0">
               <value>
+<<<<<<< HEAD
                 <![CDATA[public void test.apptest.common.AppCommonSpeedInquiry.appCommonSpeedInquiry(java.util.Map) throws java.lang.Exception]]>
+=======
+<<<<<<< HEAD
+                <![CDATA[{apkPathOfChuangye=D:\autoApp\testAPK\Easyrongchuangye_pre_2_3_1.apk, fundPassword=xlh123456, backPassword=xlh123456, filePath=D:\autotest.pdf, changyeUserName=15000000002, backUserName=zdhcs, fundUserName=lkj123, comments=app自动化测试用评论123，有长度要求超过20个字, activity=自动化测试活动-长期, chuangyePassword=xlh123456, version=v2.3}]]>
+=======
+                <![CDATA[public void test.apptest.chuangye.AppChuangyeReleaseLoan.chuangyeReleaseLoan(java.util.Map) throws java.lang.Exception]]>
+>>>>>>> branch 'master' of http://172.16.11.124/luyi/appAuto.git
+>>>>>>> branch 'master' of http://172.16.11.124/luyi/appAuto.git
               </value>
             </param>
           </params>
+<<<<<<< HEAD
+          <exception class="java.lang.AssertionError">
+=======
           <reporter-output>
           </reporter-output>
         </test-method> <!-- springTestContextBeforeTestMethod -->
@@ -34,25 +117,214 @@
               </value>
             </param>
           </params>
+<<<<<<< HEAD
+=======
+          <exception class="org.openqa.selenium.NoSuchElementException">
+>>>>>>> branch 'master' of http://172.16.11.124/luyi/appAuto.git
+            <message>
+<<<<<<< HEAD
+              <![CDATA[expected [true] but found [false]]]>
+=======
+              <![CDATA[An element could not be located on the page using the given search parameters. (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 10.38 seconds
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '2.44.0', revision: '76d78cf', time: '2014-10-23 20:03:00'
+<<<<<<< HEAD
+System info: host: 'ALLen-PC', ip: '172.16.22.117', os.name: 'Windows Vista', os.arch: 'x86', os.version: '6.1', java.version: '1.6.0_10-rc2'
+Session ID: f9c76bf8-f65f-41b8-a3b6-19513a203bcc
+Driver info: io.appium.java_client.AppiumDriver
+Capabilities [{platform=LINUX, app=D:\autoApp\testAPK\EasyrongFund_pre_2_2_1.apk, javascriptEnabled=true, appActivity=.activities.EasyrongFundMainActivity, browserName=, networkConnectionEnabled=true, noSign=true, desired={platformVersion=4.4, app=D:\autoApp\testAPK\EasyrongFund_pre_2_2_1.apk, platformName=Android, deviceName=Android Emulator, browserName=, appActivity=.activities.EasyrongFundMainActivity, unicodeKeyboard=true, noSign=true, resetKeyboard=true, appPackage=com.easyrongfund, noReset=true}, locationContextEnabled=false, appPackage=com.easyrongfund, noReset=true, platformVersion=4.4.2, databaseEnabled=false, platformName=Android, deviceName=emulator-5554, webStorageEnabled=false, unicodeKeyboard=true, resetKeyboard=true, warnings={}, takesScreenshot=true}]]]>
+>>>>>>> branch 'master' of http://172.16.11.124/luyi/appAuto.git
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: expected [true] but found [false]
+	at org.testng.Assert.fail(Assert.java:94)
+	at org.testng.Assert.failNotEquals(Assert.java:494)
+	at org.testng.Assert.assertTrue(Assert.java:42)
+	at org.testng.Assert.assertTrue(Assert.java:52)
+	at test.apptest.chuangye.AppChuangyeSignUp.chuangyeSignUp(AppChuangyeSignUp.java:133)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:80)
+	at org.testng.internal.InvokeMethodRunnable.runOne(InvokeMethodRunnable.java:46)
+	at org.testng.internal.InvokeMethodRunnable.run(InvokeMethodRunnable.java:37)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Unknown Source)
+	at java.util.concurrent.FutureTask$Sync.innerRun(Unknown Source)
+	at java.util.concurrent.FutureTask.run(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.runTask(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+<<<<<<< HEAD
+=======
+Caused by: org.openqa.selenium.NoSuchElementException: An element could not be located on the page using the given search parameters. (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 10.46 seconds
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '2.44.0', revision: '76d78cf', time: '2014-10-23 20:03:00'
+System info: host: 'ALLen-PC', ip: '172.16.22.117', os.name: 'Windows Vista', os.arch: 'x86', os.version: '6.1', java.version: '1.6.0_10-rc2'
+Session ID: f9c76bf8-f65f-41b8-a3b6-19513a203bcc
+=======
+System info: host: 'xlh-028', ip: '172.16.22.236', os.name: 'Windows 8', os.arch: 'amd64', os.version: '6.2', java.version: '1.6.0_43'
+Session ID: a4491aaf-abb3-4e61-ad96-9afb60ffe16a
+Driver info: io.appium.java_client.AppiumDriver
+Capabilities [{platform=LINUX, app=D:\autoApp\testAPK\Easyrongchuangye_pre_2_3_1.apk, javascriptEnabled=true, appActivity=.activities.EasyrongChuangyeActivity, browserName=, networkConnectionEnabled=true, noSign=true, desired={platformVersion=4.4, app=D:\autoApp\testAPK\Easyrongchuangye_pre_2_3_1.apk, platformName=Android, deviceName=Android Emulator, browserName=, appActivity=.activities.EasyrongChuangyeActivity, unicodeKeyboard=true, noSign=true, resetKeyboard=true, appPackage=com.easyrongchuangye, noReset=true}, locationContextEnabled=false, appPackage=com.easyrongchuangye, noReset=true, platformVersion=4.4.2, databaseEnabled=false, platformName=Android, deviceName=emulator-5554, webStorageEnabled=false, unicodeKeyboard=true, resetKeyboard=true, warnings={}, takesScreenshot=true}]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.NoSuchElementException: An element could not be located on the page using the given search parameters. (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 10.38 seconds
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '2.44.0', revision: '76d78cf', time: '2014-10-23 20:03:00'
+System info: host: 'xlh-028', ip: '172.16.22.236', os.name: 'Windows 8', os.arch: 'amd64', os.version: '6.2', java.version: '1.6.0_43'
+Session ID: a4491aaf-abb3-4e61-ad96-9afb60ffe16a
+Driver info: io.appium.java_client.AppiumDriver
+Capabilities [{platform=LINUX, app=D:\autoApp\testAPK\Easyrongchuangye_pre_2_3_1.apk, javascriptEnabled=true, appActivity=.activities.EasyrongChuangyeActivity, browserName=, networkConnectionEnabled=true, noSign=true, desired={platformVersion=4.4, app=D:\autoApp\testAPK\Easyrongchuangye_pre_2_3_1.apk, platformName=Android, deviceName=Android Emulator, browserName=, appActivity=.activities.EasyrongChuangyeActivity, unicodeKeyboard=true, noSign=true, resetKeyboard=true, appPackage=com.easyrongchuangye, noReset=true}, locationContextEnabled=false, appPackage=com.easyrongchuangye, noReset=true, platformVersion=4.4.2, databaseEnabled=false, platformName=Android, deviceName=emulator-5554, webStorageEnabled=false, unicodeKeyboard=true, resetKeyboard=true, warnings={}, takesScreenshot=true}]
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
+	at java.lang.reflect.Constructor.newInstance(Unknown Source)
+	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:204)
+	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:156)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:599)
+	at io.appium.java_client.AppiumDriver.execute(AppiumDriver.java:81)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:352)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementByName(RemoteWebDriver.java:425)
+	at org.openqa.selenium.By$ByName.findElement(By.java:299)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:344)
+	at test.apptest.chuangye.AppChuangyeReleaseLoan.chuangyeReleaseLoan(AppChuangyeReleaseLoan.java:91)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:84)
+	at org.testng.internal.InvokeMethodRunnable.runOne(InvokeMethodRunnable.java:46)
+	at org.testng.internal.InvokeMethodRunnable.run(InvokeMethodRunnable.java:37)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Unknown Source)
+	at java.util.concurrent.FutureTask$Sync.innerRun(Unknown Source)
+	at java.util.concurrent.FutureTask.run(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.runTask(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+<<<<<<< HEAD
+=======
+Caused by: org.openqa.selenium.NoSuchElementException: An element could not be located on the page using the given search parameters. (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 10.21 seconds
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '2.44.0', revision: '76d78cf', time: '2014-10-23 20:03:00'
+System info: host: 'xlh-028', ip: '172.16.22.236', os.name: 'Windows 8', os.arch: 'amd64', os.version: '6.2', java.version: '1.6.0_43'
+Session ID: c6cbb30e-1eff-4424-b405-9c8ce4e4fa6e
+>>>>>>> branch 'master' of http://172.16.11.124/luyi/appAuto.git
+Driver info: io.appium.java_client.AppiumDriver
+Capabilities [{platform=LINUX, app=D:\autoApp\testAPK\EasyrongFund_pre_2_2_1.apk, javascriptEnabled=true, appActivity=.activities.EasyrongFundMainActivity, browserName=, networkConnectionEnabled=true, noSign=true, desired={platformVersion=4.4, app=D:\autoApp\testAPK\EasyrongFund_pre_2_2_1.apk, platformName=Android, deviceName=Android Emulator, browserName=, appActivity=.activities.EasyrongFundMainActivity, unicodeKeyboard=true, noSign=true, resetKeyboard=true, appPackage=com.easyrongfund, noReset=true}, locationContextEnabled=false, appPackage=com.easyrongfund, noReset=true, platformVersion=4.4.2, databaseEnabled=false, platformName=Android, deviceName=emulator-5554, webStorageEnabled=false, unicodeKeyboard=true, resetKeyboard=true, warnings={}, takesScreenshot=true}]
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
+	at java.lang.reflect.Constructor.newInstance(Unknown Source)
+	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:204)
+	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:156)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:599)
+	at io.appium.java_client.AppiumDriver.execute(AppiumDriver.java:81)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:352)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementById(RemoteWebDriver.java:393)
+	at org.openqa.selenium.By$ById.findElement(By.java:214)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:344)
+	at org.openqa.selenium.support.ui.ExpectedConditions.findElement(ExpectedConditions.java:730)
+	at org.openqa.selenium.support.ui.ExpectedConditions.access$0(ExpectedConditions.java:728)
+	at org.openqa.selenium.support.ui.ExpectedConditions$4.apply(ExpectedConditions.java:130)
+	at org.openqa.selenium.support.ui.ExpectedConditions$4.apply(ExpectedConditions.java:1)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:208)
+	... 15 more
+>>>>>>> branch 'master' of http://172.16.11.124/luyi/appAuto.git
+>>>>>>> branch 'master' of http://172.16.11.124/luyi/appAuto.git
+]]>
+            </full-stacktrace>
+<<<<<<< HEAD
+          </exception> <!-- java.lang.AssertionError -->
+=======
+          </exception> <!-- org.openqa.selenium.NoSuchElementException -->
+>>>>>>> branch 'master' of http://172.16.11.124/luyi/appAuto.git
+>>>>>>> branch 'master' of http://172.16.11.124/luyi/appAuto.git
           <reporter-output>
           </reporter-output>
+<<<<<<< HEAD
         </test-method> <!-- appCommonSpeedInquiry -->
         <test-method status="PASS" signature="springTestContextAfterTestMethod(java.lang.reflect.Method)[pri:0, instance:test.apptest.common.AppCommonSpeedInquiry@87f383f]" name="springTestContextAfterTestMethod" is-config="true" duration-ms="1" started-at="2016-12-26T18:32:16Z" finished-at="2016-12-26T18:32:16Z">
+=======
+<<<<<<< HEAD
+        </test-method> <!-- chuangyeSignUp -->
+        <test-method status="PASS" signature="springTestContextBeforeTestMethod(java.lang.reflect.Method)[pri:0, instance:test.apptest.chuangye.AppChuangyeSignUp@406199]" name="springTestContextBeforeTestMethod" is-config="true" duration-ms="0" started-at="2016-12-22T17:23:26Z" finished-at="2016-12-22T17:23:26Z">
+=======
+<<<<<<< HEAD
+        </test-method> <!-- chuangyeReleaseLoan -->
+        <test-method status="PASS" signature="springTestContextAfterTestMethod(java.lang.reflect.Method)[pri:0, instance:test.apptest.chuangye.AppChuangyeReleaseLoan@3bc0f2e5]" name="springTestContextAfterTestMethod" is-config="true" duration-ms="1" started-at="2016-12-23T17:16:31Z" finished-at="2016-12-23T17:16:31Z">
+=======
+        </test-method> <!-- fundSignUp -->
+<<<<<<< HEAD
+        <test-method status="PASS" signature="springTestContextAfterTestMethod(java.lang.reflect.Method)[pri:0, instance:test.apptest.fund.AppFundSignUp@406199]" name="springTestContextAfterTestMethod" is-config="true" duration-ms="1" started-at="2016-12-22T16:47:20Z" finished-at="2016-12-22T16:47:20Z">
+=======
+        <test-method status="PASS" signature="springTestContextAfterTestMethod(java.lang.reflect.Method)[pri:0, instance:test.apptest.fund.AppFundSignUp@77d2b01b]" name="springTestContextAfterTestMethod" is-config="true" duration-ms="2" started-at="2016-12-22T15:54:08Z" finished-at="2016-12-22T15:54:08Z">
+>>>>>>> branch 'master' of http://172.16.11.124/luyi/appAuto.git
+>>>>>>> branch 'master' of http://172.16.11.124/luyi/appAuto.git
+>>>>>>> branch 'master' of http://172.16.11.124/luyi/appAuto.git
+>>>>>>> branch 'master' of http://172.16.11.124/luyi/appAuto.git
           <params>
             <param index="0">
               <value>
+<<<<<<< HEAD
                 <![CDATA[public void test.apptest.common.AppCommonSpeedInquiry.appCommonSpeedInquiry(java.util.Map) throws java.lang.Exception]]>
+=======
+<<<<<<< HEAD
+                <![CDATA[public void test.apptest.chuangye.AppChuangyeSignUp.chuangyeSignUp(java.util.Map) throws java.lang.Exception]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- springTestContextBeforeTestMethod -->
+        <test-method status="PASS" signature="springTestContextAfterTestMethod(java.lang.reflect.Method)[pri:0, instance:test.apptest.chuangye.AppChuangyeSignUp@406199]" name="springTestContextAfterTestMethod" is-config="true" duration-ms="1" started-at="2016-12-22T17:25:20Z" finished-at="2016-12-22T17:25:20Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void test.apptest.chuangye.AppChuangyeSignUp.chuangyeSignUp(java.util.Map) throws java.lang.Exception]]>
+=======
+                <![CDATA[public void test.apptest.chuangye.AppChuangyeReleaseLoan.chuangyeReleaseLoan(java.util.Map) throws java.lang.Exception]]>
+>>>>>>> branch 'master' of http://172.16.11.124/luyi/appAuto.git
+>>>>>>> branch 'master' of http://172.16.11.124/luyi/appAuto.git
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- springTestContextAfterTestMethod -->
+<<<<<<< HEAD
         <test-method status="PASS" signature="afterClass()[pri:0, instance:test.apptest.common.AppCommonSpeedInquiry@87f383f]" name="afterClass" is-config="true" duration-ms="1514" started-at="2016-12-26T18:32:16Z" finished-at="2016-12-26T18:32:17Z">
+=======
+<<<<<<< HEAD
+        <test-method status="PASS" signature="afterClass()[pri:0, instance:test.apptest.chuangye.AppChuangyeSignUp@406199]" name="afterClass" is-config="true" duration-ms="1" started-at="2016-12-22T17:25:21Z" finished-at="2016-12-22T17:25:21Z">
+=======
+<<<<<<< HEAD
+        <test-method status="PASS" signature="afterClass()[pri:0, instance:test.apptest.chuangye.AppChuangyeReleaseLoan@3bc0f2e5]" name="afterClass" is-config="true" duration-ms="1546" started-at="2016-12-23T17:16:31Z" finished-at="2016-12-23T17:16:33Z">
+=======
+<<<<<<< HEAD
+        <test-method status="PASS" signature="afterClass()[pri:0, instance:test.apptest.fund.AppFundSignUp@406199]" name="afterClass" is-config="true" duration-ms="0" started-at="2016-12-22T16:47:20Z" finished-at="2016-12-22T16:47:20Z">
+=======
+        <test-method status="PASS" signature="afterClass()[pri:0, instance:test.apptest.fund.AppFundSignUp@77d2b01b]" name="afterClass" is-config="true" duration-ms="1509" started-at="2016-12-22T15:54:08Z" finished-at="2016-12-22T15:54:09Z">
+>>>>>>> branch 'master' of http://172.16.11.124/luyi/appAuto.git
+>>>>>>> branch 'master' of http://172.16.11.124/luyi/appAuto.git
+>>>>>>> branch 'master' of http://172.16.11.124/luyi/appAuto.git
+>>>>>>> branch 'master' of http://172.16.11.124/luyi/appAuto.git
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterClass -->
+<<<<<<< HEAD
       </class> <!-- test.apptest.common.AppCommonSpeedInquiry -->
+=======
+<<<<<<< HEAD
+      </class> <!-- test.apptest.chuangye.AppChuangyeSignUp -->
+=======
+      </class> <!-- test.apptest.chuangye.AppChuangyeReleaseLoan -->
+>>>>>>> branch 'master' of http://172.16.11.124/luyi/appAuto.git
+>>>>>>> branch 'master' of http://172.16.11.124/luyi/appAuto.git
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

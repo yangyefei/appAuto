@@ -79,7 +79,7 @@ public class AppCommonServiceImpl implements AppCommonService{
 	@Override
 	public AppiumDriver alipay(AppiumDriver driver) throws Exception {
 		// TODO Auto-generated method stub
-		Thread.sleep(3000);	
+		Thread.sleep(5000);
 		int x =driver.manage().window().getSize().width;
 		int y =driver.manage().window().getSize().height;
 		TouchAction  touchAction =new TouchAction(driver);

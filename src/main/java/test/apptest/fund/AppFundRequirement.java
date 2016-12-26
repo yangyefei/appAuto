@@ -52,7 +52,7 @@ public class AppFundRequirement extends BaseTest {
 
 		String apkPathOfFund = datadriven.get("apkPathOfFund");
 		
-		logger.info("APP "+datadriven.get("version")+"---发起需求发布流程---");
+		logger.info("APP "+datadriven.get("version")+"---投资人发起需求发布流程---");
 		//启动投资者app并且登录
 		logger.info("启动并登陆投资者app");
 		driver = Initial.appiumAndroidFundSetUp(driver,apkPathOfFund);
@@ -114,7 +114,7 @@ public class AppFundRequirement extends BaseTest {
 			assertTrue(false);
 		}
 		driver.quit();
-		logger.info("APP "+datadriven.get("version")+"---需求发布流程测试结束---");
+		logger.info("APP "+datadriven.get("version")+"---投资人需求发布流程测试结束---");
 	}
 
 	
