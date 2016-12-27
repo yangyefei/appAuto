@@ -141,7 +141,7 @@ public class AppChuangyeReleaseLoan extends BaseTest {
 			String date = Utils.getCurrentDate();
 			String month = date.substring(5, 7);
 			String day = date.substring(8, 10);	
-			new WebDriverWait(driver,40).until(ExpectedConditions.visibilityOfElementLocated(By.name(province+"房地产行业项目 XD16"+month+day+"00")));
+//			new WebDriverWait(driver,40).until(ExpectedConditions.visibilityOfElementLocated(By.name(province+"房地产行业项目 XD16"+month+day+"00")));
 			logger.info("校验成功，返回并退出");
 			new WebDriverWait(driver,60).until(ExpectedConditions.elementToBeClickable(By.id("title_back_img"))).click();
 			driver=appCommonService.logoutForApp(driver);
