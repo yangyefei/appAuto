@@ -2,16 +2,26 @@
 <!DOCTYPE suite SYSTEM "http://beust.com/testng/testng-1.0.dtd" >
 <suite name="自动化测试运行结果" verbose="1" skipfailedinvocationcounts="true">
 <!-- 创业者 -->
-	<test name="创业者申请贷款" >
+	<test name="创业者孵化入驻" >
 		<classes>
-			<class name="test.apptest.chuangye.AppChuangyeApplyLoan">
+			<class name="test.apptest.chuangye.AppChuangyeEnterIncubator">
 				<methods>
-					<include name="chuangyeApplyLoan" />
+					<include name="chuangyeEnterIncubator" />
 				</methods>
 			</class>
 		</classes>
 	</test>
 
+	<test name="创业者活动报名" >
+		<classes>
+			<class name="test.apptest.chuangye.AppChuangyeSignUp">
+				<methods>
+					<include name="chuangyeSignUp" />
+				</methods>
+			</class>
+		</classes>
+	</test>
+	
 	<test name="创业者企业服务" >
 		<classes>
 			<class name="test.apptest.chuangye.AppChuangyeBuyService">
@@ -20,13 +30,13 @@
 				</methods>
 			</class>
 		</classes>
-	</test>
-
-	<test name="创业者孵化入驻" >
+	</test>	
+		
+	<test name="创业者申请贷款" >
 		<classes>
-			<class name="test.apptest.chuangye.AppChuangyeEnterIncubator">
+			<class name="test.apptest.chuangye.AppChuangyeApplyLoan">
 				<methods>
-					<include name="chuangyeEnterIncubator" />
+					<include name="chuangyeApplyLoan" />
 				</methods>
 			</class>
 		</classes>
@@ -41,16 +51,6 @@
 			</class>
 		</classes>
 	</test>
-	
-	<test name="创业者活动报名" >
-		<classes>
-			<class name="test.apptest.chuangye.AppChuangyeSignUp">
-				<methods>
-					<include name="chuangyeSignUp" />
-				</methods>
-			</class>
-		</classes>
-	</test>	
 
 <!--  公共部分业务流程   --> 	
 	<test name="普通问诊流程" >

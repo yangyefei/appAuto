@@ -42,7 +42,8 @@ public class AppChuangyeEnterIncubator extends BaseTest {
 	@BeforeClass
 	public void beforeClass() {
 		
-		
+		logger.info("APP --- 企业入驻孵化器测试开始---");
+		logger.info("先准备测试数据");
 		mysqlDataDeal.updateEnterpriseStatus("SHXLHEnterprise", 4);
 		    
 	}
@@ -53,7 +54,7 @@ public class AppChuangyeEnterIncubator extends BaseTest {
 		
 		String apkPathOfChuangye = datadriven.get("apkPathOfChuangye");
 		
-		logger.info("APP "+datadriven.get("version")+"---企业入驻孵化器测试开始---");
+		logger.info("APP "+datadriven.get("version")+"---企业入驻孵化器业务流程测试开始---");
 		
 		logger.info("启动创业者app");
 		driver = Initial.appiumAndroidChuangyeSetUp(driver,apkPathOfChuangye);
