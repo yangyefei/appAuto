@@ -67,18 +67,19 @@ public class AppCommonSpeedInquiry extends BaseTest{
 		new WebDriverWait(driver, 30).until(ExpectedConditions.elementToBeClickable(By.id("com.easyrongchuangye:id/detai_op_view"))).click();
 	
 		driver.findElementById("com.easyrongchuangye:id/qi_ye_xin_xi_edit").sendKeys("adlkjjjjk123456两点上课是老款的解放路");
-		appCommonService.swipeToDown(driver);
+		driver=appCommonService.swipeToDown(driver);
 		driver.findElementById("com.easyrongchuangye:id/wen_ti_xin_xi_edit").sendKeys("adlkjjjjk123456两点上课是老款的解放路");
 		driver.findElementById("com.easyrongchuangye:id/submit_view").click();
 		Thread.sleep(3000);
 		//调用付款
 		logger.info(" 点击付款");
-		appCommonService.alipay(driver);
-		//PayButton();
-		new WebDriverWait(driver, 30).until(ExpectedConditions.elementToBeClickable(By.className("android.widget.Button"))).click();
+		//appCommonService.alipay(driver);
+		PayButton();
+	
 		driver.findElementByName("我的问诊 Link").click();
 		
 		logger.info(" 付款成功");
+		logger.info(" 进入PC后台确认快速问诊订单");
 		oderConfrim(datadriven);
 		
 		new WebDriverWait(driver, 30).until(ExpectedConditions.elementToBeClickable(By.name("待问诊"))).click();
@@ -122,12 +123,19 @@ public class AppCommonSpeedInquiry extends BaseTest{
 	}
 
 	public void PayButton(){
-		
-		int x =driver.manage().window().getSize().width;
-		int y =driver.manage().window().getSize().height;
-     
-		TouchAction  touchAction =new TouchAction(driver);
-		touchAction.press(x/2, y*19/20).release().perform();
+		try {
+			WebElement element =new WebDriverWait(driver, 60).until(ExpectedConditions.visibilityOfElementLocated(By.name("一融支付中心")));
+			if (element.isDisplayed()) {
+				int x =driver.manage().window().getSize().width;
+				int y =driver.manage().window().getSize().height;
+		     
+				TouchAction  touchAction =new TouchAction(driver);
+				touchAction.press(x/2, y*19/20).release().perform();
+			} 
+		} catch (Exception e) {
+			logger.info("支付宝控件调出失败");
+		}
+		new WebDriverWait(driver, 30).until(ExpectedConditions.elementToBeClickable(By.className("android.widget.Button"))).click();
 	}
 
 

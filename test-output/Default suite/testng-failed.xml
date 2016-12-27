@@ -3,16 +3,31 @@
 <suite name="Failed suite [Default suite]">
   <test name="Default test(failed)">
     <classes>
+<<<<<<< HEAD
+      <class name="test.apptest.common.AppCommonSpeedInquiry">
+=======
       <class name="test.apptest.chuangye.AppChuangyeReleaseLoan">
+>>>>>>> branch 'master' of http://172.16.11.124/luyi/appAuto.git
         <methods>
+<<<<<<< HEAD
+          <include name="appCommonSpeedInquiry" invocation-numbers="0"/>
+          <include name="afterClass"/>
+          <include name="springTestContextPrepareTestInstance"/>
+          <include name="springTestContextBeforeTestMethod"/>
+=======
           <include name="afterClass"/>
           <include name="springTestContextBeforeTestMethod"/>
           <include name="chuangyeReleaseLoan" invocation-numbers="0"/>
           <include name="springTestContextPrepareTestInstance"/>
           <include name="beforeClass"/>
+>>>>>>> branch 'master' of http://172.16.11.124/luyi/appAuto.git
           <include name="springTestContextAfterTestMethod"/>
         </methods>
+<<<<<<< HEAD
+      </class> <!-- test.apptest.common.AppCommonSpeedInquiry -->
+=======
       </class> <!-- test.apptest.chuangye.AppChuangyeReleaseLoan -->
+>>>>>>> branch 'master' of http://172.16.11.124/luyi/appAuto.git
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
