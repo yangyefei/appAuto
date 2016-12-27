@@ -1,58 +1,128 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" total="1" passed="1">
+<testng-results skipped="0" failed="1" total="1" passed="0">
   <reporter-output>
   </reporter-output>
+<<<<<<< HEAD
   <suite name="Default suite" duration-ms="99823" started-at="2016-12-27T08:57:22Z" finished-at="2016-12-27T08:59:02Z">
+=======
+  <suite name="Default suite" duration-ms="107666" started-at="2016-12-27T06:01:28Z" finished-at="2016-12-27T06:03:16Z">
+>>>>>>> branch 'master' of http://172.16.11.124/luyi/appAuto.git
     <groups>
     </groups>
+<<<<<<< HEAD
     <test name="Default test" duration-ms="99823" started-at="2016-12-27T08:57:22Z" finished-at="2016-12-27T08:59:02Z">
       <class name="test.apptest.common.AppCommonSpeedInquiry">
         <test-method status="PASS" signature="springTestContextPrepareTestInstance()[pri:0, instance:test.apptest.common.AppCommonSpeedInquiry@76a3e297]" name="springTestContextPrepareTestInstance" is-config="true" duration-ms="490" started-at="2016-12-27T16:57:22Z" finished-at="2016-12-27T16:57:22Z">
+=======
+    <test name="Default test" duration-ms="107666" started-at="2016-12-27T06:01:28Z" finished-at="2016-12-27T06:03:16Z">
+      <class name="test.apptest.chuangye.AppChuangyeReleaseLoan">
+        <test-method status="PASS" signature="springTestContextPrepareTestInstance()[pri:0, instance:test.apptest.chuangye.AppChuangyeReleaseLoan@7054c4ad]" name="springTestContextPrepareTestInstance" is-config="true" duration-ms="436" started-at="2016-12-27T14:01:28Z" finished-at="2016-12-27T14:01:29Z">
+>>>>>>> branch 'master' of http://172.16.11.124/luyi/appAuto.git
           <reporter-output>
           </reporter-output>
         </test-method> <!-- springTestContextPrepareTestInstance -->
+<<<<<<< HEAD
         <test-method status="PASS" signature="beforeClass()[pri:0, instance:test.apptest.common.AppCommonSpeedInquiry@76a3e297]" name="beforeClass" is-config="true" duration-ms="0" started-at="2016-12-27T16:57:22Z" finished-at="2016-12-27T16:57:22Z">
+=======
+        <test-method status="PASS" signature="beforeClass()[pri:0, instance:test.apptest.chuangye.AppChuangyeReleaseLoan@7054c4ad]" name="beforeClass" is-config="true" duration-ms="1" started-at="2016-12-27T14:01:29Z" finished-at="2016-12-27T14:01:29Z">
+>>>>>>> branch 'master' of http://172.16.11.124/luyi/appAuto.git
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeClass -->
+<<<<<<< HEAD
         <test-method status="PASS" signature="springTestContextBeforeTestMethod(java.lang.reflect.Method)[pri:0, instance:test.apptest.common.AppCommonSpeedInquiry@76a3e297]" name="springTestContextBeforeTestMethod" is-config="true" duration-ms="1" started-at="2016-12-27T16:57:23Z" finished-at="2016-12-27T16:57:23Z">
+=======
+        <test-method status="PASS" signature="springTestContextBeforeTestMethod(java.lang.reflect.Method)[pri:0, instance:test.apptest.chuangye.AppChuangyeReleaseLoan@7054c4ad]" name="springTestContextBeforeTestMethod" is-config="true" duration-ms="0" started-at="2016-12-27T14:01:29Z" finished-at="2016-12-27T14:01:29Z">
+>>>>>>> branch 'master' of http://172.16.11.124/luyi/appAuto.git
           <params>
             <param index="0">
               <value>
+<<<<<<< HEAD
                 <![CDATA[public void test.apptest.common.AppCommonSpeedInquiry.appCommonSpeedInquiry(java.util.Map) throws java.lang.Exception]]>
+=======
+                <![CDATA[public void test.apptest.chuangye.AppChuangyeReleaseLoan.chuangyeReleaseLoan(java.util.Map) throws java.lang.Exception]]>
+>>>>>>> branch 'master' of http://172.16.11.124/luyi/appAuto.git
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- springTestContextBeforeTestMethod -->
+<<<<<<< HEAD
         <test-method status="PASS" signature="appCommonSpeedInquiry(java.util.Map)[pri:0, instance:test.apptest.common.AppCommonSpeedInquiry@76a3e297]" name="appCommonSpeedInquiry" duration-ms="97967" started-at="2016-12-27T16:57:23Z" description="å¿«é€Ÿé—®è¯Š" data-provider="testData" finished-at="2016-12-27T16:59:00Z">
+=======
+        <test-method status="FAIL" signature="chuangyeReleaseLoan(java.util.Map)[pri:0, instance:test.apptest.chuangye.AppChuangyeReleaseLoan@7054c4ad]" name="chuangyeReleaseLoan" duration-ms="105600" started-at="2016-12-27T14:01:29Z" description="·¢²¼´û¿î" data-provider="testData" finished-at="2016-12-27T14:03:14Z">
+>>>>>>> branch 'master' of http://172.16.11.124/luyi/appAuto.git
           <params>
             <param index="0">
               <value>
-                <![CDATA[{chuangyePassword=xlh123456, fundUserName=13774364001, apkPathOfChuangye=D:\autoApp\testAPK\Easyrongchuangye_pre_2_3_1.apk, changyeUserName=13000000001, uploadFilePath=E:\uploadFiles\autotest.pdf, fundPassword=xlh123456, version=v2.3, interviewProject=è°·æ³‰æ©¡æœ¨å¡ç‹ ç‹ å“­æ‹‰è¨, interviewComments=appè‡ªåŠ¨åŒ–æµ‹è¯•ç”¨è¯„è®º123, Result=YYF TEST}]]>
+                <![CDATA[{apkPathOfChuangye=D:\autoApp\testAPK\Easyrongchuangye_pre_2_3_1.apk, fundPassword=xlh123456, backPassword=xlh123456, incubator=×¢²átest(ÉÏº£w)+, filePath=D:\autotest.pdf, changyeUserName=15000000002, backUserName=zdhcs, fundUserName=lkj123, comments=app×Ô¶¯»¯²âÊÔÓÃÆÀÂÛ123£¬ÓÐ³¤¶ÈÒªÇó³¬¹ý20¸ö×Ö, chuangyePassword=xlh123456, version=v2.3}]]>
               </value>
             </param>
           </params>
+<<<<<<< HEAD
+=======
+          <exception class="java.lang.StringIndexOutOfBoundsException">
+            <message>
+              <![CDATA[String index out of range: 5]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.StringIndexOutOfBoundsException: String index out of range: 5
+	at java.lang.String.substring(Unknown Source)
+	at test.apptest.chuangye.AppChuangyeReleaseLoan.chuangyeReleaseLoan(AppChuangyeReleaseLoan.java:119)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:84)
+	at org.testng.internal.InvokeMethodRunnable.runOne(InvokeMethodRunnable.java:46)
+	at org.testng.internal.InvokeMethodRunnable.run(InvokeMethodRunnable.java:37)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Unknown Source)
+	at java.util.concurrent.FutureTask$Sync.innerRun(Unknown Source)
+	at java.util.concurrent.FutureTask.run(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.runTask(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.StringIndexOutOfBoundsException -->
+>>>>>>> branch 'master' of http://172.16.11.124/luyi/appAuto.git
           <reporter-output>
           </reporter-output>
+<<<<<<< HEAD
         </test-method> <!-- appCommonSpeedInquiry -->
         <test-method status="PASS" signature="springTestContextAfterTestMethod(java.lang.reflect.Method)[pri:0, instance:test.apptest.common.AppCommonSpeedInquiry@76a3e297]" name="springTestContextAfterTestMethod" is-config="true" duration-ms="0" started-at="2016-12-27T16:59:00Z" finished-at="2016-12-27T16:59:00Z">
+=======
+        </test-method> <!-- chuangyeReleaseLoan -->
+        <test-method status="PASS" signature="springTestContextAfterTestMethod(java.lang.reflect.Method)[pri:0, instance:test.apptest.chuangye.AppChuangyeReleaseLoan@7054c4ad]" name="springTestContextAfterTestMethod" is-config="true" duration-ms="0" started-at="2016-12-27T14:03:14Z" finished-at="2016-12-27T14:03:14Z">
+>>>>>>> branch 'master' of http://172.16.11.124/luyi/appAuto.git
           <params>
             <param index="0">
               <value>
+<<<<<<< HEAD
                 <![CDATA[public void test.apptest.common.AppCommonSpeedInquiry.appCommonSpeedInquiry(java.util.Map) throws java.lang.Exception]]>
+=======
+                <![CDATA[public void test.apptest.chuangye.AppChuangyeReleaseLoan.chuangyeReleaseLoan(java.util.Map) throws java.lang.Exception]]>
+>>>>>>> branch 'master' of http://172.16.11.124/luyi/appAuto.git
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- springTestContextAfterTestMethod -->
+<<<<<<< HEAD
         <test-method status="PASS" signature="afterClass()[pri:0, instance:test.apptest.common.AppCommonSpeedInquiry@76a3e297]" name="afterClass" is-config="true" duration-ms="1148" started-at="2016-12-27T16:59:01Z" finished-at="2016-12-27T16:59:02Z">
+=======
+        <test-method status="PASS" signature="afterClass()[pri:0, instance:test.apptest.chuangye.AppChuangyeReleaseLoan@7054c4ad]" name="afterClass" is-config="true" duration-ms="1447" started-at="2016-12-27T14:03:14Z" finished-at="2016-12-27T14:03:16Z">
+>>>>>>> branch 'master' of http://172.16.11.124/luyi/appAuto.git
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterClass -->
+<<<<<<< HEAD
       </class> <!-- test.apptest.common.AppCommonSpeedInquiry -->
+=======
+      </class> <!-- test.apptest.chuangye.AppChuangyeReleaseLoan -->
+>>>>>>> branch 'master' of http://172.16.11.124/luyi/appAuto.git
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

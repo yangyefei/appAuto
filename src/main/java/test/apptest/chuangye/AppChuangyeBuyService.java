@@ -111,6 +111,7 @@ public class AppChuangyeBuyService extends BaseTest {
 		System.out.println(time);
 		
 		logger.info("去支付");
+		Thread.sleep(3000);
 		driver = appCommonService.alipay(driver);
 		new WebDriverWait(driver,60).until(ExpectedConditions.elementToBeClickable(By.name("返回首页 Link"))).click();
 		driver.quit();

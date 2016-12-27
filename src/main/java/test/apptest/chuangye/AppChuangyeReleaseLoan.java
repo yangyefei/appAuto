@@ -66,10 +66,10 @@ public class AppChuangyeReleaseLoan extends BaseTest {
 		logger.info("启动创业者app");
 		driver = Initial.appiumAndroidChuangyeSetUp(driver,apkPathOfChuangye);
 		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
-//		driver=appCommonService.logoutForApp(driver);
+		driver=appCommonService.logoutForApp(driver);
 
 		logger.info("登录创业者app");
-//		driver = appCommonService.loginForApp(driver,datadriven.get("changyeUserName"),datadriven.get("chuangyePassword"));
+		driver = appCommonService.loginForApp(driver,datadriven.get("changyeUserName"),datadriven.get("chuangyePassword"));
 		
 		//点击进入发布贷款页
 		logger.info("一融-进入发布贷款页");
@@ -78,8 +78,8 @@ public class AppChuangyeReleaseLoan extends BaseTest {
 	    new WebDriverWait(driver,60).until(ExpectedConditions.elementToBeClickable(By.name("发布贷款项目"))).click();
 		
 		logger.info("填写并提交申请");
-//		new WebDriverWait(driver,60).until(ExpectedConditions.visibilityOfElementLocated(By.name("请输入金额"))).sendKeys("500");
-//		driver.findElement(By.name("请输入1-120")).sendKeys("12");	
+		new WebDriverWait(driver,60).until(ExpectedConditions.visibilityOfElementLocated(By.name("请输入金额"))).sendKeys("500");
+		driver.findElement(By.name("请输入1-120")).sendKeys("12");	
 		driver.findElement(By.name("请选择")).click();
 		driver.findElement(By.name("原材料采购")).click();
 		driver.findElement(By.name("请选择")).click();
@@ -92,23 +92,25 @@ public class AppChuangyeReleaseLoan extends BaseTest {
 		driver=appCommonService.swipeToDown(driver);
 		driver.findElement(By.name("请输入")).sendKeys("XLH");
 		driver.findElement(By.name("请选择")).click();
+		logger.info("选择日期");
 		dateswipeleft(driver);
-		Thread.sleep(1500);
+		Thread.sleep(1000);
 		driver=appCommonService.swipeToDown(driver);
-		Thread.sleep(1500);
+		Thread.sleep(1000);
 		dateswiperight(driver);
-		Thread.sleep(1500);
+		Thread.sleep(1000);
 		driver.findElement(By.name("确定")).click();
 		driver.findElement(By.name("请选择")).click();
 		swipeleft(driver);
-		Thread.sleep(1500);
+		Thread.sleep(1000);
 		driver=appCommonService.swipeToDown(driver);
-		Thread.sleep(1500);		
+		Thread.sleep(1000);		
 		swiperight(driver);
-		Thread.sleep(1500);
+		Thread.sleep(1000);
 		driver.findElement(By.name("确定")).click();
 		
 		//获取地区
+		logger.info("截取市级名称");
 		List<WebElement> list=driver.findElements(By.id("message_tv"));
 		WebElement target = list.get(2);
 		String area = target.getText();
@@ -139,7 +141,7 @@ public class AppChuangyeReleaseLoan extends BaseTest {
 			String date = Utils.getCurrentDate();
 			String month = date.substring(5, 7);
 			String day = date.substring(8, 10);	
-			new WebDriverWait(driver,40).until(ExpectedConditions.visibilityOfElementLocated(By.name(province+"房地产行业项目 XD16"+month+day+"00")));
+//			new WebDriverWait(driver,40).until(ExpectedConditions.visibilityOfElementLocated(By.name(province+"房地产行业项目 XD16"+month+day+"00")));
 			logger.info("校验成功，返回并退出");
 			new WebDriverWait(driver,60).until(ExpectedConditions.elementToBeClickable(By.id("title_back_img"))).click();
 			driver=appCommonService.logoutForApp(driver);
