@@ -78,7 +78,7 @@ public class AppChuangyeBuyService extends BaseTest {
 		
 		String apkPathOfChuangye = datadriven.get("apkPathOfChuangye");
 		
-		logger.info("APP "+datadriven.get("version")+"---购买服务测试开始---");
+		logger.info("APP "+datadriven.get("version")+"---创业者购买服务测试开始---");
 		
 		logger.info("启动创业者app");
 		driver = Initial.appiumAndroidChuangyeSetUp(driver, apkPathOfChuangye);
@@ -158,7 +158,7 @@ public class AppChuangyeBuyService extends BaseTest {
 			new WebDriverWait(driver,60).until(ExpectedConditions.elementToBeClickable(By.id("title_back_img"))).click();
 			driver=appCommonService.logoutForApp(driver);
 			driver.quit();
-			logger.info("APP "+datadriven.get("version")+"---购买服务测试结束---");
+			logger.info("APP "+datadriven.get("version")+"---创业者购买服务测试结束---");
 			
 		} catch (Exception e) {
 			// TODO: handle exception

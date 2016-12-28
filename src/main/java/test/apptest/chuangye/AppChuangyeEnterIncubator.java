@@ -54,7 +54,7 @@ public class AppChuangyeEnterIncubator extends BaseTest {
 		
 		String apkPathOfChuangye = datadriven.get("apkPathOfChuangye");
 		
-		logger.info("APP "+datadriven.get("version")+"---企业入驻孵化器业务流程测试开始---");
+		logger.info("APP "+datadriven.get("version")+"企业入驻孵化器业务流程测试开始");
 		
 		logger.info("启动创业者app");
 		driver = Initial.appiumAndroidChuangyeSetUp(driver,apkPathOfChuangye);
@@ -111,7 +111,7 @@ public class AppChuangyeEnterIncubator extends BaseTest {
 		logger.info("校验是否入驻成功");
 		Assert.assertTrue(checkResult(), "入驻失败！");				
 		
-		logger.info("APP "+datadriven.get("version")+"---入驻流程测试结束---");
+		logger.info("APP "+datadriven.get("version")+"---企业入驻孵化器测试结束---");
 		
 	}
 	
