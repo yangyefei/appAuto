@@ -1,8 +1,28 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://beust.com/testng/testng-1.0.dtd" >
-<suite name="自动化测试运行结果" verbose="1">
-    
-    <test name="创业者企业服务" >
+<suite name="自动化测试运行结果" verbose="1" skipfailedinvocationcounts="true">
+<!-- 创业者 -->
+<!-- 	<test name="创业者孵化入驻" >
+		<classes>
+			<class name="test.apptest.chuangye.AppChuangyeEnterIncubator">
+				<methods>
+					<include name="chuangyeEnterIncubator" />
+				</methods>
+			</class>
+		</classes>
+	</test> -->
+
+<!-- 	<test name="创业者活动报名" >
+		<classes>
+			<class name="test.apptest.chuangye.AppChuangyeSignUp">
+				<methods>
+					<include name="chuangyeSignUp" />
+				</methods>
+			</class>
+		</classes>
+	</test> -->
+	
+<!-- 	<test name="创业者企业服务" >
 		<classes>
 			<class name="test.apptest.chuangye.AppChuangyeBuyService">
 				<methods>
@@ -10,8 +30,39 @@
 				</methods>
 			</class>
 		</classes>
+	</test>	 -->
+		
+<!-- 	<test name="创业者申请贷款" >
+		<classes>
+			<class name="test.apptest.chuangye.AppChuangyeApplyLoan">
+				<methods>
+					<include name="chuangyeApplyLoan" />
+				</methods>
+			</class>
+		</classes>
 	</test>
-    
+	
+	<test name="创业者发布贷款项目" >
+		<classes>
+			<class name="test.apptest.chuangye.AppChuangyeReleaseLoan">
+				<methods>
+					<include name="chuangyeReleaseLoan" />
+				</methods>
+			</class>
+		</classes>
+	</test> -->
+
+<!--  公共部分业务流程   --> 	
+	<test name="普通问诊流程" >
+		<classes>
+			<class name="test.apptest.common.AppCommonInquiry">
+				<methods>
+					<include name="commonInquiryProcess" />
+				</methods>
+			</class>
+		</classes>
+	</test>	
+	
 <!-- 	<test name="约谈流程" >
 		<classes>
 			<class name="test.apptest.common.AppCommonInterview">
@@ -22,21 +73,33 @@
 		</classes>
 	</test> -->
 	
-<!-- 	<test name="普通问诊流程" >
-		<classes>
-			<class name="test.apptest.common.AppCommonInquiry">
-				<methods>
-					<include name="commonInquiryProcess" />
-				</methods>
-			</class>
-		</classes>
-	</test>	 -->
-	
 <!-- 	<test name="快速问诊流程" >
 		<classes>
 			<class name="test.apptest.common.AppCommonSpeedInquiry">
 				<methods>
 					<include name="appCommonSpeedInquiry" />
+				</methods>
+			</class>
+		</classes>
+	</test> -->
+	
+<!-- 投资人	 -->
+<!-- 	<test name="投资人发布以及需求响应"   preserve-order="true">
+		<classes>
+			<class name="test.apptest.fund.AppFundRequirement">
+				<methods>
+					<include name="fundRequirement" />
+					<include name="fundRespond" />
+				</methods>
+			</class>
+		</classes>
+	</test> -->
+	
+<!-- 	<test name="投资人活动报名"  >
+		<classes>
+			<class name="test.apptest.fund.AppFundSignUp">
+				<methods>
+					<include name="fundSignUp" />
 				</methods>
 			</class>
 		</classes>
@@ -50,47 +113,6 @@
 				</methods>
 			</class>
 		</classes>
-	</test>
+	</test> -->
 
-	<test name="投资人发布以及需求响应"   preserve-order="true">
-		<classes>
-			<class name="test.apptest.fund.AppFundRequirement">
-				<methods>
-					<include name="fundRequirement" />
-					<include name="fundRespond" />
-				</methods>
-			</class>
-		</classes>
-	</test> -->
-	
-<!-- 	<test name="创业者孵化入驻" >
-		<classes>
-			<class name="test.apptest.chuangye.AppChuangyeEnterIncubator">
-				<methods>
-					<include name="chuangyeEnterIncubator" />
-				</methods>
-			</class>
-		</classes>
-	</test> -->
-	
-<!-- 	<test name="投资人活动报名动报名"  >
-		<classes>
-			<class name="test.apptest.fund.AppFundSignUp">
-				<methods>
-					<include name="fundSignUp" />
-				</methods>
-			</class>
-		</classes>
-	</test> -->
-	
-<!-- 		<test name="创业者活动报名" >
-		<classes>
-			<class name="test.apptest.chuangye.AppChuangyeSignUp">
-				<methods>
-					<include name="chuangyeSignUp" />
-				</methods>
-			</class>
-		</classes>
-	</test>	 -->
-	
 </suite>
