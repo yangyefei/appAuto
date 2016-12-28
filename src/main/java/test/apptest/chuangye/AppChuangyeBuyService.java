@@ -2,24 +2,16 @@ package test.apptest.chuangye;
 
 
 import io.appium.java_client.AppiumDriver;
-import io.appium.java_client.TouchAction;
 
 import java.io.IOException;
-import java.security.PrivateKey;
 import java.util.Iterator;
-import java.util.List;
 import java.util.Map;
 import java.util.concurrent.TimeUnit;
 import java.util.Date;
 import java.text.SimpleDateFormat;
 
-import net.sf.saxon.functions.Substring;
-
-import org.omg.CORBA.PRIVATE_MEMBER;
-import org.openqa.selenium.Alert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -29,31 +21,11 @@ import org.testng.annotations.Test;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.AfterClass;
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 import service.AppCommonService;
 import service.InitialService;
 import service.WebCommonService;
-import common.frame.helper.Utils;
 import common.frame.test.BaseTest;
 import common.utils.UrlsOfPre;
-
-
 
 public class AppChuangyeBuyService extends BaseTest {
 

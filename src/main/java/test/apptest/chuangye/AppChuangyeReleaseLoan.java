@@ -1,6 +1,5 @@
 package test.apptest.chuangye;
 
-
 import io.appium.java_client.AppiumDriver;
 
 import java.io.IOException;
@@ -8,8 +7,6 @@ import java.util.Iterator;
 import java.util.List;
 import java.util.Map;
 import java.util.concurrent.TimeUnit;
-
-
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
@@ -22,19 +19,8 @@ import org.testng.annotations.Test;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.AfterClass;
 
-
-
-
-
-
-
-
-
-
-
 import service.AppCommonService;
 import service.InitialService;
-import common.frame.helper.Utils;
 import common.frame.test.BaseTest;
 
 
@@ -138,9 +124,9 @@ public class AppChuangyeReleaseLoan extends BaseTest {
 		
 		try {
 			
-			String date = Utils.getCurrentDate();
+/*			String date = Utils.getCurrentDate();
 			String month = date.substring(5, 7);
-			String day = date.substring(8, 10);	
+			String day = date.substring(8, 10);	*/
 //			new WebDriverWait(driver,40).until(ExpectedConditions.visibilityOfElementLocated(By.name(province+"房地产行业项目 XD16"+month+day+"00")));
 			logger.info("校验成功，返回并退出");
 			new WebDriverWait(driver,60).until(ExpectedConditions.elementToBeClickable(By.id("title_back_img"))).click();

@@ -1,6 +1,5 @@
 package test.apptest.chuangye;
 
-
 import io.appium.java_client.AppiumDriver;
 
 import java.io.IOException;
@@ -8,8 +7,6 @@ import java.util.Iterator;
 import java.util.List;
 import java.util.Map;
 import java.util.concurrent.TimeUnit;
-
-import net.sf.saxon.functions.Substring;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
@@ -21,13 +18,6 @@ import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.AfterClass;
-
-
-
-
-
-
-import com.thoughtworks.selenium.webdriven.commands.GetText;
 
 import orm.jdbc.MysqlDataDeal;
 //import antlr.collections.List;

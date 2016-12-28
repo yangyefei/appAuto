@@ -2,6 +2,16 @@
 <!DOCTYPE suite SYSTEM "http://beust.com/testng/testng-1.0.dtd" >
 <suite name="自动化测试运行结果" verbose="1">
     
+    <test name="创业者企业服务" >
+		<classes>
+			<class name="test.apptest.chuangye.AppChuangyeBuyService">
+				<methods>
+					<include name="chuangyeBuyService" />
+				</methods>
+			</class>
+		</classes>
+	</test>
+    
 <!-- 	<test name="约谈流程" >
 		<classes>
 			<class name="test.apptest.common.AppCommonInterview">
@@ -73,7 +83,7 @@
 		</classes>
 	</test> -->
 	
-		<test name="创业者活动报名" >
+<!-- 		<test name="创业者活动报名" >
 		<classes>
 			<class name="test.apptest.chuangye.AppChuangyeSignUp">
 				<methods>
@@ -81,6 +91,6 @@
 				</methods>
 			</class>
 		</classes>
-	</test>	
+	</test>	 -->
 	
 </suite>

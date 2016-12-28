@@ -8,11 +8,9 @@ import java.util.Iterator;
 import java.util.List;
 import java.util.Map;
 import java.util.concurrent.TimeUnit;
-import org.apache.commons.logging.Log;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -117,10 +115,10 @@ public class AppCommonSpeedInquiry extends BaseTest{
 
 	}
 
-	private Log info(String string) {
+/*	private Log info(String string) {
 		// TODO Auto-generated method stub
 		return null;
-	}
+	}*/
 
 	public void PayButton(){
 		try {
