@@ -84,7 +84,7 @@ public class AppCommonInterview extends BaseTest {
 		
 		//评价后提交
 		logger.info("评价后提交");
-		appCommonService.commentSubmit(driver, datadriven.get("interviewComments"));
+		driver = appCommonService.commentSubmit(driver, datadriven.get("interviewComments"));
 		
 		try {
 			//去创业者app约谈成功页面进行检查
@@ -97,14 +97,14 @@ public class AppCommonInterview extends BaseTest {
 			//返回并退出创业者app
 			logger.info("创业者中校验订单失败，未找到当天订单，进行创业者退出操作");
 			driver.findElement(By.id("title_back_img")).click();
-			appCommonService.logoutForApp(driver);
+			driver=appCommonService.logoutForApp(driver);
 			driver.quit();
 			
 			//退出投资者app
 			logger.info("创业者中校验订单失败，未找到当天订单，将之前登录的投资者也进行退出操作");
 			driver = Initial.appiumAndroidFundSetUp(driver,apkPathOfFund);
 			new WebDriverWait(driver,60).until(ExpectedConditions.elementToBeClickable(By.name("我的"))).click();
-			appCommonService.logoutForApp(driver);
+			driver=appCommonService.logoutForApp(driver);
 			driver.quit();
 			logger.info("APP "+datadriven.get("version")+"---约谈流程测试结束---");
 			
@@ -114,7 +114,7 @@ public class AppCommonInterview extends BaseTest {
 		//检查成功，返回并退出app
 		logger.info("创业者中校验当天订单成功，进行创业者退出操作");
 		driver.findElement(By.id("title_back_img")).click();
-		appCommonService.logoutForApp(driver);
+		driver=appCommonService.logoutForApp(driver);
 		driver.quit();
 		
 		
@@ -136,7 +136,7 @@ public class AppCommonInterview extends BaseTest {
 			// TODO Auto-generated catch block
 			logger.info("投资者中校验订单失败，未找到当天订单，进行退出操作");
 			driver.findElement(By.id("title_back_img")).click();
-			appCommonService.logoutForApp(driver);
+			driver=appCommonService.logoutForApp(driver);
 			driver.quit();
 			logger.info("APP "+datadriven.get("version")+"---约谈流程测试结束---");
 			
@@ -146,12 +146,12 @@ public class AppCommonInterview extends BaseTest {
 		//评论并且提交
 		logger.info("投资者中校验当天订单成功，对当天订单进行评价操作");
 		driver.findElement(By.name("评价")).click();
-		appCommonService.commentSubmit(driver, datadriven.get("interviewComments"));
+		driver=appCommonService.commentSubmit(driver, datadriven.get("interviewComments"));
 		
 		//返回并退出app
 		logger.info("投资者当天订单评价成功后，最后返回并进行退出登录操作");
 		driver.findElement(By.id("title_back_img")).click();
-		appCommonService.logoutForApp(driver);
+		driver=appCommonService.logoutForApp(driver);
 		driver.quit();
 		
 		logger.info("APP "+datadriven.get("version")+"---约谈流程测试结束---");

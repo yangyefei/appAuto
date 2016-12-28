@@ -109,7 +109,7 @@ public class AppCommonSpeedInquiry extends BaseTest{
 			}
       	
 		new WebDriverWait(driver, 30).until(ExpectedConditions.elementToBeClickable(By.name("确认服务"))).click();
-		appCommonService.commentSubmit(driver, "123");
+		driver=appCommonService.commentSubmit(driver, "123");
 				
 		logger.info("APP "+datadriven.get("version")+"---导师快速问诊流程测试结束--");
 
