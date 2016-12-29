@@ -20,6 +20,7 @@ import org.testng.annotations.BeforeClass;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 import common.frame.test.BaseTest;
+import common.utils.UrlsOfPre;
 import io.appium.java_client.AppiumDriver;
 import io.appium.java_client.TouchAction;
 import service.AppCommonService;
@@ -144,9 +145,9 @@ public class AppCommonSpeedInquiry extends BaseTest{
 //				"C:\\Program Files (x86)\\Google\\Chrome\\Application\\chromedriver.exe");
 //		WebDriver webDriver = new ChromeDriver();
 		// 运行时关闭之前启动的浏览器
-
+		
+		webDriver.get(UrlsOfPre.BackGroundSystem.getUrl());
 		webDriver.manage().timeouts().pageLoadTimeout(60, TimeUnit.SECONDS);
-		webDriver.get("http://fwgl.yirongbang.net/");
 		// webDriver.manage().window().maximize();
 
 		webDriver.findElement(By.name("form_user")).sendKeys("zdhcs");

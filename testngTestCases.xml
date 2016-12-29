@@ -105,7 +105,7 @@
 		</classes>
 	</test>
 	
-	<test name="投资人提现" >
+<!-- 	<test name="投资人提现" >
 		<classes>
 			<class name="test.apptest.fund.AppFundWallet">
 				<methods>
@@ -113,7 +113,7 @@
 				</methods>
 			</class>
 		</classes>
-	</test>
+	</test> -->
 
 </suite>
 
