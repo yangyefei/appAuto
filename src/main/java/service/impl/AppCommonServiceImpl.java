@@ -86,7 +86,7 @@ public class AppCommonServiceImpl implements AppCommonService{
 		TouchAction  touchAction =new TouchAction(driver);
 		touchAction.press(x/2, y*19/20).release().perform();
 		
-		driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
+		Thread.sleep(3000);
 		new WebDriverWait(driver,60).until(ExpectedConditions.elementToBeClickable(By.name("付款"))).click();
 		
 		return driver;
