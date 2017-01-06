@@ -79,13 +79,14 @@ public class AppCommonServiceImpl implements AppCommonService{
 	@Override
 	public AppiumDriver alipay(AppiumDriver driver) throws Exception {
 		// TODO Auto-generated method stub
-		Thread.sleep(5000);
+		Thread.sleep(3000);		
+		
 		int x =driver.manage().window().getSize().width;
 		int y =driver.manage().window().getSize().height;
 		TouchAction  touchAction =new TouchAction(driver);
 		touchAction.press(x/2, y*19/20).release().perform();
 		
-		driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
+		Thread.sleep(3000);
 		new WebDriverWait(driver,60).until(ExpectedConditions.elementToBeClickable(By.name("付款"))).click();
 		
 		return driver;

@@ -246,7 +246,7 @@ public class AppCommonInquiry extends BaseTest {
 		
 		logger.info("退出当前app");
 		driver.findElement(By.id("title_back_img")).click();
-		appCommonService.logoutForApp(driver);
+		driver=appCommonService.logoutForApp(driver);
 		driver.quit();
 		
 	}
@@ -258,7 +258,7 @@ public class AppCommonInquiry extends BaseTest {
 		
 		logger.info("退出另一个app");
 		new WebDriverWait(driver,60).until(ExpectedConditions.elementToBeClickable(By.name("我的"))).click();
-		appCommonService.logoutForApp(driver);
+		driver=appCommonService.logoutForApp(driver);
 		driver.quit();
 	}
 	

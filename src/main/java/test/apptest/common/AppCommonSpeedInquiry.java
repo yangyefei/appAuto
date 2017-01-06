@@ -8,11 +8,9 @@ import java.util.Iterator;
 import java.util.List;
 import java.util.Map;
 import java.util.concurrent.TimeUnit;
-import org.apache.commons.logging.Log;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -22,6 +20,7 @@ import org.testng.annotations.BeforeClass;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 import common.frame.test.BaseTest;
+import common.utils.UrlsOfPre;
 import io.appium.java_client.AppiumDriver;
 import io.appium.java_client.TouchAction;
 import service.AppCommonService;
@@ -111,16 +110,16 @@ public class AppCommonSpeedInquiry extends BaseTest{
 			}
       	
 		new WebDriverWait(driver, 30).until(ExpectedConditions.elementToBeClickable(By.name("确认服务"))).click();
-		appCommonService.commentSubmit(driver, "123");
+		driver=appCommonService.commentSubmit(driver, "123");
 				
 		logger.info("APP "+datadriven.get("version")+"---导师快速问诊流程测试结束--");
 
 	}
 
-	private Log info(String string) {
+/*	private Log info(String string) {
 		// TODO Auto-generated method stub
 		return null;
-	}
+	}*/
 
 	public void PayButton(){
 		try {
@@ -146,9 +145,9 @@ public class AppCommonSpeedInquiry extends BaseTest{
 //				"C:\\Program Files (x86)\\Google\\Chrome\\Application\\chromedriver.exe");
 //		WebDriver webDriver = new ChromeDriver();
 		// 运行时关闭之前启动的浏览器
-
+		
+		webDriver.get(UrlsOfPre.BackGroundSystem.getUrl());
 		webDriver.manage().timeouts().pageLoadTimeout(60, TimeUnit.SECONDS);
-		webDriver.get("http://fwgl.yirongbang.net/");
 		// webDriver.manage().window().maximize();
 
 		webDriver.findElement(By.name("form_user")).sendKeys("zdhcs");

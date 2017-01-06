@@ -18,6 +18,7 @@ import org.testng.annotations.Test;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.AfterClass;
 
+import orm.jdbc.DataBaseDao;
 import orm.jdbc.MysqlDataDeal;
 import service.AppCommonService;
 import service.InitialService;
@@ -29,7 +30,7 @@ public class AppChuangyeEnterIncubator extends BaseTest {
 	private InitialService Initial;
 	@Autowired
 	private AppCommonService appCommonService;	
-//	@Autowired
+	//@Autowired
 //	private WebCommonService webCommonService;
 	
 	@Autowired
@@ -42,9 +43,10 @@ public class AppChuangyeEnterIncubator extends BaseTest {
 	@BeforeClass
 	public void beforeClass() {
 		
-		
+		logger.info("APP --- 企业入驻孵化器测试开始---");
+		logger.info("先准备测试数据");
 		mysqlDataDeal.updateEnterpriseStatus("SHXLHEnterprise", 4);
-		    
+		
 	}
 
 
@@ -53,7 +55,7 @@ public class AppChuangyeEnterIncubator extends BaseTest {
 		
 		String apkPathOfChuangye = datadriven.get("apkPathOfChuangye");
 		
-		logger.info("APP "+datadriven.get("version")+"---企业入驻孵化器测试开始---");
+		logger.info("APP "+datadriven.get("version")+"企业入驻孵化器业务流程测试开始");
 		
 		logger.info("启动创业者app");
 		driver = Initial.appiumAndroidChuangyeSetUp(driver,apkPathOfChuangye);
@@ -110,7 +112,7 @@ public class AppChuangyeEnterIncubator extends BaseTest {
 		logger.info("校验是否入驻成功");
 		Assert.assertTrue(checkResult(), "入驻失败！");				
 		
-		logger.info("APP "+datadriven.get("version")+"---入驻流程测试结束---");
+		logger.info("APP "+datadriven.get("version")+"---企业入驻孵化器测试结束---");
 		
 	}
 	

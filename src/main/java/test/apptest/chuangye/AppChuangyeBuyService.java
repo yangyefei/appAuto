@@ -2,24 +2,16 @@ package test.apptest.chuangye;
 
 
 import io.appium.java_client.AppiumDriver;
-import io.appium.java_client.TouchAction;
 
 import java.io.IOException;
-import java.security.PrivateKey;
 import java.util.Iterator;
-import java.util.List;
 import java.util.Map;
 import java.util.concurrent.TimeUnit;
 import java.util.Date;
 import java.text.SimpleDateFormat;
 
-import net.sf.saxon.functions.Substring;
-
-import org.omg.CORBA.PRIVATE_MEMBER;
-import org.openqa.selenium.Alert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -29,31 +21,11 @@ import org.testng.annotations.Test;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.AfterClass;
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 import service.AppCommonService;
 import service.InitialService;
 import service.WebCommonService;
-import common.frame.helper.Utils;
 import common.frame.test.BaseTest;
 import common.utils.UrlsOfPre;
-
-
 
 public class AppChuangyeBuyService extends BaseTest {
 
@@ -78,7 +50,7 @@ public class AppChuangyeBuyService extends BaseTest {
 		
 		String apkPathOfChuangye = datadriven.get("apkPathOfChuangye");
 		
-		logger.info("APP "+datadriven.get("version")+"---购买服务测试开始---");
+		logger.info("APP "+datadriven.get("version")+"---创业者购买服务测试开始---");
 		
 		logger.info("启动创业者app");
 		driver = Initial.appiumAndroidChuangyeSetUp(driver, apkPathOfChuangye);
@@ -112,6 +84,7 @@ public class AppChuangyeBuyService extends BaseTest {
 		
 		logger.info("去支付");
 		Thread.sleep(3000);
+		new WebDriverWait(driver, 60).until(ExpectedConditions.visibilityOfElementLocated(By.name("支付")));
 		driver = appCommonService.alipay(driver);
 		new WebDriverWait(driver,60).until(ExpectedConditions.elementToBeClickable(By.name("返回首页 Link"))).click();
 		driver.quit();
@@ -158,7 +131,7 @@ public class AppChuangyeBuyService extends BaseTest {
 			new WebDriverWait(driver,60).until(ExpectedConditions.elementToBeClickable(By.id("title_back_img"))).click();
 			driver=appCommonService.logoutForApp(driver);
 			driver.quit();
-			logger.info("APP "+datadriven.get("version")+"---购买服务测试结束---");
+			logger.info("APP "+datadriven.get("version")+"---创业者购买服务测试结束---");
 			
 		} catch (Exception e) {
 			// TODO: handle exception

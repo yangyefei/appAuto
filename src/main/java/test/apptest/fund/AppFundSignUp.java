@@ -1,6 +1,5 @@
 package test.apptest.fund;
 
-
 import io.appium.java_client.AppiumDriver;
 
 import java.io.IOException;
@@ -20,17 +19,10 @@ import org.testng.annotations.Test;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.AfterClass;
 
-
-
-
-
-
-
 import orm.jdbc.MysqlDataDeal;
 //import antlr.collections.List;
 import service.AppCommonService;
 import service.InitialService;
-import common.frame.helper.Utils;
 import common.frame.test.BaseTest;
 
 public class AppFundSignUp extends BaseTest {
