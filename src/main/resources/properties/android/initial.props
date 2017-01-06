@@ -1,15 +1,12 @@
 #ip of run machine
 #appRunMachineIp=172.16.22.180
-<<<<<<< HEAD
+#webRunMachineIp=172.16.22.180
+
+
+
 webRunMachineIp=172.16.22.233
 
-
 appRunMachineIp=172.16.22.233
-=======
-webRunMachineIp=172.16.22.180
->>>>>>> origin/master
-
-appRunMachineIp=172.16.22.117
 #webRunMachineIp=172.16.22.236
 
 #appium port
