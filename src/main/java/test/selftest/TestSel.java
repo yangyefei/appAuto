@@ -5,13 +5,17 @@ import java.util.concurrent.TimeUnit;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.testng.annotations.Test;
+
+import common.frame.test.BaseTest;
+
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.AfterClass;
 
-public class TestSel {
+public class TestSel extends BaseTest{
 
   @BeforeClass
   public void beforeClass() {
+	  logger.info("just test");
   }
   
   @Test

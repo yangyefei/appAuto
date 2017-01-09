@@ -11,46 +11,46 @@
 
 	<!-- -->
 	<bean id="dataBaseDao" class="orm.jdbc.impl.DataBaseDaoImpl">
-	       <property name="mysqlPreConnect" value="${mysqlPreConnect}"></property>
-	       <property name="mysqlPreUser" value="${mysqlPreUser}"></property>
-	       <property name="mysqlPrePwd" value="${mysqlPrePwd}"></property>
-		
-	</bean>
-	
-	  <bean id="mysqlDataDeal" class="orm.jdbc.impl.MysqlDataDealImpl">
-            <property name="dataBaseDao" ref="dataBaseDao"></property>
-     </bean>
-	
-	
-	<bean id="initialService" class="service.impl.InitialServiceImpl">	    
-	    <property name="chuangyeAppPackage" value="${chuangyeAppPackage}"></property>
-	    <property name="chuangyeAppActivity" value="${chuangyeAppActivity}"></property>
-	    
-	    <property name="fundAppPackage" value="${fundAppPackage}"></property>
-	    <property name="fundAppActivity" value="${fundAppActivity}"></property>
-	    
-	    <property name="platformVersion" value="${platformVersion}"></property>
-	    <property name="appRunMachineIp" value="${appRunMachineIp}"></property>
-	    <property name="webRunMachineIp" value="${webRunMachineIp}"></property>    
-	    <property name="appiumPort" value="${appiumPort}"></property>
+		<property name="mysqlPreConnect" value="${mysqlPreConnect}"></property>
+		<property name="mysqlPreUser" value="${mysqlPreUser}"></property>
+		<property name="mysqlPrePwd" value="${mysqlPrePwd}"></property>
 
 	</bean>
-	
-	<bean id="appCommonService"  class="service.impl.AppCommonServiceImpl">
+
+	<bean id="mysqlDataDeal" class="orm.jdbc.impl.MysqlDataDealImpl">
+		<property name="dataBaseDao" ref="dataBaseDao"></property>
 	</bean>
-	
+
+
+	<bean id="initialService" class="service.impl.InitialServiceImpl">
+		<property name="chuangyeAppPackage" value="${chuangyeAppPackage}"></property>
+		<property name="chuangyeAppActivity" value="${chuangyeAppActivity}"></property>
+
+		<property name="fundAppPackage" value="${fundAppPackage}"></property>
+		<property name="fundAppActivity" value="${fundAppActivity}"></property>
+
+		<property name="platformVersion" value="${platformVersion}"></property>
+		<property name="appRunMachineIp" value="${appRunMachineIp}"></property>
+		<property name="webRunMachineIp" value="${webRunMachineIp}"></property>
+		<property name="appiumPort" value="${appiumPort}"></property>
+
+	</bean>
+
+	<bean id="appCommonService" class="service.impl.AppCommonServiceImpl">
+	</bean>
+
 	<bean id="webCommonService" class="service.impl.WebCommonServiceImpl">
 	</bean>
-	
+
 	<bean id="excelProviderByTest" class="common.frame.data.ExcelProviderByTest">
-	    <property name="envTestID" value="${TEST_ID}"></property>
+		<property name="envTestID" value="${TEST_ID}"></property>
 	</bean>
-	
+
 	<bean id="helperService" class="service.impl.HelperServiceImpl">
-	    <property name="sendMailUsername" value="${sendMailUsername}"></property>
-	    <property name="sendMailPassword" value="${sendMailPassword}"></property>
-        <property name="fromMailAddr" value="${fromMailAddr}"></property>
-        <property name="toMailAddr" value="${toMailAddr}"></property>
+		<property name="sendMailUsername" value="${sendMailUsername}"></property>
+		<property name="sendMailPassword" value="${sendMailPassword}"></property>
+		<property name="fromMailAddr" value="${fromMailAddr}"></property>
+		<property name="toMailAddr" value="${toMailAddr}"></property>
 	</bean>
 
 </beans>

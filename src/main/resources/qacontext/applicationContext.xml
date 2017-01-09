@@ -1,6 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<beans xmlns="http://www.springframework.org/schema/beans" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:jee="http://www.springframework.org/schema/jee"
-	xmlns:tx="http://www.springframework.org/schema/tx" xmlns:aop="http://www.springframework.org/schema/aop" xmlns:qacontext="http://www.springframework.org/schema/qacontext"
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:jee="http://www.springframework.org/schema/jee"
+	xmlns:tx="http://www.springframework.org/schema/tx" xmlns:aop="http://www.springframework.org/schema/aop"
+	xmlns:qacontext="http://www.springframework.org/schema/qacontext"
 	xsi:schemaLocation="http://www.springframework.org/schema/beans 
 	http://www.springframework.org/schema/beans/spring-beans-2.5.xsd
                     http://www.springframework.org/schema/tx 
@@ -13,12 +15,12 @@
                     http://www.springframework.org/schema/qacontext/spring-qacontext-2.5.xsd"
 	default-lazy-init="true">
 
- <!-- 引入 环境配置-->
-<!--<import resource="classpath:qacontext/envPropertyLoader.xml" />
-引入hessian配置
-<import	resource="classpath:qacontext/remote/context-remote-hessianclient.xml" /> -->
+	<!-- 引入 环境配置 -->
+	<!--<import resource="classpath:qacontext/envPropertyLoader.xml" /> 引入hessian配置 
+		<import resource="classpath:qacontext/remote/context-remote-hessianclient.xml" 
+		/> -->
 
-<!-- spring  -->
-<import	resource="classpath:qacontext/spring/spring-context.xml" />
+	<!-- spring -->
+	<import resource="classpath:qacontext/spring/spring-context.xml" />
 
 </beans>
