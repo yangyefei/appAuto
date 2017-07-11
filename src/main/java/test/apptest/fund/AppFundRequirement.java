@@ -24,7 +24,7 @@ import common.frame.test.BaseTest;
 
 
 public class AppFundRequirement extends BaseTest {
-
+//test by yyf 20170711
 	@Autowired
 	private InitialService Initial;
 	@Autowired
